@@ -8,6 +8,7 @@ namespace QaisYousuf.Models
 {
     public  class AboutPage:EntityBase
     {
+        public string Title { get; set; }
 
     }
 }
