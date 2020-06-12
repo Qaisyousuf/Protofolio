@@ -8,8 +8,6 @@ namespace QaisYousuf.Models
 
         public string Slug { get; set; }
 
-        public string Content { get; set; }
-
         public string MetaKeywords { get; set; }
 
         public string MetaDescription { get; set; }
