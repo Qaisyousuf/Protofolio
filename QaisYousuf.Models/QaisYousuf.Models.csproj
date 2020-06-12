@@ -43,7 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutPage.cs" />
+    <Compile Include="AboutPageBanner.cs" />
+    <Compile Include="CodeBanner.cs" />
+    <Compile Include="CodePage.cs" />
     <Compile Include="DataCollection.cs" />
+    <Compile Include="DesignCodeSection.cs" />
     <Compile Include="DesignSteps.cs" />
     <Compile Include="EntityBase.cs" />
     <Compile Include="HomeBanner.cs" />
@@ -55,8 +59,11 @@
     <Compile Include="RoleModel.cs" />
     <Compile Include="StartUpProcess.cs" />
     <Compile Include="StartUpProgram.cs" />
+    <Compile Include="Subscribe.cs" />
     <Compile Include="TeamSocialMedia.cs" />
+    <Compile Include="UI_UX_Tools.cs" />
     <Compile Include="UserModel.cs" />
+    <Compile Include="WebProgrammingTools.cs" />
     <Compile Include="WorkQualitySection.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

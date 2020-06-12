@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QaisYousuf.Models
 {
@@ -17,6 +13,23 @@ namespace QaisYousuf.Models
         public string MetaDescription { get; set; }
 
         public string IsVisibleToSearchEngine { get; set; }
+
+
+        public int BannerId { get; set; }
+        [ForeignKey("BannerId")]
+        public virtual AboutPageBanner AboutPageBanner { get; set; }
+
+        public int StartUpProgramId { get; set; }
+        [ForeignKey("StartUpProgramId")]
+        public virtual StartUpProgram StartUpProgram { get; set; }
+
+        public int StartUpProcessId { get; set; }
+        [ForeignKey("StartUpProcessId")]
+        public virtual StartUpProcess StartUpProcess { get; set; }
+
+        public int MeetOurTeamId { get; set; }
+        [ForeignKey("MeetOurTeamId")]
+        public virtual MeetOutTime MeetOutTime { get; set; } 
 
 
     }
