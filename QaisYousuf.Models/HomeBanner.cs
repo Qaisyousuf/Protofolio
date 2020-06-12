@@ -10,5 +10,9 @@
 
         public string SliderImagesUrl { get; set; }
 
+        public string ButtonUrl { get; set; }
+
+        public string ButtonText { get; set; }
+
     }
 }
