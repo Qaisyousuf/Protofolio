@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.ComponentModel.DataAnnotations.Schema;
 namespace QaisYousuf.Models
 {
     public class UIPage:EntityBase
@@ -17,6 +12,26 @@ namespace QaisYousuf.Models
         public string MetaDescription { get; set; }
 
         public string IsVisibleToSearchEngine { get; set; }
+
+        public int UIBannerId { get; set; }
+        [ForeignKey("UIBannerId")]
+        public virtual UIBanner UIBanner { get; set; }
+
+        public int UIProcessId { get; set; }
+        [ForeignKey("UIProcess")]
+        public virtual UIProcess  UIProcess { get; set; }
+
+
+        public int UISetpsId { get; set; }
+        [ForeignKey("UISetpsId")]
+        public virtual UIUXSteps UIUXSteps { get; set; }
+
+        public int UIUxMatterId { get; set; }
+        [ForeignKey("UIUxMatterId")]
+        public virtual UIUXMatterSection UIUXMatter { get; set; }
+
+
+
 
     }
 }
