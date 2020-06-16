@@ -2,9 +2,9 @@
 
 namespace QaisYousuf.Models
 {
-    public class MeetOutTime:EntityBase
+    public class MeetOutTeam:EntityBase
     {
-        public MeetOutTime()
+        public MeetOutTeam()
         {
             TeamSocialMedias = new List<TeamSocialMedia>();
         }

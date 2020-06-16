@@ -59,7 +59,8 @@
     <Compile Include="HomeBanner.cs" />
     <Compile Include="HomePage.cs" />
     <Compile Include="Interest.cs" />
-    <Compile Include="MeetOutTime.cs" />
+    <Compile Include="MeetOutTeam.cs" />
+    <Compile Include="Menu.cs" />
     <Compile Include="OnlineCertification.cs" />
     <Compile Include="PlatformDesign.cs" />
     <Compile Include="Portfolio.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="RequstingUIDesign.cs" />
     <Compile Include="RequstingUIForm.cs" />
     <Compile Include="RoleModel.cs" />
+    <Compile Include="SiteSetting.cs" />
     <Compile Include="StartUpProcess.cs" />
     <Compile Include="StartUpProgram.cs" />
     <Compile Include="Subscribe.cs" />

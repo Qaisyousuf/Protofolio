@@ -18,7 +18,7 @@ namespace QaisYousuf.Models
         public virtual UIBanner UIBanner { get; set; }
 
         public int UIProcessId { get; set; }
-        [ForeignKey("UIProcess")]
+        [ForeignKey("UIProcessId")]
         public virtual UIProcess  UIProcess { get; set; }
 
 

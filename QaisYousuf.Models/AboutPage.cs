@@ -29,7 +29,7 @@ namespace QaisYousuf.Models
 
         public int MeetOurTeamId { get; set; }
         [ForeignKey("MeetOurTeamId")]
-        public virtual MeetOutTime MeetOutTime { get; set; } 
+        public virtual MeetOutTeam MeetOutTime { get; set; } 
 
 
     }
