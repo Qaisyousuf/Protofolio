@@ -51,8 +51,95 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete Implementation\AboutPageBannerRepository.cs" />
+    <Compile Include="Concrete Implementation\AboutPageRepository.cs" />
+    <Compile Include="Concrete Implementation\CodeBannerRepository.cs" />
+    <Compile Include="Concrete Implementation\CodePageRepository.cs" />
+    <Compile Include="Concrete Implementation\ContactBannerRepository.cs" />
+    <Compile Include="Concrete Implementation\ContactDetailsRepository.cs" />
+    <Compile Include="Concrete Implementation\ContactFormRepository.cs" />
+    <Compile Include="Concrete Implementation\ContactMatterRepository.cs" />
+    <Compile Include="Concrete Implementation\ContactPageRepository.cs" />
+    <Compile Include="Concrete Implementation\DataCollectionRepository.cs" />
+    <Compile Include="Concrete Implementation\DesignCodeSectionRepository.cs" />
+    <Compile Include="Concrete Implementation\DesignStepsRepository.cs" />
+    <Compile Include="Concrete Implementation\EducationRepository.cs" />
+    <Compile Include="Concrete Implementation\HomeBannerRepository.cs" />
+    <Compile Include="Concrete Implementation\HomePageRepository.cs" />
+    <Compile Include="Concrete Implementation\InterestRepository.cs" />
+    <Compile Include="Concrete Implementation\SubscribeRepository.cs" />
+    <Compile Include="Concrete Implementation\MeetOurTeamRepository.cs" />
+    <Compile Include="Concrete Implementation\MenuRepository.cs" />
+    <Compile Include="Concrete Implementation\OnlineCertificationRepository.cs" />
+    <Compile Include="Concrete Implementation\PlatformDesignRepository.cs" />
+    <Compile Include="Concrete Implementation\PortfolioAboutRepository.cs" />
+    <Compile Include="Concrete Implementation\PortfolioBannerRepository.cs" />
+    <Compile Include="Concrete Implementation\PortfolioProjectRepository.cs" />
+    <Compile Include="Concrete Implementation\PortfolioRepository.cs" />
+    <Compile Include="Concrete Implementation\ProjectCountingRepository.cs" />
+    <Compile Include="Concrete Implementation\Repository.cs" />
+    <Compile Include="Concrete Implementation\RequestingUIDesignRepository.cs" />
+    <Compile Include="Concrete Implementation\RequestingUIFormRepository.cs" />
+    <Compile Include="Concrete Implementation\SiteSettingRepository.cs" />
+    <Compile Include="Concrete Implementation\StartUpProcessRepository.cs" />
+    <Compile Include="Concrete Implementation\StartUpProgramRepository.cs" />
+    <Compile Include="Concrete Implementation\TeamSocialMediaRepository.cs" />
+    <Compile Include="Concrete Implementation\TypeOfCompanyRepository.cs" />
+    <Compile Include="Concrete Implementation\UIBannerRepository.cs" />
+    <Compile Include="Concrete Implementation\UIPageRepository.cs" />
+    <Compile Include="Concrete Implementation\UIProcessRepository.cs" />
+    <Compile Include="Concrete Implementation\UIUXMatterSectionRepository.cs" />
+    <Compile Include="Concrete Implementation\UIUXStepsRepository.cs" />
+    <Compile Include="Concrete Implementation\UIUXToolsRepository.cs" />
+    <Compile Include="Concrete Implementation\WebProgrammingToolsRepository.cs" />
+    <Compile Include="Concrete Implementation\WorkExperienceRepository.cs" />
+    <Compile Include="Concrete Implementation\WorkQualitySectionRepository.cs" />
     <Compile Include="Context\UIContext.cs" />
     <Compile Include="FluentAPI\UserMapping.cs" />
+    <Compile Include="Interfaces\IAboutPageBannerRepository.cs" />
+    <Compile Include="Interfaces\IAboutPageRepository.cs" />
+    <Compile Include="Interfaces\ICodeBannerRepository.cs" />
+    <Compile Include="Interfaces\ICodePageRepository.cs" />
+    <Compile Include="Interfaces\IContactBannerRepository.cs" />
+    <Compile Include="Interfaces\IContactDetailsRepository.cs" />
+    <Compile Include="Interfaces\IContactFormRepository.cs" />
+    <Compile Include="Interfaces\IContactMatterRepository.cs" />
+    <Compile Include="Interfaces\IContactPageRepository.cs" />
+    <Compile Include="Interfaces\IDataCollectionRepository.cs" />
+    <Compile Include="Interfaces\IDesignCodeSectionRepository.cs" />
+    <Compile Include="Interfaces\IDesignStepsRepository.cs" />
+    <Compile Include="Interfaces\IEducationRepository.cs" />
+    <Compile Include="Interfaces\IHomeBannerRepository.cs" />
+    <Compile Include="Interfaces\IHomePageRepository.cs" />
+    <Compile Include="Interfaces\IIntresetRepository.cs" />
+    <Compile Include="Interfaces\IMeetOurTeamRepository.cs" />
+    <Compile Include="Interfaces\IMenuRepository.cs" />
+    <Compile Include="Interfaces\IOnlineCertificationRepository.cs" />
+    <Compile Include="Interfaces\IPlatformDesignRepository.cs" />
+    <Compile Include="Interfaces\IPortfolioAboutRepository.cs" />
+    <Compile Include="Interfaces\IPortfolioBannerRepository.cs" />
+    <Compile Include="Interfaces\IPortfolioProjectRepository.cs" />
+    <Compile Include="Interfaces\IPortfolioRepository.cs" />
+    <Compile Include="Interfaces\IProjectCountingRepository.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IRequstingUIDesignRepository.cs" />
+    <Compile Include="Interfaces\IRequstingUIFormRepository.cs" />
+    <Compile Include="Interfaces\ISiteSettingRepository.cs" />
+    <Compile Include="Interfaces\ISlug.cs" />
+    <Compile Include="Interfaces\IStartUpProcessRepository.cs" />
+    <Compile Include="Interfaces\IStartUpProgramRepository.cs" />
+    <Compile Include="Interfaces\ISubscribeRepository.cs" />
+    <Compile Include="Interfaces\ITeamSocialMediaRepository.cs" />
+    <Compile Include="Interfaces\ITypeOfCompanyRepository.cs" />
+    <Compile Include="Interfaces\IUIBannerRepository.cs" />
+    <Compile Include="Interfaces\IUIPageRepository.cs" />
+    <Compile Include="Interfaces\IUIProcessRepository.cs" />
+    <Compile Include="Interfaces\IUIUXMatterSectionRepository.cs" />
+    <Compile Include="Interfaces\IUIUXStepsRepository.cs" />
+    <Compile Include="Interfaces\IUIUXToolsRepository.cs" />
+    <Compile Include="Interfaces\IWebProgrammingToolsRepository.cs" />
+    <Compile Include="Interfaces\IWorkExperienceRepository.cs" />
+    <Compile Include="Interfaces\IWorkQualitySectionRepository.cs" />
     <Compile Include="Migrations\202006151629180_Initial.cs" />
     <Compile Include="Migrations\202006151629180_Initial.designer.cs">
       <DependentUpon>202006151629180_Initial.cs</DependentUpon>
@@ -75,6 +162,7 @@
       <DependentUpon>202006151629180_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
