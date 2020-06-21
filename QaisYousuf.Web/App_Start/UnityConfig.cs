@@ -46,7 +46,7 @@ namespace QaisYousuf.Web
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
             container.RegisterType<IUnitOfWork, UnitOfWork>();
-            Container.RegisterType<IAuthenticationServices, AuthenticationServices>();
+            container.RegisterType<IAuthenticationServices, AuthenticationServices>();
         }
     }
 }

@@ -1,21 +1,22 @@
-﻿using System;
+﻿using QaisYousuf.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using QaisYousuf.Services;
-using QaisYousuf.ViewModels;
 
 namespace QaisYousuf.Web.Controllers
 {
     public class AccountsController : Controller
     {
-        private readonly IAuthenticationServices authServices;
+        private readonly IAuthenticationServices authService;
 
-        public AccountsController(IAuthenticationServices authServices)
+        public AccountsController(IAuthenticationServices authService)
         {
-            this.authServices = authServices;
+            this.authService = authService;
         }
+        // GET: Accounts
         public ActionResult Index()
         {
             return View();
@@ -25,7 +26,6 @@ namespace QaisYousuf.Web.Controllers
         public ActionResult Register()
         {
             return View();
-
         }
 
         [HttpPost]
@@ -36,16 +36,15 @@ namespace QaisYousuf.Web.Controllers
                 return View(viewmodel);
             }
 
-            bool registerSuccess = authServices.Register(viewmodel.Email, viewmodel.UserName, viewmodel.Password, out int? userId);
+            bool registerSuccess = authService.Register(viewmodel.Email, viewmodel
+                .UserName, viewmodel.Password, out int? userId);
 
             if(!registerSuccess)
             {
                 ModelState.AddModelError("", "User already exists");
                 return View(viewmodel);
             }
-
-            TempData["Success"] = "Registratin Successful";
-
+            TempData["Success"] = "Registration Successful";
             return RedirectToAction(nameof(Register));
         }
     }
