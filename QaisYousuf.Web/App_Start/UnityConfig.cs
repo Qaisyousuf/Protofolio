@@ -1,5 +1,6 @@
 using QaisYousuf.Data.Interfaces;
 using QaisYousuf.Data.Concrete_Implementation;
+using QaisYousuf.Services;
 using System;
 
 using Unity;
@@ -45,6 +46,7 @@ namespace QaisYousuf.Web
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
             container.RegisterType<IUnitOfWork, UnitOfWork>();
+            Container.RegisterType<IAuthenticationServices, AuthenticationServices>();
         }
     }
 }
