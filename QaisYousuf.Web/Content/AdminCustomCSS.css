@@ -1,10 +1,9 @@
-﻿body{
-    padding-top:70px;
+﻿body {
+    padding-top:50px;
+}
+.side-nav .logo-wrapper{
+    height:150px;
 }
 .double-nav .breadcrumb-dn {
     color: #fff;
-}
-.side-nav .logo-wrapper {
-    height: 140px;
-    
 }

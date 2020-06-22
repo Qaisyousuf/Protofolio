@@ -25,7 +25,8 @@ namespace QaisYousuf.Web.App_Start
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js",
-                      "~/Scripts/mdb.min.js"));
+                      "~/Scripts/mdb.min.js",
+                      "~/Scripts/AdminLayoutScripts.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
