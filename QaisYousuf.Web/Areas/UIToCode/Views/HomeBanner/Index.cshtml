@@ -1,63 +1,205 @@
-﻿@model IEnumerable<QaisYousuf.Models.HomeBanner>
-
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    ViewBag.Title = "HomeBanner";
 }
 
-<h2>Index</h2>
+<!-- Card -->
+<div class="card">
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SubTitle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BackgroundImage)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SliderImagesUrl)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ButtonUrl)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ButtonText)
-        </th>
-        <th></th>
-    </tr>
+    <!-- Card image -->
+    <!-- Card content -->
+    <div class="card-body">
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SubTitle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BackgroundImage)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SliderImagesUrl)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ButtonUrl)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ButtonText)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
+        <!-- Title -->
+        <div>
+            <h4 class="card-title text-center">List Home Banner</h4>
+            <a class="btn btn-primary btn-rounded" style="margin-bottom:10px" onclick="PopupForm('@Url.Action("Create","HomeBanner",new { Area="UIToCode"})')"><i class="fa fa-plus"></i> Add New Record</a>
+            <hr />
+            <table id="dataTable" class="table table-bordered table-hover table-striped table-responsive-sm ">
+                <thead class="  mdb-color white-text">
+                    <tr class="pt-2">
+                        <th><i class="fas fa-hashtag"></i> Ttitle</th>
+                        <th><i class="fas fa-align-center"></i> SubTitle</th>
+                        <th><i class="fas fa-check-square"></i> Button Text</th>
+                        <th><i class="fas fa-wrench"></i> Actions</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+<!-- Card -->
+
+@section scripts{
+   
+    <script>
+         var Popup, dataTable;
+        $(document).ready(function () {
+            dataTable = $("#dataTable").DataTable({
+                "ajax": {
+                    "url": "/UIToCode/HomeBanner/GetHomeBanner",
+                    "type": "GET",
+                    "datatype": "json",
+ 
+                },
+                "columns": [
+                    { "data": "Title" },
+                    { "data": "SubTitle" },
+                    { "data": "ButtonText" },
+
+                    {
+                        "data": "actions",
+                        "className": "dt-body-right",
+                        "data": "Id", "render": function (data)
+                         
+                        {
+                        return "<a class='btn btn-info btn-md' onclick=PopupForm('@Url.Action("Edit","HomeBanner")/" + data + "')><i class='far fa-edit'></i> Edit </a> | <a class='btn btn-info btn-md' onclick=PopupForm('@Url.Action("Details", "HomeBanner")/" + data + "')><i class='far fa-edit'></i> Details </a> | <a class='btn btn-danger btn-md' style='margin-left:5px' onclick=Delete("+data+")><i class='fa fa-trash'></i> Delete </a>";
+                    },
+                        "orderable": false,
+                        "searchable":false,
+                        "width":"150px"
+                    }
+
+                ],
+                "language": {
+
+                    "emptyTable" : "No data found, Please click on <b>Add New</b> Button"
+                }
+            });
+        });
+
+        function PopupForm(url) {
+           
+            var formDiv = $('<div/>');
+            $.get(url)
+                .done(function (response) {
+                    formDiv.html(response);
+
+                    Popup = formDiv.dialog({
+                        modal: true,
+                        open: function () {
+                            overlayOpacityNormal = $('.ui-widget-overlay').css('opacity');
+                            $('.ui-widget-overlay').css('opacity', .9);
+                        },
+                        beforeClose: function () {
+                            $('.ui-widget-overlay').css('opacity', .9);
+                        },
+                        autoOpen: true,
+                        resizable: true,
+                        title: 'Fill the form',
+                        height: 550,
+                        width: 700,
+                        keyboard: true,
+                        show: true ,
+                        close: function () {
+                            Popup.dialog('destroy').remove();
+                        }
+
+                    });
+                });
+        }
+        function SubmitFormCreate(form) {
+            $.validator.unobtrusive.parse(form);
+            if ($(form).valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: form.action,
+                    data: $(form).serialize(),
+                    success: function (data) {
+                        if (data.success) {
+                            Popup.dialog('close');
+                            dataTable.ajax.reload();
+
+                            $.notify(data.message, {
+                                globalPosition: "top center",
+                                className: "success"
+                            });
+
+
+                        }
+                    }
+                });
+            }
+            return false;
+        }
+
+        function SubmitFormEdit(form) {
+            $.validator.unobtrusive.parse(form);
+            if ($(form).valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: form.action,
+                    data: $(form).serialize(),
+                    success: function (data) {
+                        if (data.success) {
+                            Popup.dialog('close');
+                            dataTable.ajax.reload();
+
+                            $.notify(data.message, {
+                                globalPosition: "top center",
+                                className: "success"
+                            });
+
+
+                        }
+                    }
+                });
+            }
+            return false;
+        }
+        function SubmitFormDetails(form) {
+            $.validator.unobtrusive.parse(form);
+            if ($(form).valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: form.action,
+                    data: $(form).serialize(),
+                    success: function (data) {
+                        if (data.success) {
+                            Popup.dialog('close');
+                            dataTable.ajax.reload();
+
+                            $.notify(data.message, {
+                                globalPosition: "top center",
+                                className: "success"
+                            });
+
+
+                        }
+                    }
+                });
+            }
+            return false;
+        }
+        function Delete(id) {
+            if (confirm('Are You Sure to Delete this  Record ?'))
+            {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("Delete","HomeBanner")/' + id,
+                    success: function (data) {
+                        if (data.success)
+                        {
+                            dataTable.ajax.reload();
+
+                            $.notify(data.message, {
+                                globalPosition: "top center",
+                                className: "success"
+                            })
+
+                        }
+                    }
+
+                });
+            }
+        }
+
+    </script>
 }
 
-</table>
+
+
+
+
+

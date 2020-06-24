@@ -23,9 +23,12 @@ namespace QaisYousuf.Web.App_Start
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
+                 "~/Scripts/jquery-ui-1.12.1.min.js",
+                      "~/Scripts/bootstrap.min.js",
                       "~/Scripts/respond.js",
+                      "~/Scripts/popper-utils.min.js",
                       "~/Scripts/mdb.min.js",
+                      "~/Scripts/notify.min.js",
                       "~/Scripts/AdminLayoutScripts.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

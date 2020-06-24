@@ -3,9 +3,10 @@ html,
 body,
 header,
 .view {
-    height: 100%;
-    padding-top: 50px;
+    padding-top: 30px;
+    background-color: #fafafa;
 }
+
 .side-nav .logo-wrapper{
     height:150px;
 }
