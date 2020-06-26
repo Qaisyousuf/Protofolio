@@ -54,7 +54,7 @@
                         "data": "Id", "render": function (data)
                          
                         {
-                        return "<a class='btn btn-info btn-md' onclick=PopupForm('@Url.Action("Edit","HomeBanner")/" + data + "')><i class='far fa-edit'></i> Edit </a> | <a class='btn btn-info btn-md' onclick=PopupForm('@Url.Action("Details", "HomeBanner")/" + data + "')><i class='far fa-edit'></i> Details </a> | <a class='btn btn-danger btn-md' style='margin-left:5px' onclick=Delete("+data+")><i class='fa fa-trash'></i> Delete </a>";
+                            return "<a class='btn btn-info btn-md btn-rounded' onclick=PopupForm('@Url.Action("Edit","HomeBanner")/" + data + "')><i class='far fa-edit'></i> Edit </a> | <a class='btn btn-default btn-md btn-rounded' onclick=PopupForm('@Url.Action("Details", "HomeBanner")/" + data + "')><i class='fas fa-info-circle'> </i> Details </a> | <a class='btn btn-danger btn-md btn-rounded' style='margin-left:5px' onclick=Delete("+data+")><i class='fa fa-trash'></i> Delete </a>";
                     },
                         "orderable": false,
                         "searchable":false,
@@ -68,6 +68,8 @@
                 }
             });
         });
+
+
 
         function PopupForm(url) {
            
@@ -87,11 +89,10 @@
                         },
                         autoOpen: true,
                         resizable: true,
-                        title: 'Fill the form',
-                        height: 550,
+                        title:'Entry Form',
+                        height: 570,
                         width: 700,
-                        keyboard: true,
-                        show: true ,
+                        
                         close: function () {
                             Popup.dialog('destroy').remove();
                         }

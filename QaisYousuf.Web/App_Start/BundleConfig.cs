@@ -21,12 +21,13 @@ namespace QaisYousuf.Web.App_Start
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
+            bundles.Add(new ScriptBundle("~/bundles/popper").Include(
+              "~/Scripts/umd/popper.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                  "~/Scripts/jquery-ui-1.12.1.min.js",
                       "~/Scripts/bootstrap.min.js",
-                      "~/Scripts/respond.js",
-                      "~/Scripts/popper-utils.min.js",
+                      "~/Scripts/respond.js",            
                       "~/Scripts/mdb.min.js",
                       "~/Scripts/notify.min.js",
                       "~/Scripts/AdminLayoutScripts.js"));

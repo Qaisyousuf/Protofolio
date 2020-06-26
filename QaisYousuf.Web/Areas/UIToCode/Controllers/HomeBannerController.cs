@@ -136,7 +136,7 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
             uow.HomeBannerRepository.Remove(homebanner);
             uow.Commit();
 
-            return Json(new { success = true, message = "Reocrd Deleted Successfuly" }, JsonRequestBehavior.AllowGet);
+            return Json(new { success = true, message = "Record Deleted Successfuly" }, JsonRequestBehavior.AllowGet);
         }
         [HttpGet]
         public ActionResult Details(int id)

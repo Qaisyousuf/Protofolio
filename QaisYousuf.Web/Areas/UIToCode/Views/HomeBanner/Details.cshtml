@@ -2,66 +2,86 @@
 @{
     Layout = null;
 }
-<div class="d-flex justify-content-center">
-    @using (Html.BeginForm("Details", "HomeBanner", FormMethod.Get, new { onsubmit = "return SubmitFormDetails(this)" }))
-    {
-        @Html.HiddenFor(model => model.Id)
-        <div class="table-wrapper table-responsive table-bordered table-striped ">
-            <!--Table-->
-            <table class="table table-hover mb-0 ">
-                <tbody>
-                    <tr>
-                        <th scope="row">
-                            <a class="btn-floating btn-sm blue-gradient"><i class="fas fa-tag"></i></a>
-                        </th>
-                        <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Title)</td>
-                        <td class="text-primary"> @Html.DisplayFor(model => model.Title)</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <a class="btn-floating btn-sm blue-gradient"><i class="fas fa-align-center"></i></a>
-                        </th>
-                        <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.SubTitle)</td>
 
-                        <td class="text-primary"> @Html.DisplayFor(model => model.SubTitle)</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <a class="btn-floating btn-sm blue-gradient"><i class="fas fa-image"></i> </a>
-                        </th>
-                        <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.BackgroundImage)</td>
-                        <td class="text-primary"> @Html.DisplayFor(model => model.BackgroundImage)</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <a class="btn-floating btn-sm blue-gradient"><i class="fas fa-spell-check"></i></a>
-                        </th>
-                        <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.ButtonText)</td>
-                        <td class="text-primary">  @Html.DisplayFor(model => model.ButtonText)</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <a class="btn-floating btn-sm blue-gradient"><i class="fas fa-external-link-alt"></i></a>
-                        </th>
-                        <td class="font-weight-bold">   @Html.DisplayNameFor(model => model.ButtonUrl)</td>
-                        <td class="text-primary">  @Html.DisplayFor(model => model.ButtonUrl)</td>
-                    </tr>
+<div class="card card-cascade narrower mb-1 z-depth-0" style="margin-top: 28px">
 
-                    <tr>
-                        <th scope="row">
-                            <a class="btn-floating btn-sm blue-gradient"><i class="fas fa-external-link-alt"></i></a>
-                        </th>
-                        <td class="font-weight-bold">   @Html.DisplayNameFor(model => model.SliderImagesUrl)</td>
-                        <td class="text-primary">  @Html.DisplayFor(model => model.SliderImagesUrl)</td>
-                    </tr>
-
-                </tbody>
-                <!--Table body-->
-            </table>
-            <!--Table-->
+    <!--Card image-->
+    <div class="view view-cascade pt-0">
+        <div class=" card-header light-blue lighten-1 white-text text-uppercase font-weight-bold text-center py-3">
+            Detials of <span class="text-warning">@Model.Title</span>  Record
         </div>
 
-    }
+    </div>
+    <!--/.Card image-->
+    <!--Card content-->
+    <div class="card-body card-body-cascade d-flex justify-content-center mt-n2">
+        @using (Html.BeginForm("Details", "HomeBanner", FormMethod.Get, new { onsubmit = "return SubmitFormDetails(this)" }))
+        {
+            @Html.HiddenFor(model => model.Id)
+            <div class="table-wrapper table-responsive table-bordered table-striped ">
+                <!--Table-->
+                <table class="table table-hover mb-0 ">
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-tag"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Title)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.Title)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.SubTitle)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.SubTitle)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-image"></i> </a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.BackgroundImage)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.BackgroundImage)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-spell-check"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.ButtonText)</td>
+                            <td class="text-primary">  @Html.DisplayFor(model => model.ButtonText)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
+                            </th>
+                            <td class="font-weight-bold">   @Html.DisplayNameFor(model => model.ButtonUrl)</td>
+                            <td class="text-primary">  @Html.DisplayFor(model => model.ButtonUrl)</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
+                            </th>
+                            <td class="font-weight-bold">   @Html.DisplayNameFor(model => model.SliderImagesUrl)</td>
+                            <td class="text-primary">  @Html.DisplayFor(model => model.SliderImagesUrl)</td>
+                        </tr>
+
+                    </tbody>
+                    <!--Table body-->
+                </table>
+                <!--Table-->
+            </div>
+
+        }
+      
+
+
+
+    </div>
+    <!--/.Card content-->
+
 </div>
+
 
 

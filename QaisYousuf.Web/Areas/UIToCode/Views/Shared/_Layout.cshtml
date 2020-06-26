@@ -6,8 +6,8 @@
     <title>@ViewBag.Title -UI To Code</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    
     @Styles.Render("~/Content/css")
-
     <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
     @Styles.Render("~/Content/AdminCustomCSS.css")
     @Scripts.Render("~/bundles/modernizr")
@@ -73,16 +73,16 @@
                     <ul class="collapsible collapsible-accordion">
                         <li>
                             <a class="collapsible-header waves-effect arrow-r">
-                                <i class="fas fa-chevron-right"></i> Submit
-                                blog<i class="fas fa-angle-down rotate-icon"></i>
+                                <i class="fas fa-home"></i> Home
+                                <i class="fas fa-angle-down rotate-icon"></i>
                             </a>
                             <div class="collapsible-body">
                                 <ul>
                                     <li>
-                                        <a href="#" class="waves-effect">Submit listing</a>
+                                        <a href="/UIToCode/HomeBanner/Index" class="waves-effect">Banner</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="waves-effect">Registration form</a>
+                                        <a href="/UIToCode/DataCollection/Index" class="waves-effect">Data Collection</a>
                                     </li>
                                 </ul>
                             </div>
@@ -166,24 +166,24 @@
             <div class="breadcrumb-dn mr-auto">
                 <p>UI To Code Admin</p>
             </div>
-           
+
             <ul class="nav navbar-nav nav-flex-icons ml-auto">
-               
+
                 <li class="nav-item">
                     @Html.Partial("_LoginPartial")
                 </li>
-               
+
                 @*<li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-               aria-haspopup="true" aria-expanded="false">
-                Dropdown
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-        </li>*@
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>*@
             </ul>
         </nav>
         <!-- /.Navbar -->
@@ -204,6 +204,7 @@
     @Scripts.Render("~/bundles/popper")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    
 
 
 </body>
