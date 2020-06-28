@@ -32,9 +32,6 @@
 
 @section scripts{
 
-
-    
-
     <script>
          var Popup, dataTable;
         $(document).ready(function () {
@@ -80,13 +77,15 @@
             $.get(url)
                 .done(function (response) {
                     formDiv.html(response);
-
+                   
                     Popup = formDiv.dialog({
                         modal: true,
+                        
                         open: function () {
                             overlayOpacityNormal = $('.ui-widget-overlay').css('opacity');
                             $('.ui-widget-overlay').css('opacity', .9);
                         },
+                      
                         beforeClose: function () {
                             $('.ui-widget-overlay').css('opacity', .9);
                         },
@@ -94,8 +93,8 @@
                         resizable: true,
                         title: 'Entry Form',
                         height: 570,
-                        width: 700,
-
+                        width: 600,
+                       
                         close: function () {
                             Popup.dialog('destroy').remove();
                         }

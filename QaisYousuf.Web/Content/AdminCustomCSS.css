@@ -6,10 +6,33 @@ header,
     padding-top: 30px;
     background-color: #fafafa;
 }
+.ui-widget {
+    position: absolute;
+    height: 100px;
+    width: 600px;
+    top: 100px;
+    left: 383px;
+    z-index: 101;
+}
 
-
-.side-nav .logo-wrapper{
-    height:150px;
+ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-draggable ui-resizable {
+    position: absolute;
+    height: 100px;
+    width: 600px;
+    top: 200px;
+    left: 383px;
+    z-index: 101;
+}
+ui-dialog {
+    position: absolute;
+    height: auto;
+    width: 600px;
+    top: 100px;
+    left: 383px;
+    z-index: 101;
+}
+.side-nav .logo-wrapper {
+    height: 150px;
 }
 .double-nav .breadcrumb-dn {
     color: #fff;

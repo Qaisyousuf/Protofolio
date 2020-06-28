@@ -1,22 +1,22 @@
-﻿@{
-    ViewBag.Title = "HomeBanner";
+﻿
+@{
+    ViewBag.Title = "Index";
 }
-
-<!-- Card -->
 <div class="card">
 
     <div class="card-body">
 
         <!-- Title -->
         <div>
-            <h4 class="card-title text-center">List Home Banner</h4>
-            <a class="btn btn-primary btn-rounded" style="margin-bottom:10px" onclick="PopupForm('@Url.Action("Create","HomeBanner",new { Area="UIToCode"})')"><i class="fa fa-plus"></i> Add New Record</a>
+            <h4 class="card-title text-center">List of Work Quality Section</h4>
+            <a class="btn btn-primary btn-rounded" style="margin-bottom:10px" onclick="PopupForm('@Url.Action("Create","WorkQualitySection",new { Area="UIToCode"})')"><i class="fa fa-plus"></i> Add New Record</a>
             <hr />
             <table id="dataTable" class="table table-bordered table-hover table-striped table-responsive-sm ">
                 <thead class="  mdb-color white-text">
                     <tr class="pt-2">
+                        <th><i class="fas fa-sort-numeric-down"></i> Id</th>
                         <th><i class="fas fa-hashtag"></i> Ttitle</th>
-                        <th><i class="fas fa-align-center"></i> SubTitle</th>
+                        <th><i class="fas fa-align-center"></i> Modal Title</th>
                         <th><i class="fas fa-check-square"></i> Button Text</th>
                         <th><i class="fas fa-wrench"></i> Actions</th>
                     </tr>
@@ -30,29 +30,30 @@
 <!-- Card -->
 
 @section scripts{
-   
+
     <script>
          var Popup, dataTable;
         $(document).ready(function () {
             dataTable = $("#dataTable").DataTable({
                 "ajax": {
-                    "url": "/UIToCode/HomeBanner/GetHomeBanner",
+                    "url": "/UIToCode/WorkQualitySection/GetWorkQualitySection",
                     "type": "GET",
                     "datatype": "json",
- 
+
                 },
                 "columns": [
+                    { "data": "Id" },
                     { "data": "Title" },
-                    { "data": "SubTitle" },
+                    { "data": "ModalTitle" },
                     { "data": "ButtonText" },
 
                     {
                         "data": "actions",
                         "className": "dt-body-right",
                         "data": "Id", "render": function (data)
-                         
+
                         {
-                            return "<a class='btn btn-info btn-md btn-rounded' onclick=PopupForm('@Url.Action("Edit","HomeBanner")/" + data + "')><i class='far fa-edit'></i> Edit </a> | <a class='btn btn-default btn-md btn-rounded' onclick=PopupForm('@Url.Action("Details", "HomeBanner")/" + data + "')><i class='fas fa-info-circle'> </i> Details </a> | <a class='btn btn-danger btn-md btn-rounded' style='margin-left:5px' onclick=Delete("+data+")><i class='fa fa-trash'></i> Delete </a>";
+                            return "<a class='btn btn-info btn-md btn-rounded' onclick=PopupForm('@Url.Action("Edit", "WorkQualitySection")/" + data + "')><i class='far fa-edit'></i> Edit </a> | <a class='btn btn-default btn-md btn-rounded' onclick=PopupForm('@Url.Action("Details", "WorkQualitySection")/" + data + "')><i class='fas fa-info-circle'> </i> Details </a> | <a class='btn btn-danger btn-md btn-rounded' style='margin-left:5px' onclick=Delete("+data+")><i class='fa fa-trash'></i> Delete </a>";
                     },
                         "orderable": false,
                         "searchable":false,
@@ -70,7 +71,7 @@
 
 
         function PopupForm(url) {
-           
+
             var formDiv = $('<div/>');
             $.get(url)
                 .done(function (response) {
@@ -90,7 +91,7 @@
                         title:'Entry Form',
                         height: 570,
                         width: 600,
-                        
+
                         close: function () {
                             Popup.dialog('destroy').remove();
                         }
@@ -176,7 +177,7 @@
             {
                 $.ajax({
                     type: "POST",
-                    url: '@Url.Action("Delete","HomeBanner")/' + id,
+                    url: '@Url.Action("Delete", "WorkQualitySection")/' + id,
                     success: function (data) {
                         if (data.success)
                         {
@@ -196,9 +197,4 @@
 
     </script>
 }
-
-
-
-
-
 
