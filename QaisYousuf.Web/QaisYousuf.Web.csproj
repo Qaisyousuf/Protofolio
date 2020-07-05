@@ -561,6 +561,8 @@
     <Content Include="Areas\UIToCode\Views\DataCollection\Details.cshtml" />
     <Content Include="Areas\UIToCode\Views\WorkQualitySection\Index.cshtml" />
     <Content Include="Areas\UIToCode\Views\WorkQualitySection\Create.cshtml" />
+    <Content Include="Areas\UIToCode\Views\WorkQualitySection\Edit.cshtml" />
+    <Content Include="Areas\UIToCode\Views\WorkQualitySection\Details.cshtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />

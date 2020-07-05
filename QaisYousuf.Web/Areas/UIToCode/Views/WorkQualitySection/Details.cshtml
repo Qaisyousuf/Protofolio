@@ -1,4 +1,4 @@
-﻿@model QaisYousuf.ViewModels.HomeBannerViewModel
+﻿@model QaisYousuf.ViewModels.WorkQualitySectionViewModel
 @{
     Layout = null;
 }
@@ -29,20 +29,13 @@
                             <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Title)</td>
                             <td class="text-primary"> @Html.DisplayFor(model => model.Title)</td>
                         </tr>
-                        <tr>
-                            <th scope="row">
-                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
-                            </th>
-                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.SubTitle)</td>
 
-                            <td class="text-primary"> @Html.DisplayFor(model => model.SubTitle)</td>
-                        </tr>
                         <tr>
                             <th scope="row">
                                 <a class="btn-floating btn-sm btn-primary"><i class="fas fa-image"></i> </a>
                             </th>
-                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.BackgroundImage)</td>
-                            <td class="text-primary"> @Html.DisplayFor(model => model.BackgroundImage)</td>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.ImageUrl)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.ImageUrl)</td>
                         </tr>
                         <tr>
                             <th scope="row">
@@ -55,18 +48,39 @@
                             <th scope="row">
                                 <a class="btn-floating btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
                             </th>
-                            <td class="font-weight-bold">   @Html.DisplayNameFor(model => model.ButtonUrl)</td>
-                            <td class="text-primary">  @Html.DisplayFor(model => model.ButtonUrl)</td>
+                            <td class="font-weight-bold">   @Html.DisplayNameFor(model => model.ModalTitle)</td>
+                            <td class="text-primary">  @Html.DisplayFor(model => model.ModalTitle)</td>
                         </tr>
 
-                        <tr>
+
+                        <tr class="">
                             <th scope="row">
-                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
+                                <a class="btn-floating btn-sm btn-primary"><i class="far fa-newspaper"></i></a>
                             </th>
-                            <td class="font-weight-bold">   @Html.DisplayNameFor(model => model.SliderImagesUrl)</td>
-                            <td class="text-primary">  @Html.DisplayFor(model => model.SliderImagesUrl)</td>
+                            <td class="font-weight-bold">  @Html.DisplayNameFor(model => model.Content)</td>
+                            <td class="collapse" id="collapseExample"> @Html.Raw(Model.Content)</td>
+                            <td>
+                                <button class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#collapseExample"
+                                        aria-expanded="false" aria-controls="collapseExample">
+                                    Read more
+                                </button>
+                            </td>
                         </tr>
+                        <tr class="">
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="far fa-newspaper"></i></a>
+                            </th>
+                            <td class="font-weight-bold">  @Html.DisplayNameFor(model => model.ModalsContent)</td>
+                            <td class="collapse" id="collapseExample"> @Html.Raw(Model.ModalsContent)</td>
+                            <td>
+                                <button class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#collapseExample"
+                                        aria-expanded="false" aria-controls="collapseExample">
+                                    Read more
+                                </button>
+                            </td>
 
+
+                        </tr>
                     </tbody>
                     <!--Table body-->
                 </table>
@@ -74,7 +88,7 @@
             </div>
 
         }
-      
+
 
 
 
@@ -82,6 +96,3 @@
     <!--/.Card content-->
 
 </div>
-
-
-

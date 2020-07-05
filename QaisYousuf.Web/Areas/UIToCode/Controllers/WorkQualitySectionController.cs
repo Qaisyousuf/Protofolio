@@ -75,5 +75,85 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
             
             return Json(new { success = true, message = "Record Saved Successfully" }, JsonRequestBehavior.AllowGet);
         }
+
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var workQuality = uow.WorkQualitySectionRepository.GetById(id);
+
+            WorkQualitySectionViewModel viewmodel = new WorkQualitySectionViewModel
+            {
+                Id=workQuality.Id,
+                Title=workQuality.Title,
+                Content=workQuality.Content,
+                ImageUrl=workQuality.ImageUrl,
+                ButtonText=workQuality.ButtonText,
+                ModalTitle=workQuality.ModalTitle,
+                ModalsContent=workQuality.ModalsContent
+
+            };
+            return View(viewmodel);
+        }
+        [HttpPost]
+        public ActionResult Edit(WorkQualitySectionViewModel viewmodel)
+        {
+            if(ModelState.IsValid)
+            {
+                var workQuality = uow.WorkQualitySectionRepository.GetById(viewmodel.Id);
+
+                workQuality.Id = viewmodel.Id;
+                workQuality.Title = viewmodel.Title;
+                workQuality.Content = viewmodel.Content;
+                workQuality.ImageUrl = viewmodel.ImageUrl;
+                workQuality.ButtonText = viewmodel.ButtonText;
+                workQuality.ModalTitle = viewmodel.ModalTitle;
+                workQuality.ModalsContent = viewmodel.ModalsContent;
+
+
+                uow.WorkQualitySectionRepository.Update(workQuality);
+                uow.Commit();
+                
+            }
+            return Json(new { success = true, message = "Record Updated Successfuly" }, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            var workQuality = uow.WorkQualitySectionRepository.GetById(id);
+
+            WorkQualitySectionViewModel viewmodel = new WorkQualitySectionViewModel
+            {
+                Id=workQuality.Id,
+                Title=workQuality.Title,
+                Content=workQuality.Content,
+                ImageUrl=workQuality.ImageUrl,
+                ButtonText=workQuality.ButtonText,
+                ModalTitle=workQuality.ModalTitle,
+                ModalsContent=workQuality.ModalsContent,
+            };
+
+            uow.WorkQualitySectionRepository.Remove(workQuality);
+            uow.Commit();
+
+            return Json(new { success = true, message = "Record Deleted Successfuly" }, JsonRequestBehavior.AllowGet);
+        }
+        [HttpGet]
+        public ActionResult Details(int id)
+        {
+            var workQuality = uow.WorkQualitySectionRepository.GetById(id);
+
+            WorkQualitySectionViewModel viewmodel = new WorkQualitySectionViewModel
+            {
+                Id=workQuality.Id,
+                Title=workQuality.Title,
+                Content=workQuality.Content,
+                ImageUrl=workQuality.ImageUrl,
+                ButtonText=workQuality.ButtonText,
+                ModalTitle=workQuality.ModalTitle,
+                ModalsContent=workQuality.ModalsContent,
+            };
+            return View(viewmodel);
+        }
     }
 }
