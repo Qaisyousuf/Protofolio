@@ -148,6 +148,14 @@
     <Compile Include="Migrations\202006151629180_Initial.designer.cs">
       <DependentUpon>202006151629180_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007051459309_TableNameChanged.cs" />
+    <Compile Include="Migrations\202007051459309_TableNameChanged.designer.cs">
+      <DependentUpon>202007051459309_TableNameChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007111140530_PlatformDesignPropertyNameChanged.cs" />
+    <Compile Include="Migrations\202007111140530_PlatformDesignPropertyNameChanged.designer.cs">
+      <DependentUpon>202007111140530_PlatformDesignPropertyNameChanged.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -164,6 +172,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202006151629180_Initial.resx">
       <DependentUpon>202006151629180_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007051459309_TableNameChanged.resx">
+      <DependentUpon>202007051459309_TableNameChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007111140530_PlatformDesignPropertyNameChanged.resx">
+      <DependentUpon>202007111140530_PlatformDesignPropertyNameChanged.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

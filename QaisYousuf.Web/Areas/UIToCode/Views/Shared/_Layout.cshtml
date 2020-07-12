@@ -85,6 +85,16 @@
                                     <li>
                                         <a href="/UIToCode/DataCollection/Index" class="waves-effect">Data Collection</a>
                                     </li>
+
+                                    <li>
+                                        <a href="/UIToCode/WorkQualitySection/Index" class="waves-effect">Work Quality</a>
+                                    </li>
+                                    <li>
+                                        <a href="/UIToCode/ProjectCounting/Index" class="waves-effect">Project Counting</a>
+                                    </li>
+                                    <li>
+                                        <a href="/UIToCode/PlatformDesign/Index" class="waves-effect">Platform Design</a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
@@ -195,6 +205,7 @@
 
     <div class="container body-content">
         @RenderBody()
+        @RenderSection("AdminCustomCSS", required: true)
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - UI To Code</p>

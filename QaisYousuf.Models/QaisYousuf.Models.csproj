@@ -67,7 +67,7 @@
     <Compile Include="PortfolioAbout.cs" />
     <Compile Include="PortfolioProject.cs" />
     <Compile Include="PortfolioBanner.cs" />
-    <Compile Include="ProjectCountiing.cs" />
+    <Compile Include="ProjectCounting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequstingUIDesign.cs" />
     <Compile Include="RequstingUIForm.cs" />

@@ -6,31 +6,21 @@ header,
     padding-top: 30px;
     background-color: #fafafa;
 }
-.ui-widget {
-    position: absolute;
-    height: 100px;
-    width: 600px;
-    top: 100px;
-    left: 383px;
-    z-index: 101;
+
+.ui-widget-header, .ui-state-default, ui-button {
+    background: #42a5f5;
+    border: 1px solid #b9cd6d;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.ui-dialog {
+    position: relative;
+    padding-top: 4px;
+    
+    border: 3px solid white;
+    
 }
 
-ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-draggable ui-resizable {
-    position: absolute;
-    height: 100px;
-    width: 600px;
-    top: 200px;
-    left: 383px;
-    z-index: 101;
-}
-ui-dialog {
-    position: absolute;
-    height: auto;
-    width: 600px;
-    top: 100px;
-    left: 383px;
-    z-index: 101;
-}
 .side-nav .logo-wrapper {
     height: 150px;
 }

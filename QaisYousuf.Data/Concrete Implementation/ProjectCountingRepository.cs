@@ -4,7 +4,7 @@ using QaisYousuf.Models;
 
 namespace QaisYousuf.Data.Concrete_Implementation
 {
-    public class ProjectCountingRepository:Repository<ProjectCountiing>,IProjectCountingRepository
+    public class ProjectCountingRepository:Repository<ProjectCounting>,IProjectCountingRepository
     {
         public ProjectCountingRepository(UIContext context):base(context)
         {

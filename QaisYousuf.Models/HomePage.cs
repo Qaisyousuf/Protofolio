@@ -29,7 +29,7 @@ namespace QaisYousuf.Models
 
         public int ProjectCountingId { get; set; }
         [ForeignKey("ProjectCountingId")]
-        public virtual ProjectCountiing ProjectCountiing { get; set; }
+        public virtual ProjectCounting ProjectCountiing { get; set; }
 
         public int PlatformDesignId { get; set; }
         [ForeignKey("PlatformDesignId")]

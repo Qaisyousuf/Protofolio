@@ -35,7 +35,7 @@ namespace QaisYousuf.Data.Context
         public DbSet<PortfolioAbout> PortfolioAbouts { get; set; }
         public DbSet<PortfolioBanner> PortfolioBanners { get; set; }
         public DbSet<PortfolioProject> PortfolioProjects { get; set; }
-        public DbSet<ProjectCountiing> ProjectCountiings { get; set; }
+        public DbSet<ProjectCounting> ProjectCountiings { get; set; }
         public DbSet<RequstingUIDesign> RequstingUIDesigns { get; set; }
         public DbSet<RequstingUIForm> RequstingUIForms { get; set; }
         public DbSet<RoleModel> Roles { get; set; }

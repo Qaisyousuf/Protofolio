@@ -2,7 +2,7 @@
 
 namespace QaisYousuf.Data.Interfaces
 {
-    public interface IProjectCountingRepository:IRepository<ProjectCountiing>
+    public interface IProjectCountingRepository:IRepository<ProjectCounting>
     {
     }
 }

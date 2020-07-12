@@ -6,20 +6,18 @@ using System.Threading.Tasks;
 
 namespace QaisYousuf.Models
 {
-    public class PlatformDesign:EntityBase
+    public class ProjectCounting:EntityBase
     {
         public string MainTitle { get; set; }
 
         public string SubTitle { get; set; }
 
-        public string Content { get; set; }
-
         public string ImageUrl { get; set; }
 
-        public string ButtonText { get; set; }
+        public string Title { get; set; }
 
-        public string ModalTitle { get; set; }
+        public string CountingNumber { get; set; }
 
-        public string ModalsContent { get; set; }
+
     }
 }

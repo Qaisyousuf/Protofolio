@@ -29,6 +29,11 @@
 
 </div>
 <!-- Card -->
+@section AdminCustomCSS{
+
+    <link href="~/Content/AdminCustomCSS.css" rel="stylesheet" />
+
+}
 
 @section scripts{
 
@@ -77,15 +82,15 @@
             $.get(url)
                 .done(function (response) {
                     formDiv.html(response);
-                   
+
                     Popup = formDiv.dialog({
                         modal: true,
-                        
+
                         open: function () {
                             overlayOpacityNormal = $('.ui-widget-overlay').css('opacity');
                             $('.ui-widget-overlay').css('opacity', .9);
                         },
-                      
+
                         beforeClose: function () {
                             $('.ui-widget-overlay').css('opacity', .9);
                         },
@@ -94,7 +99,7 @@
                         title: 'Entry Form',
                         height: 570,
                         width: 600,
-                       
+
                         close: function () {
                             Popup.dialog('destroy').remove();
                         }

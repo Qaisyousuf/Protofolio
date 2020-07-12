@@ -1,25 +1,26 @@
 ﻿
 @{
-                /**/
-
-                ViewBag.Title = "Index";
+    ViewBag.Title = "Index";
 }
+
 <div class="card">
 
+    <!-- Card image -->
+    <!-- Card content -->
     <div class="card-body">
 
         <!-- Title -->
         <div>
-            <h4 class="card-title text-center">List of Work Quality Section</h4>
-            <a class="btn btn-primary btn-rounded" style="margin-bottom:10px" onclick="PopupForm('@Url.Action("Create","WorkQualitySection",new { Area="UIToCode"})')"><i class="fa fa-plus"></i> Add New Record</a>
+            <h4 class="card-title text-center">List Platform Design</h4>
+            <a class="btn btn-primary btn-rounded" style="margin-bottom:10px" onclick="PopupForm('@Url.Action("Create","PlatformDesign",new { Area="UIToCode"})')"><i class="fa fa-plus"></i> Add New Record</a>
             <hr />
             <table id="dataTable" class="table table-bordered table-hover table-striped table-responsive-sm ">
                 <thead class="  mdb-color white-text">
                     <tr class="pt-2">
                         <th><i class="fas fa-sort-numeric-down"></i> Id</th>
-                        <th><i class="fas fa-hashtag"></i> Ttitle</th>
-                        <th><i class="fas fa-align-center"></i> Modal Title</th>
-                        <th><i class="fas fa-check-square"></i> Button Text</th>
+                        <th><i class="fas fa-hashtag"></i>Main Ttitle</th>
+                        <th><i class="fas fa-align-center"></i> SubTitle</th>
+                        <th><i class="fas fa-align-center"></i> Button Text</th>
                         <th><i class="fas fa-wrench"></i> Actions</th>
                     </tr>
                 </thead>
@@ -43,16 +44,17 @@
         $(document).ready(function () {
             dataTable = $("#dataTable").DataTable({
                 "ajax": {
-                    "url": "/UIToCode/WorkQualitySection/GetWorkQualitySection",
+                    "url": "/UIToCode/PlatformDesign/GetPlatformDesignData",
                     "type": "GET",
                     "datatype": "json",
 
                 },
                 "columns": [
                     { "data": "Id" },
-                    { "data": "Title" },
-                    { "data": "ModalTitle" },
+                    { "data": "MainTitle" },
+                    { "data": "SubTitle" },
                     { "data": "ButtonText" },
+
 
                     {
                         "data": "actions",
@@ -60,7 +62,7 @@
                         "data": "Id", "render": function (data)
 
                         {
-                            return "<a class='btn btn-info btn-md btn-rounded' onclick=PopupForm('@Url.Action("Edit", "WorkQualitySection")/" + data + "')><i class='far fa-edit'></i> Edit </a> | <a class='btn btn-default btn-md btn-rounded' onclick=PopupForm('@Url.Action("Details", "WorkQualitySection")/" + data + "')><i class='fas fa-info-circle'> </i> Details </a> | <a class='btn btn-danger btn-md btn-rounded' style='margin-left:5px' onclick=Delete("+data+")><i class='fa fa-trash'></i> Delete </a>";
+                            return "<a class='btn btn-info btn-md btn-rounded' onclick=PopupForm('@Url.Action("Edit", "PlatformDesign")/" + data + "')><i class='far fa-edit'></i> Edit </a> | <a class='btn btn-default btn-md btn-rounded' onclick=PopupForm('@Url.Action("Details", "PlatformDesign")/" + data + "')><i class='fas fa-info-circle'> </i> Details </a> | <a class='btn btn-danger btn-md btn-rounded' style='margin-left:5px' onclick=Delete("+data+")><i class='fa fa-trash'></i> Delete </a>";
                     },
                         "orderable": false,
                         "searchable":false,
@@ -86,18 +88,21 @@
 
                     Popup = formDiv.dialog({
                         modal: true,
+
                         open: function () {
                             overlayOpacityNormal = $('.ui-widget-overlay').css('opacity');
                             $('.ui-widget-overlay').css('opacity', .9);
                         },
+
                         beforeClose: function () {
                             $('.ui-widget-overlay').css('opacity', .9);
                         },
                         autoOpen: true,
                         resizable: true,
-                        title:'Entry Form',
+                        title: 'Entry Form',
                         height: 570,
-                        width: 600,
+                        width: 700,
+                       
 
                         close: function () {
                             Popup.dialog('destroy').remove();
@@ -184,7 +189,7 @@
             {
                 $.ajax({
                     type: "POST",
-                    url: '@Url.Action("Delete", "WorkQualitySection")/' + id,
+                    url: '@Url.Action("Delete", "PlatformDesign")/' + id,
                     success: function (data) {
                         if (data.success)
                         {
