@@ -1,0 +1,140 @@
+﻿@model QaisYousuf.ViewModels.PageViewModel
+@{
+    Layout = null;
+}
+<div class="card card-cascade narrower mb-1 z-depth-0" style="margin-top: 28px">
+
+    <!--Card image-->
+    <div class="view view-cascade pt-0">
+        <div class=" card-header light-blue lighten-1 white-text text-uppercase font-weight-bold text-center py-3">
+            Details of <span class="text-warning">@Model.Title</span>  Record
+        </div>
+
+    </div>
+    <!--/.Card image-->
+    <!--Card content-->
+    <div class="card-body card-body-cascade d-flex justify-content-center mt-n2">
+        @using (Html.BeginForm("Details", "Pages", FormMethod.Get, new { onsubmit = "return SubmitFormDetails(this)" }))
+        {
+            @Html.HiddenFor(model => model.Id)
+            <div class="table-wrapper table-responsive table-bordered table-striped ">
+                <!--Table-->
+                <table class="table table-hover mb-0 ">
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-tag"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Title)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.Title)</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-image"></i> </a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Slug)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.Slug)</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-image"></i> </a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.MetaKeywords)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.MetaKeywords)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-image"></i> </a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.MetaDescription)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.MetaDescription)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-image"></i> </a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.HomeBanner)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.BannerId)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-image"></i> </a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.DataCollection)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.DataCollectionId)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-image"></i> </a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.WorkQualitySection)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.WorkQualityId)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-image"></i> </a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.ProjectCountiing)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.ProjectCountingId)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-image"></i> </a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.PlatformDesign)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.PlatformDesignId)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-image"></i> </a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.DesignSteps)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.DesignStepsId)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-tags"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.IsPageMetaDataOn)</td>
+                            <td class="text-primary">@Html.CheckBoxFor(model => model.IsPageMetaDataOn, new { style = "opacity: 1" }) </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-tags"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.IsVisibleToSearchEngine)</td>
+                            <td class="text-primary">@Html.CheckBoxFor(model => model.IsVisibleToSearchEngine, new { style = "opacity: 1" }) </td>
+                        </tr>
+
+
+                        <tr class="">
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="far fa-newspaper"></i></a>
+                            </th>
+                            <td class="font-weight-bold">  @Html.DisplayNameFor(model => model.Content)</td>
+                            <td class="collapse" id="collapseExample"> @Html.Raw(Model.Content)</td>
+                            <td>
+                                <button class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#collapseExample"
+                                        aria-expanded="false" aria-controls="collapseExample">
+                                    Read more
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                    <!--Table body-->
+                </table>
+                <!--Table-->
+            </div>
+
+        }
+
+
+
+
+    </div>
+    <!--/.Card content-->
+
+</div>

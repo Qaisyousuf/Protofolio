@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using QaisYousuf.Data.Interfaces;
 using QaisYousuf.Data.Context;
+using System.Data.Entity;
 
 namespace QaisYousuf.Data.Concrete_Implementation
 {
@@ -25,6 +26,18 @@ namespace QaisYousuf.Data.Concrete_Implementation
         public IQueryable<TModel> GetAll()
         {
             IQueryable<TModel> data = _context.Set<TModel>().AsQueryable();
+            return data;
+        }
+
+        public IQueryable<TModel> GetAll(params string[] navigationProperties)
+        {
+            IQueryable<TModel> data = _context.Set<TModel>().AsQueryable();
+
+            foreach(string navigationproperty in navigationProperties)
+            {
+                data = data.Include(navigationproperty);
+            }
+
             return data;
         }
 

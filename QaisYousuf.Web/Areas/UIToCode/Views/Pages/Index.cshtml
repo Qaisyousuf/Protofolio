@@ -1,6 +1,6 @@
 ﻿
 @{
-  ViewBag.Title = "Index";
+    ViewBag.Title = "Index";
 }
 <div class="card">
 
@@ -8,16 +8,19 @@
 
         <!-- Title -->
         <div>
-            <h4 class="card-title text-center">List of Work Quality Section</h4>
-            <a class="btn btn-primary btn-rounded" style="margin-bottom:10px" onclick="PopupForm('@Url.Action("Create","WorkQualitySection",new { Area="UIToCode"})')"><i class="fa fa-plus"></i> Add New Record</a>
+            <h4 class="card-title text-center">List of Home Pages</h4>
+            <a class="btn btn-primary btn-rounded" style="margin-bottom:10px" onclick="PopupForm('@Url.Action("Create","Pages",new { Area="UIToCode"})')"><i class="fa fa-plus"></i> Add New Record</a>
             <hr />
             <table id="dataTable" class="table table-bordered table-hover table-striped table-responsive-sm ">
                 <thead class="  mdb-color white-text">
                     <tr class="pt-2">
-                        <th><i class="fas fa-sort-numeric-down"></i> Id</th>
-                        <th><i class="fas fa-hashtag"></i> Ttitle</th>
-                        <th><i class="fas fa-align-center"></i> Modal Title</th>
-                        <th><i class="fas fa-check-square"></i> Button Text</th>
+                        <th><i class="fas fa-sort-numeric-down"></i>Id</th>
+                        <th><i class="fas fa-hashtag"></i> Title</th>
+                        <th><i class="fas fa-hashtag"></i> Slug</th>
+                        <th><i class="fas fa-align-center"></i> Banner</th>
+                        <th><i class="fas fa-check-square"></i> Data </th>
+                        <th><i class="fas fa-check-square"></i> Quality</th>
+                      
                         <th><i class="fas fa-wrench"></i> Actions</th>
                     </tr>
                 </thead>
@@ -41,7 +44,7 @@
         $(document).ready(function () {
             dataTable = $("#dataTable").DataTable({
                 "ajax": {
-                    "url": "/UIToCode/WorkQualitySection/GetWorkQualitySection",
+                    "url": "/UIToCode/Pages/GetPagesData",
                     "type": "GET",
                     "datatype": "json",
 
@@ -49,8 +52,11 @@
                 "columns": [
                     { "data": "Id" },
                     { "data": "Title" },
-                    { "data": "ModalTitle" },
-                    { "data": "ButtonText" },
+                    { "data": "Slug" },
+                    { "data": "HomeBanner.Title" },
+                    { "data": "DataCollection.MainTitle" },
+                    { "data": "WorkQualitySection.Title" },
+                    
 
                     {
                         "data": "actions",
@@ -58,7 +64,7 @@
                         "data": "Id", "render": function (data)
 
                         {
-                            return "<a class='btn btn-info btn-md btn-rounded' onclick=PopupForm('@Url.Action("Edit", "WorkQualitySection")/" + data + "')><i class='far fa-edit'></i> Edit </a> | <a class='btn btn-default btn-md btn-rounded' onclick=PopupForm('@Url.Action("Details", "WorkQualitySection")/" + data + "')><i class='fas fa-info-circle'> </i> Details </a> | <a class='btn btn-danger btn-md btn-rounded' style='margin-left:5px' onclick=Delete("+data+")><i class='fa fa-trash'></i> Delete </a>";
+                            return "<a class='btn btn-info btn-md btn-rounded' onclick=PopupForm('@Url.Action("Edit", "Pages")/" + data + "')><i class='far fa-edit'></i> Edit </a> | <a class='btn btn-default btn-md btn-rounded' onclick=PopupForm('@Url.Action("Details", "Pages")/" + data + "')><i class='fas fa-info-circle'> </i> Details </a> | <a class='btn btn-danger btn-md btn-rounded' style='margin-left:5px' onclick=Delete("+data+")><i class='fa fa-trash'></i> Delete </a>";
                     },
                         "orderable": false,
                         "searchable":false,
@@ -166,7 +172,7 @@
                             dataTable.ajax.reload();
 
                             $.notify(data.message, {
-                                globalPosition: "top center",
+                                globalPosition: "top",
                                 className: "success"
                             });
 
@@ -177,10 +183,21 @@
             }
             return false;
         }
+
+
         function Delete(id) {
             if (confirm('Are You Sure to Delete this  Record ?'))
             {
+
                 $.ajax({
+                    buttons: {
+                        "Delete this item": function () {
+                            $(this).dialog("close");
+                        },
+                        Cancel: function () {
+                            $(this).dialog("close");
+                        }
+                    },
                     type: "POST",
                     url: '@Url.Action("Delete", "Pages")/' + id,
                     success: function (data) {

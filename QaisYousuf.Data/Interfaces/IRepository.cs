@@ -10,6 +10,8 @@ namespace QaisYousuf.Data.Interfaces
 
         IQueryable<TModel> GetAll();
 
+        IQueryable<TModel> GetAll(params string[] navigationProperties);
+
         TModel GetById(object id);
 
         void Remove(TModel entity);

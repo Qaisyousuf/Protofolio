@@ -1,0 +1,117 @@
+﻿@model QaisYousuf.ViewModels.PageViewModel
+@{
+    Layout = null;
+}
+
+<div class="card card-cascade narrower mb-1 z-depth-0" style="margin-top: 28px">
+
+    <!--Card image-->
+    <div class="view view-cascade pt-0">
+        <div class=" card-header light-blue lighten-1 white-text text-uppercase font-weight-bold text-center py-3">
+            Do you want to Update the <span class="text-warning">@Model.Title</span>  Record?
+
+        </div>
+
+    </div>
+    <!--/.Card image-->
+    <!--Card content-->
+    <div class="card-body card-body-cascade d-flex justify-content-center mt-n2">
+        @using (Html.BeginForm("Edit", "Pages", FormMethod.Post, new { onsubmit = "return SubmitFormEdit(this)" }))
+        {
+            @Html.HiddenFor(model => model.Id)
+            <div class="form-group">
+                @Html.LabelFor(model => model.Title, new { @class = "control-label" })
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Slug, new { @class = "control-label" })
+                @Html.EditorFor(model => model.Slug, new { htmlAttributes = new { @class = "form-control" } })
+
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Content, new { @class = "control-label" })
+                @Html.TextAreaFor(model => model.Content, 10, 10, new { @class = "form-control width-textarea", })
+                @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.MetaKeywords, new { @class = "control-label" })
+                @Html.EditorFor(model => model.MetaKeywords, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MetaKeywords, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.MetaDescription, new { @class = "control-label" })
+                @Html.EditorFor(model => model.MetaDescription, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MetaDescription, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group  ">
+                <div class="checkbox">
+                    <label>@Html.CheckBoxFor(model => model.IsVisibleToSearchEngine, new { style = "opacity: 1" })&nbsp;  &nbsp; @Html.DisplayNameFor(model => model.IsVisibleToSearchEngine)</label>
+                </div>
+            </div>
+            <div class="form-group ">
+                <div class="checkbox">
+                    <label>@Html.CheckBoxFor(model => model.IsPageMetaDataOn, new { style = "opacity: 1" }) &nbsp;  &nbsp; @Html.DisplayNameFor(model => model.IsPageMetaDataOn)</label>
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.BannerId, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.DropDownListFor(m => m.BannerId, new SelectList(ViewBag.homeBanner, "Id", "Title"), "-----Select the banner------", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.BannerId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DataCollectionId, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.DropDownListFor(m => m.DataCollectionId, new SelectList(ViewBag.dataCollection, "Id", "MainTitle"), "-----Select data colllection------", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.DataCollectionId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.WorkQualityId, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.DropDownListFor(m => m.WorkQualityId, new SelectList(ViewBag.workQuality, "Id", "Title"), "-----Select work quality Section------", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.WorkQualityId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProjectCountingId, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.DropDownListFor(m => m.ProjectCountingId, new SelectList(ViewBag.projectCounting, "Id", "MainTitle"), "-----Select project counting------", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ProjectCountingId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.PlatformDesignId, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.DropDownListFor(m => m.PlatformDesignId, new SelectList(ViewBag.platformDesign, "Id", "MainTitle"), "-----Select platform design------", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.PlatformDesignId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DesignStepsId, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.DropDownListFor(m => m.DesignStepsId, new SelectList(ViewBag.designSteps, "Id", "MainTitle"), "-----Select the design steps------", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.DesignStepsId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <button type = "submit" value="Create" class="btn btn-primary"><i class="fas fa-save pr-2"></i> Save</button>  |
+                <button type = "reset" value="Reset" class="btn btn-mdb-color"><i class="fas fa-redo-alt"></i> Reset</button>
+            </div>
+
+        }
+
+
+
+    </div>
+    <!--/.Card content-->
+
+</div>

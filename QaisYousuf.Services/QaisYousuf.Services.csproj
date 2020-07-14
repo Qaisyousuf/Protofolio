@@ -63,6 +63,7 @@
     <Compile Include="Security\CustomPricipalSerialize.cs" />
     <Compile Include="Security\CustomPrincipal.cs" />
     <Compile Include="Security\ICustomPrincipal.cs" />
+    <Compile Include="SlugHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QaisYousuf.Data\QaisYousuf.Data.csproj">

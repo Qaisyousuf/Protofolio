@@ -156,6 +156,18 @@
     <Compile Include="Migrations\202007111140530_PlatformDesignPropertyNameChanged.designer.cs">
       <DependentUpon>202007111140530_PlatformDesignPropertyNameChanged.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007131116120_PropertyNameChanged.cs" />
+    <Compile Include="Migrations\202007131116120_PropertyNameChanged.designer.cs">
+      <DependentUpon>202007131116120_PropertyNameChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007131127337_IsVisibleToSearchEnginDataTypeChanged.cs" />
+    <Compile Include="Migrations\202007131127337_IsVisibleToSearchEnginDataTypeChanged.designer.cs">
+      <DependentUpon>202007131127337_IsVisibleToSearchEnginDataTypeChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007131255385_IsMetaDataOnAddToHomePagae.cs" />
+    <Compile Include="Migrations\202007131255385_IsMetaDataOnAddToHomePagae.designer.cs">
+      <DependentUpon>202007131255385_IsMetaDataOnAddToHomePagae.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -178,6 +190,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007111140530_PlatformDesignPropertyNameChanged.resx">
       <DependentUpon>202007111140530_PlatformDesignPropertyNameChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007131116120_PropertyNameChanged.resx">
+      <DependentUpon>202007131116120_PropertyNameChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007131127337_IsVisibleToSearchEnginDataTypeChanged.resx">
+      <DependentUpon>202007131127337_IsVisibleToSearchEnginDataTypeChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007131255385_IsMetaDataOnAddToHomePagae.resx">
+      <DependentUpon>202007131255385_IsMetaDataOnAddToHomePagae.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
