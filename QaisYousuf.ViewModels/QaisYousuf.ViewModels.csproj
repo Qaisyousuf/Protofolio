@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutBannerViewModel.cs" />
     <Compile Include="DataCollectionViewModel.cs" />
     <Compile Include="DesignStepsViewModel.cs" />
     <Compile Include="HomeBannerViewModel.cs" />

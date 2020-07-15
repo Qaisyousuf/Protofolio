@@ -579,6 +579,10 @@
     <Content Include="Areas\UIToCode\Views\Pages\Create.cshtml" />
     <Content Include="Areas\UIToCode\Views\Pages\Edit.cshtml" />
     <Content Include="Areas\UIToCode\Views\Pages\Details.cshtml" />
+    <Content Include="Areas\UIToCode\Views\AboutBanner\Index.cshtml" />
+    <Content Include="Areas\UIToCode\Views\AboutBanner\Create.cshtml" />
+    <Content Include="Areas\UIToCode\Views\AboutBanner\Edit.cshtml" />
+    <Content Include="Areas\UIToCode\Views\AboutBanner\Details.cshtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -673,6 +677,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="Areas\UIToCode\Controllers\AboutBannerController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\DataCollectionController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\DesignStepsController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\HomeBannerController.cs" />
