@@ -61,6 +61,7 @@ namespace QaisYousuf.Data.Context
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new UserMapping());
+            modelBuilder.Configurations.Add(new MeetOurTeamMapping());
             modelBuilder.Properties<DateTime>().Configure(c => c.HasColumnType("datetime2"));
             base.OnModelCreating(modelBuilder);
         }

@@ -8,6 +8,11 @@ namespace QaisYousuf.Models
 {
     public class TeamSocialMedia:EntityBase
     {
+        public TeamSocialMedia()
+        {
+            MeetOutTeams = new List<MeetOutTeam>();
+        }
+
         public string FB { get; set; }
 
         public string FBUrl { get; set; }
@@ -24,7 +29,7 @@ namespace QaisYousuf.Models
 
         public string WebsiteUrl { get; set; }
 
-
+        public ICollection<MeetOutTeam> MeetOutTeams { get; set; }
 
     }
 }
