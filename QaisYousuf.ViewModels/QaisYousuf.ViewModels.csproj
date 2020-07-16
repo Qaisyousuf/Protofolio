@@ -76,6 +76,7 @@
     <Compile Include="ProjectCountingViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterViewModel.cs" />
+    <Compile Include="StartUpProgramViewModel.cs" />
     <Compile Include="WorkQualitySectionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

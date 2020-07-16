@@ -583,6 +583,10 @@
     <Content Include="Areas\UIToCode\Views\AboutBanner\Create.cshtml" />
     <Content Include="Areas\UIToCode\Views\AboutBanner\Edit.cshtml" />
     <Content Include="Areas\UIToCode\Views\AboutBanner\Details.cshtml" />
+    <Content Include="Areas\UIToCode\Views\StartUpProgram\Index.cshtml" />
+    <Content Include="Areas\UIToCode\Views\StartUpProgram\Create.cshtml" />
+    <Content Include="Areas\UIToCode\Views\StartUpProgram\Edit.cshtml" />
+    <Content Include="Areas\UIToCode\Views\StartUpProgram\Details.cshtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -684,6 +688,7 @@
     <Compile Include="Areas\UIToCode\Controllers\PagesController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\PlatformDesignController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\ProjectCountingController.cs" />
+    <Compile Include="Areas\UIToCode\Controllers\StartUpProgramController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\WorkQualitySectionController.cs" />
     <Compile Include="Areas\UIToCode\UIToCodeAreaRegistration.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
