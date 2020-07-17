@@ -11,16 +11,17 @@
 
         <!-- Title -->
         <div>
-            <h4 class="card-title text-center">List of Start Up Process</h4>
-            <a class="btn btn-primary btn-rounded" style="margin-bottom:10px" onclick="PopupForm('@Url.Action("Create","StartUpProcess",new { Area="UIToCode"})')"><i class="fa fa-plus"></i> Add New Record</a>
+            <h4 class="card-title text-center">List of Social Media</h4>
+            <a class="btn btn-primary btn-rounded" style="margin-bottom:10px" onclick="PopupForm('@Url.Action("Create","SocialMediaTeam",new { Area="UIToCode"})')"><i class="fa fa-plus"></i> Add New Record</a>
             <hr />
             <table id="dataTable" class="table table-bordered table-hover table-striped table-responsive-sm ">
                 <thead class="  mdb-color white-text">
                     <tr class="pt-2">
                         <th><i class="fas fa-sort-numeric-down"></i> Id</th>
-                        <th><i class="fas fa-hashtag"></i>Main Title</th>
-                        <th><i class="fas fa-align-center"></i> SubTitle</th>
-                        <th><i class="fas fa-align-center"></i> Image Url </th>
+                        <th><i class="fab fa-facebook-f"></i> FaceBook</th>
+                        <th><i class="fab fa-linkedin-in"></i> LinkedIn</th>
+                        <th><i class="fab fa-twitter"></i> Twiter</th>
+                        <th><i class="fas fa-blog"></i> WebSite</th>
                         <th><i class="fas fa-wrench"></i> Actions</th>
                     </tr>
                 </thead>
@@ -44,16 +45,17 @@
         $(document).ready(function () {
             dataTable = $("#dataTable").DataTable({
                 "ajax": {
-                    "url": "/UIToCode/StartUpProcess/GetStartUpProcess",
+                    "url": "/UIToCode/SocialMediaTeam/GetMediaSocialTeam",
                     "type": "GET",
                     "datatype": "json",
 
                 },
                 "columns": [
                     { "data": "Id" },
-                    { "data": "MainTitle" },
-                    { "data": "SubTitle" },
-                    { "data": "ImageUrl" },
+                    { "data": "FB" },
+                    { "data": "LinkedIn" },
+                    { "data": "Twiter" },
+                    { "data": "WebSite" },
 
 
                     {
@@ -62,7 +64,7 @@
                         "data": "Id", "render": function (data)
 
                         {
-                            return "<a class='btn btn-info btn-md btn-rounded' onclick=PopupForm('@Url.Action("Edit", "StartUpProcess")/" + data + "')><i class='far fa-edit'></i> Edit </a> | <a class='btn btn-default btn-md btn-rounded' onclick=PopupForm('@Url.Action("Details", "StartUpProcess")/" + data + "')><i class='fas fa-info-circle'> </i> Details </a> | <a class='btn btn-danger btn-md btn-rounded' style='margin-left:5px' onclick=Delete("+data+")><i class='fa fa-trash'></i> Delete </a>";
+                            return "<a class='btn btn-info btn-md btn-rounded' onclick=PopupForm('@Url.Action("Edit", "SocialMediaTeam")/" + data + "')><i class='far fa-edit'></i> Edit </a> | <a class='btn btn-default btn-md btn-rounded' onclick=PopupForm('@Url.Action("Details", "SocialMediaTeam")/" + data + "')><i class='fas fa-info-circle'> </i> Details </a> | <a class='btn btn-danger btn-md btn-rounded' style='margin-left:5px' onclick=Delete("+data+")><i class='fa fa-trash'></i> Delete </a>";
                     },
                         "orderable": false,
                         "searchable":false,
@@ -189,7 +191,7 @@
             {
                 $.ajax({
                     type: "POST",
-                    url: '@Url.Action("Delete", "StartUpProcess")/' + id,
+                    url: '@Url.Action("Delete", "SocialMediaTeam")/' + id,
                     success: function (data) {
                         if (data.success)
                         {
@@ -209,5 +211,4 @@
 
     </script>
 }
-
 

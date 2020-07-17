@@ -1,0 +1,78 @@
+﻿@model QaisYousuf.ViewModels.TeamSocialMediaViewModel
+@{
+    Layout = null;
+}
+
+<div class="card card-cascade narrower mb-1 z-depth-0" style="margin-top: 28px">
+
+    <!--Card image-->
+    <div class="view view-cascade pt-0">
+        <div class=" card-header light-blue lighten-1 white-text text-uppercase font-weight-bold text-center py-3">
+            Do you want to Update the <span class="text-warning">@Model.FB</span>  Record?
+
+        </div>
+
+    </div>
+    <!--/.Card image-->
+    <!--Card content-->
+    <div class="card-body card-body-cascade d-flex justify-content-center mt-n2">
+        @using (Html.BeginForm("Edit", "SocialMediaTeam", FormMethod.Post, new { onsubmit = "return SubmitFormEdit(this)" }))
+        {
+            @Html.HiddenFor(model => model.Id)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.FB, new { @class = "control-label" })
+                @Html.EditorFor(model => model.FB, new { htmlAttributes = new { @class = "form-control w-100" } })
+                @Html.ValidationMessageFor(model => model.FB, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.FBUrl, new { @class = "control-label" })
+                @Html.EditorFor(model => model.FBUrl, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FBUrl, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LinkedIn, new { @class = "control-label" })
+                @Html.EditorFor(model => model.LinkedIn, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LinkedIn, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.LinkedInUrl, new { @class = "control-label" })
+                @Html.EditorFor(model => model.LinkedInUrl, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LinkedInUrl, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Twiter, new { @class = "control-label" })
+                @Html.EditorFor(model => model.Twiter, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Twiter, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.TwiterUrl, new { @class = "control-label" })
+                @Html.EditorFor(model => model.TwiterUrl, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TwiterUrl, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.WebSite, new { @class = "control-label" })
+                @Html.EditorFor(model => model.WebSite, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.WebSite, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.WebsiteUrl, new { @class = "control-label" })
+                @Html.EditorFor(model => model.WebsiteUrl, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.WebsiteUrl, "", new { @class = "text-danger" })
+            </div>
+
+
+            <div class="form-group">
+                <button type="submit" value="Create" class="btn btn-primary"><i class="fas fa-save pr-2"></i> Save</button>  |
+                <button type="reset" value="Reset" class="btn btn-mdb-color"><i class="fas fa-redo-alt"></i> Reset</button>
+            </div>
+
+        }
+
+
+
+    </div>
+    <!--/.Card content-->
+
+</div>

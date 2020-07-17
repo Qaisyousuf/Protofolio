@@ -1,0 +1,93 @@
+﻿@model QaisYousuf.ViewModels.TeamSocialMediaViewModel
+@{
+    Layout = null;
+}
+<div class="card card-cascade narrower mb-1 z-depth-0" style="margin-top: 28px">
+
+    <!--Card image-->
+    <div class="view view-cascade pt-0">
+        <div class=" card-header light-blue lighten-1 white-text text-uppercase font-weight-bold text-center py-3">
+            Details of <span class="text-warning">@Model.FB</span>  Record
+        </div>
+
+    </div>
+    <!--/.Card image-->
+    <!--Card content-->
+    <div class="card-body card-body-cascade d-flex justify-content-center mt-n2">
+        @using (Html.BeginForm("Details", "SocialMediaTeam", FormMethod.Get, new { onsubmit = "return SubmitFormDetails(this)" }))
+        {
+            @Html.HiddenFor(model => model.Id)
+            <div class="table-wrapper table-responsive table-bordered table-striped ">
+                <!--Table-->
+                <table class="table table-hover mb-0 ">
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fab fa-facebook-f"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.FB)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.FB)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.FBUrl)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.FBUrl)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fab fa-linkedin-in"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.LinkedIn)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.LinkedIn)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.LinkedInUrl)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.LinkedInUrl)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fab fa-twitter"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Twiter)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.Twiter)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.TwiterUrl)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.TwiterUrl)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-blog"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.WebSite)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.WebSite)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.WebsiteUrl)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.WebsiteUrl)</td>
+                        </tr>
+
+                    </tbody>
+                    <!--Table body-->
+                </table>
+                <!--Table-->
+            </div>
+
+        }
+
+    </div>
+    <!--/.Card content-->
+
+</div>
