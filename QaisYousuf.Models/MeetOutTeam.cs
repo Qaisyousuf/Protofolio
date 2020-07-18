@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QaisYousuf.Models
 {
     public class MeetOutTeam:EntityBase
     {
-        public MeetOutTeam()
-        {
-            TeamSocialMedias = new List<TeamSocialMedia>();
-        }
+        
         public string MainTitle { get; set; }
 
         public string ImageUrl { get; set; }
@@ -20,8 +19,11 @@ namespace QaisYousuf.Models
 
         public string Content { get; set; }
 
-        public ICollection<TeamSocialMedia> TeamSocialMedias { get; set; }
 
+        [Display(Name = "Social Media")]
+        public int TeamSocialId { get; set; }
+        [ForeignKey("TeamSocialId")]
+        public virtual TeamSocialMedia TeamSocialMedias { get; set; }
 
     }
 }

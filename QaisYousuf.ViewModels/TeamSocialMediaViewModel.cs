@@ -10,11 +10,12 @@ namespace QaisYousuf.ViewModels
 {
     public class TeamSocialMediaViewModel
     {
-        public TeamSocialMediaViewModel()
-        {
-            MeetOutTeams = new List<MeetOutTeam>();
-        }
+     
         public int Id { get; set; }
+
+        [Required]
+        public string Title { get; set; }
+
 
         [Required]
         [Display(Name ="Facebook")]
@@ -50,6 +51,6 @@ namespace QaisYousuf.ViewModels
         [DataType(DataType.Url)]
         public string WebsiteUrl { get; set; }
 
-        public ICollection<MeetOutTeam> MeetOutTeams { get; set; }
+       
     }
 }

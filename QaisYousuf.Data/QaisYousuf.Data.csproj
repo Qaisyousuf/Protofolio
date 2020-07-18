@@ -97,7 +97,6 @@
     <Compile Include="Concrete Implementation\WorkExperienceRepository.cs" />
     <Compile Include="Concrete Implementation\WorkQualitySectionRepository.cs" />
     <Compile Include="Context\UIContext.cs" />
-    <Compile Include="FluentAPI\MeetOurTeamMapping.cs" />
     <Compile Include="FluentAPI\UserMapping.cs" />
     <Compile Include="Interfaces\IAboutPageBannerRepository.cs" />
     <Compile Include="Interfaces\IAboutPageRepository.cs" />
@@ -173,6 +172,10 @@
     <Compile Include="Migrations\202007161620165_MeetOurTeamRelationCreated.designer.cs">
       <DependentUpon>202007161620165_MeetOurTeamRelationCreated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007181749533_Many-to-Many-RelationRemoved.cs" />
+    <Compile Include="Migrations\202007181749533_Many-to-Many-RelationRemoved.designer.cs">
+      <DependentUpon>202007181749533_Many-to-Many-RelationRemoved.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -207,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007161620165_MeetOurTeamRelationCreated.resx">
       <DependentUpon>202007161620165_MeetOurTeamRelationCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007181749533_Many-to-Many-RelationRemoved.resx">
+      <DependentUpon>202007181749533_Many-to-Many-RelationRemoved.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
