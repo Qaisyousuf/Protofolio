@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QaisYousuf.Models
 {
-    public class MeetOutTeam:EntityBase
+    public class MeetOurTeam:EntityBase
     {
         
         public string MainTitle { get; set; }

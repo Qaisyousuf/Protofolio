@@ -176,6 +176,10 @@
     <Compile Include="Migrations\202007181749533_Many-to-Many-RelationRemoved.designer.cs">
       <DependentUpon>202007181749533_Many-to-Many-RelationRemoved.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007181818084_TableName_MeetOurTeam_Spelling_Fixed.cs" />
+    <Compile Include="Migrations\202007181818084_TableName_MeetOurTeam_Spelling_Fixed.designer.cs">
+      <DependentUpon>202007181818084_TableName_MeetOurTeam_Spelling_Fixed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -213,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007181749533_Many-to-Many-RelationRemoved.resx">
       <DependentUpon>202007181749533_Many-to-Many-RelationRemoved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007181818084_TableName_MeetOurTeam_Spelling_Fixed.resx">
+      <DependentUpon>202007181818084_TableName_MeetOurTeam_Spelling_Fixed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

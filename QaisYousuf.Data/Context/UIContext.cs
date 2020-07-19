@@ -27,7 +27,7 @@ namespace QaisYousuf.Data.Context
         public DbSet<HomeBanner> HomeBanners { get; set; }
         public DbSet<HomePage> HomePages { get; set; }
         public DbSet<Interest> Interests { get; set; }
-        public DbSet<MeetOutTeam> MeetOutTeams { get; set; }
+        public DbSet<MeetOurTeam> MeetOutTeams { get; set; }
         public DbSet<Menu> Menus { get; set; }
         public DbSet<OnlineCertification> OnlineCertifications { get; set; }
         public DbSet<PlatformDesign> PlatformsDesign { get; set; }

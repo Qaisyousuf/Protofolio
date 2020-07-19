@@ -26,6 +26,7 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
         {
             var meetOurTeam = uow.MeetOurTeamRepository.GetAll("TeamSocialMedias");
 
+            ViewBag.SocialMedia = uow.TeamSocialMediaRepository.GetAll();
             List<MeetOurTeamViewModel> viewmodel = new List<MeetOurTeamViewModel>();
 
             foreach (var item in meetOurTeam)
@@ -39,6 +40,8 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
                     Name=item.Name,
                     Position=item.Position,
                     Content=item.Content,
+                    TeamSocialId=item.TeamSocialId,
+                    TeamSocialMedias=item.TeamSocialMedias,
 
                 });
             }
@@ -56,27 +59,25 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
         [HttpPost]
         public ActionResult Create(MeetOurTeamViewModel viewmodel)
         {
-            if(!ModelState.IsValid)
+          
+            if(ModelState.IsValid)
             {
-                ViewBag.SocialMedia = uow.TeamSocialMediaRepository.GetAll();
-                return View(viewmodel);
-
+                MeetOurTeam meetTeam = new MeetOurTeam
+                {
+                    Id=viewmodel.Id,
+                    MainTitle=viewmodel.MainTitle,
+                    ImageUrl=viewmodel.ImageUrl,
+                    ProfileImageUrl=viewmodel.ProfileImageUrl,
+                    Name=viewmodel.Name,
+                    Position=viewmodel.Position,
+                    Content=viewmodel.Content,
+                    TeamSocialId=viewmodel.TeamSocialId,
+                    TeamSocialMedias=viewmodel.TeamSocialMedias
+                };
+                uow.MeetOurTeamRepository.Add(meetTeam);
+                uow.Commit();
             }
-
-            MeetOutTeam meetTeam = new MeetOutTeam();
-
-            meetTeam.Id = viewmodel.Id;
-            meetTeam.MainTitle = viewmodel.MainTitle;
-            meetTeam.ImageUrl = viewmodel.ImageUrl;
-            meetTeam.ProfileImageUrl = viewmodel.ProfileImageUrl;
-            meetTeam.Name = viewmodel.Name;
-            meetTeam.Position = viewmodel.Position;
-            meetTeam.Content = viewmodel.Content;
-
            
-
-            uow.MeetOurTeamRepository.Add(meetTeam);
-            uow.Commit();
 
             return Json(new { success = true, message = "Record Saved Successfully" }, JsonRequestBehavior.AllowGet);
         }
@@ -84,7 +85,7 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
        [HttpGet]
        public ActionResult Edit(int id)
         {
-            var meetOurTeam = uow.Context.MeetOutTeams.Include("TeamSocialMedias").SingleOrDefault(x => x.Id==id);
+            var meetOurTeam = uow.MeetOurTeamRepository.GetById(id);
 
             MeetOurTeamViewModel viewmodel = new MeetOurTeamViewModel
             {
@@ -95,6 +96,8 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
                 Name=meetOurTeam.Name,
                 Position=meetOurTeam.Position,
                 Content=meetOurTeam.Content,
+                TeamSocialId=meetOurTeam.TeamSocialId,
+                TeamSocialMedias=meetOurTeam.TeamSocialMedias,
 
             };
 
@@ -106,33 +109,70 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit([Bind(Include ="Id,MainTitle,ImageUrl,ProfileImageUrl,Name,Position,Content")] MeetOurTeamViewModel viewmodel,int[] socialIds)
+        public ActionResult Edit(MeetOurTeamViewModel viewmodel)
         {
-            if(!ModelState.IsValid)
+            if(ModelState.IsValid)
             {
-                ViewBag.SocialMedia = uow.TeamSocialMediaRepository.GetAll();
-                return View(viewmodel);
+                var meetOurTeam = uow.MeetOurTeamRepository.GetById(viewmodel.Id);
+                meetOurTeam.Id = viewmodel.Id;
+                meetOurTeam.MainTitle = viewmodel.MainTitle;
+                meetOurTeam.ImageUrl = viewmodel.ImageUrl;
+                meetOurTeam.ProfileImageUrl = viewmodel.ProfileImageUrl;
+                meetOurTeam.Name = viewmodel.Name;
+                meetOurTeam.Position = viewmodel.Position;
+                meetOurTeam.Content = viewmodel.Content;
+                meetOurTeam.TeamSocialId = viewmodel.TeamSocialId;
+                meetOurTeam.TeamSocialMedias = viewmodel.TeamSocialMedias;
+                uow.MeetOurTeamRepository.Update(meetOurTeam);
+                uow.Commit();
             }
 
-            var meetOurTeam = uow.Context.MeetOutTeams.Include("TeamSocialMedias").SingleOrDefault(x => x.Id == viewmodel.Id);
-
-            meetOurTeam.Id = viewmodel.Id;
-            meetOurTeam.MainTitle = viewmodel.MainTitle;
-            meetOurTeam.ImageUrl = viewmodel.ImageUrl;
-            meetOurTeam.ProfileImageUrl = viewmodel.ProfileImageUrl;
-            meetOurTeam.Name = viewmodel.Name;
-            meetOurTeam.Position = viewmodel.Position;
-            meetOurTeam.Content = viewmodel.Content;
-
-            var socialMedia = uow.Context.TeamSocialMedias.Where(x => socialIds.Contains(x.Id)).ToList();
-
-           
-
-            uow.MeetOurTeamRepository.Update(meetOurTeam);
-            uow.Commit();
-
-
             return Json(new { success = true, message = "Record Updated Successfuly" }, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            var meetTeam = uow.MeetOurTeamRepository.GetById(id);
+
+            MeetOurTeamViewModel viewmodel = new MeetOurTeamViewModel
+            {
+                Id=meetTeam.Id,
+                MainTitle=meetTeam.MainTitle,
+                ImageUrl=meetTeam.ImageUrl,
+                ProfileImageUrl=meetTeam.ProfileImageUrl,
+                Name=meetTeam.Name,
+                Position=meetTeam.Position,
+                Content=meetTeam.Content,
+                TeamSocialId=meetTeam.TeamSocialId,
+                TeamSocialMedias=meetTeam.TeamSocialMedias,
+         
+            };
+
+            uow.MeetOurTeamRepository.Remove(meetTeam);
+            uow.Commit();
+            return Json(new { success = true, message = "Record Deleted Successfuly" }, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public ActionResult Details(int id)
+        {
+            var meetTeam = uow.MeetOurTeamRepository.GetById(id);
+
+            MeetOurTeamViewModel viewmodel = new MeetOurTeamViewModel
+            {
+                Id=meetTeam.Id,
+                MainTitle=meetTeam.MainTitle,
+                ImageUrl=meetTeam.ImageUrl,
+                ProfileImageUrl=meetTeam.ProfileImageUrl,
+                Name=meetTeam.Name,
+                Position=meetTeam.Position,
+                Content=meetTeam.Content,
+                TeamSocialId=meetTeam.TeamSocialId,
+                TeamSocialMedias=meetTeam.TeamSocialMedias,
+            };
+
+            return View(viewmodel);
         }
 
     }

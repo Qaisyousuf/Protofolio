@@ -59,7 +59,7 @@
     <Compile Include="HomeBanner.cs" />
     <Compile Include="HomePage.cs" />
     <Compile Include="Interest.cs" />
-    <Compile Include="MeetOutTeam.cs" />
+    <Compile Include="MeetOurTeam.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="OnlineCertification.cs" />
     <Compile Include="PlatformDesign.cs" />

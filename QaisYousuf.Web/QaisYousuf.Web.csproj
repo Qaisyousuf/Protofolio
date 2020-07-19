@@ -598,6 +598,7 @@
     <Content Include="Areas\UIToCode\Views\MeetOurTeam\Index.cshtml" />
     <Content Include="Areas\UIToCode\Views\MeetOurTeam\Create.cshtml" />
     <Content Include="Areas\UIToCode\Views\MeetOurTeam\Edit.cshtml" />
+    <Content Include="Areas\UIToCode\Views\MeetOurTeam\Details.cshtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />

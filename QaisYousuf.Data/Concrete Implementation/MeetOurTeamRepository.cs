@@ -9,7 +9,7 @@ using QaisYousuf.Models;
 
 namespace QaisYousuf.Data.Concrete_Implementation
 {
-    public class MeetOurTeamRepository:Repository<MeetOutTeam>,IMeetOurTeamRepository
+    public class MeetOurTeamRepository:Repository<MeetOurTeam>,IMeetOurTeamRepository
     {
         public MeetOurTeamRepository(UIContext context):base(context)
         {

@@ -34,6 +34,7 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
                 viewmodel.Add(new TeamSocialMediaViewModel
                 {
                     Id=item.Id,
+                    Title=item.Title,
                     FB=item.FB,
                     FBUrl=item.FBUrl,
                     LinkedIn=item.LinkedIn,
@@ -62,6 +63,7 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
                 TeamSocialMedia socialMedia = new TeamSocialMedia
                 {
                     Id=viewmodel.Id,
+                    Title=viewmodel.Title,
                     FB=viewmodel.FB,
                     FBUrl=viewmodel.FBUrl,
                     LinkedIn=viewmodel.LinkedIn,
@@ -85,6 +87,7 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
             TeamSocialMediaViewModel viewmodel = new TeamSocialMediaViewModel
             {
                 Id=socialMedia.Id,
+                Title=socialMedia.Title,
                 FB=socialMedia.FB,
                 FBUrl=socialMedia.FBUrl,
                 LinkedIn=socialMedia.LinkedIn,
@@ -105,6 +108,7 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
                 var socialMedia = uow.TeamSocialMediaRepository.GetById(viewmodel.Id);
 
                 socialMedia.Id = viewmodel.Id;
+                socialMedia.Title = viewmodel.Title;
                 socialMedia.FB = viewmodel.FB;
                 socialMedia.FBUrl = viewmodel.FBUrl;
                 socialMedia.LinkedIn = viewmodel.LinkedIn;
@@ -129,6 +133,7 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
             TeamSocialMediaViewModel viewmodel = new TeamSocialMediaViewModel
             {
                 Id=socialMedia.Id,
+                Title=socialMedia.Title,
                 FB=socialMedia.FB,
                 FBUrl=socialMedia.FBUrl,
                 LinkedIn=socialMedia.LinkedIn,
@@ -152,6 +157,7 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
             TeamSocialMediaViewModel viewmodel = new TeamSocialMediaViewModel
             {
                 Id=socialMedia.Id,
+                Title=socialMedia.Title,
                 FB=socialMedia.FB,
                 FBUrl=socialMedia.FBUrl,
                 LinkedIn=socialMedia.LinkedIn,

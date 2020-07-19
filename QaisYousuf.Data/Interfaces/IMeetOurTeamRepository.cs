@@ -2,7 +2,7 @@
 
 namespace QaisYousuf.Data.Interfaces
 {
-    public interface IMeetOurTeamRepository:IRepository<MeetOutTeam>
+    public interface IMeetOurTeamRepository:IRepository<MeetOurTeam>
     {
     }
 }
