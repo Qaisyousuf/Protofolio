@@ -180,6 +180,14 @@
     <Compile Include="Migrations\202007181818084_TableName_MeetOurTeam_Spelling_Fixed.designer.cs">
       <DependentUpon>202007181818084_TableName_MeetOurTeam_Spelling_Fixed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007191225142_TeamNameFixed.cs" />
+    <Compile Include="Migrations\202007191225142_TeamNameFixed.designer.cs">
+      <DependentUpon>202007191225142_TeamNameFixed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007191247411_ContentPropertyAddToAboutPage.cs" />
+    <Compile Include="Migrations\202007191247411_ContentPropertyAddToAboutPage.designer.cs">
+      <DependentUpon>202007191247411_ContentPropertyAddToAboutPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -220,6 +228,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007181818084_TableName_MeetOurTeam_Spelling_Fixed.resx">
       <DependentUpon>202007181818084_TableName_MeetOurTeam_Spelling_Fixed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007191225142_TeamNameFixed.resx">
+      <DependentUpon>202007191225142_TeamNameFixed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007191247411_ContentPropertyAddToAboutPage.resx">
+      <DependentUpon>202007191247411_ContentPropertyAddToAboutPage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

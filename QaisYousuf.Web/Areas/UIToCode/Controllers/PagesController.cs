@@ -93,6 +93,7 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
             string slug;
 
             HomePage page = new HomePage();
+            page.Id = viewmodel.Id;
             page.Title = viewmodel.Title;
 
             if (string.IsNullOrEmpty(viewmodel.Slug))
