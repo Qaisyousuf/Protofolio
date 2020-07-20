@@ -611,6 +611,10 @@
     <Content Include="Areas\UIToCode\Views\WebProgrammingTools\Create.cshtml" />
     <Content Include="Areas\UIToCode\Views\WebProgrammingTools\Edit.cshtml" />
     <Content Include="Areas\UIToCode\Views\WebProgrammingTools\Details.cshtml" />
+    <Content Include="Areas\UIToCode\Views\UIUXTools\Index.cshtml" />
+    <Content Include="Areas\UIToCode\Views\UIUXTools\Create.cshtml" />
+    <Content Include="Areas\UIToCode\Views\UIUXTools\Edit.cshtml" />
+    <Content Include="Areas\UIToCode\Views\UIUXTools\Details.cshtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -718,6 +722,7 @@
     <Compile Include="Areas\UIToCode\Controllers\SocialMediaTeamController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\StartUpProcessController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\StartUpProgramController.cs" />
+    <Compile Include="Areas\UIToCode\Controllers\UIUXToolsController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\WebProgrammingToolsController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\WorkQualitySectionController.cs" />
     <Compile Include="Areas\UIToCode\UIToCodeAreaRegistration.cs" />

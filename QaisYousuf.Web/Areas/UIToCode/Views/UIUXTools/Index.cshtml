@@ -3,15 +3,14 @@
     ViewBag.Title = "Index";
 }
 
-
 <div class="card">
 
     <div class="card-body">
 
         <!-- Title -->
         <div>
-            <h4 class="card-title text-center">List of Web Programming Tools</h4>
-            <a class="btn btn-primary btn-rounded" style="margin-bottom:10px" onclick="PopupForm('@Url.Action("Create","WebProgrammingTools",new { Area="UIToCode"})')"><i class="fa fa-plus"></i> Add New Record</a>
+            <h4 class="card-title text-center">List of UI UX Tools</h4>
+            <a class="btn btn-primary btn-rounded" style="margin-bottom:10px" onclick="PopupForm('@Url.Action("Create","UIUXTools",new { Area="UIToCode"})')"><i class="fa fa-plus"></i> Add New Record</a>
             <hr />
             <table id="dataTable" class="table table-bordered table-hover table-striped table-responsive-sm ">
                 <thead class="  mdb-color white-text">
@@ -42,7 +41,7 @@
         $(document).ready(function () {
             dataTable = $("#dataTable").DataTable({
                 "ajax": {
-                    "url": "/UIToCode/WebProgrammingTools/GetWebProgrammingData",
+                    "url": "/UIToCode/UIUXTools/GetUIUXData",
                     "type": "GET",
                     "datatype": "json",
 
@@ -57,7 +56,7 @@
                         "data": "Id", "render": function (data)
 
                         {
-                            return "<a class='btn btn-info btn-md btn-rounded' onclick=PopupForm('@Url.Action("Edit", "WebProgrammingTools")/" + data + "')><i class='far fa-edit'></i> Edit </a> | <a class='btn btn-default btn-md btn-rounded' onclick=PopupForm('@Url.Action("Details", "WebProgrammingTools")/" + data + "')><i class='fas fa-info-circle'> </i> Details </a> | <a class='btn btn-danger btn-md btn-rounded' style='margin-left:5px' onclick=Delete("+data+")><i class='fa fa-trash'></i> Delete </a>";
+                            return "<a class='btn btn-info btn-md btn-rounded' onclick=PopupForm('@Url.Action("Edit", "UIUXTools")/" + data + "')><i class='far fa-edit'></i> Edit </a> | <a class='btn btn-default btn-md btn-rounded' onclick=PopupForm('@Url.Action("Details", "UIUXTools")/" + data + "')><i class='fas fa-info-circle'> </i> Details </a> | <a class='btn btn-danger btn-md btn-rounded' style='margin-left:5px' onclick=Delete("+data+")><i class='fa fa-trash'></i> Delete </a>";
                     },
                         "orderable": false,
                         "searchable":false,
@@ -192,7 +191,7 @@
                         }
                     },
                     type: "POST",
-                    url: '@Url.Action("Delete", "WebProgrammingTools")/' + id,
+                    url: '@Url.Action("Delete", "UIUXTools")/' + id,
                     success: function (data) {
                         if (data.success)
                         {
@@ -212,3 +211,4 @@
 
     </script>
 }
+

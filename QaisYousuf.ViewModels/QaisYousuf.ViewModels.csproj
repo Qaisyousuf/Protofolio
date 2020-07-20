@@ -82,6 +82,7 @@
     <Compile Include="StartUpProcessViewModel.cs" />
     <Compile Include="StartUpProgramViewModel.cs" />
     <Compile Include="TeamSocialMediaViewModel.cs" />
+    <Compile Include="UIUXToolsViewModel.cs" />
     <Compile Include="WebProgrammingToolsViewModel.cs" />
     <Compile Include="WorkQualitySectionViewModel.cs" />
   </ItemGroup>
