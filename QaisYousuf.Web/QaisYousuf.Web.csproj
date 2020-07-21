@@ -554,8 +554,6 @@
     <Content Include="Areas\UIToCode\Views\HomeBanner\Edit.cshtml" />
     <Content Include="Areas\UIToCode\Views\HomeBanner\Details.cshtml" />
     <Content Include="Areas\UIToCode\Views\DataCollection\Index.cshtml" />
-    <Content Include="Areas\UIToCode\Views\DataCollection\Add.cshtml" />
-    <Content Include="Areas\UIToCode\Views\DataCollection\AddNewRecord.cshtml" />
     <Content Include="Areas\UIToCode\Views\DataCollection\Edit.cshtml" />
     <Content Include="Scripts\ckeditor\ckeditor.pack" />
     <Content Include="Areas\UIToCode\Views\DataCollection\Details.cshtml" />
@@ -615,6 +613,10 @@
     <Content Include="Areas\UIToCode\Views\UIUXTools\Create.cshtml" />
     <Content Include="Areas\UIToCode\Views\UIUXTools\Edit.cshtml" />
     <Content Include="Areas\UIToCode\Views\UIUXTools\Details.cshtml" />
+    <Content Include="Areas\UIToCode\Views\DesignCode\Index.cshtml" />
+    <Content Include="Areas\UIToCode\Views\DesignCode\Create.cshtml" />
+    <Content Include="Areas\UIToCode\Views\DesignCode\Edit.cshtml" />
+    <Content Include="Areas\UIToCode\Views\DesignCode\Details.cshtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -713,6 +715,7 @@
     <Compile Include="Areas\UIToCode\Controllers\AboutPageController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\CodeBannerController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\DataCollectionController.cs" />
+    <Compile Include="Areas\UIToCode\Controllers\DesignCodeController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\DesignStepsController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\HomeBannerController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\MeetOurTeamController.cs" />
