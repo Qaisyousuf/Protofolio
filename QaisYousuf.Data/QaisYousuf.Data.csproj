@@ -188,6 +188,10 @@
     <Compile Include="Migrations\202007191247411_ContentPropertyAddToAboutPage.designer.cs">
       <DependentUpon>202007191247411_ContentPropertyAddToAboutPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007221417370_CodePageDataTypeChanged.cs" />
+    <Compile Include="Migrations\202007221417370_CodePageDataTypeChanged.designer.cs">
+      <DependentUpon>202007221417370_CodePageDataTypeChanged.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -234,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007191247411_ContentPropertyAddToAboutPage.resx">
       <DependentUpon>202007191247411_ContentPropertyAddToAboutPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007221417370_CodePageDataTypeChanged.resx">
+      <DependentUpon>202007221417370_CodePageDataTypeChanged.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
