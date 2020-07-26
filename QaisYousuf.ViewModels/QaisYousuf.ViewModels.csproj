@@ -71,6 +71,7 @@
     <Compile Include="CodeBannerViewModel.cs" />
     <Compile Include="CodePageViewModel.cs" />
     <Compile Include="ContactBannerViewModel.cs" />
+    <Compile Include="ContactDetailsViewModel.cs" />
     <Compile Include="DataCollectionViewModel.cs" />
     <Compile Include="DesignCodeViewModel.cs" />
     <Compile Include="DesignStepsViewModel.cs" />

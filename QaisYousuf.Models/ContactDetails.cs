@@ -1,4 +1,7 @@
-﻿namespace QaisYousuf.Models
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace QaisYousuf.Models
 {
     public class ContactDetails:EntityBase
     {
@@ -10,7 +13,8 @@
 
         public string Email { get; set; }
 
-        public string WorkingTime { get; set; }
+        [DataType(DataType.DateTime)]
+        public DateTime WorkingTime { get; set; }
 
     }
 }

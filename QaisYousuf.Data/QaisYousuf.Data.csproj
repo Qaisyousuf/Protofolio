@@ -192,6 +192,10 @@
     <Compile Include="Migrations\202007221417370_CodePageDataTypeChanged.designer.cs">
       <DependentUpon>202007221417370_CodePageDataTypeChanged.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007241127556_ContactDetailsDateFormatChanged.cs" />
+    <Compile Include="Migrations\202007241127556_ContactDetailsDateFormatChanged.designer.cs">
+      <DependentUpon>202007241127556_ContactDetailsDateFormatChanged.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -241,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007221417370_CodePageDataTypeChanged.resx">
       <DependentUpon>202007221417370_CodePageDataTypeChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007241127556_ContactDetailsDateFormatChanged.resx">
+      <DependentUpon>202007241127556_ContactDetailsDateFormatChanged.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
