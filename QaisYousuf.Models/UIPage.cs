@@ -11,7 +11,7 @@ namespace QaisYousuf.Models
 
         public string MetaDescription { get; set; }
 
-        public string IsVisibleToSearchEngine { get; set; }
+        public bool IsVisibleToSearchEngine { get; set; }
 
         public int UIBannerId { get; set; }
         [ForeignKey("UIBannerId")]

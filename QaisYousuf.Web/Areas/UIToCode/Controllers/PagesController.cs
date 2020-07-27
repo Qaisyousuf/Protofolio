@@ -78,7 +78,7 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
         public ActionResult Create()
         {
             GetPageRelatedData();
-            return View();
+            return View(new PageViewModel());
         }
 
         [HttpPost]

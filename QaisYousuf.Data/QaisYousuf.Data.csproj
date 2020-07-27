@@ -200,6 +200,10 @@
     <Compile Include="Migrations\202007271129269_ContactPageDataTypeChagedForIsVisibleToSearchEngine.designer.cs">
       <DependentUpon>202007271129269_ContactPageDataTypeChagedForIsVisibleToSearchEngine.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007271435543_UIBannerPropertyAdded.cs" />
+    <Compile Include="Migrations\202007271435543_UIBannerPropertyAdded.designer.cs">
+      <DependentUpon>202007271435543_UIBannerPropertyAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -255,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007271129269_ContactPageDataTypeChagedForIsVisibleToSearchEngine.resx">
       <DependentUpon>202007271129269_ContactPageDataTypeChagedForIsVisibleToSearchEngine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007271435543_UIBannerPropertyAdded.resx">
+      <DependentUpon>202007271435543_UIBannerPropertyAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
