@@ -1,0 +1,224 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="card">
+
+    <div class="card-body">
+
+        <!-- Title -->
+        <div>
+            <h4 class="card-title text-center">List of contact page</h4>
+            <a class="btn btn-primary btn-rounded" style="margin-bottom:10px" onclick="PopupForm('@Url.Action("Create","ContactPage",new { Area="UIToCode"})')"><i class="fa fa-plus"></i> Add New Record</a>
+            <hr />
+            <table id="dataTable" class="table table-bordered table-hover table-striped table-responsive-sm ">
+                <thead class="  mdb-color white-text">
+                    <tr class="pt-2">
+                        <th><i class="fas fa-sort-numeric-down"></i>Id</th>
+                        <th><i class="fas fa-hashtag"></i> Title</th>
+                        <th><i class="fas fa-hashtag"></i> Slug</th>
+                        <th><i class="far fa-image"></i> Banner</th>
+                        <th><i class="fas fa-sitemap"></i> Details </th>
+                        <th><i class="fas fa-bullhorn"></i> Matters</th>
+                        
+                        <th><i class="fas fa-wrench"></i> Actions</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+<!-- Card -->
+@section AdminCustomCSS{
+
+    <link href="~/Content/AdminCustomCSS.css" rel="stylesheet" />
+
+}
+
+@section scripts{
+
+    <script>
+         var Popup, dataTable;
+        $(document).ready(function () {
+            dataTable = $("#dataTable").DataTable({
+                "ajax": {
+                    "url": "/UIToCode/ContactPage/GetContactPageData",
+                    "type": "GET",
+                    "datatype": "json",
+
+                },
+                "columns": [
+                    { "data": "Id" },
+                    { "data": "Title" },
+                    { "data": "Slug" },
+                    { "data": "ContactBanner.MainTitle" },
+                    { "data": "ContactDetails.Title" },
+                    { "data": "ContactMatters.Title" },
+                    
+
+
+                    {
+                        "data": "actions",
+                        "className": "dt-body-right",
+                        "data": "Id", "render": function (data)
+
+                        {
+                            return "<a class='btn btn-info btn-md btn-rounded' onclick=PopupForm('@Url.Action("Edit", "ContactPage")/" + data + "')><i class='far fa-edit'></i> Edit </a> | <a class='btn btn-default btn-md btn-rounded' onclick=PopupForm('@Url.Action("Details", "ContactPage")/" + data + "')><i class='fas fa-info-circle'> </i> Details </a> | <a class='btn btn-danger btn-md btn-rounded' style='margin-left:5px' onclick=Delete("+data+")><i class='fa fa-trash'></i> Delete </a>";
+                    },
+                        "orderable": false,
+                        "searchable":false,
+                        "width":"150px"
+                    }
+
+                ],
+                "language": {
+
+                    "emptyTable" : "No data found, Please click on <b>Add New</b> Button"
+                }
+            });
+        });
+
+
+
+        function PopupForm(url) {
+
+            var formDiv = $('<div/>');
+            $.get(url)
+                .done(function (response) {
+                    formDiv.html(response);
+
+                    Popup = formDiv.dialog({
+                        modal: true,
+                        open: function () {
+                            overlayOpacityNormal = $('.ui-widget-overlay').css('opacity');
+                            $('.ui-widget-overlay').css('opacity', .9);
+                        },
+                        beforeClose: function () {
+                            $('.ui-widget-overlay').css('opacity', .9);
+                        },
+                        autoOpen: true,
+                        resizable: true,
+                        title:'Entry Form',
+                        height: 570,
+                        width: 600,
+
+                        close: function () {
+                            Popup.dialog('destroy').remove();
+                        }
+
+                    });
+                });
+        }
+        function SubmitFormCreate(form) {
+            $.validator.unobtrusive.parse(form);
+            if ($(form).valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: form.action,
+                    data: $(form).serialize(),
+                    success: function (data) {
+                        if (data.success) {
+                            Popup.dialog('close');
+                            dataTable.ajax.reload();
+
+                            $.notify(data.message, {
+                                globalPosition: "top center",
+                                className: "success"
+                            });
+
+
+                        }
+                    }
+                });
+            }
+            return false;
+        }
+
+        function SubmitFormEdit(form) {
+            $.validator.unobtrusive.parse(form);
+            if ($(form).valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: form.action,
+                    data: $(form).serialize(),
+                    success: function (data) {
+                        if (data.success) {
+                            Popup.dialog('close');
+                            dataTable.ajax.reload();
+
+                            $.notify(data.message, {
+                                globalPosition: "top center",
+                                className: "success"
+                            });
+
+
+                        }
+                    }
+                });
+            }
+            return false;
+        }
+        function SubmitFormDetails(form) {
+            $.validator.unobtrusive.parse(form);
+            if ($(form).valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: form.action,
+                    data: $(form).serialize(),
+                    success: function (data) {
+                        if (data.success) {
+                            Popup.dialog('close');
+                            dataTable.ajax.reload();
+
+                            $.notify(data.message, {
+                                globalPosition: "top",
+                                className: "success"
+                            });
+
+
+                        }
+                    }
+                });
+            }
+            return false;
+        }
+
+
+        function Delete(id) {
+            if (confirm('Are You Sure to Delete this  Record ?'))
+            {
+
+                $.ajax({
+                    buttons: {
+                        "Delete this item": function () {
+                            $(this).dialog("close");
+                        },
+                        Cancel: function () {
+                            $(this).dialog("close");
+                        }
+                    },
+                    type: "POST",
+                    url: '@Url.Action("Delete", "ContactPage")/' + id,
+                    success: function (data) {
+                        if (data.success)
+                        {
+                            dataTable.ajax.reload();
+
+                            $.notify(data.message, {
+                                globalPosition: "top center",
+                                className: "success"
+                            })
+
+                        }
+                    }
+
+                });
+            }
+        }
+
+    </script>
+}
+

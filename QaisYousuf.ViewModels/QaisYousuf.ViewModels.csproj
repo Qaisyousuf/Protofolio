@@ -73,6 +73,7 @@
     <Compile Include="ContactBannerViewModel.cs" />
     <Compile Include="ContactDetailsViewModel.cs" />
     <Compile Include="ContactMattersViewModel.cs" />
+    <Compile Include="ContactPageViewModel.cs" />
     <Compile Include="DataCollectionViewModel.cs" />
     <Compile Include="DesignCodeViewModel.cs" />
     <Compile Include="DesignStepsViewModel.cs" />
