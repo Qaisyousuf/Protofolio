@@ -1,0 +1,80 @@
+﻿@model QaisYousuf.ViewModels.UIProcessViewModel
+@{
+    Layout = null;
+}
+
+<div class="card card-cascade narrower mb-1 z-depth-0" style="margin-top: 28px">
+
+    <!--Card image-->
+    <div class="view view-cascade pt-0">
+        <div class=" card-header light-blue lighten-1 white-text text-uppercase font-weight-bold text-center py-3">
+            Details of <span class="text-warning">@Model.MainTitle</span>  Record
+        </div>
+
+    </div>
+    <!--/.Card image-->
+    <!--Card content-->
+    <div class="card-body card-body-cascade d-flex justify-content-center mt-n2">
+        @using (Html.BeginForm("Details", "UIProcess", FormMethod.Get, new { onsubmit = "return SubmitFormDetails(this)" }))
+        {
+            @Html.HiddenFor(model => model.Id)
+            <div class="table-wrapper table-responsive table-bordered table-striped ">
+                <!--Table-->
+                <table class="table table-hover mb-0 ">
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-tag"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.MainTitle)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.MainTitle)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.SubTitle)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.SubTitle)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-image"></i> </a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.ImageUrl)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.ImageUrl)</td>
+                        </tr>
+
+
+
+                        <tr class="">
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="far fa-newspaper"></i></a>
+                            </th>
+                            <td class="font-weight-bold">  @Html.DisplayNameFor(model => model.Content)</td>
+                            <td class="collapse" id="collapseExample"> @Html.Raw(Model.Content)</td>
+                            <td>
+                                <button class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#collapseExample"
+                                        aria-expanded="false" aria-controls="collapseExample">
+                                    Read more
+                                </button>
+                            </td>
+
+
+                        </tr>
+
+                    </tbody>
+                    <!--Table body-->
+                </table>
+                <!--Table-->
+            </div>
+
+        }
+
+
+
+
+    </div>
+    <!--/.Card content-->
+
+</div>

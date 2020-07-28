@@ -90,6 +90,7 @@
     <Compile Include="SubscribeViewModel.cs" />
     <Compile Include="TeamSocialMediaViewModel.cs" />
     <Compile Include="UIBannerViewModel.cs" />
+    <Compile Include="UIProcessViewModel.cs" />
     <Compile Include="UIUXToolsViewModel.cs" />
     <Compile Include="WebProgrammingToolsViewModel.cs" />
     <Compile Include="WorkQualitySectionViewModel.cs" />
