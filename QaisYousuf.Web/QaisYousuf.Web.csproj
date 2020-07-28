@@ -649,6 +649,10 @@
     <Content Include="Areas\UIToCode\Views\UIProcess\Create.cshtml" />
     <Content Include="Areas\UIToCode\Views\UIProcess\Edit.cshtml" />
     <Content Include="Areas\UIToCode\Views\UIProcess\Details.cshtml" />
+    <Content Include="Areas\UIToCode\Views\UISteps\Index.cshtml" />
+    <Content Include="Areas\UIToCode\Views\UISteps\Create.cshtml" />
+    <Content Include="Areas\UIToCode\Views\UISteps\Edit.cshtml" />
+    <Content Include="Areas\UIToCode\Views\UISteps\Details.cshtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -766,6 +770,7 @@
     <Compile Include="Areas\UIToCode\Controllers\SubscribeController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\UIBannerController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\UIProcessController.cs" />
+    <Compile Include="Areas\UIToCode\Controllers\UIStepsController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\UIUXToolsController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\WebProgrammingToolsController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\WorkQualitySectionController.cs" />

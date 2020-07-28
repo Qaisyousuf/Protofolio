@@ -91,6 +91,7 @@
     <Compile Include="TeamSocialMediaViewModel.cs" />
     <Compile Include="UIBannerViewModel.cs" />
     <Compile Include="UIProcessViewModel.cs" />
+    <Compile Include="UIStepsViewModel.cs" />
     <Compile Include="UIUXToolsViewModel.cs" />
     <Compile Include="WebProgrammingToolsViewModel.cs" />
     <Compile Include="WorkQualitySectionViewModel.cs" />
