@@ -93,6 +93,7 @@
     <Compile Include="UIProcessViewModel.cs" />
     <Compile Include="UIStepsViewModel.cs" />
     <Compile Include="UIUXMatterViewModel.cs" />
+    <Compile Include="UIUXPageViewModel.cs" />
     <Compile Include="UIUXToolsViewModel.cs" />
     <Compile Include="WebProgrammingToolsViewModel.cs" />
     <Compile Include="WorkQualitySectionViewModel.cs" />

@@ -1,0 +1,92 @@
+﻿@model QaisYousuf.ViewModels.UIUXPageViewModel
+@{
+    Layout = null;
+}
+
+<div class="card card-cascade narrower mb-1 z-depth-0" style="margin-top: 28px">
+
+    <!--Card image-->
+    <div class="view view-cascade pt-0">
+        <div class=" card-header light-blue lighten-1 white-text text-uppercase font-weight-bold text-center py-3">
+            Insert new record
+        </div>
+
+    </div>
+    <!--/.Card image-->
+    <!--Card content-->
+    <div class="card-body card-body-cascade d-flex justify-content-center mt-n2">
+        @using (Html.BeginForm("Create", "UIPage", FormMethod.Post, new { onsubmit = "return SubmitFormCreate(this)" }))
+        {
+            @Html.HiddenFor(model => model.Id)
+            <div class="form-group">
+                @Html.LabelFor(model => model.Title, new { @class = "control-label" })
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Slug, new { @class = "control-label" })
+                @Html.EditorFor(model => model.Slug, new { htmlAttributes = new { @class = "form-control" } })
+
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.MetaKeywords, new { @class = "control-label" })
+                @Html.EditorFor(model => model.MetaKeywords, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MetaKeywords, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.MetaDescription, new { @class = "control-label" })
+                @Html.EditorFor(model => model.MetaDescription, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MetaDescription, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group  ">
+                <div class="checkbox">
+                    <label>@Html.CheckBoxFor(model => model.IsVisibleToSearchEngine, new { style = "opacity: 1" })&nbsp;  &nbsp; @Html.DisplayNameFor(model => model.IsVisibleToSearchEngine)</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.UIBannerId, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.DropDownListFor(m => m.UIBannerId, new SelectList(ViewBag.UIBanner, "Id", "MainTitle"), "-----Select the banner------", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.UIBannerId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.UIProcessId, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.DropDownListFor(m => m.UIProcessId, new SelectList(ViewBag.UIProcess, "Id", "MainTitle"), "-----Select UI process------", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.UIProcessId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.UISetpsId, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.DropDownListFor(m => m.UISetpsId, new SelectList(ViewBag.UISteps, "Id", "MainTitle"), "-----Select UI steps------", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.UISetpsId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.UIUxMatterId, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.DropDownListFor(m => m.UIUxMatterId, new SelectList(ViewBag.UIMatter, "Id", "MainTitle"), "-----Select UI Matter------", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.UIUxMatterId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" value="Create" class="btn btn-primary"><i class="fas fa-save pr-2"></i> Save</button>  |
+                <button type="reset" value="Reset" class="btn btn-mdb-color"><i class="fas fa-redo-alt"></i> Reset</button>
+
+            </div>
+        }
+
+
+
+    </div>
+    <!--/.Card content-->
+
+</div>
