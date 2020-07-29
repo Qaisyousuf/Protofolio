@@ -661,6 +661,10 @@
     <Content Include="Areas\UIToCode\Views\UIPage\Create.cshtml" />
     <Content Include="Areas\UIToCode\Views\UIPage\Edit.cshtml" />
     <Content Include="Areas\UIToCode\Views\UIPage\Details.cshtml" />
+    <Content Include="Areas\UIToCode\Views\PortfolioBanner\Index.cshtml" />
+    <Content Include="Areas\UIToCode\Views\PortfolioBanner\Create.cshtml" />
+    <Content Include="Areas\UIToCode\Views\PortfolioBanner\Edit.cshtml" />
+    <Content Include="Areas\UIToCode\Views\PortfolioBanner\Details.cshtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -771,6 +775,7 @@
     <Compile Include="Areas\UIToCode\Controllers\MeetOurTeamController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\PagesController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\PlatformDesignController.cs" />
+    <Compile Include="Areas\UIToCode\Controllers\PortfolioBannerController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\ProjectCountingController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\SocialMediaTeamController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\StartUpProcessController.cs" />
