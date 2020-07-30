@@ -677,6 +677,10 @@
     <Content Include="Areas\UIToCode\Views\Education\Create.cshtml" />
     <Content Include="Areas\UIToCode\Views\Education\Edit.cshtml" />
     <Content Include="Areas\UIToCode\Views\Education\Details.cshtml" />
+    <Content Include="Areas\UIToCode\Views\OnlineCertification\Index.cshtml" />
+    <Content Include="Areas\UIToCode\Views\OnlineCertification\Create.cshtml" />
+    <Content Include="Areas\UIToCode\Views\OnlineCertification\Edit.cshtml" />
+    <Content Include="Areas\UIToCode\Views\OnlineCertification\Details.cshtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -786,6 +790,7 @@
     <Compile Include="Areas\UIToCode\Controllers\EducationController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\HomeBannerController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\MeetOurTeamController.cs" />
+    <Compile Include="Areas\UIToCode\Controllers\OnlineCertificationController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\PagesController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\PlatformDesignController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\PortfolioAboutController.cs" />

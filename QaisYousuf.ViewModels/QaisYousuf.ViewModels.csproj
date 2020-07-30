@@ -81,6 +81,7 @@
     <Compile Include="HomeBannerViewModel.cs" />
     <Compile Include="LoginViewModel.cs" />
     <Compile Include="MeetOurTeamViewModel.cs" />
+    <Compile Include="OnlineCertificateViewModel.cs" />
     <Compile Include="PageViewModel.cs" />
     <Compile Include="PlatformDesignViewModel.cs" />
     <Compile Include="PortfolioAboutViewModels.cs" />

@@ -8,6 +8,8 @@ namespace QaisYousuf.Models
 {
     public  class OnlineCertification:EntityBase
     {
+        public string MainTitle { get; set; }
+
         public string ProgramName { get; set; }
 
         public string CourseLocation { get; set; }

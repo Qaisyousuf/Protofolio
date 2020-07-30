@@ -208,6 +208,10 @@
     <Compile Include="Migrations\202007301256313_MainTitleAddedToTheWorkExperienceModel.designer.cs">
       <DependentUpon>202007301256313_MainTitleAddedToTheWorkExperienceModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007301451265_MainTitleAddtoTheOnlineCertificationModel.cs" />
+    <Compile Include="Migrations\202007301451265_MainTitleAddtoTheOnlineCertificationModel.designer.cs">
+      <DependentUpon>202007301451265_MainTitleAddtoTheOnlineCertificationModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -269,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007301256313_MainTitleAddedToTheWorkExperienceModel.resx">
       <DependentUpon>202007301256313_MainTitleAddedToTheWorkExperienceModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007301451265_MainTitleAddtoTheOnlineCertificationModel.resx">
+      <DependentUpon>202007301451265_MainTitleAddtoTheOnlineCertificationModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
