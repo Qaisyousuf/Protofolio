@@ -82,6 +82,7 @@
     <Compile Include="MeetOurTeamViewModel.cs" />
     <Compile Include="PageViewModel.cs" />
     <Compile Include="PlatformDesignViewModel.cs" />
+    <Compile Include="PortfolioAboutViewModels.cs" />
     <Compile Include="PortfolioBannerViewModel.cs" />
     <Compile Include="ProjectCountingViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
