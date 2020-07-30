@@ -77,6 +77,7 @@
     <Compile Include="DataCollectionViewModel.cs" />
     <Compile Include="DesignCodeViewModel.cs" />
     <Compile Include="DesignStepsViewModel.cs" />
+    <Compile Include="EducationViewModel.cs" />
     <Compile Include="HomeBannerViewModel.cs" />
     <Compile Include="LoginViewModel.cs" />
     <Compile Include="MeetOurTeamViewModel.cs" />
