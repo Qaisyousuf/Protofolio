@@ -204,6 +204,10 @@
     <Compile Include="Migrations\202007271435543_UIBannerPropertyAdded.designer.cs">
       <DependentUpon>202007271435543_UIBannerPropertyAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007301256313_MainTitleAddedToTheWorkExperienceModel.cs" />
+    <Compile Include="Migrations\202007301256313_MainTitleAddedToTheWorkExperienceModel.designer.cs">
+      <DependentUpon>202007301256313_MainTitleAddedToTheWorkExperienceModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -262,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007271435543_UIBannerPropertyAdded.resx">
       <DependentUpon>202007271435543_UIBannerPropertyAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007301256313_MainTitleAddedToTheWorkExperienceModel.resx">
+      <DependentUpon>202007301256313_MainTitleAddedToTheWorkExperienceModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

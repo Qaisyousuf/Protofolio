@@ -8,6 +8,9 @@ namespace QaisYousuf.Models
 {
     public class WorkExperience:EntityBase
     {
+        public string Maintitle { get; set; }
+
+
         public string JobTitle { get; set; }
 
         public string CompanyName { get; set; }

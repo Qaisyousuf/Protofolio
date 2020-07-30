@@ -1,0 +1,81 @@
+﻿@model QaisYousuf.ViewModels.WorkExperienceViewModel
+@{
+    Layout = null;
+}
+
+<div class="card card-cascade narrower mb-1 z-depth-0" style="margin-top: 28px">
+
+    <!--Card image-->
+    <div class="view view-cascade pt-0">
+        <div class=" card-header light-blue lighten-1 white-text text-uppercase font-weight-bold text-center py-3">
+            Do you want to Update the <span class="text-warning">@Model.MainTitle</span>  Record?
+
+        </div>
+
+    </div>
+    <!--/.Card image-->
+    <!--Card content-->
+    <div class="card-body card-body-cascade d-flex justify-content-center mt-n2">
+        @using (Html.BeginForm("Edit", "WorkExperince", FormMethod.Post, new { onsubmit = "return SubmitFormEdit(this)" }))
+        {
+            @Html.HiddenFor(model => model.Id)
+            <div class="form-group ">
+                @Html.LabelFor(model => model.MainTitle, new { @class = "control-label" })
+                @Html.EditorFor(model => model.MainTitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MainTitle, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.JobTitle, new { @class = "control-label" })
+                @Html.EditorFor(model => model.JobTitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.JobTitle, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.CompanyName, new { @class = "control-label" })
+                @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.CompanyLocation, new { @class = "control-label" })
+                @Html.EditorFor(model => model.CompanyLocation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CompanyLocation, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.StartDate, new { @class = "control-label" })
+                @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EndDate, new { @class = "control-label" })
+                @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.LogoUrl, new { @class = "control-label" })
+                @Html.TextAreaFor(model => model.LogoUrl, new { @class = "form-control", rows = "10", cols = "30" })
+                @Html.ValidationMessageFor(model => model.LogoUrl, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.JobDesicription, new { @class = "control-label" })
+                @Html.TextAreaFor(model => model.JobDesicription, new { @class = "form-control", rows = "10", cols = "30" })
+                @Html.ValidationMessageFor(model => model.JobDesicription, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.JobSubDescription, new { @class = "control-label" })
+                @Html.TextAreaFor(model => model.JobSubDescription, new { @class = "form-control", rows = "10", cols = "30" })
+                @Html.ValidationMessageFor(model => model.JobSubDescription, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <button type="submit" value="Create" class="btn btn-primary"><i class="fas fa-save pr-2"></i> Save</button>  |
+                <button type="reset" value="Reset" class="btn btn-mdb-color"><i class="fas fa-redo-alt"></i> Reset</button>
+            </div>
+
+        }
+
+
+
+    </div>
+    <!--/.Card content-->
+
+</div>
+
