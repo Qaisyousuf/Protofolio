@@ -50,6 +50,7 @@ namespace QaisYousuf.Data.Interfaces
         IWorkExperienceRepository WorkExperienceRepository { get; }
         IWorkQualitySectionRepository WorkQualitySectionRepository { get; }
         IUserRepository UserRepository { get; }
+        IProjectStatusRepository ProjectStatusRepository { get; }
         void Commit();
     }
 }

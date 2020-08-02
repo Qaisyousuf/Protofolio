@@ -55,6 +55,7 @@ namespace QaisYousuf.Data.Context
         public DbSet<WebProgrammingTools> WebProgrammingTools { get; set; }
         public DbSet<WorkExperience> WorkExperiences { get; set; }
         public DbSet<WorkQualitySection> WorkQualitySections { get; set; }
+        public DbSet<ProjectStatus> ProjectStatuses { get; set; }
 
 
 

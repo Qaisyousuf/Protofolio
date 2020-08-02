@@ -681,6 +681,10 @@
     <Content Include="Areas\UIToCode\Views\OnlineCertification\Create.cshtml" />
     <Content Include="Areas\UIToCode\Views\OnlineCertification\Edit.cshtml" />
     <Content Include="Areas\UIToCode\Views\OnlineCertification\Details.cshtml" />
+    <Content Include="Areas\UIToCode\Views\ProjectStatus\Index.cshtml" />
+    <Content Include="Areas\UIToCode\Views\ProjectStatus\Create.cshtml" />
+    <Content Include="Areas\UIToCode\Views\ProjectStatus\Edit.cshtml" />
+    <Content Include="Areas\UIToCode\Views\ProjectStatus\Details.cshtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -796,6 +800,7 @@
     <Compile Include="Areas\UIToCode\Controllers\PortfolioAboutController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\PortfolioBannerController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\ProjectCountingController.cs" />
+    <Compile Include="Areas\UIToCode\Controllers\ProjectStatusController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\SocialMediaTeamController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\StartUpProcessController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\StartUpProgramController.cs" />

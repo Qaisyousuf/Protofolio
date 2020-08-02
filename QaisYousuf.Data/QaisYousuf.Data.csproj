@@ -67,6 +67,7 @@
     <Compile Include="Concrete Implementation\HomeBannerRepository.cs" />
     <Compile Include="Concrete Implementation\HomePageRepository.cs" />
     <Compile Include="Concrete Implementation\InterestRepository.cs" />
+    <Compile Include="Concrete Implementation\ProjectStatusRepository.cs" />
     <Compile Include="Concrete Implementation\SubscribeRepository.cs" />
     <Compile Include="Concrete Implementation\MeetOurTeamRepository.cs" />
     <Compile Include="Concrete Implementation\MenuRepository.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Interfaces\IIntresetRepository.cs" />
     <Compile Include="Interfaces\IMeetOurTeamRepository.cs" />
     <Compile Include="Interfaces\IMenuRepository.cs" />
+    <Compile Include="Interfaces\IProjectStatusRepository.cs" />
     <Compile Include="Interfaces\IUserRepository.cs" />
     <Compile Include="Interfaces\IOnlineCertificationRepository.cs" />
     <Compile Include="Interfaces\IPlatformDesignRepository.cs" />
@@ -212,6 +214,26 @@
     <Compile Include="Migrations\202007301451265_MainTitleAddtoTheOnlineCertificationModel.designer.cs">
       <DependentUpon>202007301451265_MainTitleAddtoTheOnlineCertificationModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007311030412_ProjectStatusAdded.cs" />
+    <Compile Include="Migrations\202007311030412_ProjectStatusAdded.designer.cs">
+      <DependentUpon>202007311030412_ProjectStatusAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007311053517_DevelopmentPhaseAdded.cs" />
+    <Compile Include="Migrations\202007311053517_DevelopmentPhaseAdded.designer.cs">
+      <DependentUpon>202007311053517_DevelopmentPhaseAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008021326008_ProjectStatusAdded1.cs" />
+    <Compile Include="Migrations\202008021326008_ProjectStatusAdded1.designer.cs">
+      <DependentUpon>202008021326008_ProjectStatusAdded1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008021330295_ProjectStatusCreated.cs" />
+    <Compile Include="Migrations\202008021330295_ProjectStatusCreated.designer.cs">
+      <DependentUpon>202008021330295_ProjectStatusCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008021345159_ProjectStatusPropertyChanged.cs" />
+    <Compile Include="Migrations\202008021345159_ProjectStatusPropertyChanged.designer.cs">
+      <DependentUpon>202008021345159_ProjectStatusPropertyChanged.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -276,6 +298,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007301451265_MainTitleAddtoTheOnlineCertificationModel.resx">
       <DependentUpon>202007301451265_MainTitleAddtoTheOnlineCertificationModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007311030412_ProjectStatusAdded.resx">
+      <DependentUpon>202007311030412_ProjectStatusAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007311053517_DevelopmentPhaseAdded.resx">
+      <DependentUpon>202007311053517_DevelopmentPhaseAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008021326008_ProjectStatusAdded1.resx">
+      <DependentUpon>202008021326008_ProjectStatusAdded1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008021330295_ProjectStatusCreated.resx">
+      <DependentUpon>202008021330295_ProjectStatusCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008021345159_ProjectStatusPropertyChanged.resx">
+      <DependentUpon>202008021345159_ProjectStatusPropertyChanged.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
