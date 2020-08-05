@@ -1,0 +1,91 @@
+﻿@model QaisYousuf.ViewModels.PortfolioProjectViewModel
+@{
+    Layout = null;
+}
+
+<div class="card card-cascade narrower mb-1 z-depth-0" style="margin-top: 28px">
+
+    <!--Card image-->
+    <div class="view view-cascade pt-0">
+        <div class=" card-header light-blue lighten-1 white-text text-uppercase font-weight-bold text-center py-3">
+            Insert new record
+        </div>
+
+    </div>
+    <!--/.Card image-->
+    <!--Card content-->
+    <div class="card-body card-body-cascade d-flex justify-content-center mt-n2">
+        @using (Html.BeginForm("Create", "ProjectPortfolio", FormMethod.Post, new { onsubmit = "return SubmitFormCreate(this)" }))
+        {
+            @Html.HiddenFor(model => model.Id)
+            <div class="form-group">
+                @Html.LabelFor(model => model.MainTitle, new { @class = "control-label" })
+                @Html.EditorFor(model => model.MainTitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MainTitle, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProjectName, new { @class = "control-label" })
+                @Html.EditorFor(model => model.ProjectName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProjectName, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProjectType, new { @class = "control-label" })
+                @Html.EditorFor(model => model.ProjectType, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProjectType, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProjectImageUrl, new { @class = "control-label" })
+                @Html.EditorFor(model => model.ProjectImageUrl, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProjectImageUrl, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProjectPublishDate, new { @class = "control-label" })
+                @Html.EditorFor(model => model.ProjectPublishDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProjectPublishDate, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProjectDetails, new { @class = "control-label" })
+                @Html.EditorFor(model => model.ProjectDetails, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProjectDetails, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProjectWebSiteUrl, new { @class = "control-label" })
+                @Html.EditorFor(model => model.ProjectWebSiteUrl, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProjectWebSiteUrl, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ButtonText, new { @class = "control-label" })
+                @Html.EditorFor(model => model.ButtonText, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ButtonText, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Content, new { @class = "control-label" })
+                @Html.TextAreaFor(model => model.Content, 10, 10, new { @class = "form-control width-textarea", })
+                @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.SubContent, new { @class = "control-label" })
+                @Html.TextAreaFor(model => model.SubContent, 10, 10, new { @class = "form-control width-textarea", })
+                @Html.ValidationMessageFor(model => model.SubContent, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProjectStatusId, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.DropDownListFor(m => m.ProjectStatusId, new SelectList(ViewBag.ProjectStatus, "Id", "ProjectStatusProcess"), "-----Select project status------", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ProjectStatusId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" value="Create" class="btn btn-primary"><i class="fas fa-save pr-2"></i> Save</button>  |
+                <button type="reset" value="Reset" class="btn btn-mdb-color"><i class="fas fa-redo-alt"></i> Reset</button>
+
+            </div>
+        }
+
+
+
+    </div>
+    <!--/.Card content-->
+
+</div>

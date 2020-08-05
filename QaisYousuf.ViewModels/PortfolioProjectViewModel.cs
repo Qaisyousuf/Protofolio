@@ -1,11 +1,7 @@
 ﻿using QaisYousuf.Models;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QaisYousuf.ViewModels
 {
@@ -37,14 +33,26 @@ namespace QaisYousuf.ViewModels
         [DataType(DataType.Url)]
         public string ProjectImageUrl { get; set; }
 
-        public string ProjectPublishDate { get; set; }
 
+        [Required]
+        [Display(Name ="Project Publish Date")]
+        [DataType(DataType.Date)]
+        public DateTime ProjectPublishDate { get; set; }
+
+        [Required]
+        [Display(Name ="Project Detials")]
         public string ProjectDetails { get; set; }
 
+        [Required]
+        [Display(Name ="Project Web Url")]
+        [DataType(DataType.Url)]
         public string ProjectWebSiteUrl { get; set; }
 
+        [Required]
+        [Display(Name ="Button Text")]
         public string ButtonText { get; set; }
 
+        [Display(Name ="Project Status")]
         public int ProjectStatusId { get; set; }
 
         [ForeignKey("ProjectStatusId")]

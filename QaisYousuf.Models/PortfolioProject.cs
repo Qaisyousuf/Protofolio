@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QaisYousuf.Models
@@ -17,7 +19,8 @@ namespace QaisYousuf.Models
 
         public string ProjectImageUrl { get; set; }
 
-        public string ProjectPublishDate { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime ProjectPublishDate { get; set; }
 
         public string ProjectDetails { get; set; }
 
