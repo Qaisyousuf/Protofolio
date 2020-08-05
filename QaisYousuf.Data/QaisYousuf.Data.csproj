@@ -238,6 +238,10 @@
     <Compile Include="Migrations\202008051137173_PortfolioPublishDataTypeChanged.designer.cs">
       <DependentUpon>202008051137173_PortfolioPublishDataTypeChanged.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008051412433_SubTitleAddedToInterestModel.cs" />
+    <Compile Include="Migrations\202008051412433_SubTitleAddedToInterestModel.designer.cs">
+      <DependentUpon>202008051412433_SubTitleAddedToInterestModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -320,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008051137173_PortfolioPublishDataTypeChanged.resx">
       <DependentUpon>202008051137173_PortfolioPublishDataTypeChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008051412433_SubTitleAddedToInterestModel.resx">
+      <DependentUpon>202008051412433_SubTitleAddedToInterestModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

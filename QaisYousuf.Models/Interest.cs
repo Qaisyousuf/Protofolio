@@ -10,6 +10,7 @@ namespace QaisYousuf.Models
     {
         public string MainTitle { get; set; }
 
+        public string Subtitle { get; set; }
         public string UrlIcon { get; set; }
 
     }
