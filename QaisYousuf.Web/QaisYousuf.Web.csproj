@@ -693,6 +693,10 @@
     <Content Include="Areas\UIToCode\Views\Interest\Create.cshtml" />
     <Content Include="Areas\UIToCode\Views\Interest\Edit.cshtml" />
     <Content Include="Areas\UIToCode\Views\Interest\Details.cshtml" />
+    <Content Include="Areas\UIToCode\Views\Portfolio\Index.cshtml" />
+    <Content Include="Areas\UIToCode\Views\Portfolio\Create.cshtml" />
+    <Content Include="Areas\UIToCode\Views\Portfolio\Edit.cshtml" />
+    <Content Include="Areas\UIToCode\Views\Portfolio\Details.cshtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -808,6 +812,7 @@
     <Compile Include="Areas\UIToCode\Controllers\PlatformDesignController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\PortfolioAboutController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\PortfolioBannerController.cs" />
+    <Compile Include="Areas\UIToCode\Controllers\PortfolioController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\ProjectCountingController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\ProjectPortfolioController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\ProjectStatusController.cs" />

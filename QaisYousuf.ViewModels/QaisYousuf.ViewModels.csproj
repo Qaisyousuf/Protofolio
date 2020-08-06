@@ -88,6 +88,7 @@
     <Compile Include="PortfolioAboutViewModels.cs" />
     <Compile Include="PortfolioBannerViewModel.cs" />
     <Compile Include="PortfolioProjectViewModel.cs" />
+    <Compile Include="PortfolioViewModel.cs" />
     <Compile Include="ProjectCountingViewModel.cs" />
     <Compile Include="ProjectStatusViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

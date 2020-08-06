@@ -246,6 +246,10 @@
     <Compile Include="Migrations\202008061035298_ContactDetailsRemoved.designer.cs">
       <DependentUpon>202008061035298_ContactDetailsRemoved.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008061314265_StringChangeToBoolInPortfolio.cs" />
+    <Compile Include="Migrations\202008061314265_StringChangeToBoolInPortfolio.designer.cs">
+      <DependentUpon>202008061314265_StringChangeToBoolInPortfolio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -334,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008061035298_ContactDetailsRemoved.resx">
       <DependentUpon>202008061035298_ContactDetailsRemoved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008061314265_StringChangeToBoolInPortfolio.resx">
+      <DependentUpon>202008061314265_StringChangeToBoolInPortfolio.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
