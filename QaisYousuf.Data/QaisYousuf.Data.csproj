@@ -242,6 +242,10 @@
     <Compile Include="Migrations\202008051412433_SubTitleAddedToInterestModel.designer.cs">
       <DependentUpon>202008051412433_SubTitleAddedToInterestModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008061035298_ContactDetailsRemoved.cs" />
+    <Compile Include="Migrations\202008061035298_ContactDetailsRemoved.designer.cs">
+      <DependentUpon>202008061035298_ContactDetailsRemoved.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -327,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008051412433_SubTitleAddedToInterestModel.resx">
       <DependentUpon>202008051412433_SubTitleAddedToInterestModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008061035298_ContactDetailsRemoved.resx">
+      <DependentUpon>202008061035298_ContactDetailsRemoved.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

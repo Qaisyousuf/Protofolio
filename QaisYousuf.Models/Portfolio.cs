@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QaisYousuf.Models
 {
@@ -54,9 +49,9 @@ namespace QaisYousuf.Models
         //[ForeignKey("PortfolioContactId")]
         //public virtual ContactForm ContactFormPortfolio { get; set; }
 
-        public int PortfolioContactDetails { get; set; }
-        [ForeignKey("PortfolioContactDetails")]
-        public virtual ContactDetails PortfolioContactDetials { get; set; }
+        //public int PortfolioContactDetails { get; set; }
+        //[ForeignKey("PortfolioContactDetails")]
+        //public virtual ContactDetails PortfolioContactDetials { get; set; }
 
 
 

@@ -51,7 +51,7 @@
     <header>
         <!-- Sidebar navigation -->
         <div id="slide-out" class="side-nav sn-bg-4">
-            <ul class="custom-scrollbar">
+            <ul class="custom-scrollbar scrollbar-near-moon" style="height:auto;overflow-y:auto;"">
                 <!-- Logo -->
                 <li>
                     <div class="logo-wrapper waves-light">
@@ -232,10 +232,10 @@
                                         <a href="/UIToCode/OnlineCertification/Index" class="waves-effect"> Online Certification</a>
                                     </li>
                                     <li>
-                                        <a href="/UIToCode/OnlineCertification/Index" class="waves-effect"> Projects</a>
+                                        <a href="/UIToCode/ProjectStatus/Index" class="waves-effect"> Project Status</a>
                                     </li>
                                     <li>
-                                        <a href="/UIToCode/ProjectStatus/Index" class="waves-effect"> Project Status</a>
+                                        <a href="/UIToCode/ProjectPortfolio/Index" class="waves-effect"> Project </a>
                                     </li>
 
                                 </ul>
@@ -292,12 +292,21 @@
             <p>&copy; @DateTime.Now.Year - UI To Code</p>
         </footer>
     </div>
-
+    <script>
+        $(document).ready(function () {
+            $(".button-collapse").sideNav({
+                breakpoint: 1600
+            });
+            // SideNav Scrollbar Initialization
+            var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+            var ps = new PerfectScrollbar(sideNavScrollbar);
+        });
+    </script>
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/popper")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-    
+
 
 
 </body>
