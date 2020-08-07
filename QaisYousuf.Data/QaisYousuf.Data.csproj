@@ -250,6 +250,26 @@
     <Compile Include="Migrations\202008061314265_StringChangeToBoolInPortfolio.designer.cs">
       <DependentUpon>202008061314265_StringChangeToBoolInPortfolio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008071229453_SiteSettingsAdded.cs" />
+    <Compile Include="Migrations\202008071229453_SiteSettingsAdded.designer.cs">
+      <DependentUpon>202008071229453_SiteSettingsAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008071234282_SettingsAdded.cs" />
+    <Compile Include="Migrations\202008071234282_SettingsAdded.designer.cs">
+      <DependentUpon>202008071234282_SettingsAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008071242123_SiteSettingsAddedAgain.cs" />
+    <Compile Include="Migrations\202008071242123_SiteSettingsAddedAgain.designer.cs">
+      <DependentUpon>202008071242123_SiteSettingsAddedAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008071251119_DataRemovedFromSettings.cs" />
+    <Compile Include="Migrations\202008071251119_DataRemovedFromSettings.designer.cs">
+      <DependentUpon>202008071251119_DataRemovedFromSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008071253496_ProptertyAddedToSiteSettings.cs" />
+    <Compile Include="Migrations\202008071253496_ProptertyAddedToSiteSettings.designer.cs">
+      <DependentUpon>202008071253496_ProptertyAddedToSiteSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -341,6 +361,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008061314265_StringChangeToBoolInPortfolio.resx">
       <DependentUpon>202008061314265_StringChangeToBoolInPortfolio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008071229453_SiteSettingsAdded.resx">
+      <DependentUpon>202008071229453_SiteSettingsAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008071234282_SettingsAdded.resx">
+      <DependentUpon>202008071234282_SettingsAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008071242123_SiteSettingsAddedAgain.resx">
+      <DependentUpon>202008071242123_SiteSettingsAddedAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008071251119_DataRemovedFromSettings.resx">
+      <DependentUpon>202008071251119_DataRemovedFromSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008071253496_ProptertyAddedToSiteSettings.resx">
+      <DependentUpon>202008071253496_ProptertyAddedToSiteSettings.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

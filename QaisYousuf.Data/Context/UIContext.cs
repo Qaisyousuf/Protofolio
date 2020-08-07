@@ -39,7 +39,7 @@ namespace QaisYousuf.Data.Context
         public DbSet<RequstingUIDesign> RequstingUIDesigns { get; set; }
         public DbSet<RequstingUIForm> RequstingUIForms { get; set; }
         public DbSet<RoleModel> Roles { get; set; }
-        public DbSet<SiteSetting> SiteSettings { get; set; }
+        public DbSet<Settings> Settings { get; set; }
         public DbSet<StartUpProcess> StartUpProcesses { get; set; }
         public DbSet<StartUpProgram> StartUpProgram { get; set; }
         public DbSet<Subscribe> Subscribes { get; set; }

@@ -1,0 +1,240 @@
+﻿@model QaisYousuf.ViewModels.SiteSettingViewMdoel
+@{
+    Layout = null;
+}
+
+<div class="card card-cascade narrower mb-1 z-depth-0" style="margin-top: 28px">
+
+    <!--Card image-->
+    <div class="view view-cascade pt-0">
+        <div class=" card-header light-blue lighten-1 white-text text-uppercase font-weight-bold text-center py-3">
+            Details of <span class="text-warning">@Model.Title</span>  Record
+        </div>
+
+    </div>
+    <!--/.Card image-->
+    <!--Card content-->
+    <div class="card-body card-body-cascade d-flex justify-content-center mt-n2">
+        @using (Html.BeginForm("Details", "SiteSettings", FormMethod.Get, new { onsubmit = "return SubmitFormDetails(this)" }))
+        {
+            @Html.HiddenFor(model => model.Id)
+            <div class="table-wrapper table-responsive table-bordered table-striped ">
+                <!--Table-->
+                <table class="table table-hover mb-0 ">
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-tag"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.SiteName)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.SiteName)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.SiteOwner)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.SiteOwner)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.GoogleSiteVerfication)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.GoogleSiteVerfication)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.GoogleAds)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.GoogleAds)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.SiteLastUpdate)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.SiteLastUpdate)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.UpdatedBy)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.UpdatedBy)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Title)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.Title)</td>
+                        </tr>
+                        <tr class="">
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="far fa-newspaper"></i></a>
+                            </th>
+                            <td class="font-weight-bold">  @Html.DisplayNameFor(model => model.Content)</td>
+                            <td class="collapse" id="collapseExample"> @Html.Raw(Model.Content)</td>
+                            <td>
+                                <button class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#collapseExample"
+                                        aria-expanded="false" aria-controls="collapseExample">
+                                    Read more
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Home)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.Home)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.HomeUrl)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.HomeUrl)</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.About)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.About)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.AboutUrl)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.AboutUrl)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.UIUX)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.UIUX)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.UIUXURl)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.UIUXURl)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Code)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.Code)</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.CodeUrl)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.CodeUrl)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Contact)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.Contact)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.ContactUrl)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.ContactUrl)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Support)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.Support)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.SupportUrl)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.SupportUrl)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Profile)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.Profile)</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.ProfileUrl)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.ProfileUrl)</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.CopyrightFooter)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.CopyrightFooter)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.DesignBy)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.DesignBy)</td>
+                        </tr>
+                    </tbody>
+                    <!--Table body-->
+                </table>
+                <!--Table-->
+            </div>
+
+        }
+
+
+
+
+    </div>
+    <!--/.Card content-->
+
+</div>
+

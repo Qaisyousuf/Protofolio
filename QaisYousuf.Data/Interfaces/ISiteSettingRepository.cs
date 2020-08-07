@@ -2,7 +2,7 @@
 
 namespace QaisYousuf.Data.Interfaces
 {
-    public interface ISiteSettingRepository:IRepository<SiteSetting>
+    public interface ISiteSettingRepository:IRepository<Settings>
     {
     }
 }
