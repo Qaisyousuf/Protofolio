@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace QaisYousuf.ViewModels
 {
-    public class TeamSocialMediaViewModel
+    public class TeamSocialMediaViewModel:BaseViewModel
     {
      
         public int Id { get; set; }

@@ -2,7 +2,7 @@
 
 namespace QaisYousuf.ViewModels
 {
-    public class UIUXToolsViewModel
+    public class UIUXToolsViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

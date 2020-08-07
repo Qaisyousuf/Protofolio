@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QaisYousuf.ViewModels
 {
-    public class PortfolioProjectViewModel
+    public class PortfolioProjectViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

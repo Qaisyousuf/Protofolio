@@ -2,7 +2,7 @@
 
 namespace QaisYousuf.ViewModels
 {
-    public class UIStepsViewModel
+    public class UIStepsViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

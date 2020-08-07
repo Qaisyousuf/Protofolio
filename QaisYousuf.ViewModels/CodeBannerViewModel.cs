@@ -2,7 +2,7 @@
 
 namespace QaisYousuf.ViewModels
 {
-    public class CodeBannerViewModel
+    public class CodeBannerViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

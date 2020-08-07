@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QaisYousuf.ViewModels
 {
-    public class UIProcessViewModel
+    public class UIProcessViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

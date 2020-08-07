@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QaisYousuf.ViewModels
 {
-    public class StartUpProcessViewModel
+    public class StartUpProcessViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

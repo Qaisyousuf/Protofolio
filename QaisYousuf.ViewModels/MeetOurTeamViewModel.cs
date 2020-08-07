@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QaisYousuf.ViewModels
 {
-    public class MeetOurTeamViewModel
+    public class MeetOurTeamViewModel:BaseViewModel
     {
        
         public int Id { get; set; }

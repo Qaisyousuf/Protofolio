@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QaisYousuf.ViewModels
 {
-    public class ContactDetailsViewModel
+    public class ContactDetailsViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

@@ -2,7 +2,7 @@
 
 namespace QaisYousuf.ViewModels
 {
-    public class WebProgrammingToolsViewModel
+    public class WebProgrammingToolsViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

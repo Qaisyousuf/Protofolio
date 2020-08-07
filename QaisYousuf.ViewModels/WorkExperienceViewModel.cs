@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace QaisYousuf.ViewModels
 {
-    public class WorkExperienceViewModel
+    public class WorkExperienceViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

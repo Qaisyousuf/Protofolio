@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QaisYousuf.ViewModels
 {
-    public class ProjectStatusViewModel
+    public class ProjectStatusViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

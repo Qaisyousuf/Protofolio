@@ -1,11 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-
-
 namespace QaisYousuf.ViewModels
 {
     
-    public class RegisterViewModel
+    public class RegisterViewModel:BaseViewModel
     {
         
         [Display(Name ="User Name")]

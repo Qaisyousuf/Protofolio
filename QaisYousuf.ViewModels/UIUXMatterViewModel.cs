@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QaisYousuf.ViewModels
 {
-    public class UIUXMatterViewModel
+    public class UIUXMatterViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

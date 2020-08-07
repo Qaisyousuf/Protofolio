@@ -2,7 +2,7 @@
 
 namespace QaisYousuf.ViewModels
 {
-    public class EducationViewModel
+    public class EducationViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

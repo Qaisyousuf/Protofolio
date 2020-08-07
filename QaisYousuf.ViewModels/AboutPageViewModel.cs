@@ -9,10 +9,9 @@ using QaisYousuf.Models;
 
 namespace QaisYousuf.ViewModels
 {
-    public class AboutPageViewModel
+    public class AboutPageViewModel:BaseViewModel
     {
         public int Id { get; set; }
-
 
         [Required]
         public string Title { get; set; }

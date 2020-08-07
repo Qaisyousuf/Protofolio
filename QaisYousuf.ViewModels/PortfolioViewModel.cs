@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QaisYousuf.ViewModels
 {
-    public class PortfolioViewModel
+    public class PortfolioViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

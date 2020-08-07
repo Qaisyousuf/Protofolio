@@ -2,7 +2,7 @@
 
 namespace QaisYousuf.ViewModels
 {
-    public class InterestViewModel
+    public class InterestViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

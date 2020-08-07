@@ -9,7 +9,7 @@ using QaisYousuf.Models;
 
 namespace QaisYousuf.ViewModels
 {
-    public class PageViewModel
+    public class PageViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QaisYousuf.ViewModels
 {
-    public class UIUXPageViewModel
+    public class UIUXPageViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

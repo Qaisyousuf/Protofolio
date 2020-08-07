@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QaisYousuf.ViewModels
 {
-    public class OnlineCertificateViewModel
+    public class OnlineCertificateViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

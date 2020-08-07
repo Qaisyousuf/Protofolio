@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="AboutBannerViewModel.cs" />
     <Compile Include="AboutPageViewModel.cs" />
+    <Compile Include="BaseViewModel.cs" />
     <Compile Include="CodeBannerViewModel.cs" />
     <Compile Include="CodePageViewModel.cs" />
     <Compile Include="ContactBannerViewModel.cs" />

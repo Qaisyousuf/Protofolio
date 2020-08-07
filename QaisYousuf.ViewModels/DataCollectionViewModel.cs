@@ -3,7 +3,7 @@ using System.Web.Mvc;
 
 namespace QaisYousuf.ViewModels
 {
-    public class DataCollectionViewModel
+    public class DataCollectionViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

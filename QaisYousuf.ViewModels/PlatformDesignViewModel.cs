@@ -2,7 +2,7 @@
 
 namespace QaisYousuf.ViewModels
 {
-    public class PlatformDesignViewModel
+    public class PlatformDesignViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

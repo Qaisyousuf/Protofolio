@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QaisYousuf.ViewModels
 {
-    public class PortfolioBannerViewModel
+    public class PortfolioBannerViewModel:BaseViewModel
     {
         public int Id { get; set; }
 
