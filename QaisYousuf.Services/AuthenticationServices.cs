@@ -11,6 +11,13 @@ namespace QaisYousuf.Services
         {
             this.uow = uow;
         }
+
+        public void AddUserToRoles(int? userId, int[] roleIds)
+        {
+            uow.UserRepository.AddUserToRoles(userId, roleIds,uow.Context);
+            uow.Commit();
+        }
+
         public string GenerateHash(string password)
         {
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);

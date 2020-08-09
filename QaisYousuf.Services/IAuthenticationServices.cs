@@ -11,5 +11,7 @@ namespace QaisYousuf.Services
         bool VerifyHash(string username, string password);
 
         string GenerateHash(string password);
+
+        void AddUserToRoles(int? userId, int[] roleIds);
     }
 }

@@ -18,6 +18,18 @@ namespace QaisYousuf.Data.Concrete_Implementation
 
         }
 
+        public void AddUserToRoles(int? userId, int[] roleIds,UIContext context)
+        {
+            var user = context.Users.Where(x => x.Id == userId).SingleOrDefault();
+
+            var rolesFromdb = GetRolesById(roleIds);
+
+            foreach (var role in rolesFromdb)
+            {
+                user.Roles.Add(role);
+            }
+        }
+
         public string GetPassword(string username)
         {
             return _context.Users.Where(x => x.UserName == username).Select(x => x.PasswordHash).SingleOrDefault();

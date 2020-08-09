@@ -69,6 +69,7 @@
     <Compile Include="AboutBannerViewModel.cs" />
     <Compile Include="AboutPageViewModel.cs" />
     <Compile Include="BaseViewModel.cs" />
+    <Compile Include="CheckBoxViewModel.cs" />
     <Compile Include="CodeBannerViewModel.cs" />
     <Compile Include="CodePageViewModel.cs" />
     <Compile Include="ContactBannerViewModel.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="DesignStepsViewModel.cs" />
     <Compile Include="EducationViewModel.cs" />
     <Compile Include="HomeBannerViewModel.cs" />
+    <Compile Include="InsertUsersViewModel.cs" />
     <Compile Include="InterestViewModel.cs" />
     <Compile Include="LoginViewModel.cs" />
     <Compile Include="MeetOurTeamViewModel.cs" />

@@ -1,4 +1,5 @@
-﻿using QaisYousuf.Models;
+﻿using QaisYousuf.Data.Context;
+using QaisYousuf.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,5 +21,7 @@ namespace QaisYousuf.Data.Interfaces
         IEnumerable<UserModel> GetUserWithRoles();
 
         IEnumerable<RoleModel> GetRolesById(int[] ids);
+
+        void AddUserToRoles(int? userId, int[] roleIds,UIContext context);
     }
 }

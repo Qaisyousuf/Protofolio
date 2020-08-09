@@ -104,6 +104,8 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
                 Url=menu.Url,
                 ParentId=menu.ParentId,
             };
+
+            uow.Context.Entry(menu).Reference(x => x.Parent).Load();
             ViewBag.DropDownMenu = uow.MenuRepository.GetAll();
             return View(viewmodel);
         }
