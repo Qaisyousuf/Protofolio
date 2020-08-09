@@ -701,6 +701,11 @@
     <Content Include="Areas\UIToCode\Views\SiteSettings\Create.cshtml" />
     <Content Include="Areas\UIToCode\Views\SiteSettings\Edit.cshtml" />
     <Content Include="Areas\UIToCode\Views\SiteSettings\Details.cshtml" />
+    <Content Include="Areas\UIToCode\Views\Menus\Create.cshtml" />
+    <Content Include="Areas\UIToCode\Views\Menus\Index.cshtml" />
+    <Content Include="Areas\UIToCode\Views\Menus\Edit.cshtml" />
+    <Content Include="Areas\UIToCode\Views\Menus\Delete.cshtml" />
+    <Content Include="Areas\UIToCode\Views\Menus\Details.cshtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -811,6 +816,7 @@
     <Compile Include="Areas\UIToCode\Controllers\HomeBannerController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\InterestController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\MeetOurTeamController.cs" />
+    <Compile Include="Areas\UIToCode\Controllers\MenusController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\OnlineCertificationController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\PagesController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\PlatformDesignController.cs" />

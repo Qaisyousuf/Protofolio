@@ -1,0 +1,83 @@
+﻿@model IEnumerable<QaisYousuf.ViewModels.MenuViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="card card-cascade narrower blue lighten-5">
+
+    <!-- Card image -->
+    <div class="view view-cascade gradient-card-header  blue lighten-1 text-white">
+
+        <!-- Title -->
+        <h4 class="text-white"> Navigation </h4>
+        <!-- Subtitle -->
+    </div>
+
+    <!-- Card content -->
+    <div class="card-body  text-center">
+
+        <!-- Text -->
+        <div class="">
+
+            <p>
+                <a class="btn btn-rounded  btn-outline-primary" href="/UIToCode/Menus/Create"><i class="fas fa-plus-circle pr-2 fa-1x" aria-hidden="true"></i> Create New Menu </a>
+
+            </p>
+            <hr />
+            <table id="dataTable" class="table table-bordered table-hover table-striped table-responsive-sm ">
+                <thead class=" mdb-color white-text">
+                    <tr>
+                        <th>
+                            <i class="fas fa-bars"></i> @Html.DisplayNameFor(model => model.Title)
+                        </th>
+                        <th>
+                            <i class="fas fa-sort-amount-up"></i> @Html.DisplayNameFor(model => model.Description)
+                        </th>
+                        <th>
+                            <i class="fas fa-link"></i> @Html.DisplayNameFor(model => model.Url)
+                        </th>
+                        <th>
+                            <i class="fas fa-th-list"></i> @Html.DisplayNameFor(model => model.ParentId)
+                        </th>
+                        <th>
+                            <i class="fas fa-wrench"></i> Actions
+                        </th>
+                    </tr>
+                </thead>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Url)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Parent.Title)
+                        </td>
+                        <td>
+
+
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-default" }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+@section AdminCustomCSS{
+
+    <link href="~/Content/AdminCustomCSS.css" rel="stylesheet" />
+
+}

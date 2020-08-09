@@ -83,6 +83,7 @@
     <Compile Include="InterestViewModel.cs" />
     <Compile Include="LoginViewModel.cs" />
     <Compile Include="MeetOurTeamViewModel.cs" />
+    <Compile Include="MenuViewModel.cs" />
     <Compile Include="OnlineCertificateViewModel.cs" />
     <Compile Include="PageViewModel.cs" />
     <Compile Include="PlatformDesignViewModel.cs" />
