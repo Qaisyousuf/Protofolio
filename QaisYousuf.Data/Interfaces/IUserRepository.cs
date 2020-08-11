@@ -23,5 +23,7 @@ namespace QaisYousuf.Data.Interfaces
         IEnumerable<RoleModel> GetRolesById(int[] ids);
 
         void AddUserToRoles(int? userId, int[] roleIds,UIContext context);
+
+       
     }
 }

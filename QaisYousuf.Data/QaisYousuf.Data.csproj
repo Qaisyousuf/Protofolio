@@ -68,6 +68,7 @@
     <Compile Include="Concrete Implementation\HomePageRepository.cs" />
     <Compile Include="Concrete Implementation\InterestRepository.cs" />
     <Compile Include="Concrete Implementation\ProjectStatusRepository.cs" />
+    <Compile Include="Concrete Implementation\RoleRepository.cs" />
     <Compile Include="Concrete Implementation\SubscribeRepository.cs" />
     <Compile Include="Concrete Implementation\MeetOurTeamRepository.cs" />
     <Compile Include="Concrete Implementation\MenuRepository.cs" />
@@ -118,6 +119,7 @@
     <Compile Include="Interfaces\IMeetOurTeamRepository.cs" />
     <Compile Include="Interfaces\IMenuRepository.cs" />
     <Compile Include="Interfaces\IProjectStatusRepository.cs" />
+    <Compile Include="Interfaces\IRoleRepository.cs" />
     <Compile Include="Interfaces\IUserRepository.cs" />
     <Compile Include="Interfaces\IOnlineCertificationRepository.cs" />
     <Compile Include="Interfaces\IPlatformDesignRepository.cs" />

@@ -77,8 +77,11 @@
     <Compile Include="ContactMattersViewModel.cs" />
     <Compile Include="ContactPageViewModel.cs" />
     <Compile Include="DataCollectionViewModel.cs" />
+    <Compile Include="DeleteUserViewModel.cs" />
     <Compile Include="DesignCodeViewModel.cs" />
     <Compile Include="DesignStepsViewModel.cs" />
+    <Compile Include="DetailsUserViewModel.cs" />
+    <Compile Include="EditUserViewModel.cs" />
     <Compile Include="EducationViewModel.cs" />
     <Compile Include="HomeBannerViewModel.cs" />
     <Compile Include="InsertUsersViewModel.cs" />
@@ -97,6 +100,7 @@
     <Compile Include="ProjectStatusViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterViewModel.cs" />
+    <Compile Include="RolesViewModel.cs" />
     <Compile Include="SiteSettingViewMdoel.cs" />
     <Compile Include="StartUpProcessViewModel.cs" />
     <Compile Include="StartUpProgramViewModel.cs" />

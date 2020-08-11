@@ -95,6 +95,8 @@ namespace QaisYousuf.Data.Concrete_Implementation
 
         public IProjectStatusRepository ProjectStatusRepository => new ProjectStatusRepository(Context);
 
+        public IRoleRepository RoleRepository => new RoleRepository(Context);
+
         public UnitOfWork()
         {
             Context = new UIContext();

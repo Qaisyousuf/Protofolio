@@ -1,0 +1,81 @@
+﻿@model QaisYousuf.ViewModels.DetailsUserViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="card card-cascade narrower blue lighten-5">
+
+    <!-- Card image -->
+    <div class="view view-cascade gradient-card-header  blue lighten-1 text-white">
+
+        <!-- Title -->
+        <h4 class="text-white">Details user account</h4>
+        <!-- Subtitle -->
+    </div>
+
+    <div class="card-body card-body-cascade text-center">
+
+        <hr />
+        <h4 class="text-info">Details of the <button disabled class="btn btn-info  btn-sm  btn-rounded"><i class="fas fa-info-circle pr-2"></i> @Model.UserName</button> account</h4>
+        <br />
+        <div>
+            <div class="col-md-8 offset-2 text-left">
+                <div class="table-wrapper table-responsive table-bordered table-striped ">
+                    <!--Table-->
+                    <table class="table table-hover mb-0 table-striped ">
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <a class="btn-floating btn-sm blue-gradient"><i class="fas fa-user-circle"></i></a>
+                                </th>
+                                <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.UserName)</td>
+                                <td class="text-primary"> @Html.DisplayFor(model => model.UserName)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <a class="btn-floating btn-sm blue-gradient"><i class="fas fa-at"></i></a>
+                                </th>
+                                <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Email)</td>
+                                <td class="text-primary"> @Html.DisplayFor(model => model.Email)</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">
+                                    <a class="btn-floating btn-sm blue-gradient"><i class="fas fa-key"></i></a>
+                                </th>
+                                <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Password)</td>
+                                <td class="text-primary"> @Html.DisplayFor(model => model.Password)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <a class="btn-floating btn-sm blue-gradient"><i class="fas fa-sign-in-alt"></i></a>
+                                </th>
+                                <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Roles)</td>
+                                <td class="text-primary">  @Html.CheckBoxListFor(model => model.Roles, model => model.Roles, model => model.Id, model => model.Text, model => model.Checked, model => new { @class = "checkbox-inline", @style = "opacity: 1; margin:10px; padding:20px;" })</td>
+                            </tr>
+                        </tbody>
+                        <!--Table body-->
+                    </table>
+                    <!--Table-->
+                </div>
+
+                <div class="col-md-9 offset-3 pt-4">
+                    <a class="btn btn-primary" href="/UIToCode/AdminUsers/Index"><i class="fas fa-undo-alt pr-2"></i> Back to Menu</a>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+@section AdminCustomCSS{
+
+    <link href="~/Content/AdminCustomCSS.css" rel="stylesheet" />
+
+}

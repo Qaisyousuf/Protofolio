@@ -51,6 +51,7 @@ namespace QaisYousuf.Data.Interfaces
         IWorkQualitySectionRepository WorkQualitySectionRepository { get; }
         IUserRepository UserRepository { get; }
         IProjectStatusRepository ProjectStatusRepository { get; }
+        IRoleRepository RoleRepository { get; }
         void Commit();
     }
 }
