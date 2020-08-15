@@ -2,6 +2,8 @@
     padding-top: 0px;
     margin-top:20px;
     font-family: 'Varela Round', sans-serif;
+    overflow-x:hidden;
+    
 }
 header
 {
@@ -81,7 +83,35 @@ nav .nav-item .nav-link {
 .navbar-brand {
     color: #6e84ff !important;
 }
+.backGroundSecond img {
+    position: absolute;
+    top: -20%;
+    right: -7%;
+    height: 400px;
+    width: 500px;
+    z-index: 1;
+    -webkit-transform: rotateZ(9deg);
+    -moz-transform: rotateZ(9deg);
+    -ms-transform: rotateZ(9deg);
+    -o-transform: rotateZ(9deg);
+    transform: rotateZ(-10deg);
+    pointer-events:none;
+}
+.LeftSideBackGroudnSecond img {
+    position: absolute;
+    top: 40%;
+    left: -7%;
+    height: 400px;
+    width: 500px;
+    z-index: 1;
+    -webkit-transform: rotateZ(9deg);
+    -moz-transform: rotateZ(9deg);
+    -ms-transform: rotateZ(9deg);
+    -o-transform: rotateZ(9deg);
+    transform: rotateZ(-10deg);
+    pointer-events:none;
+}
 
 
-
+   
 

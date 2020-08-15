@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - @Model.BaseTitle</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     @Styles.Render("~/Content/css")
@@ -46,11 +46,30 @@
     <script src="https://cdn.datatables.net/plug-ins/1.10.19/dataRender/datetime.js"></script>
 
 </head>
+
 <body>
     <!--Main Navigation-->
     <!--Main Navigation-->
+    <div style="overflow:hidden;">
+        <div class="BackGroundImagWaves">
+            <div class="backGroundSecond">
+                <img src="~/Content/Images/BackGroundSVGTesting.svg" class="img-fluid" />
+            </div>
+
+        </div>
+
+    </div>
+    <div style="overflow:hidden;">
+        <div class="LeftSideBackGroudn">
+            <div class="LeftSideBackGroudnSecond">
+                <img src="~/Content/Images/BackGroundSVGTesting.svg" class="img-fluid" />
+            </div>
+
+        </div>
+
+    </div>
     <header>
-       
+
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar ">
 
             <a class="navbar-brand" href="#"><strong>Navbar</strong></a>
@@ -66,10 +85,11 @@
 
 
     <div class="container body-content">
+        @Html.Action("HomeBanner", "Home")
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - @Model.SiteName</p>
         </footer>
     </div>
 
