@@ -147,8 +147,13 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\HomeCustomCSS.css" />
+    <Content Include="Content\Images\15.-Finance.svg" />
     <Content Include="Content\Images\5 SCENE.svg" />
+    <Content Include="Content\Images\Background3.svg" />
     <Content Include="Content\Images\BackGroundSVGTesting.svg" />
+    <Content Include="Content\Images\BackgroundTitle.svg" />
+    <Content Include="Content\Images\FinalLandingPage.svg" />
     <Content Include="Content\mdb.lite.min.css" />
     <Content Include="Content\mdb.min.css" />
     <Content Include="Content\Site.css" />

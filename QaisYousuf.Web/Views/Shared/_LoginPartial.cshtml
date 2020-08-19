@@ -1,4 +1,4 @@
-﻿@if(Request.IsAuthenticated)
+﻿@if (Request.IsAuthenticated)
 {
     using (Html.BeginForm("LogOut", "Accounts", new { Area = "" }, FormMethod.Post,
         new { id = "logoutForm" }))
@@ -12,11 +12,16 @@
 }
 else
 {
-        <ul class="nav navbar-nav nav-flex-icons ml-auto">
-            @*<li>@Html.ActionLink("Register", "Register", "Accounts", new { Area = "" }, null)</li>
-        <li>@Html.ActionLink("Login", "Login", "Accounts", new { Area = "" }, null)</li>*@
+    <ul class="nav navbar-nav nav-flex-icons ml-auto">
+        @*<li>@Html.ActionLink("Register", "Register", "Accounts", new { Area = "" }, null)</li>
+            <li>@Html.ActionLink("Login", "Login", "Accounts", new { Area = "" }, null)</li>*@
 
-            <li class=""><a class="nav-link ml-auto" href="/Authorization"><span class="btn btn-primary btn-rounded btn-md"> LogIn <i class="fas fa-unlock"></i> </span></a></li>
-            <li class=""><a class="nav-link ml-auto" href="/Authorization"><span class="btn btn-primary btn-rounded btn-md"> Register <i class="fas fa-key"></i> </span></a></li>
-        </ul>
+        <li class=""><a class="nav-link ml-auto" href="/Authorization"><span class="btn btn-primary btn-rounded btn-md"> Sign In <i class="fas fa-unlock"></i> </span></a></li>
+        <li class=""><a class="nav-link ml-auto" href="/Authorization"><span class="btn btn-primary btn-rounded btn-md"> Sign Up <i class="fas fa-key"></i> </span></a></li>
+    </ul>
+}
+
+@section HomeCustomCSS
+{
+    @Styles.Render("~/Content/HomeCustomCSS.css")
 }

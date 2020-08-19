@@ -71,7 +71,10 @@ header,
 }
 
 .navbar {
-    background-color: red;
+    background-color: #45526e !important;
+    -webkit-box-shadow: -1px 3px 5px -200px rgba(0,0,0,0.75) !important;
+    -moz-box-shadow: -1px 3px 5px -200px rgba(0,0,0,0.75) !important;
+    box-shadow: -1px 3px 5px -200px rgba(0,0,0,0.75) !important;
 }
 
 .top-nav-collapse {

@@ -112,6 +112,11 @@ nav .nav-item .nav-link {
     pointer-events:none;
 }
 
+.btn-primary
+{
+    background-color:rebeccapurple !important;
+    color:white;
+}
 
    
 

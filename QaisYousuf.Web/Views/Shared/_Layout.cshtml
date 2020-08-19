@@ -8,9 +8,10 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/AdminCustomCSS.css")
+    @Styles.Render("~/Content/HomeCustomCSS.css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
+    
     <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
    
 
@@ -50,31 +51,34 @@
 <body>
     <!--Main Navigation-->
     <!--Main Navigation-->
-    <div style="overflow:hidden;">
-        <div class="BackGroundImagWaves">
-            <div class="backGroundSecond">
-                <img src="~/Content/Images/BackGroundSVGTesting.svg" class="img-fluid" />
-            </div>
 
+    <div class="BackGroundImagWaves">
+        <div class="backGroundSecond">
+            <img src="~/Content/Images/BackGroundSVGTesting.svg" class="img-fluid" />
         </div>
 
     </div>
-    <div style="overflow:hidden;">
-        <div class="LeftSideBackGroudn">
-            <div class="LeftSideBackGroudnSecond">
-                <img src="~/Content/Images/BackGroundSVGTesting.svg" class="img-fluid" />
-            </div>
 
+
+
+   
+
+    <div class="ContetnBackgroundthired">
+        <div class="ContetnBackground">
+            <img src="~/Content/Images/BackGroundSVGTesting.svg" class="img-fluid" />
         </div>
 
     </div>
+
+
+
     <header>
 
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar ">
 
-            <a class="navbar-brand" href="#"><strong>Navbar</strong></a>
+            <a class="navbar-brand" href="#"><strong>UI UX To Code</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon btn btn-rounded btn-indigo"></span>
+                <span class="navbar-toggler-icon btn btn-primary btn-rounded btn-indigo"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 @Html.Action("PartialMenu", "Home")
@@ -85,6 +89,7 @@
 
 
     <div class="container body-content">
+        @RenderSection("HomeCustomCSS", required: true)
         @Html.Action("HomeBanner", "Home")
         @RenderBody()
         <hr />
