@@ -97,5 +97,33 @@ namespace QaisYousuf.Web.Controllers
             return PartialView(viewmodel);
         }
 
+        [HttpGet]
+        [ChildActionOnly]
+        public ActionResult DataCollection()
+        {
+            var dataCollection = uow.DataCollectionRepository.GetAll();
+
+            List<DataCollectionViewModel> viewmodel = new List<DataCollectionViewModel>();
+
+
+            foreach (var item in dataCollection)
+            {
+                viewmodel.Add(new DataCollectionViewModel
+                {
+                    Id=item.Id,
+                    MainTitle=item.MainTitle,
+                    SubTitle=item.SubTitle,
+                    Content=item.Content,
+                    ImageUrl=item.Image,
+                });
+            }
+
+            ListOfDataViewModels listofData = new ListOfDataViewModels
+            {
+                ListOfDataCollectionViewModel=viewmodel
+            };
+            return PartialView(listofData);
+        }
+
     }
 }

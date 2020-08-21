@@ -1,50 +1,40 @@
 ﻿@model QaisYousuf.ViewModels.HomeBannerViewModel
 @{
-                /**/
 
-                ViewBag.Title = ViewBag.PageTitle;
+
+    ViewBag.Title = ViewBag.PageTitle;
 }
 
 @if (Model?.Id != null)
 {
-    <!-- Main navigation -->
-    <header>
+    <div class="bg-transparent">
+       <div class="container-fluid">
+           <div class="row">
+               <div class="col-md-6">
+                   <div class="contentLandingBackground">
+                       <img src="~/Content/Images/12.-No-Messages.svg" />
+                       <div class="SubContent">
+                           <div class="display-4">@Model.Title</div>
+                           <p>@Html.Raw(Model.SubTitle)</p>
+                           <button class="btn btn-primary">Get Started</button>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-md-6">
+                   <div class="landingImagebackground">
+                       @*<img src="~/Content/Images/12.-No-Messages.svg"  class="img-fluid"/>*@
+                       <div class="landingimg">
+                           <img src="~/Content/Images/Landing.svg" class="img-fluid" />
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
 
-        <!-- Full Page Intro -->
-        <div class=" bg-transparent">
-            <!-- Mask & flexbox options-->
-            <div class="mask">
-                <!-- Content -->
-                <div class="container h-100">
-                    <!--Grid row-->
-                    <div class="row align-items-center h-100">
-                        <!--Grid column-->
-                        <div class="col-md-6" id="BannerContent">
-                            <h1 class="display-4 mb-4">@Model.Title</h1>
-                            <p class="mb-4 pb-2 dark-grey-text">@Html.Raw(Model.SubTitle)</p>
-                            <button type="@Model.ButtonUrl" class="btn btn-primary btn-rounded btn-md ml-md-0">Get started</button>
-                            
-                        </div>
-                        <!--Grid column-->
-                        <!--Grid column-->
-                        <div class="col-md-6" id="LandingBanner">
-                            <img src="~/Content/Images/FinalLandingPage.svg" alt="" class="img-fluid">
-                        </div>
-                        <!--Grid column-->
-                    </div>
-                    <!--Grid row-->
-                </div>
-                <!-- Content -->
-            </div>
-            <!-- Mask & flexbox options-->
-        </div>
-        <!-- Full Page Intro -->
-
-    </header>
-    <!-- Main navigation -->
+    </div>
 }
 
 @section HomeCustomCSS
-{
+    {
     @Styles.Render("~/Content/HomeCustomCSS.css")
 }

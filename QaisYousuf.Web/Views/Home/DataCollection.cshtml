@@ -1,0 +1,34 @@
+﻿@model  QaisYousuf.ViewModels.ListOfDataViewModels
+
+@{
+    ViewBag.Title = ViewBag.PageTitle;
+}
+
+
+@if (Model.ListOfDataCollectionViewModel != null)
+{
+<div class="container">
+    @foreach (var item in Model.ListOfDataCollectionViewModel.Take(1))
+    {
+        
+    }
+
+
+    @foreach (var item in Model.ListOfDataCollectionViewModel)
+    {
+       
+    }
+
+    <!--Section: Content-->
+    <!--Section: Content-->
+
+
+</div>
+}
+
+
+
+@section HomeCustomCSS
+{
+    @Styles.Render("~/Content/HomeCustomCSS.css")
+}

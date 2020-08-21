@@ -53,22 +53,13 @@
     <!--Main Navigation-->
 
     <div class="BackGroundImagWaves">
-        <div class="backGroundSecond">
-            <img src="~/Content/Images/BackGroundSVGTesting.svg" class="img-fluid" />
+        <div class="LogInBackground">
+            <img src="~/Content/Images/12.-No-Messages.svg" class="img-fluid" />
         </div>
 
     </div>
 
 
-
-   
-
-    <div class="ContetnBackgroundthired">
-        <div class="ContetnBackground">
-            <img src="~/Content/Images/BackGroundSVGTesting.svg" class="img-fluid" />
-        </div>
-
-    </div>
 
 
 
@@ -88,10 +79,11 @@
     </header>
 
 
-    <div class="container body-content">
+    <div class="container-fluid body-content">
         @RenderSection("HomeCustomCSS", required: true)
         @Html.Action("HomeBanner", "Home")
         @RenderBody()
+        @Html.Action("DataCollection", "Home")
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - @Model.SiteName</p>
