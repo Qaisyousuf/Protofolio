@@ -86,7 +86,8 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
                 uow.PortfolioProjectRepository.Add(project);
                 uow.Commit();
             }
-            return Json(new { success = true, message = "Record Saved Successfully" }, JsonRequestBehavior.AllowGet);
+            return Json(new { success = true, message = "`" +
+                0}, JsonRequestBehavior.AllowGet);
 
         }
         [HttpGet]
