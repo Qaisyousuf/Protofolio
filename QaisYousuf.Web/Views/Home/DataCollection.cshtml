@@ -4,27 +4,155 @@
     ViewBag.Title = ViewBag.PageTitle;
 }
 
-
-@if (Model.ListOfDataCollectionViewModel != null)
+<body>
+    @if (Model.ListOfDataCollectionViewModel != null)
 {
-<div class="container">
-    @foreach (var item in Model.ListOfDataCollectionViewModel.Take(1))
-    {
-        
-    }
+    <div class="DataCollectionBackground">
+        <div class="container-fluid">
+            @foreach (var item in Model.ListOfDataCollectionViewModel.Take(1))
+            {
+                <div class="container mt-5 pt-5">
 
 
-    @foreach (var item in Model.ListOfDataCollectionViewModel)
-    {
-       
-    }
+                    <!--Section: Content-->
+                    <section>
 
-    <!--Section: Content-->
-    <!--Section: Content-->
+                        <!-- Grid row -->
+                        <div class="row">
+
+                            <!-- Grid column -->
+
+                            <div class="col-lg-12 mb-4 align-self-center text-center text-lg-center">
+
+                               
+                                <div class="display-4 h2 mb-2">@item.MainTitle</div>
 
 
-</div>
+
+                            </div>
+                            <!-- Grid column -->
+                            <!-- Grid column -->
+                            <div class="col-lg-6 offset-lg-3 mb-4 col-md-12 offset-md-0">
+
+                                <!-- Featured image -->
+                                <div class="view overlay">
+                                   <img src="~/Content/Images/process_rswj.svg" class="img-fluid" />
+                                    <a>
+                                        <div class="mask rgba-white-slight"></div>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Grid row -->
+
+                    </section>
+                    <!--Section: Content-->
+
+
+                </div>
+
+
+            }
+                <div class="container">
+                    <div class="row">
+
+                        @foreach (var item in Model.ListOfDataCollectionViewModel)
+                        {
+                            <div class="container my-2 py-2 z-depth-0">
+
+
+                                <!--Section: Content-->
+                                <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+
+                                    <!--Grid row-->
+                                    <div class="row">
+                                        <div class="col-md-5 mb-4 mb-md-0">
+
+                                            <!--Image-->
+                                            <div class="view overlay z-depth-0">
+                                                <img src="@item.ImageUrl" class="img-fluid" alt="" id="DataCollectonItemImage">
+                                               
+                                            </div>
+
+                                        </div>
+                                        <!--Grid column-->
+                                        <div class="col-md-7 mt-5 pb-0">
+
+                                            <h3 class="font-weight-bold">@item.SubTitle</h3>
+
+                                            <p class="text-muted">
+                                               @Html.Raw(item.Content)
+                                            </p>
+
+                                            <button class="btn btn-primary btn-rounded">View Process</button>
+
+                                        </div>
+                                        <!--Grid column-->
+                                        <!--Grid column-->
+                                        <!--Grid column-->
+
+                                    </div>
+                                    <!--Grid row-->
+
+
+                                </section>
+                                <!--Section: Content-->
+
+
+                            </div>
+
+                            <!-- Grid row -->
+                            @*<div class="col-md-4">
+                <!-- Card -->
+                <div class="card bg-transparent z-depth-1">
+
+                    <!-- Card image -->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="@item.ImageUrl"
+                             alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="card-body">
+
+                        <!-- Title -->
+                        <h4 class="card-title">@item.SubTitle</h4>
+                        <!-- Text -->
+                        <p class="card-text">
+                           @Html.Raw(item.Content)
+                        </p>
+                        <!-- Button -->
+                        <a href="#" class="btn btn-primary btn-roun">Button</a>
+
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>*@
+
+                            <!-- Card -->
+
+                            <!-- Card -->
+                        }
+                    </div>
+                </div>
+             
+            <!--Section: Content-->
+            <!--Section: Content-->
+
+
+        </div>
+    </div>
+
 }
+</body>
+
 
 
 

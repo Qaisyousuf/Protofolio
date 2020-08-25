@@ -7,7 +7,7 @@
 
 @if (Model?.Id != null)
 {
-    <div class="bg-transparent">
+    <div class="bg-transparent pb-5">
        <div class="container-fluid">
            <div class="row">
                <div class="col-md-6">
@@ -15,6 +15,7 @@
                        <img src="~/Content/Images/12.-No-Messages.svg" />
                        <div class="SubContent">
                            <div class="display-4">@Model.Title</div>
+
                            <p>@Html.Raw(Model.SubTitle)</p>
                            <button class="btn btn-primary">Get Started</button>
                        </div>

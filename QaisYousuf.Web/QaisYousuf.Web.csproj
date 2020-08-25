@@ -149,19 +149,14 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\HomeCustomCSS.css" />
     <Content Include="Content\Images\12.-No-Messages.svg" />
-    <Content Include="Content\Images\15.-Finance.svg" />
-    <Content Include="Content\Images\5 SCENE.svg" />
-    <Content Include="Content\Images\AnimatedBackground.svg" />
     <Content Include="Content\Images\Background3.svg" />
     <Content Include="Content\Images\BackGroundSVGTesting.svg" />
     <Content Include="Content\Images\BackgroundTitle.svg" />
     <Content Include="Content\Images\BigBackground.svg" />
-    <Content Include="Content\Images\DataCollectionBackground.svg">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Content\Images\FinalLandingPage.svg" />
-    <Content Include="Content\Images\Group 1.svg" />
     <Content Include="Content\Images\Landing.svg" />
+    <Content Include="Content\Images\process_rswj.svg" />
+    <Content Include="Content\Images\Waihou 1.svg" />
     <Content Include="Content\mdb.lite.min.css" />
     <Content Include="Content\mdb.min.css" />
     <Content Include="Content\Site.css" />

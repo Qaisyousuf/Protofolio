@@ -1,9 +1,17 @@
 ﻿body {
     padding-top: 60px;
-   margin-top: 20px;
+    margin-top: 20px;
     font-family: 'Varela Round', sans-serif;
     overflow-x: hidden;
+  
 }
+/*@media(max-width:500px)
+{
+    body {
+        overflow-x: hidden;
+    }
+   
+}*/
 
 header {
     margin-top: 0px !important;
@@ -615,7 +623,25 @@ nav .nav-item .nav-link {
         top: 25%;
         left: 10%;
     }
+
 }
+.DataCollectionBackground
+{
+    background-image:url('Images/Waihou 1.svg');
+    background-attachment:fixed;
+    background-position:center;
+    background-size:cover;
+    height:auto;
+    width:auto;
+    margin:-15px;
+    z-index:-1;
+}
+#DataCollectonItemImage {
+    display:inline-block;
+}
+
+
+
 
 
 
