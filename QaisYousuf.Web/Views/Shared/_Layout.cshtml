@@ -11,9 +11,13 @@
     @Styles.Render("~/Content/HomeCustomCSS.css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
-    
-    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="~/Scripts/node_modules/lottie-player/dist/lottie-player.js"></script>
+
    
+   
+
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+
 
     <script type="text/javascript" language="javascript" src="https://nightly.datatables.net/responsive/js/dataTables.responsive.min.js">
     </script>
@@ -45,6 +49,8 @@
     @*<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>*@
     <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
     <script src="https://cdn.datatables.net/plug-ins/1.10.19/dataRender/datetime.js"></script>
+
+
 
 </head>
 
@@ -84,6 +90,7 @@
         @Html.Action("HomeBanner", "Home")
         @RenderBody()
         @Html.Action("DataCollection", "Home")
+        @Html.Action("WorkQuality", "Home")
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - @Model.SiteName</p>

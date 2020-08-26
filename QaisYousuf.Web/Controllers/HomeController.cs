@@ -99,6 +99,29 @@ namespace QaisYousuf.Web.Controllers
 
         [HttpGet]
         [ChildActionOnly]
+        public ActionResult WorkQuality()
+        {
+            int id = (int)TempData["WorkQuality"];
+
+            var workQuality = uow.WorkQualitySectionRepository.GetById(id);
+
+            WorkQualitySectionViewModel viewmodel = new WorkQualitySectionViewModel
+            {
+                Id=workQuality.Id,
+                Title=workQuality.Title,
+                Content=workQuality.Content,
+                ImageUrl=workQuality.ImageUrl,
+                ButtonText=workQuality.ButtonText,
+                ModalTitle=workQuality.ModalTitle,
+                ModalsContent=workQuality.ModalsContent,
+
+            };
+
+            return PartialView(viewmodel);
+        }
+
+        [HttpGet]
+        [ChildActionOnly]
         public ActionResult DataCollection()
         {
             var dataCollection = uow.DataCollectionRepository.GetAll();

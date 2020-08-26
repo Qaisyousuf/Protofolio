@@ -1,0 +1,81 @@
+﻿@model QaisYousuf.ViewModels.WorkQualitySectionViewModel
+
+@if (Model?.Id != null)
+{
+    <div class="WorkQualtiyBackground">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,128L24,117.3C48,107,96,85,144,80C192,75,240,85,288,117.3C336,149,384,203,432,197.3C480,192,528,128,576,106.7C624,85,672,107,720,144C768,181,816,235,864,224C912,213,960,139,1008,101.3C1056,64,1104,64,1152,101.3C1200,139,1248,213,1296,213.3C1344,213,1392,139,1416,101.3L1440,64L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg>
+        <!-- Full Page Intro -->
+    </div>
+    <div class="" id="MainContentWorkquality">
+        <!-- Mask & flexbox options-->
+        <div class="mask">
+            <!-- Content -->
+            <div class="container h-100">
+                <!--Grid row-->
+                <div class="row align-items-center h-100">
+                    <!--Grid column-->
+                    <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <h1 class="white-text mb-4">@Model.Title</h1>
+                        <p class="mb-4 pb-2 white-text">@Html.Raw(Model.Content)</p>
+
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-white" data-toggle="modal" data-target="#basicExampleModal">
+                            @Model.ButtonText
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">@Model.ModalTitle</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        @Html.Raw(Model.ModalsContent)
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-6 wow fadeInRight" data-wow-delay="0.2s">
+
+                        <div class="img-fluid">
+                            <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_QzstYQ.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay></lottie-player>
+                        </div>
+                       
+
+                        @*<img src="@Model.ImageUrl" class="img-fluid">*@
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Content -->
+        </div>
+        <!-- Mask & flexbox options-->
+    </div>
+    <!-- Full Page Intro -->
+
+}
+<div class="WorkQualtiyBackground1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,160L17.1,176C34.3,192,69,224,103,213.3C137.1,203,171,149,206,149.3C240,149,274,203,309,208C342.9,213,377,171,411,170.7C445.7,171,480,213,514,234.7C548.6,256,583,256,617,245.3C651.4,235,686,213,720,224C754.3,235,789,277,823,298.7C857.1,320,891,320,926,282.7C960,245,994,171,1029,117.3C1062.9,64,1097,32,1131,58.7C1165.7,85,1200,171,1234,186.7C1268.6,203,1303,149,1337,144C1371.4,139,1406,181,1423,202.7L1440,224L1440,0L1422.9,0C1405.7,0,1371,0,1337,0C1302.9,0,1269,0,1234,0C1200,0,1166,0,1131,0C1097.1,0,1063,0,1029,0C994.3,0,960,0,926,0C891.4,0,857,0,823,0C788.6,0,754,0,720,0C685.7,0,651,0,617,0C582.9,0,549,0,514,0C480,0,446,0,411,0C377.1,0,343,0,309,0C274.3,0,240,0,206,0C171.4,0,137,0,103,0C68.6,0,34,0,17,0L0,0Z"></path></svg>
+</div>
+@section Scripts
+{
+
+<script src="~/Scripts/node_modules/lottie-player/dist/lottie-player.js"></script>
+    <script src="~/Scripts/LottieFiles.js"></script>
+    <script src="~/Scripts/lottie.js"></script>
+}
