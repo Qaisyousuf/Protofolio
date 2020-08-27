@@ -33,21 +33,16 @@
                 @Html.ValidationMessageFor(model => model.ImageUrl, "", new { @class = "text-danger" })
             </div>
             <div class="form-group">
+                @Html.LabelFor(model => model.ImageContent, new { @class = "control-label" })
+                @Html.EditorFor(model => model.ImageContent, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ImageContent, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
                 @Html.LabelFor(model => model.ButtonText, new { @class = "control-label" })
                 @Html.EditorFor(model => model.ButtonText, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ButtonText, "", new { @class = "text-danger" })
             </div>
-            <div class="form-group">
-                @Html.LabelFor(model => model.ModalTitle, new { @class = "control-label" })
-                @Html.EditorFor(model => model.ModalTitle, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ModalTitle, "", new { @class = "text-danger" })
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.ModalsContent, new { @class = "control-label" })
-                @Html.TextAreaFor(model => model.ModalsContent, 10, 10, new { @class = "form-control width-textarea", })
-                @Html.ValidationMessageFor(model => model.ModalsContent, "", new { @class = "text-danger" })
-            </div>
+           
             <div class="form-group">
                 @Html.LabelFor(model => model.Content, new { @class = "control-label" })
                 @Html.TextAreaFor(model => model.Content, 10, 10, new { @class = "form-control width-textarea", })

@@ -127,6 +127,10 @@ nav .nav-item .nav-link {
     color: #169cba !important;
     font-weight: bold;
 }
+h1, h2, h3, h4, h5, h6 {
+    color: #169cba !important;
+    font-weight: bold;
+}
 
 @media (max-width:800px) and (min-width:200px)
 {

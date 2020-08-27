@@ -87,6 +87,7 @@
     <Compile Include="InsertUsersViewModel.cs" />
     <Compile Include="InterestViewModel.cs" />
     <Compile Include="ListOfDataViewModels.cs" />
+    <Compile Include="ListOfPlatfomeDesignViewModel.cs" />
     <Compile Include="LoginViewModel.cs" />
     <Compile Include="MeetOurTeamViewModel.cs" />
     <Compile Include="MenuViewModel.cs" />

@@ -12,14 +12,14 @@ namespace QaisYousuf.Web.Controllers
 {
     public class HomeController : BaseController
     {
-      
-        
+
+
         public ActionResult Index(string slug)
         {
 
             if (string.IsNullOrEmpty(slug))
                 slug = "home";
-            if(!uow.HomePageRepository.SlugExists(slug))
+            if (!uow.HomePageRepository.SlugExists(slug))
             {
                 TempData["PageNotFound"] = "Page Not Found";
                 return RedirectToAction(nameof(Index), new { slug = "" });
@@ -45,13 +45,13 @@ namespace QaisYousuf.Web.Controllers
 
             viewmodel = new PageViewModel
             {
-                Id=page.Id,
-                Title=page.Title,
-                Content=page.Content,
-                IsPageMetaDataOn=page.IsPageMetaDataOn,
-                MetaKeywords=page.MetaKeywords,
-                MetaDescription=page.MetaDescription,
-                IsVisibleToSearchEngine=page.IsVisibleToSearchEngine,
+                Id = page.Id,
+                Title = page.Title,
+                Content = page.Content,
+                IsPageMetaDataOn = page.IsPageMetaDataOn,
+                MetaKeywords = page.MetaKeywords,
+                MetaDescription = page.MetaDescription,
+                IsVisibleToSearchEngine = page.IsVisibleToSearchEngine,
 
             };
 
@@ -86,12 +86,12 @@ namespace QaisYousuf.Web.Controllers
 
             HomeBannerViewModel viewmodel = new HomeBannerViewModel
             {
-                Id=homeBanner.Id,
-                Title=homeBanner.Title,
-                SubTitle=homeBanner.SubTitle,
-                BackgroundImage=homeBanner.BackgroundImage,
-                ButtonUrl=homeBanner.ButtonUrl,
-                ButtonText=homeBanner.ButtonText,
+                Id = homeBanner.Id,
+                Title = homeBanner.Title,
+                SubTitle = homeBanner.SubTitle,
+                BackgroundImage = homeBanner.BackgroundImage,
+                ButtonUrl = homeBanner.ButtonUrl,
+                ButtonText = homeBanner.ButtonText,
             };
 
             return PartialView(viewmodel);
@@ -107,13 +107,13 @@ namespace QaisYousuf.Web.Controllers
 
             WorkQualitySectionViewModel viewmodel = new WorkQualitySectionViewModel
             {
-                Id=workQuality.Id,
-                Title=workQuality.Title,
-                Content=workQuality.Content,
-                ImageUrl=workQuality.ImageUrl,
-                ButtonText=workQuality.ButtonText,
-                ModalTitle=workQuality.ModalTitle,
-                ModalsContent=workQuality.ModalsContent,
+                Id = workQuality.Id,
+                Title = workQuality.Title,
+                Content = workQuality.Content,
+                ImageUrl = workQuality.ImageUrl,
+                ButtonText = workQuality.ButtonText,
+                ModalTitle = workQuality.ModalTitle,
+                ModalsContent = workQuality.ModalsContent,
 
             };
 
@@ -133,20 +133,52 @@ namespace QaisYousuf.Web.Controllers
             {
                 viewmodel.Add(new DataCollectionViewModel
                 {
-                    Id=item.Id,
-                    MainTitle=item.MainTitle,
-                    SubTitle=item.SubTitle,
-                    Content=item.Content,
-                    ImageUrl=item.Image,
+                    Id = item.Id,
+                    MainTitle = item.MainTitle,
+                    SubTitle = item.SubTitle,
+                    Content = item.Content,
+                    ImageUrl = item.Image,
                 });
             }
 
             ListOfDataViewModels listofData = new ListOfDataViewModels
             {
-                ListOfDataCollectionViewModel=viewmodel
+                ListOfDataCollectionViewModel = viewmodel
             };
             return PartialView(listofData);
         }
 
+        [HttpGet]
+        [ChildActionOnly]
+        public ActionResult PlatformDesign()
+        {
+
+
+            var platformDesign = uow.PlatformDesignRepository.GetAll();
+
+            List<PlatformDesignViewModel> viewmodel = new List<PlatformDesignViewModel>();
+
+            foreach (var item in platformDesign)
+            {
+                viewmodel.Add(new PlatformDesignViewModel
+                {
+                    Id = item.Id,
+                    MainTitle = item.MainTitle,
+                    SubTitle = item.SubTitle,
+                    Content = item.Content,
+                    ImageUrl = item.ImageUrl,
+                    ButtonText = item.ButtonText,
+                    ImageContent=item.ImageContent,
+                });
+            }
+
+            ListOfPlatfomeDesignViewModel ViewModelPlatformDesign = new ListOfPlatfomeDesignViewModel
+            {
+                ListPlatformDesignViewModel = viewmodel
+            };
+
+            return PartialView(ViewModelPlatformDesign);
+
+        }
     }
 }

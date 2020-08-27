@@ -929,6 +929,7 @@
     <Content Include="Scripts\node_modules\lottie-player\LICENSE" />
     <Content Include="Scripts\node_modules\lottie-player\package.json" />
     <Content Include="Scripts\node_modules\lottie-player\README.md" />
+    <Content Include="Views\Home\PlatformDesign.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

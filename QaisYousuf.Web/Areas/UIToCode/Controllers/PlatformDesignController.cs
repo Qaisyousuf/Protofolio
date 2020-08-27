@@ -37,8 +37,8 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
                     Content=item.Content,
                     ImageUrl=item.ImageUrl,
                     ButtonText=item.ButtonText,
-                    ModalTitle=item.ModalTitle,
-                    ModalsContent=item.ModalsContent
+                    ImageContent=item.ImageContent,
+
                 });
             }
             return Json(new { data = viewmodel }, JsonRequestBehavior.AllowGet);
@@ -63,8 +63,8 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
                     Content=viewmodel.Content,
                     ImageUrl=viewmodel.ImageUrl,
                     ButtonText=viewmodel.ButtonText,
-                    ModalTitle=viewmodel.ModalTitle,
-                    ModalsContent=viewmodel.ModalsContent
+                    ImageContent=viewmodel.ImageContent,
+                    
       
                 };
                 uow.PlatformDesignRepository.Add(platformDesign);
@@ -86,8 +86,7 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
                 Content=platformDesign.Content,
                 ImageUrl=platformDesign.ImageUrl,
                 ButtonText=platformDesign.ButtonText,
-                ModalTitle=platformDesign.ModalTitle,
-                ModalsContent=platformDesign.ModalsContent,
+                ImageContent=platformDesign.ImageContent,
             };
             return View(viewmodel);
         }
@@ -105,8 +104,8 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
                 platformDesign.Content = viewmodel.Content;
                 platformDesign.ImageUrl = viewmodel.ImageUrl;
                 platformDesign.ButtonText = viewmodel.ButtonText;
-                platformDesign.ModalTitle = viewmodel.ModalTitle;
-                platformDesign.ModalsContent = viewmodel.ModalsContent;
+                platformDesign.ImageContent = viewmodel.ImageContent;
+
 
                 uow.PlatformDesignRepository.Update(platformDesign);
                 uow.Commit();
@@ -126,8 +125,7 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
                 Content=platformDesign.Content,
                 ImageUrl=platformDesign.ImageUrl,
                 ButtonText=platformDesign.ButtonText,
-                ModalTitle=platformDesign.ModalTitle,
-                ModalsContent=platformDesign.ModalsContent,
+                ImageContent=platformDesign.ImageContent,
             };
             uow.PlatformDesignRepository.Remove(platformDesign);
             uow.Commit();
@@ -141,14 +139,13 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
 
             PlatformDesignViewModel viewmodel = new PlatformDesignViewModel
             {
-                Id=platformDesign.Id,
-                MainTitle=platformDesign.MainTitle,
-                SubTitle=platformDesign.SubTitle,
-                Content=platformDesign.Content,
-                ImageUrl=platformDesign.ImageUrl,
-                ButtonText=platformDesign.ButtonText,
-                ModalTitle=platformDesign.ModalTitle,
-                ModalsContent=platformDesign.ModalsContent,
+                Id = platformDesign.Id,
+                MainTitle = platformDesign.MainTitle,
+                SubTitle = platformDesign.SubTitle,
+                Content = platformDesign.Content,
+                ImageUrl = platformDesign.ImageUrl,
+                ButtonText = platformDesign.ButtonText,
+                ImageContent = platformDesign.ImageContent,
             };
             return View(viewmodel);
         }

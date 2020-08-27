@@ -20,19 +20,19 @@ namespace QaisYousuf.ViewModels
 
         [Required]
         [Display(Name ="Image Url")]
+        [DataType(DataType.Url)]
         public string ImageUrl { get; set; }
 
         [Required]
         [Display(Name ="Button Text")]
         public string ButtonText { get; set; }
 
-        [Display(Name ="Model Title")]
-        [Required]
-        public string ModalTitle { get; set; }
+      
 
         [Required]
-        [Display(Name ="Modal Content")]
-        public string ModalsContent { get; set; }
+        [Display(Name ="Content Image")]
+        [DataType(DataType.Url)]
+        public string ImageContent { get; set; }
 
     }
 }

@@ -272,6 +272,14 @@
     <Compile Include="Migrations\202008071253496_ProptertyAddedToSiteSettings.designer.cs">
       <DependentUpon>202008071253496_ProptertyAddedToSiteSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008271058386_ContentImageAddedToPlatformDesign.cs" />
+    <Compile Include="Migrations\202008271058386_ContentImageAddedToPlatformDesign.designer.cs">
+      <DependentUpon>202008271058386_ContentImageAddedToPlatformDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008272014568_PropertyRemovedFromTheModelClass.cs" />
+    <Compile Include="Migrations\202008272014568_PropertyRemovedFromTheModelClass.designer.cs">
+      <DependentUpon>202008272014568_PropertyRemovedFromTheModelClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -378,6 +386,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008071253496_ProptertyAddedToSiteSettings.resx">
       <DependentUpon>202008071253496_ProptertyAddedToSiteSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008271058386_ContentImageAddedToPlatformDesign.resx">
+      <DependentUpon>202008271058386_ContentImageAddedToPlatformDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008272014568_PropertyRemovedFromTheModelClass.resx">
+      <DependentUpon>202008272014568_PropertyRemovedFromTheModelClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

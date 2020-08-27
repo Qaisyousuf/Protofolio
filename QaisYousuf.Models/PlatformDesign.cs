@@ -18,8 +18,8 @@ namespace QaisYousuf.Models
 
         public string ButtonText { get; set; }
 
-        public string ModalTitle { get; set; }
+       
 
-        public string ModalsContent { get; set; }
+        public string ImageContent { get; set; }
     }
 }
