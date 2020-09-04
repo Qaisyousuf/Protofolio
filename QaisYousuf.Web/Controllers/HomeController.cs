@@ -180,5 +180,68 @@ namespace QaisYousuf.Web.Controllers
             return PartialView(ViewModelPlatformDesign);
 
         }
+        [HttpGet]
+        [ChildActionOnly]
+        public ActionResult ProjectCounting()
+        {
+            
+
+            var project = uow.ProjectCountingRepository.GetAll();
+
+            List<ProjectCountingViewModel> viewmodel = new List<ProjectCountingViewModel>();
+
+            foreach (var item in project)
+            {
+                viewmodel.Add(new ProjectCountingViewModel
+                {
+                    Id = item.Id,
+                    MainTitle = item.MainTitle,
+                    SubTitle = item.SubTitle,
+                    ImageUrl = item.ImageUrl,
+                    Title = item.Title,
+                    CountingNumber = item.CountingNumber,
+                });
+            }
+
+            ListOfProjectCounting projectCounting = new ListOfProjectCounting
+            {
+                CountingViewModel = viewmodel
+            };
+            
+
+            return PartialView(projectCounting);
+
+        }
+
+        [HttpGet]
+        [ChildActionOnly]
+        public ActionResult DesignSteps()
+        {
+            var desing = uow.DesignStepsRepository.GetAll();
+
+
+            List<DesignStepsViewModel> viewmodel = new List<DesignStepsViewModel>();
+
+            foreach (var item in desing)
+            {
+                viewmodel.Add(new DesignStepsViewModel
+                {
+                    Id=item.Id,
+                    MainTitle=item.MainTitle,
+                    SubTitle=item.SubTitle,
+                    StepIcon=item.StepIcon,
+                    StepTitle=item.StepTitle,
+                    StepContent=item.StepContent,
+                    StepImageUrl=item.StepImageUrl,
+                });
+            }
+
+            ListOfDesignStepsViewModel ListofDesing = new ListOfDesignStepsViewModel
+            {
+                DesignViewModel = viewmodel
+            };
+
+            return PartialView(ListofDesing);
+        }
     }
 }

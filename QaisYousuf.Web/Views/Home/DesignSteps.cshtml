@@ -1,0 +1,101 @@
+﻿@model QaisYousuf.ViewModels.ListOfDesignStepsViewModel
+
+ @if (Model?.DesignViewModel != null)
+ {
+<div class="DesignSetpBackground">
+    <!-- Card -->
+    <div class="container-fluid">
+        <div class="card card-cascade wider reverse z-depth-0 ">
+
+            <!-- Card image -->
+            @foreach (var img in Model.DesignViewModel.Take(1))
+            {
+                <div class="overlayBackground">
+                    <div class="view view-cascade overlay z-depth-0">
+                        <div class="col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-12">
+                            <div class="img-fluid">
+                                <lottie-player src=@img.StepIcon background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            }
+
+
+
+
+
+            <!-- Card content -->
+            <div class="card-body card-body-cascade text-center">
+                @foreach (var subitem in Model.DesignViewModel.Take(1))
+                {
+                    <h2 class="card-title font-weight-bold display-4 mt-4"><strong>@subitem.MainTitle</strong></h2>
+                    <!-- Subtitle -->
+
+                    <!-- Text -->
+
+                }
+
+                @foreach (var item in Model.DesignViewModel)
+                {
+                    <div class="container my-2 py-2 z-depth-0">
+
+
+                        <!--Section: Content-->
+                        <section class="px-md-2 mx-md-2 text-center text-lg-left dark-grey-text">
+
+                            <!--Grid row-->
+                            <div class="row">
+                                <div class="col-md-3 mb-4 mb-md-0">
+
+                                    <!--Image-->
+                                    <div class="view overlay z-depth-0">
+                                        <img src="@item.StepImageUrl" class="img-fluid" alt="" id="DataCollectonItemImage">
+
+                                    </div>
+
+                                </div>
+                                <!--Grid column-->
+                                <div class="col-md-9 mt-5 ">
+
+                                    <h3 class="font-weight-bold">@item.SubTitle</h3>
+
+                                    <p class="text-muted">
+                                        @Html.Raw(item.StepContent)
+                                    </p>
+
+                                 
+
+                                </div>
+                                <!--Grid column-->
+                                <!--Grid column-->
+                                <!--Grid column-->
+
+                            </div>
+                            <!--Grid row-->
+
+
+                        </section>
+                        <hr />
+                        <!--Section: Content-->
+
+
+                    </div>
+                }
+
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- Card -->
+</div>
+
+ }
+@section HomeCustomCSS
+    {
+    @Styles.Render("~/Content/HomeCustomCSS.css")
+}
+
+

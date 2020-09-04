@@ -156,7 +156,10 @@
     <Content Include="Content\Images\FinalLandingPage.svg" />
     <Content Include="Content\Images\Landing.svg" />
     <Content Include="Content\Images\process_rswj.svg" />
+    <Content Include="Content\Images\StepsDesignBackround.svg" />
+    <Content Include="Content\Images\Waiau.svg" />
     <Content Include="Content\Images\Waihou 1.svg" />
+    <Content Include="Content\Images\Waimakariri.svg" />
     <Content Include="Content\mdb.lite.min.css" />
     <Content Include="Content\mdb.min.css" />
     <Content Include="Content\Site.css" />
@@ -930,6 +933,8 @@
     <Content Include="Scripts\node_modules\lottie-player\package.json" />
     <Content Include="Scripts\node_modules\lottie-player\README.md" />
     <Content Include="Views\Home\PlatformDesign.cshtml" />
+    <Content Include="Views\Home\ProjectCounting.cshtml" />
+    <Content Include="Views\Home\DesignSteps.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

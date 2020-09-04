@@ -127,10 +127,7 @@ nav .nav-item .nav-link {
     color: #169cba !important;
     font-weight: bold;
 }
-h1, h2, h3, h4, h5, h6 {
-    color: #169cba !important;
-    font-weight: bold;
-}
+
 
 @media (max-width:800px) and (min-width:200px)
 {
@@ -649,7 +646,9 @@ h1, h2, h3, h4, h5, h6 {
 {
     margin-top:-197px;
     margin-left:-15px;
-    margin-right:-20px;
+    margin-right:-15px;
+    overflow-x:hidden;
+    
 }
 .WorkQualtiyBackground1 {
     
@@ -663,6 +662,7 @@ h1, h2, h3, h4, h5, h6 {
     color:white;
     margin-left:-15px;
     margin-right:-15px;
+    padding-top:-10px;
 }
 
 @media(max-width:700px)
@@ -676,6 +676,253 @@ h1, h2, h3, h4, h5, h6 {
 .display-4
 {
     font-size:2.5rem;
+}
+
+.ProjectWaveBackgroundFirst {
+    margin-top: -60px;
+    margin-left: -15px;
+    margin-right: -20px;
+    padding-bottom:-50px;
+    padding-top:-50px;
+}
+.ProjectWaveBackgroundSecond {
+    margin-left: -15px;
+    margin-right: -20px;
+    
+}
+.ProjectBackground {
+    margin-left: -15px;
+    margin-right: -15px;
+    background-color: #74d5de;
+    color:white;
+    
+    
+}
+
+
+.card.card-cascade.wider.reverse .card-body.card-body-cascade {
+    z-index: 3;
+    margin-top: -5rem;
+    border-radius: .25rem;
+    -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+    -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+    box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+}
+
+
+/*.card.card-cascade .view.view-cascade {
+    border-radius: .25rem;
+    -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+    -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+    box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+}*/
+.DesignSetpBackground {
+    margin-top: -250px;
+    background-image: url('Images/StepsDesignBackround.svg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    margin-left: -15px;
+    margin-right: -15px;
+    height:auto;
+    width:auto;
+    overflow-y:hidden;
+}
+.overlayBackground {
+    padding-top: 200px;
+}
+@media(max-width:1150px) {
+    .DesignSetpBackground {
+        margin-top: -150px;
+        background-image: url('Images/StepsDesignBackround.svg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        margin-left: -15px;
+        margin-right: -15px;
+        height: auto;
+        width: auto;
+        overflow-y: hidden;
+    }
+
+    .overlayBackground {
+        padding-top: 100px;
+    }
+}
+@media(max-width:1000px) {
+    .DesignSetpBackground {
+        margin-top: -180px;
+        background-image: url('Images/StepsDesignBackround.svg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        margin-left: -15px;
+        margin-right: -15px;
+        height: auto;
+        width: auto;
+        overflow-y: hidden;
+    }
+
+    .overlayBackground {
+        padding-top: 130px;
+    }
+}
+
+@media(max-width:900px)
+{
+    .DesignSetpBackground {
+        margin-top: -170px;
+        background-image: url('Images/StepsDesignBackround.svg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        margin-left: -15px;
+        margin-right: -15px;
+        height: auto;
+        width: auto;
+        overflow-y: hidden;
+    }
+    .overlayBackground {
+        padding-top: 130px;
+    }
+}
+
+@media(max-width:767px) {
+    .DesignSetpBackground {
+        margin-top: -140px;
+        background-image: url('Images/StepsDesignBackround.svg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        margin-left: -15px;
+        margin-right: -15px;
+        height: auto;
+        width: auto;
+        overflow-y: hidden;
+    }
+    .overlayBackground {
+        padding-top: 130px;
+    }
+}
+@media(max-width:650px) {
+    .DesignSetpBackground {
+        margin-top: -120px;
+        background-image: url('Images/StepsDesignBackround.svg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        margin-left: -15px;
+        margin-right: -15px;
+        height: auto;
+        width: auto;
+        overflow-y: hidden;
+    }
+    .overlayBackground {
+        padding-top: 130px;
+    }
+}
+@media(max-width:560px) {
+    .DesignSetpBackground {
+        margin-top: -100px;
+        background-image: url('Images/StepsDesignBackround.svg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        margin-left: -15px;
+        margin-right: -15px;
+        height: auto;
+        width: auto;
+        overflow-y: hidden;
+    }
+    .overlayBackground {
+        padding-top: 130px;
+    }
+}
+@media(max-width:460px) {
+    .DesignSetpBackground {
+        margin-top: -90px;
+        background-image: url('Images/StepsDesignBackround.svg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        margin-left: -15px;
+        margin-right: -15px;
+        height: auto;
+        width: auto;
+        overflow-y: hidden;
+    }
+    .overlayBackground {
+        padding-top: 100px;
+    }
+}
+@media(max-width:420px) {
+    .DesignSetpBackground {
+        margin-top: -80px;
+        background-image: url('Images/StepsDesignBackround.svg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        margin-left: -15px;
+        margin-right: -15px;
+        height: auto;
+        width: auto;
+        overflow-y: hidden;
+    }
+    .overlayBackground {
+        padding-top: 100px;
+    }
+}
+@media(max-width:370px) {
+    .DesignSetpBackground {
+        margin-top: -70px;
+        background-image: url('Images/StepsDesignBackround.svg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        margin-left: -15px;
+        margin-right: -15px;
+        height: auto;
+        width: auto;
+        overflow-y: hidden;
+    }
+    .overlayBackground {
+        padding-top: 100px;
+    }
+}
+@media(max-width:330px) {
+    .DesignSetpBackground {
+        margin-top: -50px;
+        background-image: url('Images/StepsDesignBackround.svg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        margin-left: -15px;
+        margin-right: -15px;
+        height: auto;
+        width: auto;
+        overflow-y: hidden;
+    }
+    .overlayBackground {
+        padding-top: 100px;
+    }
+}
+@media(max-width:230px) {
+    .DesignSetpBackground {
+        margin-top: -40px;
+        background-image: url('Images/StepsDesignBackround.svg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        margin-left: -15px;
+        margin-right: -15px;
+        height: auto;
+        width: auto;
+        overflow-y: hidden;
+    }
+
+    .overlayBackground {
+        padding-top: 100px;
+    }
 }
 
 

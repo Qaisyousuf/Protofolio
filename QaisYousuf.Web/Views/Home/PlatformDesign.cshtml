@@ -5,7 +5,7 @@
 
     foreach(var item in Model.ListPlatformDesignViewModel.Take(1))
     {
-        <div class="container mt-3 px-5 pt-3 pb-5">
+        <div class="container mt-3 px-5 pt-3 mb-5">
             <section class="text-center dark-grey-text">
                
                 <!-- Section heading -->
@@ -16,7 +16,7 @@
     }
 
     
-    <div class="container mt-0  pt-0 pb-3 z-depth-0">
+    <div class="container pt-5  pb-0 z-depth-0">
 
 
         <!--Section: Content-->
@@ -27,8 +27,8 @@
             <div class="row text-center d-flex justify-content-center">
                 @foreach (var item in Model.ListPlatformDesignViewModel)
                 {
-                <div class="col-lg-4 col-md-12  pb-0 mb-5 pb-5">
-                    <div class="view card-img-100 mx-auto mb-2 pb-4 ">
+                <div class="col-lg-4 col-md-12   mb-2 pb-2">
+                    <div class="view card-img-100 mx-auto mb-2 pb-2 ">
                         <img src="@item.ImageUrl" class="img-fluid" alt="smaple image">
                     </div>
                     <h5 class="font-weight-normal mb-3">@item.SubTitle</h5>
