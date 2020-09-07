@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace QaisYousuf.ViewModels
 {
-    public class SiteSettingViewMdoel
+    public class SiteSettingViewMdoel:BaseViewModel
     {
         public int Id { get; set; }
 

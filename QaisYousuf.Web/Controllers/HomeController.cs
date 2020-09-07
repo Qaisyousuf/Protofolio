@@ -243,5 +243,17 @@ namespace QaisYousuf.Web.Controllers
 
             return PartialView(ListofDesing);
         }
+
+        [HttpPost]
+        public ActionResult Subscrite(SubscribeViewModel viewmodel)
+        {
+            Subscribe subscribe = new Subscribe
+            {
+                Id=viewmodel.Id,
+                Title=viewmodel.Title,
+
+            };
+            return View();
+        }
     }
 }

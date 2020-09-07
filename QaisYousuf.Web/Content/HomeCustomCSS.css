@@ -700,14 +700,7 @@ nav .nav-item .nav-link {
 }
 
 
-.card.card-cascade.wider.reverse .card-body.card-body-cascade {
-    z-index: 3;
-    margin-top: -5rem;
-    border-radius: .25rem;
-    -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-    -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-    box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-}
+
 
 
 /*.card.card-cascade .view.view-cascade {
@@ -716,20 +709,32 @@ nav .nav-item .nav-link {
     -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
     box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
 }*/
+
+.card.card-cascade.wider.reverse .card-body.card-body-cascade {
+    z-index: 3;
+    margin-top: -6.2rem;
+    border-radius: .25rem;
+    -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+    -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+    box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+}
 .DesignSetpBackground {
     margin-top: -250px;
     background-image: url('Images/StepsDesignBackround.svg');
-    background-attachment: fixed;
-    background-size: cover;
+    background-attachment:fixed;
+    background-size:cover;
     background-position: center;
     margin-left: -15px;
     margin-right: -15px;
     height:auto;
     width:auto;
     overflow-y:hidden;
+    padding-bottom:150px;
+    
 }
 .overlayBackground {
-    padding-top: 200px;
+    padding-top: 150px;
+    
 }
 @media(max-width:1150px) {
     .DesignSetpBackground {
@@ -748,6 +753,14 @@ nav .nav-item .nav-link {
     .overlayBackground {
         padding-top: 100px;
     }
+    .card.card-cascade.wider.reverse .card-body.card-body-cascade {
+        z-index: 3;
+        margin-top: -5rem;
+        border-radius: .25rem;
+        -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+        -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+        box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+    }
 }
 @media(max-width:1000px) {
     .DesignSetpBackground {
@@ -764,14 +777,22 @@ nav .nav-item .nav-link {
     }
 
     .overlayBackground {
-        padding-top: 130px;
+        padding-top: 100px;
+    }
+    .card.card-cascade.wider.reverse .card-body.card-body-cascade {
+        z-index: 3;
+        margin-top: -5rem;
+        border-radius: .25rem;
+        -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+        -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+        box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
     }
 }
 
 @media(max-width:900px)
 {
     .DesignSetpBackground {
-        margin-top: -170px;
+        margin-top: -150px;
         background-image: url('Images/StepsDesignBackround.svg');
         background-attachment: fixed;
         background-size: cover;
@@ -783,13 +804,21 @@ nav .nav-item .nav-link {
         overflow-y: hidden;
     }
     .overlayBackground {
-        padding-top: 130px;
+        padding-top: 50px;
+    }
+    .card.card-cascade.wider.reverse .card-body.card-body-cascade {
+        z-index: 3;
+        margin-top: -4rem;
+        border-radius: .25rem;
+        -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+        -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+        box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
     }
 }
 
 @media(max-width:767px) {
     .DesignSetpBackground {
-        margin-top: -140px;
+        margin-top: -150px;
         background-image: url('Images/StepsDesignBackround.svg');
         background-attachment: fixed;
         background-size: cover;
@@ -801,12 +830,20 @@ nav .nav-item .nav-link {
         overflow-y: hidden;
     }
     .overlayBackground {
-        padding-top: 130px;
+        padding-top: 50px;
+    }
+    .card.card-cascade.wider.reverse .card-body.card-body-cascade {
+        z-index: 3;
+        margin-top: -5.7rem;
+        border-radius: .25rem;
+        -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+        -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+        box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
     }
 }
 @media(max-width:650px) {
     .DesignSetpBackground {
-        margin-top: -120px;
+        margin-top: -100px;
         background-image: url('Images/StepsDesignBackround.svg');
         background-attachment: fixed;
         background-size: cover;
@@ -818,7 +855,7 @@ nav .nav-item .nav-link {
         overflow-y: hidden;
     }
     .overlayBackground {
-        padding-top: 130px;
+        padding-top: 50px;
     }
 }
 @media(max-width:560px) {
@@ -835,7 +872,7 @@ nav .nav-item .nav-link {
         overflow-y: hidden;
     }
     .overlayBackground {
-        padding-top: 130px;
+        padding-top: 30px;
     }
 }
 @media(max-width:460px) {
@@ -852,7 +889,15 @@ nav .nav-item .nav-link {
         overflow-y: hidden;
     }
     .overlayBackground {
-        padding-top: 100px;
+        padding-top: 30px;
+    }
+    .card.card-cascade.wider.reverse .card-body.card-body-cascade {
+        z-index: 3;
+        margin-top: -4.5rem;
+        border-radius: .25rem;
+        -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+        -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+        box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
     }
 }
 @media(max-width:420px) {
@@ -869,7 +914,7 @@ nav .nav-item .nav-link {
         overflow-y: hidden;
     }
     .overlayBackground {
-        padding-top: 100px;
+        padding-top: 20px;
     }
 }
 @media(max-width:370px) {
@@ -886,7 +931,15 @@ nav .nav-item .nav-link {
         overflow-y: hidden;
     }
     .overlayBackground {
-        padding-top: 100px;
+        padding-top: 20px;
+    }
+    .card.card-cascade.wider.reverse .card-body.card-body-cascade {
+        z-index: 3;
+        margin-top: -3rem;
+        border-radius: .25rem;
+        -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+        -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+        box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
     }
 }
 @media(max-width:330px) {
@@ -903,7 +956,15 @@ nav .nav-item .nav-link {
         overflow-y: hidden;
     }
     .overlayBackground {
-        padding-top: 100px;
+        padding-top: 20px;
+    }
+    .card.card-cascade.wider.reverse .card-body.card-body-cascade {
+        z-index: 3;
+        margin-top: -3rem;
+        border-radius: .25rem;
+        -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+        -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+        box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
     }
 }
 @media(max-width:230px) {
@@ -921,11 +982,21 @@ nav .nav-item .nav-link {
     }
 
     .overlayBackground {
-        padding-top: 100px;
+        padding-top: 20px;
+    }
+    .card.card-cascade.wider.reverse .card-body.card-body-cascade {
+        z-index: 3;
+        margin-top: -5rem;
+        border-radius: .25rem;
+        -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+        -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
+        box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
     }
 }
-
-
+.footerwaves
+{
+    margin-top:-180px;
+}
 
 
 

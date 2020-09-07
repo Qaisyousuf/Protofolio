@@ -39,7 +39,7 @@ namespace QaisYousuf.Web.Controllers
                     baseViewModel.SiteLastUpdate = siteSetting.SiteLastUpdate;
                     baseViewModel.UpdatedBy = siteSetting.UpdatedBy;
                     baseViewModel.BaseTitle = siteSetting.UpdatedBy;
-                    baseViewModel.BaseContent = siteSetting.UpdatedBy;
+                    baseViewModel.BaseContent = siteSetting.Content;
                     baseViewModel.Home = siteSetting.Home;
                     baseViewModel.HomeUrl = siteSetting.HomeUrl;
                     baseViewModel.About = siteSetting.About;
