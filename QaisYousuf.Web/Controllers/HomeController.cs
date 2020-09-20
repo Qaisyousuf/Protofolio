@@ -13,7 +13,7 @@ namespace QaisYousuf.Web.Controllers
     public class HomeController : BaseController
     {
 
-
+        
         public ActionResult Index(string slug)
         {
 

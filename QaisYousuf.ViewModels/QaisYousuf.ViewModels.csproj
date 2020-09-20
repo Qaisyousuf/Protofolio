@@ -86,6 +86,7 @@
     <Compile Include="HomeBannerViewModel.cs" />
     <Compile Include="InsertUsersViewModel.cs" />
     <Compile Include="InterestViewModel.cs" />
+    <Compile Include="ListOfAboutPage.cs" />
     <Compile Include="ListOfDataViewModels.cs" />
     <Compile Include="ListOfDesignStepsViewModel.cs" />
     <Compile Include="ListOfPlatfomeDesignViewModel.cs" />

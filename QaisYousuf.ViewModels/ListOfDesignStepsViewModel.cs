@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QaisYousuf.ViewModels
 {
-   public class ListOfDesignStepsViewModel
+   public class ListOfDesignStepsViewModel:BaseViewModel
     {
         public List<DesignStepsViewModel> DesignViewModel { get; set; }
     }

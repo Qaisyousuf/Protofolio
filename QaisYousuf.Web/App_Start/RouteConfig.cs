@@ -14,6 +14,7 @@ namespace QaisYousuf.Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapMvcAttributeRoutes();
+           
             routes.MapRoute("Page", "{slug}", new { controller = "Home", action = "Index" }, new[] { "QaisYousuf.Web.Controllers" });
             routes.MapRoute("Default", "", new { controller = "Home", action = "Index" }, new[] { "QaisYousuf.Web.Controllers" });
 

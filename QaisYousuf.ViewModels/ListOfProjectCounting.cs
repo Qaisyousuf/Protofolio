@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QaisYousuf.ViewModels
 {
-   public class ListOfProjectCounting
+   public class ListOfProjectCounting:BaseViewModel
     {
       public  List<ProjectCountingViewModel> CountingViewModel { get; set; }
     }

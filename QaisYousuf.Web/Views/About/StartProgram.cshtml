@@ -1,0 +1,51 @@
+﻿@model QaisYousuf.ViewModels.ListOfAboutPage
+@{
+    ViewBag.Title = ViewBag.PageTitle;
+}
+
+@if (Model?.StartProgramListViewModel != null)
+{
+    foreach (var item in Model.StartProgramListViewModel.Take(1))
+    {
+
+        <div class="container-fluid mt-5 py-5 z-depth-0">
+
+
+            <!--Section: Content-->
+            <section class="px-md-3 mx-md-3 dark-grey-text text-center text-lg-left">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-lg-6 mb-4 mb-lg-0 d-flex align-items-center img-fluid justify-content-center">
+                        <lottie-player src=@item.ImageUrl background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-6 mb-0 mt-3 mb-lg-0">
+
+                        <h3 class="font-weight-bold">@item.MainTitle</h3>
+
+                        <h4 class="font-weight-bold">@item.SubTitle</h4>
+
+                        <p class="text-muted">@item.Content</p>
+
+                        <a class="btn btn-primary" href=@item.ButtonUrl>@item.ButtonText<i class="fas fa-angle-right ml-2"></i></a>
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+
+            </section>
+            <!--Section: Content-->
+
+
+        </div>
+  
+    }
+
+}
