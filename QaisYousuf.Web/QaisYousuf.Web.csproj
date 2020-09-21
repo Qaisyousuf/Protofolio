@@ -140,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\UIToCode\Views\DataCollection\Create.cshtml" />
+    <Content Include="Content\ContactCustomCSS.css" />
     <Content Include="Content\AboutCustomCSS.css" />
     <Content Include="Content\AdminCustomCSS.css" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -157,9 +158,11 @@
     <Content Include="Content\Images\blob.svg" />
     <Content Include="Content\Images\FinalLandingPage.svg" />
     <Content Include="Content\Images\girl-sitiing-on-table-conducting-an-interview-by-oblik-studio.svg" />
+    <Content Include="Content\Images\HomeBackground.svg" />
     <Content Include="Content\Images\Landing.svg" />
     <Content Include="Content\Images\MainGroup.svg" />
     <Content Include="Content\Images\process_rswj.svg" />
+    <Content Include="Content\Images\ProfileBackground.svg" />
     <Content Include="Content\Images\StepsDesignBackround.svg" />
     <Content Include="Content\Images\Waiau.svg" />
     <Content Include="Content\Images\Waihou 1.svg" />
@@ -903,6 +906,7 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\CustomAuthenticationFilter.cs" />
     <Compile Include="Global.asax.cs">
@@ -950,6 +954,8 @@
     <Content Include="Views\About\StartProgram.cshtml" />
     <Content Include="Views\About\StartUpProcess.cshtml" />
     <Content Include="Views\About\GetMeetOurTeam.cshtml" />
+    <Content Include="Views\Shared\_ContactLayout.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

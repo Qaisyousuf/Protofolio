@@ -1000,5 +1000,126 @@ nav .nav-item .nav-link {
 }
 
 
+#One {
+    animation: test 7s infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+    
+}
+
+@keyframes test {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#Tow {
+    animation: test 6s infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes test {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#Three {
+    animation: test 5s infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes test {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#Four {
+    animation: test 4s infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes test1 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#Five {
+    padding: 10px;
+    animation: test1 3s infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+    position: absolute;
+    top: 20%;
+}
+
+@keyframes test1 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.aboutbackgroundContent {
+    position: relative;
+    top: 10%;
+    padding-bottom: 50px;
+    left: -15px;
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: auto;
+}
+
+.MainContent {
+    position: absolute;
+    top: -20%;
+    left: 20%;
+}
+
+.MainContentText {
+    position: absolute;
+    top: -20%;
+    left: 32%;
+    color: white !important;
+}
+
+.ProfileBackImage svg {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    
+}
+
+.profileImageForBackground img {
+    position: absolute;
+    top: 15%;
+    left: 24%;
+}
+
 
 
