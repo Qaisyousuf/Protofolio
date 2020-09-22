@@ -14,6 +14,8 @@ namespace QaisYousuf.Models
 
         public string Message { get; set; }
 
+        public string IpAddress { get; set; }
+
 
     }
 }

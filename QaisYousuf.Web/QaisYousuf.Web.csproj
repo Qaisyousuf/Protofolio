@@ -868,6 +868,7 @@
     <Compile Include="Areas\UIToCode\Controllers\CodePageController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\ContactBannerController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\ContactDetailsController.cs" />
+    <Compile Include="Areas\UIToCode\Controllers\ContactFormBackEndController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\ContactMattersController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\ContactPageController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\DataCollectionController.cs" />
@@ -926,6 +927,8 @@
     <Content Include="Content\bootstrap-reboot.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Areas\UIToCode\Views\ContactFormBackEnd\Index.cshtml" />
+    <Content Include="Areas\UIToCode\Views\ContactFormBackEnd\Details.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />

@@ -127,8 +127,14 @@ nav .nav-item .nav-link {
 .display-4 {
     color: #169cba !important;
     font-weight: bold;
+    font-size:2.5rem;
 }
 
+@media (max-width:800px) and (min-width:200px) {
+    .display-3 {
+        font-size: 2rem;
+    }
+}
 
 @media (max-width:800px) and (min-width:200px) {
     .display-4 {
@@ -137,11 +143,7 @@ nav .nav-item .nav-link {
 }
 
 
-}
 
-.display-4 {
-    font-size: 2.5rem;
-}
 
 .aboutbackground{
     background-image:url('../Content/Images/Waihou 1.svg');

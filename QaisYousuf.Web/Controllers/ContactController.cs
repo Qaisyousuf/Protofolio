@@ -56,5 +56,11 @@ namespace QaisYousuf.Web.Controllers
             };
             return View(AllListofContact);
         }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }

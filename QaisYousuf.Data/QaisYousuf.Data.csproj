@@ -280,6 +280,10 @@
     <Compile Include="Migrations\202008272014568_PropertyRemovedFromTheModelClass.designer.cs">
       <DependentUpon>202008272014568_PropertyRemovedFromTheModelClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009221223302_IpAddressAddedToContactForm.cs" />
+    <Compile Include="Migrations\202009221223302_IpAddressAddedToContactForm.designer.cs">
+      <DependentUpon>202009221223302_IpAddressAddedToContactForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -392,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008272014568_PropertyRemovedFromTheModelClass.resx">
       <DependentUpon>202008272014568_PropertyRemovedFromTheModelClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009221223302_IpAddressAddedToContactForm.resx">
+      <DependentUpon>202009221223302_IpAddressAddedToContactForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
