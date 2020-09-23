@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using QaisYousuf.Models;
 using QaisYousuf.ViewModels;
 
 namespace QaisYousuf.Web.Controllers
@@ -54,13 +55,56 @@ namespace QaisYousuf.Web.Controllers
                 ListContactBannerViewmodel=viewmodel,
                 ListContactDetiailsViewModel=detailsViewModel,
             };
-            return View(AllListofContact);
+            return PartialView(AllListofContact);
         }
 
         [HttpGet]
+        [Route("ContactUs")]
         public ActionResult Create()
         {
-            return View();
+            return View(new ContactFormViewModel());
         }
+
+        [HttpPost]
+        [Route("ContactUs")]
+        public ActionResult Create(ContactFormViewModel viewmodel)
+        {
+            if(ModelState.IsValid)
+            {
+                ContactForm contactForm = new ContactForm
+                {
+                    Id=viewmodel.Id,
+                    FullName=viewmodel.FullName,
+                    Email=viewmodel.Email,
+                    Moible=viewmodel.Moible,
+                    Message=viewmodel.Message,
+                    IpAddress= GetIpAddres(HttpContext.Request),
+
+                };
+
+                uow.ContactFormRepository.Add(contactForm);
+                uow.Commit();
+                return View(viewmodel);
+
+               
+            }
+            return View(viewmodel);
+        }
+
+      
+       
+
+        [NonAction]
+        private string GetIpAddres(HttpRequestBase request)
+        {
+            string ipaddres;
+            ipaddres = request.ServerVariables["HTTP_X_FORWARDED_FOR"];
+            if (ipaddres == "" || ipaddres == null)
+            {
+                ipaddres = request.ServerVariables["REMOTE_ADDR"];
+            }
+            return ipaddres;
+        }
+
     }
 }

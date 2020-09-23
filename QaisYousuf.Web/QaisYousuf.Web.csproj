@@ -958,6 +958,7 @@
     <Content Include="Views\About\StartUpProcess.cshtml" />
     <Content Include="Views\About\GetMeetOurTeam.cshtml" />
     <Content Include="Views\Shared\_ContactLayout.cshtml" />
+    <Content Include="Views\Contact\Create.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

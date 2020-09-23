@@ -3,6 +3,7 @@ body {
    
     font-family: 'Varela Round', sans-serif;
     overflow-x: hidden;
+    color:rebeccapurple;
    
 }
 /*@media(max-width:500px)
@@ -145,26 +146,24 @@ nav .nav-item .nav-link {
 
 
 
-.aboutbackground{
-    background-image:url('../Content/Images/Waihou 1.svg');
-    
-    background-size:cover;
-    background-attachment:fixed;
-    height:100vh;
+.ContactBackground {
+    background-image: url('Images/Waihou 1.svg');
+    background-size: cover;
+    background-attachment: fixed;
     background-position:center center;
-
-    width:auto;
-    margin-left:-15px;
-    margin-right:-15px;
-    
-    
+    height: auto;
+    width: auto;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-bottom:50px;
+   
 }
 
 .footerwaves {
    
    margin-top:-50px;
 }
-#aboutBannerVedio main {
+#ContactBannerVedio main {
     opacity: 0.2;
     position: absolute;
     top: 29%;
