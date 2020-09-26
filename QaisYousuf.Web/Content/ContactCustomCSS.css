@@ -273,23 +273,21 @@ nav .nav-item .nav-link {
     }
 }
 
-.aboutbackgroundContent
-{
+.ContactFormBackground {
     position:relative;
-    top:10%;
-    padding-bottom:50px;
-    left:-15px;
-    margin:0px;
-    padding:0px;
-    height:auto;
-    width:auto;
-
+    top: 0%;
+    padding-bottom: 50px;
+    left: -15px;
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: auto;
 }
-.MainContent
-{
-    position:absolute;
-    top:-20%;
-    left:20%;
+.ContactSVGBackground svg {
+    position: absolute;
+    top: auto;
+    left: auto;
+    
 }
 .MainContentText
 {
@@ -311,6 +309,18 @@ nav .nav-item .nav-link {
     top: 10%;
     left: 30%;
 }
+.view-cascade
+{
+    background-image:url('Images/Waihou 1.svg');
+    background-position:center center;
+    background-attachment:fixed;
+    
+}
 
+.card card-cascade z-depth-1 {
+    -webkit-box-shadow: 0px 0px 27px -5px rgba(242,243,255,1) !important;
+    -moz-box-shadow: 0px 0px 27px -5px rgba(242,243,255,1) !important;
+    box-shadow: 0px 0px 27px -5px rgba(242,243,255,1) !important;
+}
 
 

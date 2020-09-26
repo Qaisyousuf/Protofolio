@@ -19,6 +19,10 @@ namespace QaisYousuf.ViewModels
         public string HomeAddress { get; set; }
 
         [Required]
+        [Display(Name = "Country")]
+        public string CountryName { get; set; }
+
+        [Required]
         [DataType(DataType.PhoneNumber)]
         public string Moible { get; set; }
 
@@ -26,6 +30,12 @@ namespace QaisYousuf.ViewModels
         [EmailAddress]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
+
+        [Required]
+        [EmailAddress]
+        [DataType(DataType.EmailAddress)]
+        [Display(Name ="Sale Email")]
+        public string SaleEamil { get; set; }
 
         [Required]
         [DataType(DataType.Time)]
@@ -38,5 +48,17 @@ namespace QaisYousuf.ViewModels
         [DisplayFormat(ApplyFormatInEditMode = true)]
         [Display(Name = "Working Date")]
         public DateTime WorkingData { get; set; }
+
+        [Required]
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true)]
+        [Display(Name = "Working Date of Week")]
+        public DateTime WorkingTimeofWeek { get; set; }
+
+        [Required]
+        [DataType(DataType.Time)]
+        [DisplayFormat(ApplyFormatInEditMode = true)]
+        [Display(Name = "Working Time Of Week")]
+        public DateTime WrokingDateOfWeek { get; set; }
     }
 }

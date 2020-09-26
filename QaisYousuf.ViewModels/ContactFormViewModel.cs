@@ -15,8 +15,12 @@ namespace QaisYousuf.ViewModels
         [Display(Name ="Full Name")]
         public string FullName { get; set; }
 
+        [Required]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
+        [Required]
+        [DataType(DataType.PhoneNumber)]
         public string Moible { get; set; }
 
         public string Message { get; set; }

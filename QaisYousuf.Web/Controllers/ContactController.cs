@@ -31,31 +31,56 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
+           
+
+            ListOfContact AllListofContact = new ListOfContact
+            {
+                ListContactBannerViewmodel=viewmodel,
+                
+            };
+            return PartialView(AllListofContact);
+        }
+
+        [HttpGet]
+        [ChildActionOnly]
+        
+        public ActionResult GetContactDetails(string slug)
+        {
             var contactDetails = uow.ContactDetialsRepository.GetAll();
 
             List<ContactDetailsViewModel> detailsViewModel = new List<ContactDetailsViewModel>();
 
             foreach (var ContactItem in contactDetails)
             {
+                var datatime = ContactItem.WorkingTime;
+                var dateTimeOfWeek = ContactItem.WorkingDateTimeOfWeek;
+
+                var TimeOfWeek = Convert.ToDateTime(dateTimeOfWeek.ToShortTimeString());
+                var DateOfWeek = Convert.ToDateTime(dateTimeOfWeek.ToShortDateString());
+                var time = Convert.ToDateTime(datatime.ToShortTimeString());
+                var date = Convert.ToDateTime(datatime.ToShortDateString());
                 detailsViewModel.Add(new ContactDetailsViewModel
                 {
-                    Id=ContactItem.Id,
-                    Title=ContactItem.Title,
-                    HomeAddress=ContactItem.HomeAddress,
-                    Moible=ContactItem.Moible,
-                    Email=ContactItem.Email,
-                    WorkingTime=ContactItem.WorkingTime,
-                    WorkingData=ContactItem.WorkingTime,
+                    Id = ContactItem.Id,
+                    Title = ContactItem.Title,
+                    HomeAddress = ContactItem.HomeAddress,
+                    CountryName=ContactItem.CountryName,
+                    SaleEamil=ContactItem.SaleEamil,
+                    Moible = ContactItem.Moible,
+                    Email = ContactItem.Email,
+                    WorkingTime = time,
+                    WorkingData = date,
+                    WorkingTimeofWeek=TimeOfWeek,
+                    WrokingDateOfWeek=dateTimeOfWeek,
 
                 });
             }
 
-            ListOfContact AllListofContact = new ListOfContact
+            ListOfContact ContactDetailslist = new ListOfContact
             {
-                ListContactBannerViewmodel=viewmodel,
-                ListContactDetiailsViewModel=detailsViewModel,
+                ListContactDetiailsViewModel=detailsViewModel
             };
-            return PartialView(AllListofContact);
+            return PartialView(ContactDetailslist);
         }
 
         [HttpGet]
@@ -84,14 +109,20 @@ namespace QaisYousuf.Web.Controllers
 
                 uow.ContactFormRepository.Add(contactForm);
                 uow.Commit();
-                return View(viewmodel);
+                TempData["Message"] = $"{contactForm.FullName}";
+                return RedirectToAction(nameof(ThankYou));
+                
 
                
             }
             return View(viewmodel);
         }
 
-      
+        [Route("ThankYou")]
+        public ActionResult ThankYou()
+        {
+            return View(new ContactFormViewModel());
+        }
        
 
         [NonAction]

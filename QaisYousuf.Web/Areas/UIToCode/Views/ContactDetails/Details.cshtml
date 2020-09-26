@@ -39,6 +39,14 @@
                         </tr>
                         <tr>
                             <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-map-marked"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.CountryName)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.CountryName)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
                                 <a class="btn-floating btn-sm btn-primary"><i class="fas fa-mobile-alt"></i> </a>
                             </th>
                             <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Moible)</td>
@@ -51,7 +59,13 @@
                             <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Email)</td>
                             <td class="text-primary"> @Html.DisplayFor(model => model.Email)</td>
                         </tr>
-
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-envelope"></i> </a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.SaleEamil)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.SaleEamil)</td>
+                        </tr>
                         <tr>
                             <th scope="row">
                                 <a class="btn-floating btn-sm btn-primary"><i class="far fa-calendar-alt"></i></a>
@@ -66,7 +80,20 @@
                             <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.WorkingTime)</td>
                             <td class="text-primary"> @Html.DisplayFor(model => model.WorkingTime)</td>
                         </tr>
-
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="far fa-calendar-alt"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.WrokingDateOfWeek)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.WrokingDateOfWeek)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-clock"></i> </a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.WorkingTimeofWeek)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.WrokingDateOfWeek)</td>
+                        </tr>
 
                     </tbody>
                     <!--Table body-->

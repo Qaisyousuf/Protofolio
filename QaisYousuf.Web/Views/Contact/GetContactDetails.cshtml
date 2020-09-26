@@ -1,0 +1,82 @@
+﻿@model QaisYousuf.ViewModels.ListOfContact
+
+@if (Model?.ListContactDetiailsViewModel != null)
+{
+    foreach (var item in Model.ListContactDetiailsViewModel.Take(1))
+    {
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-10 col-sm-12 offset-sm-0 offset-md-1">
+                    <section>
+                        <div class="card card-cascade z-depth-1">
+
+                            <!-- Card image -->
+                            <div class="view-cascade overlay">
+                                <div class="img-fluid text-xl-center">
+                                    <lottie-player src=https://assets10.lottiefiles.com/packages/lf20_atgjqorh.json background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                                </div>
+
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body card-body-cascade text-center">
+
+                                <!-- Title -->
+                                <div class="display-4 mt-2 card-title"><strong>@item.Title</strong></div>
+                                <!-- Subtitle -->
+                                <!-- Text -->
+                                <div class="row text-center mt-5 ">
+                                    <div class="col-md-3">
+                                        <a class="btn-floating btn-primary">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </a>
+                                        <p>@item.HomeAddress</p>
+                                        <p class="mb-md-0">@item.CountryName</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a class="btn-floating btn-primary">
+
+                                            <i class="far fa-calendar-alt"></i>
+                                        </a>
+                                        <p>@item.WorkingData.DayOfWeek.ToString() @item.WorkingTime.ToShortTimeString()</p>
+                                        <p class="mb-md-0">@item.WorkingData.AddDays(4).DayOfWeek.ToString() @item.WorkingTime.AddHours(8).ToShortTimeString()</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a class="btn-floating btn-primary">
+                                            <i class="fas fa-phone"></i>
+                                        </a>
+                                        <p>@item.Moible</p>
+                                        <p class="mb-md-0"></p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a class="btn-floating btn-primary">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                        <p>@item.Email</p>
+                                        <p class="mb-0">@item.SaleEamil</p>
+                                    </div>
+                                </div>
+
+                                <!-- Facebook -->
+                                <hr />
+                                <a class="btn-floating btn-md btn-tw" type="button" role="button"><i class="fab fa-twitter"></i></a>
+                                <a class="btn-floating btn-md btn-li" type="button" role="button"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn-floating btn-md btn-ins" type="button" role="button"><i class="fab fa-instagram"></i></a>
+                                <a class="btn-floating btn-md btn-so" type="button" role="button"><i class="fab fa-stack-overflow"></i></a>
+                                <a class="btn-floating btn-md btn-git" type="button" role="button"><i class="fab fa-github"></i></a>
+                            </div>
+
+                            <!-- Card footer -->
+                          
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+@section ContactCustomCSS{
+    @Styles.Render("~/Content/ContactCustomCSS.css")
+}
