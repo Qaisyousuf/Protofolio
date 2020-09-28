@@ -307,6 +307,8 @@ nav .nav-item .nav-link {
     top: 10%;
     left: 30%;
 }
-
+.btn-rounded {
+    border-radius: 0.3rem !important;
+}
 
 

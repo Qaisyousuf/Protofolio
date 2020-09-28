@@ -84,6 +84,35 @@ namespace QaisYousuf.Web.Controllers
         }
 
         [HttpGet]
+        [ChildActionOnly]
+        public ActionResult GetContactMatter()
+        {
+            var contactMatter = uow.ContactMatterRepository.GetAll();
+
+            List<ContactMattersViewModel> viewmodel = new List<ContactMattersViewModel>();
+
+            foreach (var item in contactMatter)
+            {
+                viewmodel.Add(new ContactMattersViewModel
+                {
+                    Id=item.Id,
+                    Title=item.Title,
+                    Content=item.Content,
+                    MapApi=item.MapApi,
+                    ButtonText=item.ButtonText,
+                    ImageUrl=item.ImageUrl,
+                });
+            }
+
+            ListOfContact ContacMatterList = new ListOfContact
+            {
+                ListContactMatterViewModel=viewmodel
+            };
+
+            return PartialView(ContacMatterList);
+        }
+
+        [HttpGet]
         [Route("ContactUs")]
         public ActionResult Create()
         {
