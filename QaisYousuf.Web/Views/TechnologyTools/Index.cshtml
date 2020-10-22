@@ -1,0 +1,287 @@
+﻿@model QaisYousuf.ViewModels.ListOfCodePages
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Technology.cshtml";
+}
+@if (Model?.ListOfCodeBannerViewModel != null)
+{
+    <div class=" mt-n5">
+
+
+        @foreach (var item in Model.ListOfCodeBannerViewModel.Take(1))
+        {
+            <div class="bg-transparent">
+                <!-- Mask & flexbox options-->
+                <div class="mask">
+                    <!-- Content -->
+                    <div class="container h-100 mt-3  ">
+                        <!--Grid row-->
+                        <div class="row align-items-center h-100 mt-sm-3">
+                            <!--Grid column-->
+                            <div class="col-md-7 text-center text-lg-left pt-5 mt-5">
+                                <div class="display-4 mb-0">@item.MainTitle</div>
+                                <p class="mb-2 pb-0 dark-grey-text">@item.SubTitle</p>
+
+                                <a href="@item.ButtonUrl" class="btn btn-primary btn-rounded  btn-md ml-md-0">@item.ButtonText</a>
+
+                            </div>
+                            <!--Grid column-->
+                            <!--Grid column-->
+                            <div class="col-md-5 col-sm-12 pb-5 mb-md-5 pb-md-5">
+                                <div class="img-fluid mt-sm-5 py-sm-5 " id="ContactBannerVedio">
+                                    <lottie-player src=@item.ImageUrl background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                                </div>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+                        <!--Grid row-->
+                    </div>
+                    <!-- Content -->
+                </div>
+                <!-- Mask & flexbox options-->
+            </div>
+        }
+    </div>
+}
+
+@if (Model?.ListOfWebProgramming != null)
+{
+    <div class="MainToolsBackground">
+
+
+        <div class="display-4 text-center">Our Tools and Technologies</div>
+        <div class=" container my-5 z-depth-0">
+
+
+            <!--Section: Content-->
+            <section class="dark-grey-text">
+
+                <div class="row pr-lg-5 mt-5">
+                    <div class="col-md-5 offset-sm-0 offset-md-1 offset-lg-1 offset-xl-1">
+                        @foreach (var LottiImage in Model.ListOfWebProgramming.Take(1))
+                        {
+                            <div class="view pt-5">
+                                <lottie-player src=@LottiImage.ImageUrl background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                            </div>
+                        }
+
+                    </div>
+
+                    <div class="col-lg-4 offset-sm-0 offset-md-1 offset-lg-1 offset-xl-1 col-md-12 mb-4">
+
+                        <div class="pricing-card card card-cascade narrower">
+
+                            <!-- Card image -->
+                            <div class="view view-cascade gradient-card-header  blue lighten-1">
+
+                                @foreach (var item in Model.ListOfWebProgramming.Take(1))
+                                {
+                                    <h4 class=" card-header-title">@item.MainTitle</h4>
+                                }
+                                <!-- Title -->
+                                <!-- Subtitle -->
+                                <!-- Facebook -->
+
+
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body mx-5 card-body-cascade  text-left mx-3">
+
+                                @foreach (var subItem in Model.ListOfWebProgramming)
+                                {
+                                    <ul>
+                                        <li>
+                                            <h6 class="mt-2"><img src="@subItem.IconUrl" style="height:30px; width:30px; margin-right:10px;" />@subItem.ProgramTitle</h6>
+                                        </li>
+                                    </ul>
+                                }
+                                <!-- Text -->
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+            <!--Section: Content-->
+
+
+        </div>
+        <div class=" container my-5 z-depth-0">
+
+
+            <!--Section: Content-->
+            <section class="dark-grey-text">
+
+                <div class="row pr-lg-5">
+                    <div class="col-md-5 offset-sm-0 offset-md-1 offset-lg-1 offset-xl-1">
+                        @foreach (var LottiImage in Model.ListUIUXToolsViewModel.Take(1))
+                        {
+                            <div class="view pt-5">
+                                <lottie-player src=@LottiImage.ImageUrl background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                            </div>
+                        }
+
+
+
+                    </div>
+
+                    <div class="col-lg-4 offset-sm-0 offset-md-1 offset-lg-1 offset-xl-1 col-md-12 mb-4">
+
+                        <div class="pricing-card card card-cascade narrower">
+
+                            <!-- Card image -->
+                            <div class="view view-cascade gradient-card-header  blue lighten-1">
+
+                                @foreach (var item in Model.ListUIUXToolsViewModel.Take(1))
+                                {
+                                    <h4 class=" card-header-title">@item.MainTitle</h4>
+                                }
+                                <!-- Title -->
+                                <!-- Subtitle -->
+                                <!-- Facebook -->
+
+
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body mx-5 card-body-cascade  text-left mx-3">
+
+                                @foreach (var subItem in Model.ListUIUXToolsViewModel)
+                                {
+                                    <ul>
+                                        <li>
+                                            <h6 class="mt-2"><img src="@subItem.IconUrl" style="height:30px; width:30px; margin-right:10px;" />@subItem.ProgramTitle</h6>
+                                        </li>
+                                    </ul>
+                                }
+                                <!-- Text -->
+
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </section>
+            <!--Section: Content-->
+
+
+        </div>
+
+
+    </div>
+
+}
+
+@if (Model?.ListCodeDesignViewModel != null)
+{
+    <div class="WaveSVGone">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff7043" fill-opacity="1" d="M0,224L48,240C96,256,192,288,288,261.3C384,235,480,149,576,117.3C672,85,768,107,864,138.7C960,171,1056,213,1152,208C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    </div>
+    <div class="CodeDesignMainBackground">
+        <div class="container my-5 z-depth-0">
+
+            @foreach (var CodeDesignItem in Model.ListCodeDesignViewModel.Take(1))
+            {
+                <section class="dark-grey-text">
+
+                    <div class="row">
+                        <div class="col-md-6 d-flex align-items-center">
+                            <div class="mt-5">
+
+                                <div class="display-1 text-white  font-weight-bold mb-4">@CodeDesignItem.Title</div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+
+                            <div class="img-fluid">
+                                <lottie-player src=@CodeDesignItem.ImageUrl background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+            }
+            <!--Section: Content-->
+            <!--Section: Content-->
+
+
+        </div>
+    </div>
+    
+    <div class="WaveSVGsecond">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff7043" fill-opacity="1" d="M0,224L48,192C96,160,192,96,288,80C384,64,480,96,576,128C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    </div>
+
+}
+    <div class="container  z-depth-0">
+
+
+        <!--Section: Content-->
+        <section class="dark-grey-text p-5">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-5 mb-4 mb-md-0">
+
+                    <div class="view">
+                        <img src="https://mdbootstrap.com/img/illustrations/undraw_Group_chat_unwm.svg" class="img-fluid" alt="smaple image">
+                    </div>
+
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-7 mb-lg-0 mb-4">
+
+                    <!-- Form -->
+                    <form class="" action="">
+
+                        <!-- Section heading -->
+                        <h3 class="font-weight-bold my-3">Subscribe</h3>
+
+                        <p class="text-muted mb-4 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae, fuga similique quos aperiam tenetur quo ut rerum debitis.</p>
+
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email address" aria-label="Enter your email address"
+                                   aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-md btn-primary rounded-right m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2">Button</button>
+                            </div>
+                        </div>
+                        <small class="form-text black-text"><strong>* Leave your email addres to be notified first.</strong></small>
+
+                    </form>
+                    <!-- Form -->
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </section>
+        <!--Section: Content-->
+
+
+    </div>
+
+@section CodeCustomCSS{
+    @Styles.Render("~/Content/CodeCustomCSS.css")
+}
+
+
