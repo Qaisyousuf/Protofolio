@@ -140,6 +140,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\UIToCode\Views\DataCollection\Create.cshtml" />
+    <Content Include="Content\Images\UIBackground.svg" />
+    <Content Include="Content\UIUXCustomCSS.css" />
     <Content Include="Content\CodeCustomCSS.css" />
     <Content Include="Content\ContactCustomCSS.css" />
     <Content Include="Content\AboutCustomCSS.css" />
@@ -159,6 +161,7 @@
     <Content Include="Content\Images\backtools.svg" />
     <Content Include="Content\Images\BigBackground.svg" />
     <Content Include="Content\Images\blob.svg" />
+    <Content Include="Content\Images\CodeBannerBackground.svg" />
     <Content Include="Content\Images\CodeDesignBack.svg" />
     <Content Include="Content\Images\Contact Background.svg" />
     <Content Include="Content\Images\FinalLandingPage.svg" />
@@ -916,6 +919,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TechnologyToolsController.cs" />
+    <Compile Include="Controllers\UIUXController.cs" />
     <Compile Include="Filters\CustomAuthenticationFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -972,6 +976,8 @@
     <Content Include="Views\Contact\GetContactMatter.cshtml" />
     <Content Include="Views\Shared\_Technology.cshtml" />
     <Content Include="Views\TechnologyTools\Index.cshtml" />
+    <Content Include="Views\Shared\_UIUX.cshtml" />
+    <Content Include="Views\UIUX\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

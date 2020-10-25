@@ -94,6 +94,7 @@
     <Compile Include="ListOfDesignStepsViewModel.cs" />
     <Compile Include="ListOfPlatfomeDesignViewModel.cs" />
     <Compile Include="ListOfProjectCounting.cs" />
+    <Compile Include="ListUIUX.cs" />
     <Compile Include="LoginViewModel.cs" />
     <Compile Include="MeetOurTeamViewModel.cs" />
     <Compile Include="MenuViewModel.cs" />

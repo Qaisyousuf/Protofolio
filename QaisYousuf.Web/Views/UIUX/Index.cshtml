@@ -1,0 +1,140 @@
+﻿@model QaisYousuf.ViewModels.ListUIUX
+@{
+    ViewBag.Title = "UIUX";
+    Layout = "~/Views/Shared/_UIUX.cshtml";
+}
+
+
+@if (Model?.ListUIUXBannerViewModel != null)
+{
+    <div class="UIUXBackground">
+
+        @foreach (var item in Model.ListUIUXBannerViewModel.Take(1))
+        {
+            <div class="bg-transparent">
+                <!-- Mask & flexbox options-->
+                <div class="mask">
+                    <!-- Content -->
+                    <div class="container h-100 mt-3  ">
+                        <!--Grid row-->
+                        <div class="row align-items-center h-100 mt-sm-3">
+                            <!--Grid column-->
+                            <div class="col-md-7 text-center text-lg-left pt-5 mt-5">
+                                <div class="display-4 mb-0">@item.MainTitle</div>
+                                <p class="mb-2 pb-0 dark-grey-text">@item.SubTitle</p>
+
+                                <a href="@item.ButtonUrl" class="btn btn-primary btn-rounded  btn-md ml-md-0">@item.ButtonText</a>
+
+                            </div>
+                            <!--Grid column-->
+                            <!--Grid column-->
+                            <div class="col-md-5 col-sm-12 pb-5 mb-md-5 pb-md-5">
+                                <div class="img-fluid mt-sm-5 py-sm-5 " id="ContactBannerVedio">
+
+                                    <lottie-player src=@item.ImageUrl background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                                </div>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+                        <!--Grid row-->
+                    </div>
+                    <!-- Content -->
+                </div>
+                <!-- Mask & flexbox options-->
+            </div>
+        }
+
+
+    </div>
+}
+
+@if (Model?.ListOfUIProcessViewModel != null)
+{
+    <div class="container my-5 z-depth-0">
+
+
+        <!--Section: Content-->
+        <section class="dark-grey-text">
+            @foreach (var Item in Model.ListOfUIProcessViewModel.Take(1))
+            {
+                <div class="row pr-lg-5">
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div>
+
+                            <div class="ContentBackAnimation">
+                                <div class="Animation">
+                                    <div class="view pt-5">
+                                        <lottie-player src=https://assets2.lottiefiles.com/packages/lf20_6mOtyq.json background="transparent" speed="0.5" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                                    </div>
+                                </div>
+                                <div class="MainContent text-center">
+                                    <div class="font-weight-bold display-2">@Item.MainTitle</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+
+                        <div class="view">
+                    
+                            <div class="view pt-5">
+                                <lottie-player src=https://assets4.lottiefiles.com/packages/lf20_kkV6eF.json background="transparent" speed="0.7" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+
+
+        </section>
+        <!--Section: Content-->
+
+
+    </div>
+    <div class="mainUIStepsBackground container">
+        <div class="container">
+
+
+            <!--Section: Content-->
+            <section class="dark-grey-text">
+                @foreach (var SubItem in Model.ListOfUIProcessViewModel)
+                {
+                    <div class="row pr-lg-5">
+                        <div class="col-md-4 col-sm-6 d-flex align-content-center mb-4">
+
+                            <div class="view my-4">
+                                <img src=@SubItem.ImageUrl class="img-fluid" alt="smaple image">
+                            </div>
+
+                        </div>
+                        <div class="col-md-7 d-flex align-items-center">
+                            <div>
+
+                                <h3 class="font-weight-bold mb-4">@SubItem.SubTitle</h3>
+
+                                <p>@SubItem.Content</p>
+
+                               
+
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+            </section>
+            <!--Section: Content-->
+
+
+        </div>
+    </div>
+    
+}
+
+
+@section UIUXCustomCSS{
+    @Styles.Render("~/Content/UIUXCustomCSS.css")
+}
