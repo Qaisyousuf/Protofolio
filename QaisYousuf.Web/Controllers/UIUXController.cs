@@ -45,10 +45,27 @@ namespace QaisYousuf.Web.Controllers
                     ImageUrl=item.ImageUrl,
                 });
             }
+
+            var UIMatter = uow.UIUXMatterSectionRepository.GetAll();
+
+            List<UIUXMatterViewModel> UIMatterViewModel = new List<UIUXMatterViewModel>();
+
+            foreach (var item in UIMatter)
+            {
+                UIMatterViewModel.Add(new UIUXMatterViewModel
+                {
+                    Id=item.Id,
+                    MainTitle=item.MainTitle,
+                    Content=item.Content,
+                    ImageUrl=item.ImageUrl,
+                });
+            }
+
             ListUIUX UIUXViewModel = new ListUIUX
             {
                 ListUIUXBannerViewModel = UIUXBannerViewModle,
                 ListOfUIProcessViewModel=uIprocessViewModel,
+                ListUIMatterViewModel=UIMatterViewModel,
                 
             };
 

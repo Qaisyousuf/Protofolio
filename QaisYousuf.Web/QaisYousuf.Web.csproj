@@ -141,6 +141,8 @@
   <ItemGroup>
     <Content Include="Areas\UIToCode\Views\DataCollection\Create.cshtml" />
     <Content Include="Content\Images\UIBackground.svg" />
+    <Content Include="Content\Images\UIWaves.svg" />
+    <Content Include="Content\Images\UIWavesSmallBack.svg" />
     <Content Include="Content\UIUXCustomCSS.css" />
     <Content Include="Content\CodeCustomCSS.css" />
     <Content Include="Content\ContactCustomCSS.css" />

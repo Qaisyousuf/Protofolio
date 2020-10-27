@@ -10,6 +10,7 @@ namespace QaisYousuf.ViewModels
     {
         public List<UIBannerViewModel> ListUIUXBannerViewModel { get; set; }
         public List<UIProcessViewModel> ListOfUIProcessViewModel { get; set; }
+        public List<UIUXMatterViewModel> ListUIMatterViewModel { get; set; }
 
     }
 }
