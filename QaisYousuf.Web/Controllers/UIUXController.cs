@@ -61,11 +61,29 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
+            var UiSteps = uow.UIUXStepsRepository.GetAll();
+
+            List<UIStepsViewModel> UIStepsViewModel = new List<UIStepsViewModel>();
+
+            foreach (var item in UiSteps)
+            {
+                UIStepsViewModel.Add(new ViewModels.UIStepsViewModel
+                {
+                    Id=item.Id,
+                    MainTitle=item.MainTitle,
+                    Title=item.Title,
+                    Content=item.Content,
+                    ImageUrl=item.ImageUrl,
+                   
+                });
+            }
+
             ListUIUX UIUXViewModel = new ListUIUX
             {
                 ListUIUXBannerViewModel = UIUXBannerViewModle,
                 ListOfUIProcessViewModel=uIprocessViewModel,
                 ListUIMatterViewModel=UIMatterViewModel,
+                ListUIStepsViewModel=UIStepsViewModel,
                 
             };
 

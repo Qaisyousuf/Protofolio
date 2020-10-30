@@ -406,12 +406,14 @@ nav .nav-item .nav-link {
 
 
 .UIMatterBackground {
-        background-image: url(Images/UIWaves.svg);
+        background-image: url(Images/UIWavesBig.svg);
         height: 860px;
         background-repeat: no-repeat;
         margin-left: -15px;
         margin-right: -15px;
         background-position:center top;
+        margin-bottom:-120px;
+
         
     }
 
@@ -425,5 +427,20 @@ nav .nav-item .nav-link {
         background-position:center top;
         
         
+    }
+}
+.UIUXStepsBack
+{
+  
+  padding-top:-200px;
+  margin-bottom:-130px;
+  
+    
+}
+
+@media (max-width: 900px) {
+    .UIUXStepsBack {
+        padding-top:0px;
+        margin-bottom:0px;
     }
 }

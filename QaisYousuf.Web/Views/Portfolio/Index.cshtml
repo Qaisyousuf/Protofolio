@@ -1,0 +1,80 @@
+﻿@model QaisYousuf.ViewModels.ListPortfolio
+@{
+    ViewBag.Title = "Portfolio";
+    Layout = "~/Views/Shared/_PortfolioLayout.cshtml";
+}
+
+@if (Model?.ListPortfolioViewModle != null)
+{
+    <div class="PortfolioMainBack">
+
+        <!-- Full Page Intro -->
+        <div class="bg-transparent">
+            <!-- Mask & flexbox options-->
+            <div class="">
+                <!-- Content -->
+                <div class="container h-100">
+                    <!--Grid row-->
+                    <div class="row align-items-center h-100 ">
+                        @foreach (var item in Model.ListPortfolioViewModle)
+                        {
+                            <div class="col-md-5 mt-md-5 mt-sm-0 mt-lg-5 pt-md-5 pt-sm-0 pt-lg-5 offset-md-1 offset-sm-0 offset-lg-1 ">
+                                <div class="PortofilioContentBackground">
+                                    <div class="animationBackgroud">
+                                        <div class="view pt-5">
+                                            <lottie-player src=https://assets3.lottiefiles.com/packages/lf20_6mOtyq.json background="transparent" speed="0.5" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                                        </div>
+                                    </div>
+                                    <div class="ContentBack">
+                                        <div class="mb-4 display-3 font-weight-bold">@item.Title</div>
+                                        <h4 class="light-blue-text">@item.SubTitle</h4>
+                                    </div>
+                                   
+                                </div>
+                               
+                               
+                            </div>
+                            <!--Grid column-->
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="view">
+                                    <lottie-player src=@item.BackgroundImage background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                                </div>
+                            </div>
+                            <!--Grid column-->
+                        }
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+                </div>
+                <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+        </div>
+        <!-- Full Page Intro -->
+
+    </div>
+    <!-- Main navigation -->
+   
+}
+
+
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $(".button-collapse").sideNav({
+                breakpoint: 1200
+            });
+            // SideNav Scrollbar Initialization
+            var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+            var ps = new PerfectScrollbar(sideNavScrollbar);
+        });
+    </script>
+}
+
+@section PortfolioCustomCSS{
+    @Styles.Render("~/Content/PortfolioCustomCSS.css")
+}

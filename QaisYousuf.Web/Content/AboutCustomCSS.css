@@ -155,9 +155,36 @@ nav .nav-item .nav-link {
     
 }
 
-.footerwaves {
-   
-   margin-top:-50px;
+footer{
+    background-image: url(Images/FooterWaves.svg);
+    height: 860px;
+    background-position: center bottom;
+    margin-top:40px;
+
+    background-repeat: no-repeat;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.FooterWavesBack
+{
+    margin-top:50%;
 }
 #aboutBannerVedio main {
     opacity: 0.2;
@@ -311,4 +338,28 @@ nav .nav-item .nav-link {
     border-radius: 0.3rem !important;
 }
 
-
+footer {
+    background-image: url(Images/FooterWaves.svg);
+    height: 860px;
+    background-position: center bottom;
+    margin-top: 40px;
+    background-repeat: no-repeat;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}

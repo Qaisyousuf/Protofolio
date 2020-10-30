@@ -140,8 +140,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\UIToCode\Views\DataCollection\Create.cshtml" />
+    <Content Include="Content\Images\FooterWaves.svg" />
+    <Content Include="Content\Images\UI.svg" />
+    <Content Include="Content\PortfolioCustomCSS.css" />
+    <Content Include="Content\Images\SmallFooterWaves.svg" />
     <Content Include="Content\Images\UIBackground.svg" />
-    <Content Include="Content\Images\UIWaves.svg" />
+    <Content Include="Content\Images\UIStepBack.svg" />
+    <Content Include="Content\Images\UIWavesBig.svg" />
     <Content Include="Content\Images\UIWavesSmallBack.svg" />
     <Content Include="Content\UIUXCustomCSS.css" />
     <Content Include="Content\CodeCustomCSS.css" />
@@ -920,6 +925,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\TechnologyToolsController.cs" />
     <Compile Include="Controllers\UIUXController.cs" />
     <Compile Include="Filters\CustomAuthenticationFilter.cs" />
@@ -980,6 +986,8 @@
     <Content Include="Views\TechnologyTools\Index.cshtml" />
     <Content Include="Views\Shared\_UIUX.cshtml" />
     <Content Include="Views\UIUX\Index.cshtml" />
+    <Content Include="Views\Shared\_PortfolioLayout.cshtml" />
+    <Content Include="Views\Portfolio\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
