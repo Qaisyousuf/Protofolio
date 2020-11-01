@@ -29,9 +29,53 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
+            var portfolioAbout = uow.PortfolioAboutRepository.GetAll();
+
+            List<PortfolioAboutViewModels> PortfolioViewModel = new List<PortfolioAboutViewModels>();
+
+            foreach (var item in portfolioAbout)
+            {
+                PortfolioViewModel.Add(new PortfolioAboutViewModels
+                {
+                    Id=item.Id,
+                    MainTitle=item.MainTitle,
+                    Content=item.Content,
+                    ImageUrl=item.ImageUrl,
+                    ButtonText=item.ButtonText,
+                    ButtonUrl=item.ButtonUrl,
+                });
+            }
+
+            var workExperience = uow.WorkExperienceRepository.GetAll();
+
+            List<WorkExperienceViewModel> ExperienceViewModel = new List<WorkExperienceViewModel>();
+
+            foreach (var item in workExperience)
+            {
+
+                var StartDate = item.StartDate;
+
+                var ConvertedStartDate = Convert.ToDateTime(StartDate.ToLongDateString().ToString());
+                ExperienceViewModel.Add(new WorkExperienceViewModel
+                {
+                    Id=item.Id,
+                    MainTitle=item.Maintitle,
+                    JobTitle=item.JobTitle,
+                    CompanyName=item.CompanyName,
+                    CompanyLocation=item.CompanyLocation,
+                    LogoUrl=item.LogoUrl,
+                    StartDate= ConvertedStartDate,
+                    EndDate =item.EndDate,
+                    JobDesicription=item.JobDesicription,
+                    JobSubDescription=item.JobSubDescription,
+                });
+            }
+
             ListPortfolio ListPortfolioContent = new ListPortfolio
             {
                 ListPortfolioViewModle=ViewModel,
+                ListPortfolioAboutViewModel=PortfolioViewModel,
+                ListWorkExperienceViewModel=ExperienceViewModel,
             };
             return View(ListPortfolioContent);
         }

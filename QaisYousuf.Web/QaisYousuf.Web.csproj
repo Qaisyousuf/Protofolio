@@ -140,8 +140,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\UIToCode\Views\DataCollection\Create.cshtml" />
+    <Content Include="Content\Images\AboutMeBackgrounjd.svg" />
+    <Content Include="Content\Images\AboutMeSamllDevice.svg" />
     <Content Include="Content\Images\FooterWaves.svg" />
     <Content Include="Content\Images\UI.svg" />
+    <Content Include="Content\Images\WorkBack.svg" />
     <Content Include="Content\PortfolioCustomCSS.css" />
     <Content Include="Content\Images\SmallFooterWaves.svg" />
     <Content Include="Content\Images\UIBackground.svg" />
