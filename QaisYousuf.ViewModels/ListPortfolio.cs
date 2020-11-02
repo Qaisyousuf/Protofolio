@@ -11,5 +11,7 @@ namespace QaisYousuf.ViewModels
         public List<PortfolioBannerViewModel> ListPortfolioViewModle { get; set; }
         public List<PortfolioAboutViewModels> ListPortfolioAboutViewModel { get; set; }
         public List<WorkExperienceViewModel> ListWorkExperienceViewModel { get; set; }
+        public List<EducationViewModel> ListEducationViewModel { get; set; }
+        public List<OnlineCertificateViewModel> ListofOnlineCertificationViewModel { get; set; }
     }
 }

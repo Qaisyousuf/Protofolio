@@ -71,11 +71,50 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
+            var education = uow.EducationRepository.GetAll();
+
+            List<EducationViewModel> EduViewModel = new List<EducationViewModel>();
+
+            foreach (var item in education)
+            {
+                EduViewModel.Add(new EducationViewModel
+                {
+                    Id=item.Id,
+                    MainTitle=item.MainTitle,
+                    Content=item.Content,
+                    ImageUrl=item.ImageUrl,
+                });
+            }
+
+
+            var onlineCertificate = uow.OnlineCertificationRepository.GetAll();
+
+            List<OnlineCertificateViewModel> Onlinecertificateviewmodel = new List<OnlineCertificateViewModel>();
+
+            foreach (var item in onlineCertificate)
+            {
+                Onlinecertificateviewmodel.Add(new OnlineCertificateViewModel
+                {
+                    Id=item.Id,
+                    MainTitle=item.MainTitle,
+                    ProgramName=item.ProgramName,
+                    CourseLocation=item.CourseLocation,
+                    IconUrl=item.IconUrl,
+                    CourseDescription=item.CourseDescription,
+                    ButtonText=item.ButtonText,
+                    ButtonUrl=item.ButtonUrl,
+                    FinishDate=item.FinishDate,
+                });
+            }
+
             ListPortfolio ListPortfolioContent = new ListPortfolio
             {
                 ListPortfolioViewModle=ViewModel,
                 ListPortfolioAboutViewModel=PortfolioViewModel,
                 ListWorkExperienceViewModel=ExperienceViewModel,
+                ListEducationViewModel=EduViewModel,
+                ListofOnlineCertificationViewModel=Onlinecertificateviewmodel,
+                
             };
             return View(ListPortfolioContent);
         }
