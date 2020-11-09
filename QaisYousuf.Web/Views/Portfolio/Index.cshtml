@@ -278,46 +278,46 @@
                                     {
                                         <div class="font-weight-bold mb-4 pb-5 mt-4 display-4">@item.MainTitle</div>
 
-                                        
+
                                     }
 
 
                                     <!-- Grid row -->
-                                        <div class="row">
+                                    <div class="row">
 
-                                            @foreach (var SubItem in Model.ListofOnlineCertificationViewModel)
-                                            {
-                                                <!-- Grid column -->
-                                                
-                                                <!-- Grid column -->
-                                                <!-- Grid column -->
-                                                <div class="col-md-6 mb-4">
-
-                                                    <div class="view overlay rounded z-depth-1">
-                                                        <img src="@SubItem.IconUrl" class="img-fluid" alt="Sample project image">
-                                                        <a>
-                                                            <div class="mask rgba-white-slight"></div>
-                                                        </a>
-                                                    </div>
-
-                                                    <div class="px-md-3 px-sm-0 px-lg-4 pt-3 mx-0 mt-1 pb-0">
-                                                        <a class="blue-text">
-                                                            <h6 class="font-weight-bold mt-2 mb-3"><i class="fas fa-chalkboard-teacher pr-2"></i>@SubItem.ProgramName</h6>
-                                                        </a>
-                                                        <a class="blue-text">
-                                                            <h6 class="font-weight-bold mt-2 mb-3"> <i class="far fa-calendar-alt pr-2"></i>@SubItem.FinishDate.ToShortDateString().ToString()</h6>
-                                                        </a>
-                                                        <h4 class="font-weight-bold mb-3">@SubItem.CourseLocation</h4>
-                                                        <p class="text-muted text-justify">@SubItem.CourseDescription</p>
-                                                        <a href="@SubItem.ButtonUrl" class="btn btn-primary btn-rounded btn-md">@SubItem.ButtonText</a>
-                                                    </div>
-
-                                                </div>
-                                            }
-
+                                        @foreach (var SubItem in Model.ListofOnlineCertificationViewModel)
+                                        {
                                             <!-- Grid column -->
 
-                                        </div>
+                                            <!-- Grid column -->
+                                            <!-- Grid column -->
+                                            <div class="col-md-6 mb-4">
+
+                                                <div class="view overlay rounded z-depth-1">
+                                                    <img src="@SubItem.IconUrl" class="img-fluid" alt="Sample project image">
+                                                    <a>
+                                                        <div class="mask rgba-white-slight"></div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="px-md-3 px-sm-0 px-lg-4 pt-3 mx-0 mt-1 pb-0">
+                                                    <a class="blue-text">
+                                                        <h6 class="font-weight-bold mt-2 mb-3"><i class="fas fa-chalkboard-teacher pr-2"></i>@SubItem.ProgramName</h6>
+                                                    </a>
+                                                    <a class="blue-text">
+                                                        <h6 class="font-weight-bold mt-2 mb-3"> <i class="far fa-calendar-alt pr-2"></i>@SubItem.FinishDate.ToShortDateString().ToString()</h6>
+                                                    </a>
+                                                    <h5 class="font-weight-bold mb-3 light-blue-text">@SubItem.CourseLocation</h5>
+                                                    <p class="text-muted text-justify">@SubItem.CourseDescription</p>
+                                                    <a href="@SubItem.ButtonUrl" class="btn btn-primary btn-rounded btn-md" target="_blank">@SubItem.ButtonText</a>
+                                                </div>
+
+                                            </div>
+                                        }
+
+                                        <!-- Grid column -->
+
+                                    </div>
                                     <!-- Grid row -->
 
                                 </section>
@@ -350,7 +350,172 @@
     </div>
 }
 
+@if (Model?.ListPortfolioProject != null && Model?.ListProjectStatuesViewModel !=null)
+{
 
+  <div class="PortfolioProjectMainBack">
+      <div class="container my-5 mx-md-5 mx-sm-0 mx-lg-5">
+
+
+          <!--Section: Content-->
+          <section class="dark-grey-text">
+
+
+              <!-- Section heading -->
+              @foreach (var item in Model.ListPortfolioProject.Take(1))
+              {
+                  <div class="text-center display-4 font-weight-bold mb-4 pb-2">@item.MainTitle</div>
+              }
+
+              <!-- Section description -->
+              <!-- Grid row -->
+                  <div class="row align-items-center">
+
+                      <!-- Grid column -->
+                      @foreach (var SubItem in Model.ListPortfolioProject)
+                      {
+                          <div class="col-md-4 col-xl-4 py-5">
+
+                              <!-- Featured image -->
+                              <div class=" overlay rounded z-depth-1 mb-lg-0 mb-4">
+                                  <div class="img-fluid py-3">
+                                      <lottie-player src=@SubItem.ProjectImageUrl background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+
+                                  </div>
+                                  <a>
+                                      <div class="mask rgba-white-slight"></div>
+                                  </a>
+                              </div>
+
+                          </div>
+                          <!-- Grid column -->
+                          <!-- Grid column -->
+                          <div class="col-md-7 col-xl-8">
+
+                              <!-- Post title -->
+                              <h1 class="font-weight-bold mb-3 light-blue-text">@SubItem.ProjectName</h1>
+                              <!-- Excerpt -->
+                              <p class="dark-grey-text">
+                                  @SubItem.Content
+                              </p>
+                              <!-- Post data -->
+
+                              <div class="chip btn-primary">
+                                  Date:  @SubItem.ProjectPublishDate.ToShortDateString().ToString()
+                                  <i class="close fas fa-times"></i>
+                              </div>
+                              <!-- Read more button -->
+
+                              <div class="chip btn-primary">
+                                  Type: @SubItem.ProjectType
+                                  <i class="close fas fa-times"></i>
+                              </div>
+                              <div class="chip btn-primary">
+                                  Created by: @SubItem.ProjectDetails
+                                  <i class="close fas fa-times"></i>
+                              </div>
+                              @foreach (var ProjectStatusItem in Model.ListProjectStatuesViewModel.Take(1))
+                              {
+                                  <div class="chip btn-primary">
+                                     Status: @ProjectStatusItem.ProjectStatusProcess
+                                      <i class="close fas fa-times"></i>
+                                  </div>
+                              }
+
+                              <br />
+                              <a href="@SubItem.ProjectWebSiteUrl" class="btn btn-primary btn-md mx-0 btn-rounded" target="_blank">@SubItem.ButtonText</a>
+                          </div>
+                      }
+
+                      <!-- Grid column -->
+
+                  </div>
+              <!-- Grid row -->
+
+             
+
+          </section>
+          <!--Section: Content-->
+
+
+      </div>
+  </div>
+
+}
+
+@if(Model?.ListInterestViewModel !=null)
+{
+  <div class="interestMainBackground">
+      <div class="container mt-5 px-5 pt-5 pb-3 z-depth-0">
+
+
+          <!--Section: Content-->
+          <section class="text-center dark-grey-text">
+
+
+              <!-- Section heading -->
+              @foreach (var item in Model.ListInterestViewModel.Take(1))
+              {
+                  <div class="font-weight-bold display-4 mt-4">@item.MainTitle</div>
+              }
+
+
+              <!-- Section description -->
+              <div class="container">
+                  <div class="row ">
+
+                      <div class="col-md-5 col-sm-6 offset-1  mt-5 pt-5">
+                          <div class="row text-center d-flex justify-content-center">
+                              @foreach (var SubItem in Model.ListInterestViewModel)
+                              {
+                                  <div class="col-sm-6 col-md-6 col-lg-4 mb-4">
+                                      <div class=" mx-auto mb-2">
+                                          
+                                          <div class="interestSVG">
+                                              <div class="MainSVGBack">
+                                                  <lottie-player src=https://assets9.lottiefiles.com/packages/lf20_xZ8sgo.json background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></lottie-player>
+                                                 
+                                              </div>
+                                              <div class="MainIcon">
+                                                  <img src="@SubItem.UrlIcon" class="img-fluid" alt="smaple image">
+                                              </div>
+                                          </div>
+                                        
+                                          
+                                      </div>
+                                      <h5 class="font-weight-bold text-white mb-4">@SubItem.Subtitle</h5>
+
+                                  </div>
+                              }
+
+
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="row text-center d-flex justify-content-center">
+                              <div class="col-md-12 mb-4">
+                                  <div class="img-fluid py-3">
+                                      <lottie-player src=https://assets8.lottiefiles.com/private_files/lf30_mqvces5q.json background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+
+                                  </div>
+
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+
+
+
+          </section>
+          <!--Section: Content-->
+
+
+      </div>
+  </div>
+}
 
 
 @section scripts{

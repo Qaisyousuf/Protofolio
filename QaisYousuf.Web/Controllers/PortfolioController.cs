@@ -107,6 +107,57 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
+            var projectProfile = uow.PortfolioProjectRepository.GetAll();
+
+            List<PortfolioProjectViewModel> ProjectViewModel = new List<PortfolioProjectViewModel>();
+
+            foreach (var item in projectProfile)
+            {
+                ProjectViewModel.Add(new PortfolioProjectViewModel
+                {
+                    Id=item.Id,
+                    MainTitle=item.MainTitle,
+                    Content=item.Content,
+                    SubContent=item.SubContent,
+                    ProjectName=item.ProjectName,
+                    ProjectType=item.ProjectType,
+                    ProjectImageUrl=item.ProjectImageUrl,
+                    ProjectPublishDate=item.ProjectPublishDate,
+                    ProjectDetails=item.ProjectDetails,
+                    ProjectWebSiteUrl=item.ProjectWebSiteUrl,
+                    ButtonText=item.ButtonText,
+                    ProjectStatusId=item.ProjectStatusId,
+                    ProjectStatus=item.ProjectStatus,
+                });
+            }
+
+            var projectStatus = uow.ProjectStatusRepository.GetAll();
+
+            List<ProjectStatusViewModel> ProjectStatus = new List<ProjectStatusViewModel>();
+
+            foreach (var item in projectStatus)
+            {
+                ProjectStatus.Add(new ProjectStatusViewModel
+                {
+                    Id=item.Id,
+                    ProjectStatusProcess=item.ProjectStatusProcess,
+                });
+            }
+
+            var interest = uow.IntresetRepository.GetAll();
+
+            List<InterestViewModel> InterestViewModelList = new List<InterestViewModel>();
+
+            foreach (var item in interest)
+            {
+                InterestViewModelList.Add(new InterestViewModel
+                {
+                    Id=item.Id,
+                    MainTitle=item.MainTitle,
+                    Subtitle=item.Subtitle,
+                    UrlIcon=item.UrlIcon,
+                });
+            }
             ListPortfolio ListPortfolioContent = new ListPortfolio
             {
                 ListPortfolioViewModle=ViewModel,
@@ -114,6 +165,9 @@ namespace QaisYousuf.Web.Controllers
                 ListWorkExperienceViewModel=ExperienceViewModel,
                 ListEducationViewModel=EduViewModel,
                 ListofOnlineCertificationViewModel=Onlinecertificateviewmodel,
+                ListPortfolioProject=ProjectViewModel,
+                ListProjectStatuesViewModel=ProjectStatus,
+                ListInterestViewModel=InterestViewModelList,
                 
             };
             return View(ListPortfolioContent);

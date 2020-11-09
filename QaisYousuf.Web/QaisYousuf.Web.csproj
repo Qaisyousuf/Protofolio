@@ -145,6 +145,10 @@
     <Content Include="Content\Images\EducationBigBackground.svg" />
     <Content Include="Content\Images\EducationsmallBack.svg" />
     <Content Include="Content\Images\FooterWaves.svg" />
+    <Content Include="Content\Images\IconBackAnimation.svg" />
+    <Content Include="Content\Images\InterestBack.svg" />
+    <Content Include="Content\Images\InterestBackForSmallDevice.svg" />
+    <Content Include="Content\Images\PortfolioProjectBack.svg" />
     <Content Include="Content\Images\UI.svg" />
     <Content Include="Content\Images\WorkBack.svg" />
     <Content Include="Content\Images\WorkExContentBack.svg" />

@@ -366,3 +366,201 @@ footer {
     -webkit-box-shadow: 0px 0px 10px -1px rgba(228,233,245,0.75)!important;
     -moz-box-shadow: 0px 0px 10px -1px rgba(228,233,245,0.75)!important;
 }
+
+.PortfolioProjectMainBack {
+    background-image: url('Images/Waihou 1.svg');
+    height: auto;
+    margin-top: auto;
+    width: auto;
+    background-repeat: no-repeat;
+    margin-left: -15px;
+    margin-right: -15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: center;
+    align-content: space-around;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.interestSVG lottie-player {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.MainIcon {
+    position: absolute;
+    top: 7px;
+    left: 25px;
+}
+@media (max-width: 900px) 
+{
+    .interestSVG lottie-player {
+        position: relative;
+        top: 0px;
+        left: 50px;
+    }
+    .MainIcon {
+        position: absolute;
+        top: 7px;
+        left: 70px;
+    }
+}
+#One {
+    animation: test 7s infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes test {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#Tow {
+    animation: test 6s infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes test {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#Three {
+    animation: test 5s infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes test {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#Four {
+    animation: test 4s infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes test1 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#Five {
+    padding: 10px;
+    animation: test1 3s infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+    position: absolute;
+    top: 20%;
+}
+
+@keyframes test1 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+.interestMainBackground {
+    background-image: url(Images/InterestBack.svg);
+    height: 800px;
+    margin-top: auto;
+    width: auto;
+    background-repeat: no-repeat;
+    margin-left: -15px;
+    margin-right: -15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: center;
+    align-content: space-around;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .interestMainBackground {
+        background-image: url(Images/InterestBackForSmallDevice.svg);
+        height: 1700px;
+       
+        width: auto;
+        background-repeat: no-repeat;
+        margin-left: -15px;
+        margin-right: -15px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-content: flex-end;
+        -ms-flex-line-pack: center;
+        align-content: space-around;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
