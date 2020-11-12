@@ -1,0 +1,114 @@
+﻿@model QaisYousuf.ViewModels.ContactFormViewModel
+
+@{
+    ViewBag.Title = "ContactMe";
+    Layout = "~/Views/Shared/_PortfolioLayout.cshtml";
+}
+
+<!-- Material form register -->
+<div class="ProfileContactBackground">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-1">
+                <div class="ContactProfile card card-cascade ">
+
+                    <!-- Card image -->
+                    <div class="view view-cascade gradient-card-header light-blue">
+
+                        <!-- Title -->
+                        <h2 class="card-header-title mb-3">Contact Me</h2>
+                        <!-- Subtitle -->
+                       
+
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade d-inline-block justify-content-center">
+
+                        <!-- Text -->
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-horizontal bg-transparent">
+
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.FullName, htmlAttributes: new { @class = "control-label" })
+                                    <div class=" bg-transparent">
+                                        @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control md-textarea" } })
+                                        @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })
+                                    <div class="">
+                                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Moible, htmlAttributes: new { @class = "control-label" })
+                                    <div class="">
+                                        @Html.EditorFor(model => model.Moible, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Moible, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label" })
+                                    <div class="">
+                                        @Html.TextAreaFor(model => model.Message, 5, 50, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group offset-md-2">
+
+                                    <div class="">
+                                        <button class="btn btn-primary btn-rounded" type="submit">Submit<i class="far fa-paper-plane pl-1"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                       
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+               
+                <div class="img-fluid">
+                    <lottie-player src= https://assets1.lottiefiles.com/packages/lf20_gha1v1yp.json background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Material form register -->
+
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $(".button-collapse").sideNav({
+                breakpoint: 1200
+            });
+            // SideNav Scrollbar Initialization
+            var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+            var ps = new PerfectScrollbar(sideNavScrollbar);
+        });
+    </script>
+}
+
+@section PortfolioCustomCSS{
+    @Styles.Render("~/Content/PortfolioCustomCSS.css")
+}

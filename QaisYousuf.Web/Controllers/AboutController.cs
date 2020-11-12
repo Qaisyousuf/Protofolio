@@ -13,8 +13,7 @@ namespace QaisYousuf.Web.Controllers
         [Route("About")]
         public ActionResult Index(string slug)
         {
-           
-
+ 
             var aboutPage = uow.AboutPageRepository.GetAll();
 
             

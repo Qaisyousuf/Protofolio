@@ -935,7 +935,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PortfolioController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\TechnologyToolsController.cs" />
     <Compile Include="Controllers\UIUXController.cs" />
     <Compile Include="Filters\CustomAuthenticationFilter.cs" />
@@ -997,7 +997,10 @@
     <Content Include="Views\Shared\_UIUX.cshtml" />
     <Content Include="Views\UIUX\Index.cshtml" />
     <Content Include="Views\Shared\_PortfolioLayout.cshtml" />
-    <Content Include="Views\Portfolio\Index.cshtml" />
+    <Content Include="Views\Profile\Create.cshtml" />
+    <Content Include="Views\Profile\ThankYouForContact.cshtml" />
+    <Content Include="Views\Profile\Portfolio.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

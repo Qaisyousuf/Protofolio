@@ -195,8 +195,10 @@
     
     <div class="col-md-10 col-sm-12 offset-md-2 col-lg-10 offset-lg-2">
         @RenderSection("PortfolioCustomCSS", required: false)
-
+        @Html.Action("Index", "Profile")
+        
         @RenderBody()
+
 
 
     </div>
