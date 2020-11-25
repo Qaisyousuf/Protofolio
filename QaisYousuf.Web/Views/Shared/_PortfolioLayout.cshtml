@@ -156,9 +156,9 @@
             </div>
             <!--/. Sidebar navigation -->
             <!-- Navbar -->
-            <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg double-nav">
+            <nav class="navbar fixed-top navbar-toggleable-lg navbar-expand-lg double-nav">
                 <!-- SideNav slide-out button -->
-                <div class="float-left d-md-none">
+                <div class="float-left">
                     <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
                 </div>
                 <!-- Breadcrumb-->
@@ -193,7 +193,7 @@
 
 
     
-    <div class="col-md-10 col-sm-12 offset-md-2 col-lg-10 offset-lg-2">
+    <div class="container-fluid">
         @RenderSection("PortfolioCustomCSS", required: false)
         @Html.Action("Index", "Profile")
         

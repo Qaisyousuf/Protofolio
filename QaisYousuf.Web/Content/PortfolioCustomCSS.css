@@ -3,6 +3,7 @@ body {
     font-family: 'Varela Round', sans-serif;
     overflow-x: hidden;
     color: rebeccapurple;
+   
 }
 /*@media(max-width:500px)
 {
@@ -21,6 +22,7 @@ header {
     padding-left: 15px;
     padding-right: 15px;
 }
+
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
@@ -66,7 +68,46 @@ nav .nav-item .nav-link {
 
 .btn-outline-primary {
     border: 2px solid #17bde3 !important;
-    color: #17bde3 !important;
+    color: white !important;
+}
+.display-5 {
+    color: white !important;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+@media (max-width: 576px) {
+    .display-5 {
+        font-size: 3rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 776px) {
+    .display-5 {
+        font-size: 4rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 876px) {
+    .display-5 {
+        font-size: 4.1rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 976px) {
+    .display-5 {
+        font-size: 4rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 376px) {
+    .display-5 {
+        font-size: 2.5rem !important;
+        color: white !important;
+    }
 }
 
 .display-4 {
@@ -196,17 +237,51 @@ footer {
     top: 100px;
 }
 
-.PortfolioMainBack
+
+
+@media (max-width: 1920px) {
+    .PortfolioMainBack {
+        background-image: url(Images/PortfolioNewBackgroundBigDeivce.svg);
+        margin-left: -15px;
+        margin-right: -15px;
+        background-position: center center;
+        height: 868px;
+        padding-bottom: 0px;
+    }
+}
+@media (max-width: 1567px) {
+    .PortfolioMainBack {
+        background-image: url(Images/PortfolioNewBackground.svg);
+        height: 600px;
+        width: 100vw;
+        margin-left: -15px;
+        margin-right: -15px;
+        background-repeat: no-repeat;
+    }
+}
+@media (max-width: 990px) {
+    .PortfolioMainBack {
+        background-image: url(Images/PortfolioNewBackgroundMediamDeivce.svg);
+        height: 930px;
+        width: 100vw;
+        margin-left: -15px;
+        margin-right: -15px;
+        background-repeat: no-repeat;
+    }
+}
+@media (max-width: 761px) 
 {
-    background-image:url('Images/Waihou 1.svg');
-    margin-left:-15px;
-    margin-right:-15px;
-    background-position:center center;
-    
-    background-size:cover;
+    .PortfolioMainBack {
+        background-image: url(Images/PortfolioNewBackgroundSmallDeivce.svg);
+        margin-left: -15px;
+        margin-right: -15px;
+        background-position: center ;
+        height: 661px;
+        width: 100vw;
+    }
 }
 .light-blue-text {
-    color: #5fc6f5 !important;
+    color: #169cba !important;
 }
 
 .view-cascade {
@@ -227,14 +302,164 @@ footer {
     -moz-box-shadow: 0px 0px 10px -1px rgba(228,233,245,0.75) !important;
 }
 .MainAboutMeBackground {
-    background-image: url(Images/AboutMeBackgrounjd.svg);
-    height: 800px;
-    width: auto;
+    background-image: url('Images/AboutmeBackground.svg');
+    height: 600px;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    
+   
+}
+
+@media (max-width: 990px) {
+    .MainAboutMeBackground {
+        background-image: url(Images/AboutMeBackgroundMediam.svg);
+        height: 950px;
+        width: 100vw;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+/*@media (max-width: 900px) {
+    .MainAboutMeBackground {
+        background-image: url(Images/AboutMeSmallDeivce.svg);
+        height: 900px;
+        margin-top: -100px;
+        width: auto;
+       
+        margin-left: -15px;
+        margin-right: -15px;
+        background-position: center center;
+       
+    }
+}*/
+.WorkEXMainBackground {
+    background-image: url(Images/WorkExperience.svg);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    height: 750px;
+    width: 100vw;
+
+   
+}
+
+@media (max-width: 1100px) {
+    .WorkEXMainBackground {
+        background-image: url(Images/WorkExperienceMedim.svg);
+        height: 650px;
+        width: 100vw;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+@media (max-width: 990px) {
+    .WorkEXMainBackground {
+        padding-top:30px;
+        background-image: url(Images/WorkExperienceSmall.svg);
+        height: 503px;
+        width: 100vw;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+@media (max-width: 767px) {
+    .WorkEXMainBackground {
+        background-image: url(Images/WorkExperienceXSmall.svg);
+        height: 1130px;
+        width: 100vw;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+@media (max-width: 500px) {
+    .WorkEXMainBackground {
+        background-image: url(Images/WorkExperienceExtraSmall.svg);
+        height: 1300px;
+        width: 100vw;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+.WorkExperienceMainBack .WorkSVGBack {
+    position: relative;
+    top: -10%;
+    left: 0px;
+}
+.workContent
+{
+    position:absolute;
+    top:15%;
+    left:50px;
+    
+}
+@media (max-width: 1100px) {
+    .WorkExperienceMainBack .WorkSVGBack {
+        position: relative;
+        top: -10%;
+        left: 0px;
+    }
+
+    .workContent {
+        position: absolute;
+        top: 15%;
+        left: 50px;
+    }
+}
+@media (max-width: 991px) {
+    .WorkExperienceMainBack .WorkSVGBack {
+        position: relative;
+        top: -10%;
+        left: 0px;
+    }
+
+    .workContent {
+        position: absolute;
+        top: 1%;
+        left: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .WorkExperienceMainBack .WorkSVGBack {
+        position: relative;
+        top: -10%;
+        left: -50px;
+    }
+
+    .workContent {
+        position: absolute;
+        top: 15%;
+        left: 100px;
+    }
+}
+@media (max-width: 490px) {
+    .WorkExperienceMainBack .WorkSVGBack {
+        position: relative;
+        top: -10%;
+        left: 0px;
+    }
+
+    .workContent {
+        position: absolute;
+        top: 15%;
+        left: 80px;
+    }
+}
+.EducationMainback {
+    background-image: url(Images/EducationbigBackground.svg);
+    height: 721px;
+    background-position: center;
+    width: 100vw;
     background-repeat: no-repeat;
     margin-left: -15px;
     margin-right: -15px;
     background-position: center center;
-   
     background-repeat: no-repeat;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -255,11 +480,10 @@ footer {
     -ms-flex-align: center;
     align-items: center;
 }
-
-@media (max-width: 900px) {
-    .MainAboutMeBackground {
-        background-image: url(Images/AboutMeSamllDevice.svg);
-        height: 1200px;
+@media (max-width: 1600px) {
+    .EducationMainback {
+        background-image: url(Images/EducationbigMedumBackground.svg);
+        height: 721px;
         margin-top: -80px;
         width: auto;
         background-repeat: no-repeat;
@@ -287,54 +511,11 @@ footer {
         align-items: center;
     }
 }
-.WorkExperienceMainBack .WorkSVGBack
-{
-    position:relative;
-    top:0px;
-    left:0px;
-   
-}
-.workContent
-{
-    position:absolute;
-    top:10px;
-    left:70px;
-}
-
-.EducationMainback {
-    background-image: url(Images/EducationsmallBack.svg);
-    height: 700px;
-    margin-top: 30px;
-    width: auto;
-    background-repeat: no-repeat;
-    margin-left: -15px;
-    margin-right: -15px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-content: flex-end;
-    -ms-flex-line-pack: center;
-    align-content: space-around;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-@media (max-width: 900px) {
+@media (max-width: 990px) {
     .EducationMainback {
-        background-image: url(Images/EducationBigBackground.svg);
-        height: 950px;
-        margin-top: -80px;
+        background-image: url(Images/EducationbigSmallBackground.svg);
+        height: 901px;
+        
         width: auto;
         background-repeat: no-repeat;
         margin-left: -15px;
@@ -368,10 +549,12 @@ footer {
 }
 
 .PortfolioProjectMainBack {
-    background-image: url('Images/Waihou 1.svg');
+    
+    background-image: url('Images/WorkExperienceMainBack.svg');
     height: auto;
     margin-top: auto;
     width: auto;
+    background-attachment:scroll;
     background-repeat: no-repeat;
     margin-left: -15px;
     margin-right: -15px;
@@ -396,17 +579,48 @@ footer {
     -ms-flex-align: center;
     align-items: center;
 }
-
+@media (max-width: 900px) {
+    .PortfolioProjectMainBack {
+        background-image: url('Images/WorkExperienceMainBackSmallDevice.svg');
+        height: auto;
+        margin-top: auto;
+        width: auto;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        margin-left: -15px;
+        margin-right: -15px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-content: flex-end;
+        -ms-flex-line-pack: center;
+        align-content: space-around;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
 .interestSVG lottie-player {
     position: relative;
     top: 0px;
     left: 0px;
 }
 
-.MainIcon {
+.MainIcon img {
     position: absolute;
-    top: 7px;
-    left: 25px;
+    top: 0px;
+    left: 70px;
 }
 @media (max-width: 900px) 
 {
@@ -415,7 +629,7 @@ footer {
         top: 0px;
         left: 50px;
     }
-    .MainIcon {
+    .MainIcon img {
         position: absolute;
         top: 7px;
         left: 70px;
@@ -505,7 +719,7 @@ footer {
 }
 .interestMainBackground {
     background-image: url(Images/InterestBack.svg);
-    height: 800px;
+    height: 700px;
     margin-top: auto;
     width: auto;
     background-repeat: no-repeat;

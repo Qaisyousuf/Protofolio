@@ -140,18 +140,34 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\UIToCode\Views\DataCollection\Create.cshtml" />
-    <Content Include="Content\Images\AboutMeBackgrounjd.svg" />
-    <Content Include="Content\Images\AboutMeSamllDevice.svg" />
-    <Content Include="Content\Images\EducationBigBackground.svg" />
+    <Content Include="Content\Images\AboutmeBackground.svg" />
+    <Content Include="Content\Images\AboutMeBackgroundMediam.svg" />
+    <Content Include="Content\Images\AboutMeSmallDeivce.svg" />
+    <Content Include="Content\Images\EducationbigBackground.svg" />
+    <Content Include="Content\Images\EducationbigMedumBackground.svg" />
+    <Content Include="Content\Images\EducationbigSmallBackground.svg" />
     <Content Include="Content\Images\EducationsmallBack.svg" />
     <Content Include="Content\Images\FooterWaves.svg" />
     <Content Include="Content\Images\IconBackAnimation.svg" />
     <Content Include="Content\Images\InterestBack.svg" />
     <Content Include="Content\Images\InterestBackForSmallDevice.svg" />
+    <Content Include="Content\Images\PortfolioBannerBackground.svg" />
+    <Content Include="Content\Images\PortfolioNewBackground.svg" />
+    <Content Include="Content\Images\PortfolioNewBackgroundBigDeivce.svg" />
+    <Content Include="Content\Images\PortfolioNewBackgroundMediamDeivce.svg" />
+    <Content Include="Content\Images\PortfolioNewBackgroundSmallDeivce.svg" />
     <Content Include="Content\Images\PortfolioProjectBack.svg" />
     <Content Include="Content\Images\UI.svg" />
+    <Content Include="Content\Images\Whangaehu.svg" />
     <Content Include="Content\Images\WorkBack.svg" />
     <Content Include="Content\Images\WorkExContentBack.svg" />
+    <Content Include="Content\Images\WorkExperience.svg" />
+    <Content Include="Content\Images\WorkExperienceExtraSmall.svg" />
+    <Content Include="Content\Images\WorkExperienceMainBack.svg" />
+    <Content Include="Content\Images\WorkExperienceMainBackSmallDevice.svg" />
+    <Content Include="Content\Images\WorkExperienceMedim.svg" />
+    <Content Include="Content\Images\WorkExperienceSmall.svg" />
+    <Content Include="Content\Images\WorkExperienceXSmall.svg" />
     <Content Include="Content\PortfolioCustomCSS.css" />
     <Content Include="Content\Images\SmallFooterWaves.svg" />
     <Content Include="Content\Images\UIBackground.svg" />
