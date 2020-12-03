@@ -3,8 +3,13 @@ body {
     font-family: 'Varela Round', sans-serif;
     overflow-x: hidden;
     color: rebeccapurple;
+    margin-left:-15px;
+    margin-right:-15px;
+    
    
 }
+
+
 /*@media(max-width:500px)
 {
     body {
@@ -200,30 +205,58 @@ nav .nav-item .nav-link {
 }
 
 
-footer {
-    background-image: url(Images/FooterWaves.svg);
-    height: 652px;
-    background-position: center bottom;
-    margin-top: 40px;
-    background-repeat: no-repeat;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-content: flex-end;
-    -ms-flex-line-pack: end;
-    align-content: flex-end;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+.FooterMainBackground {
+    background-image: url(Images/FooterMedumBackground.svg);
+    height: 795px;
+    width: auto;
+    margin-left:-15px;
+    margin-right:-15px;
+}
+
+
+@media (max-width: 1920px) 
+{
+    .FooterMainBackground {
+        background-image: url(Images/FooterBigBackground.svg);
+        height: 652px;
+        width: auto;
+        background-position: center bottom;
+        margin-top: 40px;
+        background-repeat: no-repeat;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-content: flex-end;
+        -ms-flex-line-pack: end;
+        align-content: flex-end;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1400px) {
+    .FooterMainBackground {
+        background-image: url(Images/FooterMedumBackground.svg);
+        height: 795px;
+        width: auto;
+    }
+}
+@media (max-width: 767px) {
+    .FooterMainBackground {
+        background-image: url(Images/FooterSmallBackground.svg);
+        height: 877px;
+        width: auto;
+    }
 }
 
 .PortofilioContentBackground .animationBackgroud {
@@ -242,20 +275,18 @@ footer {
 @media (max-width: 1920px) {
     .PortfolioMainBack {
         background-image: url(Images/PortfolioNewBackgroundBigDeivce.svg);
-        margin-left: -15px;
-        margin-right: -15px;
+        
         background-position: center center;
         height: 868px;
-        padding-bottom: 0px;
+        
     }
 }
 @media (max-width: 1567px) {
     .PortfolioMainBack {
         background-image: url(Images/PortfolioNewBackground.svg);
         height: 600px;
-        width: 100vw;
-        margin-left: -15px;
-        margin-right: -15px;
+        
+        
         background-repeat: no-repeat;
     }
 }
@@ -263,9 +294,8 @@ footer {
     .PortfolioMainBack {
         background-image: url(Images/PortfolioNewBackgroundMediamDeivce.svg);
         height: 930px;
-        width: 100vw;
-        margin-left: -15px;
-        margin-right: -15px;
+        
+     
         background-repeat: no-repeat;
     }
 }
@@ -273,8 +303,7 @@ footer {
 {
     .PortfolioMainBack {
         background-image: url(Images/PortfolioNewBackgroundSmallDeivce.svg);
-        margin-left: -15px;
-        margin-right: -15px;
+       
         background-position: center ;
         height: 661px;
         width: 100vw;
@@ -302,8 +331,8 @@ footer {
     -moz-box-shadow: 0px 0px 10px -1px rgba(228,233,245,0.75) !important;
 }
 .MainAboutMeBackground {
-    background-image: url('Images/AboutmeBackground.svg');
-    height: 600px;
+    
+    height: 500px;
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
@@ -311,37 +340,31 @@ footer {
    
 }
 
+
+
 @media (max-width: 990px) {
     .MainAboutMeBackground {
-        background-image: url(Images/AboutMeBackgroundMediam.svg);
-        height: 950px;
-        width: 100vw;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        
+        height: 900px;
+        
+        width: auto;
+
     }
 }
-
-/*@media (max-width: 900px) {
+@media (max-width: 700px) {
     .MainAboutMeBackground {
-        background-image: url(Images/AboutMeSmallDeivce.svg);
         height: 900px;
-        margin-top: -100px;
         width: auto;
-       
-        margin-left: -15px;
-        margin-right: -15px;
-        background-position: center center;
-       
+        
     }
-}*/
+}
 .WorkEXMainBackground {
     background-image: url(Images/WorkExperience.svg);
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
     height: 750px;
-    width: 100vw;
+   
 
    
 }
@@ -350,7 +373,7 @@ footer {
     .WorkEXMainBackground {
         background-image: url(Images/WorkExperienceMedim.svg);
         height: 650px;
-        width: 100vw;
+        
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -360,7 +383,7 @@ footer {
     .WorkEXMainBackground {
         padding-top:30px;
         background-image: url(Images/WorkExperienceSmall.svg);
-        height: 503px;
+        height: 603px;
         width: 100vw;
         background-position: center;
         background-size: cover;
@@ -370,7 +393,7 @@ footer {
 @media (max-width: 767px) {
     .WorkEXMainBackground {
         background-image: url(Images/WorkExperienceXSmall.svg);
-        height: 1130px;
+        height: 1170px;
         width: 100vw;
         background-position: center;
         background-size: cover;
@@ -457,8 +480,7 @@ footer {
     background-position: center;
     width: 100vw;
     background-repeat: no-repeat;
-    margin-left: -15px;
-    margin-right: -15px;
+    
     background-position: center center;
     background-repeat: no-repeat;
     display: -ms-flexbox;
@@ -487,8 +509,7 @@ footer {
         margin-top: -80px;
         width: auto;
         background-repeat: no-repeat;
-        margin-left: -15px;
-        margin-right: -15px;
+       
         background-position: center center;
         background-repeat: no-repeat;
         display: -ms-flexbox;
@@ -518,8 +539,7 @@ footer {
         
         width: auto;
         background-repeat: no-repeat;
-        margin-left: -15px;
-        margin-right: -15px;
+        
         background-position: center center;
         background-repeat: no-repeat;
         display: -ms-flexbox;
@@ -556,8 +576,6 @@ footer {
     width: auto;
     background-attachment:scroll;
     background-repeat: no-repeat;
-    margin-left: -15px;
-    margin-right: -15px;
     background-position: center center;
     background-repeat: no-repeat;
     display: -ms-flexbox;
@@ -581,14 +599,11 @@ footer {
 }
 @media (max-width: 900px) {
     .PortfolioProjectMainBack {
-        background-image: url('Images/WorkExperienceMainBackSmallDevice.svg');
+        background-image: url('Images/work.svg');
         height: auto;
         margin-top: auto;
         width: auto;
         background-attachment: scroll;
-        background-repeat: no-repeat;
-        margin-left: -15px;
-        margin-right: -15px;
         background-position: center center;
         background-repeat: no-repeat;
         display: -ms-flexbox;
@@ -614,25 +629,143 @@ footer {
 .interestSVG lottie-player {
     position: relative;
     top: 0px;
-    left: 0px;
+    left: 3px;
 }
 
 .MainIcon img {
     position: absolute;
-    top: 0px;
-    left: 70px;
+    top: 17px;
+    left: 22px;
 }
-@media (max-width: 900px) 
+@media (max-width: 1198px) {
+    .interestSVG lottie-player {
+        position: relative;
+        top: 0px;
+        left: 0%
+    }
+
+    .MainIcon img {
+        position: absolute;
+        top: 17px;
+        left: 10px;
+    }
+}
+@media (max-width: 990px) {
+    .interestSVG lottie-player {
+        position: relative;
+        top: 0px;
+        left: 0%
+    }
+
+    .MainIcon img {
+        position: absolute;
+        top: 17px;
+        left: 5px;
+    }
+}
+
+@media (max-width: 767px) 
 {
     .interestSVG lottie-player {
         position: relative;
         top: 0px;
-        left: 50px;
+        left: 0%
     }
     .MainIcon img {
         position: absolute;
-        top: 7px;
-        left: 70px;
+        top: 17px;
+        left: 17px;
+    }
+}
+@media (max-width: 575px) {
+    .interestSVG lottie-player {
+        position: relative;
+        top: 0px;
+        left: 0%
+    }
+
+    .MainIcon img {
+        position: absolute;
+        top: 17px;
+        left: 41%;
+    }
+}
+@media (max-width: 500px) {
+    .interestSVG lottie-player {
+        position: relative;
+        top: 0px;
+        left: 0%
+    }
+
+    .MainIcon img {
+        position: absolute;
+        top: 17px;
+        left: 37%;
+    }
+}
+@media (max-width: 400px) {
+    .interestSVG lottie-player {
+        position: relative;
+        top: 0px;
+        left: 0%
+    }
+
+    .MainIcon img {
+        position: absolute;
+        top: 17px;
+        left: 35%;
+    }
+}
+@media (max-width: 350px) {
+    .interestSVG lottie-player {
+        position: relative;
+        top: 0px;
+        left: 0%
+    }
+
+    .MainIcon img {
+        position: absolute;
+        top: 17px;
+        left: 33%;
+    }
+}
+@media (max-width: 315px) {
+    .interestSVG lottie-player {
+        position: relative;
+        top: 0px;
+        left: 0%
+    }
+
+    .MainIcon img {
+        position: absolute;
+        top: 17px;
+        left: 30%;
+    }
+}
+@media (max-width: 300px) {
+    .interestSVG lottie-player {
+        position: relative;
+        top: 0px;
+        left: 0%
+    }
+
+    .MainIcon img {
+        position: absolute;
+        top: 17px;
+        left: 29%;
+    }
+}
+@media (max-width: 200px) {
+    .interestSVG lottie-player {
+        position: relative;
+        top: 0px;
+        left: 0%
+    }
+
+    .MainIcon img {
+        position: absolute;
+        top: 17px;
+        left: 27%;
     }
 }
 #One {
@@ -718,13 +851,11 @@ footer {
     }
 }
 .interestMainBackground {
-    background-image: url(Images/InterestBack.svg);
-    height: 700px;
+    background-image: url(Images/InterestBigBackground.svg);
+    height: 850px;
     margin-top: auto;
     width: auto;
     background-repeat: no-repeat;
-    margin-left: -15px;
-    margin-right: -15px;
     background-position: center center;
     background-repeat: no-repeat;
     display: -ms-flexbox;
@@ -747,15 +878,69 @@ footer {
     align-items: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 767px) {
     .interestMainBackground {
-        background-image: url(Images/InterestBackForSmallDevice.svg);
-        height: 1700px;
+        background-image: url(Images/InterestMedumBackground.svg);
+        height: 1500px;
+        width: auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-content: flex-end;
+        -ms-flex-line-pack: center;
+        align-content: space-around;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+@media (max-width: 575px) {
+    .interestMainBackground {
+        background-image: url(Images/InterestSmallBackground.svg);
+        height: 1900px;
        
         width: auto;
         background-repeat: no-repeat;
-        margin-left: -15px;
-        margin-right: -15px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-content: flex-end;
+        -ms-flex-line-pack: center;
+        align-content: space-around;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+@media (max-width: 460px) {
+    .interestMainBackground {
+        background-image: url(Images/InterestXSmallBackground.svg);
+        height: 1768px;
+        width: auto;
+        background-repeat: no-repeat;
         background-position: center center;
         background-repeat: no-repeat;
         display: -ms-flexbox;
@@ -784,8 +969,6 @@ footer {
     margin-top: auto;
     width: auto;
     background-repeat: no-repeat;
-    margin-left: -15px;
-    margin-right: -15px;
     background-position: center center;
     background-repeat: no-repeat;
     display: -ms-flexbox;

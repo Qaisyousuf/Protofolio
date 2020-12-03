@@ -6,33 +6,67 @@
 
 @if (Model?.Id != null)
 {
-    <div class="bg-transparent pb-5">
-       <div class="container-fluid">
-           <div class="row">
-               <div class="col-md-6">
-                   <div class="contentLandingBackground">
-                       <img src="~/Content/Images/12.-No-Messages.svg" />
-                       <div class="SubContent">
-                           <div class="display-4">@Model.Title</div>
+<div class="HomeBannerMainBackground">
+    <!-- Mask & flexbox options-->
+    <section>
 
-                           <p>@Html.Raw(Model.SubTitle)</p>
-                           <button class="btn btn-primary">Get Started</button>
+        <!-- Full Page Intro -->
+        <div class="bg-transparent h-100  py-md-2 py-sm-5 ">
+            <!-- Mask & flexbox options-->
+            
+                <!-- Content -->
+                <div class="container h-100 pt-sm-5">
+                    <!--Grid row-->
+                    <div class="row align-items-center h-100 justify-content-sm-center">
+                        <!--Grid column-->
+                        <div class="col-lg-6 offset-lg-1 col-md-6  text-center text-lg-left ">
+                            <div class="font-weight-bold display-5 text-justify text-center text-lg-left">@Model.Title</div>
+                            <p class="mb-1 pb-1 text-white">@Model.SubTitle</p>
+                            <a href="@Model.ButtonUrl" class="btn btn-info btn-rounded btn-md ">@Model.ButtonText <i class="fas fa-at"></i></a>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-lg-5 col-md-6 text-center text-lg-left">
+                            <div class="img-fluid">
+                                <lottie-player src="@Model.BackgroundImage" background="transparent" speed="2" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </div>
+                <!-- Content -->
+           
+            <!-- Mask & flexbox options-->
+        </div>
+        <!-- Full Page Intro -->
+
+    </section>
+    <!-- Main navigation -->
+    <!-- Mask & flexbox options-->
+</div>
+    @*<div class="bg-transparent pb-5">
+           <div class="container-fluid">
+               <div class="row">
+                   <div class="col-md-6">
+                       <div class="">
+
+                           <div class="SubContent">
+                               <div class="display-4">@Model.Title</div>
+
+                               <p>@Html.Raw(Model.SubTitle)</p>
+                               <button class="btn btn-primary">Get Started</button>
+                           </div>
                        </div>
                    </div>
-               </div>
-               <div class="col-md-6">
-                   <div class="landingImagebackground">
-                       <img src="~/Content/Images/12.-No-Messages.svg" class="img-fluid" />
+                   <div class="col-md-6">
 
-                   </div>
-                   <div class="landingimg">
-                       <img src="~/Content/Images/Landing.svg" class="img-fluid" />
+
                    </div>
                </div>
            </div>
-       </div>
 
-    </div>
+        </div>*@
 }
 
 @section HomeCustomCSS

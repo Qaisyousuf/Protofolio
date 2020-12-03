@@ -1,28 +1,27 @@
-﻿body {
-    padding-top: 60px;
-    margin-top: 20px;
-    font-family: 'Varela Round', sans-serif;
-    
+﻿
+html,
+body
 
+ {
+    height: 100%;
+    font-family: 'Varela Round', sans-serif;
+   
   
 }
-/*@media(max-width:500px)
-{
-    body {
-        overflow-x: hidden;
-    }
-   
-}*/
+
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 
 header {
     margin-top: 0px !important;
     padding-top: 0px !important;
 }
 /* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
@@ -36,13 +35,13 @@ textarea {
     -webkit-box-shadow: -1px 3px 5px -200px rgba(0,0,0,0.75) !important;
     -moz-box-shadow: -1px 3px 5px -200px rgba(0,0,0,0.75) !important;
     box-shadow: -1px 3px 5px -200px rgba(0,0,0,0.75) !important;
+   
 }
 
 .top-nav-collapse {
-    background-color: #fafeff !important;
-    -webkit-box-shadow: -1px 7px 15px -5px rgba(162,169,171,0.6) !important;
-    -moz-box-shadow: -1px 7px 15px -5px rgba(162,169,171,0.6) !important;
-    box-shadow: -1px 7px 15px -5px rgba(162,169,171,0.6) !important;
+    background-color: #348acb !important;
+    -webkit-box-shadow: 0px 6px 11px -10px #000000 !important;
+    box-shadow: 0px 6px 11px -10px #000000 !important;
 }
 
 
@@ -50,9 +49,10 @@ textarea {
 @media (max-width:575px) {
     .top-nav-collapse {
         background-color: #f5f9ff !important;
-        -webkit-box-shadow: -1px 7px 15px -5px rgba(162,169,171,0.6) !important;
-        -moz-box-shadow: -1px 7px 15px -5px rgba(162,169,171,0.6) !important;
-        box-shadow: -1px 7px 15px -5px rgba(162,169,171,0.6) !important;
+        -webkit-box-shadow: 0px 6px 11px -10px #000000 !important;
+        box-shadow: 0px 6px 11px -10px #000000 !important;
+        -moz-box-shadow: 0px 6px 11px -10px #000000 !important;
+        
     }
 }
 
@@ -82,41 +82,95 @@ textarea {
         box-shadow: 0px 68px 55px -120px rgba(62,154,179,1);
     }
 }
+
+.display-5 {
+    color: white !important;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+@media (max-width: 576px) {
+    .display-5 {
+        font-size: 3rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 776px) {
+    .display-5 {
+        font-size: 4rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 876px) {
+    .display-5 {
+        font-size: 3.5rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 976px) {
+    .display-5 {
+        font-size: 3.5rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 376px) {
+    .display-5 {
+        font-size: 2rem !important;
+        color: white !important;
+    }
+}
+
 .navbar.navbar-dark .navbar-nav .nav-item .nav-link {
-    color: #fff;
+    color: white;
     -webkit-transition: .35s;
     transition: .35s;
 }
 nav .nav-item .nav-link {
-    color: #545f7e !important;
+    color: white !important;
     font-size: 1.1rem;
-    font-weight: normal;
+    font-weight: bolder;
     font-family: 'Varela Round', sans-serif;
     -webkit-transition: .35s;
     transition: .35s;
 }
+@media(max-width:990px) {
 
-.navbar-brand {
-    color: #29367d !important;
-    font-weight:bold !important;
-}
+    .navbar.navbar-dark .navbar-nav .nav-item .nav-link {
+        color: #4380e0 !important;
+        -webkit-transition: .35s;
+        transition: .35s;
+    }
 
-@media (max-width:767px) and (min-width:200px)
-{
-    #BannerContent {
-        margin-top: 50px;
-       
+    nav .nav-item .nav-link {
+        color:red !important;
+        font-size: 1.1rem;
+        font-weight: bolder;
+        font-family: 'Varela Round', sans-serif;
+        -webkit-transition: .35s;
+        transition: .35s;
     }
 }
-
-
-
-
-
-
-
+.navbar-brand {
+    color: #fff !important;
+    font-weight: bold !important;
+}
+@media(max-width:990px) {
+    .navbar-brand {
+        color: #4380e0 !important;
+        font-weight: bold !important;
+    }
+}
+.btn-info {
+    background-color: transparent !important;
+    border: 2px solid #17bde3 !important;
+    color: white;
+}
 .btn-primary {
-    background-color: #17bde3 !important;
+    background-color: #5caaf2 !important;
     color: white;
 }
 .btn-outline-primary {
@@ -125,546 +179,139 @@ nav .nav-item .nav-link {
 }
 
 .display-4 {
-    color: #169cba !important;
+    color: #348acb !important;
     font-weight: bold;
+    font-size: 3.5rem;
 }
 
-
-@media (max-width:800px) and (min-width:200px)
-{
-    .display-4
-    {
-        font-size:2rem;
+@media (max-width: 976px) {
+    .display-4 {
+        font-size: 3rem !important;
+        color: #348acb !important;
     }
 }
 
-.contentLandingBackground img
-{
-    position:relative;
-    top:10%;
-    left:-10%;
-    height:500px;
-    width:500px;
+@media (max-width: 876px) {
+    .display-4 {
+        font-size: 3rem !important;
+        color: #348acb !important;
+    }
 }
-
-.SubContent
-{
-    position:absolute;
-    top:30%;
-    left:20%;
-
+@media (max-width: 776px) {
+    .display-4 {
+        font-size: 3rem !important;
+        color: #348acb !important;
+    }
 }
-
-
-@media screen and (min-width:767px) 
-{
-    .landingImagebackground {
-        position: relative;
-        top: -10%;
-        right: -10%;
-        width: 800px;
-        display: none;
+@media (max-width: 576px) {
+    .display-4 {
+        font-size: 3rem !important;
+        color: #348acb !important;
     }
 }
 
+@media (max-width: 376px) {
+    .display-4 {
+        font-size: 2rem !important;
+        color: #348acb !important;
+    }
+}
 
-.landingimg img
+.light-blue-text {
+    color: #348acb !important;
+}
+
+
+
+
+
+.HomeBannerMainBackground {
+    background-image: url(Images/HomeBannerBigBackground.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-top: -20px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+@media(max-width:1130px) 
 {
-    position:absolute;
-    top:0%;
-    right:10%;
-    height:500px;
-    width:500px;
+    .HomeBannerMainBackground {
+        background-image: url(Images/HomeBannerMedumBackground.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        margin-top: -20px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+@media(max-width:767px) {
+    .HomeBannerMainBackground {
+        background-image: url(Images/HomeBannerSmallBackground.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 800px;
+        margin-top: -20px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+@media(max-width:600px) {
+    .HomeBannerMainBackground {
+        background-image: url(Images/HomeBannerXSmallBackground.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 875px;
+        padding-top:90px;
+        margin-top: -20px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+.DataCollectionBackground {
     
-}
-
-.LogInBackground img {
-    position: absolute;
-    top: -30%;
-    right: -20%;
-    width: 950px;
-   
-}
-
-@media (min-width: 1100px) and (max-width : 1150px) 
-{
-    .LogInBackground img {
-        position: absolute;
-        top: -30%;
-        right: -20%;
-        width: 900px;
-    }
-
-    .landingimg img {
-        position: absolute;
-        top: 0%;
-        right: -5%;
-        height: 500px;
-        width: 500px;
-    }
-}
-
-@media (min-width: 1050px) and (max-width : 1100px) {
-    .LogInBackground img {
-        position: absolute;
-        top: -25%;
-        right: -20%;
-        width: 800px;
-    }
-
-    .landingimg img {
-        position: absolute;
-        top: 0%;
-        right: -5%;
-        height: 500px;
-        width: 500px;
-    }
-}
-
-@media (min-width: 1000px) and (max-width : 1050px) {
-    .LogInBackground img {
-        position: absolute;
-        top: -25%;
-        right: -20%;
-        width: 780px;
-    }
-
-    .landingimg img {
-        position: absolute;
-        top: 0%;
-        right: -5%;
-        height: 500px;
-        width: 500px;
-    }
-}
-
-@media screen and (min-width: 950px) and (max-width : 1000px) {
-    .LogInBackground img {
-        position: absolute;
-        top: -25%;
-        right: -30%;
-        width: 780px;
-    }
-
-    .landingimg img {
-        position: absolute;
-        top: 0%;
-        right: -5%;
-        height: 500px;
-        width: 500px;
-    }
-    .contentLandingBackground img {
-        position: relative;
-        top: 10%;
-        left: -10%;
-        height: 500px;
-        width: 500px;
-    }
-
-    .SubContent {
-        position: absolute;
-        top: 30%;
-        left: 20%;
-    }
-}
-
-@media screen and (min-width:800px) and (max-width:950px) {
-    .LogInBackground img {
-        position: absolute;
-        top: -25%;
-        right: -30%;
-        width: 700px;
-        
-        
-    }
-
-    .landingimg img {
-        position: absolute;
-        top: 0%;
-        right: -5%;
-        height: 500px;
-        width: 500px;
-    }
-    .landingImagebackground {
-        position: relative;
-        top: -10%;
-        right: -10%;
-        width: 800px;
-        display:none;
-        
-    }
-
-    .contentLandingBackground img {
-        position: relative;
-        top: 10%;
-        left: -10%;
-        height: 500px;
-        width: 500px;
-    }
-
-    .SubContent {
-        position: absolute;
-        top: 30%;
-        left: 20%;
-    }
-}
-
-@media screen and (min-width: 767px) and (max-width : 800px) {
-    .LogInBackground img {
-        position: absolute;
-        top: -25%;
-        right: -30%;
-        width: 680px;
-        
-    }
-
-    .landingimg img {
-        position: absolute;
-        top: 0%;
-        right: -5%;
-        height: 500px;
-        width: 500px;
-    }
-
-    .landingImagebackground {
-        position: relative;
-        top: -10%;
-        right: -10%;
-        width: 800px;
-        display: none;
-    }
-    .contentLandingBackground img {
-        position: relative;
-        top: 10%;
-        left: -10%;
-        height: 500px;
-        width: 500px;
-    }
-
-    .SubContent {
-        position: absolute;
-        top: 30%;
-        left: 20%;
-    }
-}
-
-@media screen and (min-width: 767px) and (max-width : 850px) {
-    .LogInBackground img {
-        position: absolute;
-        top: -25%;
-        right: -30%;
-        width: 650px;
-    }
-
-    .landingimg img {
-        position: absolute;
-        top: 0%;
-        right: -5%;
-        height: 500px;
-        width: 500px;
-    }
-
-    .landingImagebackground {
-        position: relative;
-        top: -10%;
-        right: -10%;
-        width: 800px;
-        display: none;
-    }
-    .contentLandingBackground img {
-        position: relative;
-        top: 10%;
-        left: -10%;
-        height: 500px;
-        width: 500px;
-    }
-
-    .SubContent {
-        position: absolute;
-        top: 30%;
-        left: 20%;
-    }
-}
-
-@media screen and (min-width: 700px) and (max-width : 767px) {
-    .LogInBackground img {
-        position: absolute;
-        top: -25%;
-        right: -30%;
-       
-        display:none;
-    }
-
-    .landingimg img {
-        position: absolute;
-        top: -5%;
-        right: 8%;
-        height: 500px;
-        width: 500px;
-    }
-
-    .landingImagebackground {
-        position: relative;
-        top:-5%;
-        right: -10%;
-        width: 800px;
-        
-    }
-    .contentLandingBackground img {
-        position: relative;
-        top: 10%;
-        left: -10%;
-        height: 500px;
-        width: 600px;
-    }
-
-    .SubContent {
-        position: absolute;
-        top: 30%;
-        left: 10%;
-    }
-   
-
-}
-
-@media screen and (min-width: 600px) and (max-width : 700px) {
-    .LogInBackground img {
-        position: absolute;
-        top: -25%;
-        right: -10%;
-        width: 650px;
-        display: none;
-    }
-
-    .landingimg img {
-        position: absolute;
-        top: 0%;
-        right:0%;
-        height: 500px;
-        width: 500px;
-    }
-
-    .landingImagebackground {
-        position: relative;
-        top: -5%;
-        right: -10%;
-        width: 650px;
-    }
-    .contentLandingBackground img {
-        position: relative;
-        top: 10%;
-        left: -10%;
-        height: 500px;
-        width: 600px;
-    }
-
-    .SubContent {
-        position: absolute;
-        top: 30%;
-        left: 10%;
-    }
-   
-}
-
-@media screen and (min-width: 500px) and (max-width : 600px) {
-    .LogInBackground img {
-        position: absolute;
-        top: -25%;
-        right: -10%;
-        width: 650px;
-        display: none;
-    }
-
-    .landingimg img {
-        position: absolute;
-        top: -5%;
-        right: -3%;
-        height: 500px;
-        width: 500px;
-    }
-
-    .landingImagebackground {
-        position: relative;
-        top: -5%;
-        right: -10%;
-        width: 631px;
-    }
-    .contentLandingBackground img {
-        position: relative;
-        top: 10%;
-        left: -10%;
-        height: 500px;
-        width: 500px;
-    }
-
-    .SubContent {
-        position: absolute;
-        top: 30%;
-        left: 10%;
-    }
-    body {
-        padding-top: 20px;
-    }
-}
-
-@media screen and (min-width: 400px) and (max-width : 500px) {
-    .LogInBackground img {
-        position: absolute;
-        top: -25%;
-        right: -10%;
-        width: 650px;
-        display: none;
-    }
-
-    .landingimg img {
-        position: absolute;
-        top: -5%;
-        right: -3%;
-        height: 400px;
-        width: 400px;
-    }
-
-    .landingImagebackground {
-        position: relative;
-        top: -5%;
-        right: -5%;
-        width: 531px;
-    }
-    .contentLandingBackground img {
-        position: relative;
-        top: 10%;
-        left: -20%;
-        height: 500px;
-        width: 500px;
-    }
-
-    .SubContent {
-        position: absolute;
-        top: 30%;
-        left: 10%;
-    }
-    body {
-        padding-top: 20px;
-    }
-}
-
-@media screen and (min-width: 300px) and (max-width : 400px) {
-    .LogInBackground img {
-        position: absolute;
-        top: -25%;
-        right: -10%;
-        width: 650px;
-        display: none;
-    }
-
-    .landingimg img {
-        position: absolute;
-        top: -15%;
-        right: -3%;
-        height: 400px;
-        width: 400px;
-    }
-
-    .landingImagebackground {
-        position: relative;
-        top: -15%;
-        right: 0%;
-        width: 431px;
-    }
-    .contentLandingBackground img {
-        position: relative;
-        top: 5%;
-        left: -40%;
-        height: 500px;
-        width: 450px;
-    }
-
-    .SubContent {
-        position: absolute;
-        top: 25%;
-        left: 10%;
-    }
-    body {
-        padding-top: 10px;
-    }
-}
-
-@media screen and (min-width: 200px) and (max-width : 300px) {
-    .LogInBackground img {
-        position: absolute;
-        top: -25%;
-        right: -10%;
-        width: 650px;
-        display: none;
-    }
-
-    .landingimg img {
-        position: absolute;
-        top: -10%;
-        right: -3%;
-        height: 400px;
-        width: 400px;
-    }
-
-    .landingImagebackground {
-        position: relative;
-        top: -10%;
-        right: 0%;
-        width: 500px;
-    }
-    .contentLandingBackground img {
-        position: relative;
-        top: 10%;
-        left: -95%;
-        height: 500px;
-        width: 500px;
-    }
-
-    .SubContent {
-        position: absolute;
-        top: 25%;
-        left: 10%;
-    }
-
-}
-.DataCollectionBackground
-{
-    background-image:url('Images/Waihou 1.svg');
-    background-attachment:fixed;
-    background-position:center;
-    background-size:cover;
-    height:auto;
-    width:auto;
-    margin:-15px;
-    z-index:-1;
-    
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    width: auto;
+    margin: -15px;
+    z-index: -1;
 }
 #DataCollectonItemImage {
     display:inline-block;
 }
 
-.WorkQualtiyBackground
-{
-    margin-top:-197px;
-    margin-left:-15px;
-    margin-right:-15px;
-    overflow-x:hidden;
-    
-}
-.WorkQualtiyBackground1 {
-    
+.WorkQualtiyBackground {
+    background-image: url(Images/QualityAssurnceBigBackground.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:726px;
     margin-left: -15px;
-    margin-right: -20px;
-    
+    margin-right: -15px;
 }
-#MainContentWorkquality {
-    
-    background-color: #0099ff;
-    color:white;
-    margin-left:-15px;
-    margin-right:-15px;
-    padding-top:-10px;
+
+@media(max-width:767px) {
+    .WorkQualtiyBackground {
+        background-image: url(Images/QualitySmallBackground.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 920px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
 }
+
+
 
 @media(max-width:700px)
 {
@@ -674,42 +321,41 @@ nav .nav-item .nav-link {
     }
 }
 
-.display-4
-{
-    font-size:2.5rem;
-}
-
-.ProjectWaveBackgroundFirst {
-    margin-top: -60px;
-    margin-left: -15px;
-    margin-right: -20px;
-    padding-bottom:-50px;
-    padding-top:-50px;
-}
-.ProjectWaveBackgroundSecond {
-    margin-left: -15px;
-    margin-right: -20px;
-    
-}
 .ProjectBackground {
+    
+    background-image: url(Images/PlatformDesigBigBackgournd.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 709px;
     margin-left: -15px;
     margin-right: -15px;
-    background-color: #74d5de;
-    color:white;
-    
     
 }
 
+@media(max-width:990px) {
+    .ProjectBackground {
+        background-image: url(Images/PlatformDesigMedumBackgournd.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 933px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
 
-
-
-
-/*.card.card-cascade .view.view-cascade {
-    border-radius: .25rem;
-    -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-    -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-    box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-}*/
+}
+@media(max-width:767px) {
+    .ProjectBackground {
+        background-image: url(Images/PlatformDesigSmallBackgournd.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 1400px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
 
 .card.card-cascade.wider.reverse .card-body.card-body-cascade {
     z-index: 3;
@@ -719,370 +365,8 @@ nav .nav-item .nav-link {
     -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
     box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
 }
-.DesignSetpBackground {
-    margin-top: -250px;
-    background-image: url('Images/StepsDesignBackround.svg');
-    background-attachment:fixed;
-    background-size:cover;
-    background-position: center;
-    margin-left: -15px;
-    margin-right: -15px;
-    height:auto;
-    width:auto;
-    overflow-y:hidden;
-    padding-bottom:150px;
-    
-}
-.overlayBackground {
-    padding-top: 150px;
-    
-}
-@media(max-width:1150px) {
-    .DesignSetpBackground {
-        margin-top: -150px;
-        background-image: url('Images/StepsDesignBackround.svg');
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        margin-left: -15px;
-        margin-right: -15px;
-        height: auto;
-        width: auto;
-        overflow-y: hidden;
-    }
-
-    .overlayBackground {
-        padding-top: 100px;
-    }
-    .card.card-cascade.wider.reverse .card-body.card-body-cascade {
-        z-index: 3;
-        margin-top: -5rem;
-        border-radius: .25rem;
-        -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-        -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-        box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-    }
-}
-@media(max-width:1000px) {
-    .DesignSetpBackground {
-        margin-top: -180px;
-        background-image: url('Images/StepsDesignBackround.svg');
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        margin-left: -15px;
-        margin-right: -15px;
-        height: auto;
-        width: auto;
-        overflow-y: hidden;
-    }
-
-    .overlayBackground {
-        padding-top: 100px;
-    }
-    .card.card-cascade.wider.reverse .card-body.card-body-cascade {
-        z-index: 3;
-        margin-top: -5rem;
-        border-radius: .25rem;
-        -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-        -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-        box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-    }
-}
-
-@media(max-width:900px)
-{
-    .DesignSetpBackground {
-        margin-top: -150px;
-        background-image: url('Images/StepsDesignBackround.svg');
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        margin-left: -15px;
-        margin-right: -15px;
-        height: auto;
-        width: auto;
-        overflow-y: hidden;
-    }
-    .overlayBackground {
-        padding-top: 50px;
-    }
-    .card.card-cascade.wider.reverse .card-body.card-body-cascade {
-        z-index: 3;
-        margin-top: -4rem;
-        border-radius: .25rem;
-        -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-        -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-        box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-    }
-}
-
-@media(max-width:767px) {
-    .DesignSetpBackground {
-        margin-top: -150px;
-        background-image: url('Images/StepsDesignBackround.svg');
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        margin-left: -15px;
-        margin-right: -15px;
-        height: auto;
-        width: auto;
-        overflow-y: hidden;
-    }
-    .overlayBackground {
-        padding-top: 50px;
-    }
-    .card.card-cascade.wider.reverse .card-body.card-body-cascade {
-        z-index: 3;
-        margin-top: -5.7rem;
-        border-radius: .25rem;
-        -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-        -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-        box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-    }
-}
-@media(max-width:650px) {
-    .DesignSetpBackground {
-        margin-top: -100px;
-        background-image: url('Images/StepsDesignBackround.svg');
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        margin-left: -15px;
-        margin-right: -15px;
-        height: auto;
-        width: auto;
-        overflow-y: hidden;
-    }
-    .overlayBackground {
-        padding-top: 50px;
-    }
-}
-@media(max-width:560px) {
-    .DesignSetpBackground {
-        margin-top: -100px;
-        background-image: url('Images/StepsDesignBackround.svg');
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        margin-left: -15px;
-        margin-right: -15px;
-        height: auto;
-        width: auto;
-        overflow-y: hidden;
-    }
-    .overlayBackground {
-        padding-top: 30px;
-    }
-}
-@media(max-width:460px) {
-    .DesignSetpBackground {
-        margin-top: -90px;
-        background-image: url('Images/StepsDesignBackround.svg');
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        margin-left: -15px;
-        margin-right: -15px;
-        height: auto;
-        width: auto;
-        overflow-y: hidden;
-    }
-    .overlayBackground {
-        padding-top: 30px;
-    }
-    .card.card-cascade.wider.reverse .card-body.card-body-cascade {
-        z-index: 3;
-        margin-top: -4.5rem;
-        border-radius: .25rem;
-        -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-        -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-        box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-    }
-}
-@media(max-width:420px) {
-    .DesignSetpBackground {
-        margin-top: -80px;
-        background-image: url('Images/StepsDesignBackround.svg');
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        margin-left: -15px;
-        margin-right: -15px;
-        height: auto;
-        width: auto;
-        overflow-y: hidden;
-    }
-    .overlayBackground {
-        padding-top: 20px;
-    }
-}
-@media(max-width:370px) {
-    .DesignSetpBackground {
-        margin-top: -70px;
-        background-image: url('Images/StepsDesignBackround.svg');
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        margin-left: -15px;
-        margin-right: -15px;
-        height: auto;
-        width: auto;
-        overflow-y: hidden;
-    }
-    .overlayBackground {
-        padding-top: 20px;
-    }
-    .card.card-cascade.wider.reverse .card-body.card-body-cascade {
-        z-index: 3;
-        margin-top: -3rem;
-        border-radius: .25rem;
-        -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-        -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-        box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-    }
-}
-@media(max-width:330px) {
-    .DesignSetpBackground {
-        margin-top: -50px;
-        background-image: url('Images/StepsDesignBackround.svg');
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        margin-left: -15px;
-        margin-right: -15px;
-        height: auto;
-        width: auto;
-        overflow-y: hidden;
-    }
-    .overlayBackground {
-        padding-top: 20px;
-    }
-    .card.card-cascade.wider.reverse .card-body.card-body-cascade {
-        z-index: 3;
-        margin-top: -3rem;
-        border-radius: .25rem;
-        -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-        -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-        box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-    }
-}
-@media(max-width:230px) {
-    .DesignSetpBackground {
-        margin-top: -40px;
-        background-image: url('Images/StepsDesignBackround.svg');
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        margin-left: -15px;
-        margin-right: -15px;
-        height: auto;
-        width: auto;
-        overflow-y: hidden;
-    }
-
-    .overlayBackground {
-        padding-top: 20px;
-    }
-    .card.card-cascade.wider.reverse .card-body.card-body-cascade {
-        z-index: 3;
-        margin-top: -5rem;
-        border-radius: .25rem;
-        -webkit-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-        -moz-box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-        box-shadow: 0px 1px 18px -1px rgba(224,221,224,1);
-    }
-}
-.footerwaves
-{
-    margin-top:-180px;
-}
 
 
-#One {
-    animation: test 7s infinite ease-in-out;
-    transform-origin: center;
-    transform-box: fill-box;
-    
-}
-
-@keyframes test {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-#Tow {
-    animation: test 6s infinite ease-in-out;
-    transform-origin: center;
-    transform-box: fill-box;
-}
-
-@keyframes test {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-#Three {
-    animation: test 5s infinite ease-in-out;
-    transform-origin: center;
-    transform-box: fill-box;
-}
-
-@keyframes test {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-#Four {
-    animation: test 4s infinite ease-in-out;
-    transform-origin: center;
-    transform-box: fill-box;
-}
-
-@keyframes test1 {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-#Five {
-    padding: 10px;
-    animation: test1 3s infinite ease-in-out;
-    transform-origin: center;
-    transform-box: fill-box;
-    position: absolute;
-    top: 20%;
-}
-
-@keyframes test1 {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
 
 .aboutbackgroundContent {
     position: relative;
@@ -1121,6 +405,77 @@ nav .nav-item .nav-link {
     left: 24%;
 }
 
+.CoutingAnimationBack svg {
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+
+.CoutingImages img  {
+    position: absolute;
+    top: 15%;
+    left: 24%;
+}
+
+@media(max-width:767px) {
+
+    .CoutingAnimationBack lottie-player {
+        position: relative;
+        top: 0%;
+        left: 20%;
+    }
+
+    .CoutingImages img {
+        position: absolute;
+        top: 15%;
+        left: 30%;
+    }
+}
+
+@media(max-width:550px) {
+
+    .CoutingAnimationBack lottie-player {
+        position: relative;
+        top: 0%;
+        left: 20%;
+    }
+
+    .CoutingImages img {
+        position: absolute;
+        top: 15%;
+        left: 30%;
+    }
+}
+
+@media(max-width:400px) {
+
+    .CoutingAnimationBack lottie-player {
+        position: relative;
+        top: 0%;
+        left: 10%;
+    }
+
+    .CoutingImages img {
+        position: absolute;
+        top: 15%;
+        left: 24%;
+    }
+}
+
+@media(max-width:375px) {
+
+    .CoutingAnimationBack lottie-player {
+        position: relative;
+        top: 0%;
+        left: 7%;
+    }
+
+    .CoutingImages img {
+        position: absolute;
+        top: 15%;
+        left: 26%;
+    }
+}
 .btn-rounded {
     border-radius: 0.3rem !important;
 }

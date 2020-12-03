@@ -2,7 +2,7 @@
 
 @if (Model?.ListPortfolioViewModle != null)
     {
-    <div class="PortfolioMainBack">
+    <div class="PortfolioMainBack" id="Home">
 
         <!-- Main navigation -->
         <div class="py-5 offset-lg-2">
@@ -56,9 +56,9 @@
     }
 @if (Model?.ListPortfolioAboutViewModel != null)
   {
-    <div class="MainAboutMeBackground">
+    <div class="MainAboutMeBackground" id="AboutMe">
 
-                            <div class="container">
+                            <div class="container" >
 
 
                                 <!--Section: Content-->
@@ -108,7 +108,7 @@
  }
   @if (Model?.ListWorkExperienceViewModel != null)
     {
-  <div class="WorkEXMainBackground">
+  <div class="WorkEXMainBackground" id="WorkExperience">
                             <div class="container">
 
                                 <section class="text-center text-white offset-lg-2">
@@ -170,7 +170,7 @@
 
  @if (Model?.ListEducationViewModel != null)
                 {
-  <div class="EducationMainback">
+  <div class="EducationMainback" id="Education">
                         <div class="container z-depth-0 offset-lg-2">
 
 
@@ -213,7 +213,7 @@
 
  @if (Model?.ListofOnlineCertificationViewModel != null)
  {
-   <div class="container mt-5">
+   <div class="container mt-5" id="OnlineCertification">
 
 
                     <!--Section: Content-->
@@ -324,8 +324,8 @@
         @if (Model?.ListPortfolioProject != null && Model?.ListProjectStatuesViewModel != null)
         {
 
-            <div class="PortfolioProjectMainBack">
-                <div class="container my-5 mx-md-5 mx-sm-0 mx-lg-5">
+            <div class="PortfolioProjectMainBack" id="Project">
+                <div class="container my-5 px-3 ">
 
 
                     <!--Section: Content-->
@@ -416,7 +416,7 @@
 
     @if (Model?.ListInterestViewModel != null)
     {
-        <div class="interestMainBackground">
+        <div class="interestMainBackground" id="Interest">
             <div class="container  px-5 pb-3 z-depth-0">
 
 
@@ -433,36 +433,45 @@
 
                     <!-- Section description -->
                     <div class="container">
-                        <div class="row ">
+                        <div class="row">
 
-                            <div class="col-md-5 col-sm-6 offset-1 mt-5">
-                                <div class="row text-center d-flex justify-content-center">
-                                    @foreach (var SubItem in Model.ListInterestViewModel)
-                                    {
-                                        <div class="col-sm-8 col-md-6 col-lg-4 mb-4">
-                                            <div class=" mx-auto mb-2">
+                            <div class="col-md-5 offset-lg-1 col-sm-6 mt-5">
 
-                                                <div class="interestSVG">
-                                                    <div class="MainSVGBack">
-                                                        <lottie-player src=https://assets9.lottiefiles.com/packages/lf20_xZ8sgo.json background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></lottie-player>
+                                
+
+                                    <!--Section: Content-->
+                                    <section class="text-center text-white">
+
+                                        <div class="row text-center d-flex justify-content-center">
+                                            @foreach (var SubItem in Model.ListInterestViewModel)
+                                            {
+                                                <div class="col-lg-4 col-md-4 col-sm-6 mb-2 d-flex justify-content-center">
+                                                    <div class="interestSVG">
+                                                        <div class="MainSVGBack">
+                                                            <lottie-player src=https://assets9.lottiefiles.com/packages/lf20_xZ8sgo.json background="transparent" speed="2" style="width: 120px; height: 120px;" loop autoplay></lottie-player>
+                                                        </div>
+
+                                                            <div class="MainIcon">
+                                                                <img src="@SubItem.UrlIcon" class="img-fluid" alt="smaple image">
+                                                                <h5 class="font-weight-normal text-white mb-3">@SubItem.Subtitle</h5>
+                                                            </div>
 
                                                     </div>
-                                                    <div class="MainIcon">
-                                                        <img src="@SubItem.UrlIcon" class="img-fluid" alt="smaple image">
-                                                    </div>
+
+                                                  
                                                 </div>
-
-
-                                            </div>
-                                            <h5 class="font-weight-bold text-white mb-4">@SubItem.Subtitle</h5>
+                                            }
 
                                         </div>
-                                    }
+
+                                    </section>
+                                    <!--Section: Content-->
 
 
-                                </div>
+                                
+                               
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 mt-md-5  ">
                                 <div class="row text-center d-flex justify-content-center">
                                     <div class="col-md-12 mb-4">
                                         <div class="img-fluid py-3">
