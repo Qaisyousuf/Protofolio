@@ -3,92 +3,130 @@
  @if (Model?.DesignViewModel != null)
  {
 <div class="DesignSetpBackground">
-    <!-- Card -->
-    <div class="">
-        <div class="card card-cascade wider reverse z-depth-0 py-5 container ">
 
-            <!-- Card image -->
-            @foreach (var img in Model.DesignViewModel.Take(1))
-            {
-                <div class="overlayBackground">
-                    <div class="view view-cascade overlay z-depth-0">
-                        <div class="col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-12">
-                            <div class="img-fluid">
-                                <lottie-player src=@img.StepIcon background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+
+    <div class="container mt-5">
+
+
+        <!--Section: Content-->
+        <section class="mx-md-5 dark-grey-text">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-12">
+
+                    <!-- Card -->
+                    <div class="card card-cascade wider reverse">
+
+                        <!-- Card image -->
+                        <div class="view view-cascade overlay ">
+                            @foreach (var img in Model.DesignViewModel.Take(1))
+                            {
+                            <div class="DesignStepsbannerBackground">
+                                <div class="img-fluid d-flex justify-content-center">
+                                    <lottie-player src=https://assets8.lottiefiles.com/packages/lf20_3dw8ed6q.json background="transparent" speed="1" style="width: 500px; height: 500px;" loop autoplay></lottie-player>
+                                </div>
                             </div>
+
+                                
+                            }
+
                         </div>
 
+                        <!-- Card content -->
+                        <div class="card-body card-body-cascade text-center">
+
+                            @foreach (var subitem in Model.DesignViewModel.Take(1))
+                            {
+                                <h2 class="card-title font-weight-bold light-blue-text  mt-4"><strong>@subitem.MainTitle</strong></h2>
+                                <!-- Subtitle -->
+                                <div class="img-fluid">
+                                    <lottie-player src=@subitem.StepIcon background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                                </div>
+                                <!-- Text -->
+
+                            }
+
+
+                            <!-- Social shares -->
+
+                        </div>
+                        <!-- Card content -->
+
                     </div>
-                </div>
-            }
+                    <!-- Card -->
+                    <!-- Excerpt -->
+                    <div class="mt-5">
+
+                        @foreach (var item in Model.DesignViewModel)
+                        {
+                        <div class=" my-2 py-2 z-depth-0">
 
 
+                            <!--Section: Content-->
+                            <hr />
+                            <section class="px-md-2 mx-md-2 text-center text-lg-left dark-grey-text">
 
+                                <!--Grid row-->
+                                <div class="row">
 
+                                    <div class="col-md-3 mb-4 mb-md-0">
 
-            <!-- Card content -->
-            <div class="card-body card-body-cascade text-center">
-                @foreach (var subitem in Model.DesignViewModel.Take(1))
-                {
-                    <h2 class="card-title font-weight-bold display-4 mt-4"><strong>@subitem.MainTitle</strong></h2>
-                    <!-- Subtitle -->
+                                        <!--Image-->
+                                        <div class="view overlay z-depth-0">
+                                            <img src="@item.StepImageUrl" class="img-fluid" alt="" id="DataCollectonItemImage">
 
-                    <!-- Text -->
-
-                }
-
-                @foreach (var item in Model.DesignViewModel)
-                {
-                    <div class=" my-2 py-2 z-depth-0">
-
-
-                        <!--Section: Content-->
-                        <section class="px-md-2 mx-md-2 text-center text-lg-left dark-grey-text">
-
-                            <!--Grid row-->
-                            <div class="row">
-                                <div class="col-md-3 mb-4 mb-md-0">
-
-                                    <!--Image-->
-                                    <div class="view overlay z-depth-0">
-                                        <img src="@item.StepImageUrl" class="img-fluid" alt="" id="DataCollectonItemImage">
+                                        </div>
 
                                     </div>
+                                    <!--Grid column-->
+                                    <div class="col-md-9 mt-5 ">
+
+                                        <h3 class="font-weight-bold">@item.SubTitle</h3>
+
+                                        <p class="text-muted text-justify">
+                                            @Html.Raw(item.StepContent)
+                                        </p>
+
+
+
+                                    </div>
+                                    <!--Grid column-->
+                                    <!--Grid column-->
+                                    <!--Grid column-->
 
                                 </div>
-                                <!--Grid column-->
-                                <div class="col-md-9 mt-5 ">
-
-                                    <h3 class="font-weight-bold">@item.SubTitle</h3>
-
-                                    <p class="text-muted">
-                                        @Html.Raw(item.StepContent)
-                                    </p>
-
-                                 
-
-                                </div>
-                                <!--Grid column-->
-                                <!--Grid column-->
-                                <!--Grid column-->
-
-                            </div>
-                            <!--Grid row-->
+                                <!--Grid row-->
 
 
-                        </section>
-                        <hr />
-                        <!--Section: Content-->
+                            </section>
 
+                            <!--Section: Content-->
+
+
+                        </div>
+                        }
 
                     </div>
-                }
+
+                </div>
+                <!-- Grid column -->
 
             </div>
+            <!-- Grid row -->
 
-        </div>
+            <hr class="mb-5 mt-4">
+
+        </section>
+        <!--Section: Content-->
+
+
     </div>
+    <!-- Card -->
     
+
     <!-- Card -->
 </div>
 

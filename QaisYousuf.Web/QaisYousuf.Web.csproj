@@ -140,10 +140,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\UIToCode\Views\DataCollection\Create.cshtml" />
+    <Content Include="Content\Images\AboutBigBackground.svg" />
     <Content Include="Content\Images\AboutmeBackground.svg" />
     <Content Include="Content\Images\AboutMeBackgroundMediam.svg" />
+    <Content Include="Content\Images\AboutMedumBackground.svg" />
     <Content Include="Content\Images\AboutMeSmallDeivce.svg" />
+    <Content Include="Content\Images\AboutSmallBackground.svg" />
+    <Content Include="Content\Images\AboutXSmallBackground.svg" />
     <Content Include="Content\Images\DataCollectionBigBackground.svg" />
+    <Content Include="Content\Images\DesignStepsBigBackground.svg" />
     <Content Include="Content\Images\EducationbigBackground.svg" />
     <Content Include="Content\Images\EducationbigMedumBackground.svg" />
     <Content Include="Content\Images\EducationbigSmallBackground.svg" />
@@ -171,6 +176,9 @@
     <Content Include="Content\Images\PortfolioProjectBack.svg" />
     <Content Include="Content\Images\QualityAssurnceBigBackground.svg" />
     <Content Include="Content\Images\QualitySmallBackground.svg" />
+    <Content Include="Content\Images\StartUPProcessBigBackground.svg" />
+    <Content Include="Content\Images\StartUPProcessMedumBackground.svg" />
+    <Content Include="Content\Images\StartUPProcessSmallBackground.svg" />
     <Content Include="Content\Images\UI.svg" />
     <Content Include="Content\Images\Whangaehu.svg" />
     <Content Include="Content\Images\WorkBack.svg" />
