@@ -179,7 +179,12 @@
     <Content Include="Content\Images\StartUPProcessBigBackground.svg" />
     <Content Include="Content\Images\StartUPProcessMedumBackground.svg" />
     <Content Include="Content\Images\StartUPProcessSmallBackground.svg" />
+    <Content Include="Content\Images\TeachnologyBigBackground.svg" />
+    <Content Include="Content\Images\TeachnologyMedumBackground.svg" />
+    <Content Include="Content\Images\TeachnologySmallBackground.svg" />
+    <Content Include="Content\Images\TeachnologyXSBackground.svg" />
     <Content Include="Content\Images\UI.svg" />
+    <Content Include="Content\Images\WebToolBigBackground.svg" />
     <Content Include="Content\Images\Whangaehu.svg" />
     <Content Include="Content\Images\WorkBack.svg" />
     <Content Include="Content\Images\WorkExContentBack.svg" />
@@ -212,7 +217,6 @@
     <Content Include="Content\Images\Background3.svg" />
     <Content Include="Content\Images\BackGroundSVGTesting.svg" />
     <Content Include="Content\Images\BackgroundTitle.svg" />
-    <Content Include="Content\Images\backtools.svg" />
     <Content Include="Content\Images\BigBackground.svg" />
     <Content Include="Content\Images\blob.svg" />
     <Content Include="Content\Images\CodeBannerBackground.svg" />

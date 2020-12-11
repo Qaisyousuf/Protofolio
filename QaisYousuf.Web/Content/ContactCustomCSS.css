@@ -115,8 +115,14 @@ nav .nav-item .nav-link {
 
 
 
+.btn-info {
+    background-color: transparent !important;
+    border: 2px solid #17bde3 !important;
+    color: white;
+}
+
 .btn-primary {
-    background-color: #17bde3 !important;
+    background-color: #5caaf2 !important;
     color: white;
 }
 
@@ -124,6 +130,8 @@ nav .nav-item .nav-link {
     border: 2px solid #17bde3 !important;
     color: #17bde3 !important;
 }
+
+
 
 .display-4 {
     color: #169cba !important;
@@ -159,10 +167,6 @@ nav .nav-item .nav-link {
    
 }
 
-.footerwaves {
-   
-   margin-top:-50px;
-}
 #ContactBannerVedio main {
     opacity: 0.2;
     position: absolute;
@@ -193,85 +197,7 @@ nav .nav-item .nav-link {
 
 }
 
-#One {
-    animation: test 7s infinite ease-in-out;
-    transform-origin: center;
-    transform-box: fill-box;
-}
 
-@keyframes test {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-#Tow {
-    animation: test 6s infinite ease-in-out;
-    transform-origin: center;
-    transform-box: fill-box;
-}
-
-@keyframes test {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-#Three {
-    animation: test 5s infinite ease-in-out;
-    transform-origin: center;
-    transform-box: fill-box;
-}
-@keyframes test
-{
-    from{
-        transform:rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-#Four {
-    animation: test 4s infinite ease-in-out;
-    transform-origin: center;
-    transform-box: fill-box;
-}
-
-@keyframes test1 {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-#Five {
-    padding: 10px;
-    animation: test1 3s infinite ease-in-out;
-    transform-origin: center;
-    transform-box: fill-box;
-    position: absolute;
-    top: 20%;
-}
-
-@keyframes test1 {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
 
 .ContactFormBackground {
     position:relative;
@@ -339,3 +265,62 @@ nav .nav-item .nav-link {
 }
 
 
+.FooterMainBackground {
+    background-image: url(Images/FooterMedumBackground.svg);
+    height: 795px;
+    margin-left: -15px;
+    margin-right: -15px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width: 1920px) {
+    .FooterMainBackground {
+        background-image: url(Images/FooterBigBackground.svg);
+        height: 652px;
+        width: auto;
+        background-position: center;
+        margin-top: 40px;
+        background-repeat: no-repeat;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-content: flex-end;
+        -ms-flex-line-pack: end;
+        align-content: flex-end;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1400px) {
+    .FooterMainBackground {
+        background-image: url(Images/FooterMedumBackground.svg);
+        height: 795px;
+        margin-left: -15px;
+        margin-right: -15px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .FooterMainBackground {
+        background-image: url(Images/FooterSmallBackground.svg);
+        height: 877px;
+        margin-left: -15px;
+        margin-right: -15px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

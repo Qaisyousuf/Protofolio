@@ -6,204 +6,157 @@
 
 @if (Model?.MeetoutTeamListViewmodel != null)
 {
-    <div class="MeetourTeamBackground">
-        <div class="container-fluid mt-n5">
+<div class="TeamMainBackground">
 
+    <header>
 
-            <!--Section: Content-->
-            <section class="team-section text-center dark-grey-text mt-lg-n5 mt-md-n5 mt-sm-n5">
-                <div class="container z-depth-0">
-
-
-                    <!--Section: Content-->
-                    <section class="text-center  dark-grey-text">
-
-                        <!--Grid row-->
-                        <div class="row">
+        <!-- Full Page Intro -->
+        <div class="">
+            <!-- Mask & flexbox options-->
+            <div class="mask">
+                <!-- Content -->
+                <div class="container h-100 pt-5">
+                    <!--Grid row-->
+                    <div class="row align-items-center h-100">
+                        <!--Grid column-->
+                        <div class="col-md-6 text-center">
                             @foreach (var item in Model.MeetoutTeamListViewmodel.Take(1))
                             {
-
-                                <!--Grid column-->
-                                <!--Grid column-->
-                                <div class="col-lg-6 mt-5 pt-5">
-                                    <div class="display-4">@item.MainTitle</div>
-
-
-                                </div>
-                                <div class="col-lg-6 mb-lg-0 mb-md-0 mt-md-n5 ">
-
-                                    <!--Image-->
-                                    <div class=" img-fluid z-depth-0">
-                                        <lottie-player src=https://assets1.lottiefiles.com/packages/lf20_2UeWRZ.json background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
-                                    </div>
-
-                                </div>
+                                <div class="display-4">@item.MainTitle</div>
                             }
-                            <!--Grid column-->
-                            <!--Grid column-->
+
 
                         </div>
-                        <!--Grid row-->
-
-                    </section>
-                    <!--Section: Content-->
-
-
-                </div>
-
-
-                <!-- Section heading -->
-                <!-- Section description -->
-                <!-- Grid row -->
-                <div class="row">
-                    @foreach (var item in Model.MeetoutTeamListViewmodel)
-                    {
-
-
-                        <div class=" col-md-4 mb-0">
-                            <div class="card  bg-transparent z-depth-0 mx-1">
-                                <div class="ProfileBackImage avatar mx-1 my-0 mt-md-4">
-                                    <svg width="240" height="237" viewBox="0 0 261 237" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="HomeBackground" opacity="0.34">
-                                            <g id="One">
-                                                <path id="One_2" d="M256.48 74.098C272.626 120.501 243.744 183.881 198.033 214.666C152.322 245.45 89.7824 243.64 49.0746 213.987C8.5943 184.108 -10.0539 126.16 5.41045 80.6623C20.6474 35.1645 69.9971 1.88994 124.805 0.0790838C179.84 -1.73178 240.56 27.6947 256.48 74.098Z" fill="url(#paint0_linear)" fill-opacity="0.36" />
-                                            </g>
-                                            <g id="Tow">
-                                                <g id="Tow_2" filter="url(#filter0_i)">
-                                                    <path d="M236.207 81.2173C249.755 120.18 225.521 173.398 187.166 199.247C148.811 225.096 96.3347 223.575 62.1776 198.677C28.2113 173.588 12.5639 124.932 25.5398 86.7291C38.3249 48.5263 79.7332 20.5869 125.721 19.0664C171.9 17.5459 222.849 42.2542 236.207 81.2173Z" fill="url(#paint1_linear)" fill-opacity="0.36" />
-                                                </g>
-                                            </g>
-                                            <g id="Three">
-                                                <g id="Three_2" filter="url(#filter1_i)">
-                                                    <path d="M213.038 89.4607C223.617 119.809 204.694 161.26 174.746 181.393C144.797 201.527 103.823 200.342 77.1523 180.949C50.6307 161.408 38.4129 123.51 48.5448 93.7538C58.5276 63.9979 90.8601 42.236 126.769 41.0517C162.826 39.8674 202.608 59.1126 213.038 89.4607Z" fill="url(#paint2_linear)" fill-opacity="0.36" />
-                                                </g>
-                                            </g>
-                                            <g id="Four">
-                                                <g id="Four_2" filter="url(#filter2_i)">
-                                                    <path d="M186.008 98.8282C193.123 119.387 180.397 147.466 160.256 161.105C140.115 174.744 112.559 173.942 94.6229 160.804C76.7868 147.567 68.5701 121.894 75.3839 101.736C82.0975 81.5792 103.842 66.8373 127.991 66.035C152.24 65.2328 178.994 78.2698 186.008 98.8282Z" fill="url(#paint3_linear)" fill-opacity="0.36" />
-                                                </g>
-                                            </g>
-                                            <g id="Five">
-                                                <g id="Five_2" filter="url(#filter3_i)">
-                                                    <path d="M163.805 106.697C168.074 119.032 160.438 135.88 148.354 144.063C136.269 152.246 119.736 151.765 108.974 143.883C98.2721 135.94 93.3421 120.536 97.4303 108.442C101.459 96.3475 114.505 87.5024 128.994 87.021C143.544 86.5397 159.596 94.3619 163.805 106.697Z" fill="url(#paint4_linear)" fill-opacity="0.36" />
-                                                </g>
-                                            </g>
-                                        </g>
-                                        <defs>
-                                            <filter id="filter0_i" x="21" y="19" width="219" height="199" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                                <feOffset />
-                                                <feGaussianBlur stdDeviation="5.5" />
-                                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow" />
-                                            </filter>
-                                            <filter id="filter1_i" x="45" y="41" width="171" height="155" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                                <feOffset />
-                                                <feGaussianBlur stdDeviation="5.5" />
-                                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow" />
-                                            </filter>
-                                            <filter id="filter2_i" x="73" y="66" width="115" height="105" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                                <feOffset />
-                                                <feGaussianBlur stdDeviation="5.5" />
-                                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow" />
-                                            </filter>
-                                            <filter id="filter3_i" x="96" y="87" width="69" height="63" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                                <feOffset />
-                                                <feGaussianBlur stdDeviation="5.5" />
-                                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow" />
-                                            </filter>
-                                            <linearGradient id="paint0_linear" x1="130.5" y1="0" x2="130.5" y2="237" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#0066FF" stop-opacity="0.38" />
-                                                <stop offset="1" stop-color="#FF0066" stop-opacity="0.09" />
-                                            </linearGradient>
-                                            <linearGradient id="paint1_linear" x1="130.5" y1="19" x2="130.5" y2="218" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#0066FF" stop-opacity="0.38" />
-                                                <stop offset="1" stop-color="#FF0066" stop-opacity="0.09" />
-                                            </linearGradient>
-                                            <linearGradient id="paint2_linear" x1="130.5" y1="41" x2="130.5" y2="196" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#0066FF" stop-opacity="0.38" />
-                                                <stop offset="1" stop-color="#FF0066" stop-opacity="0.09" />
-                                            </linearGradient>
-                                            <linearGradient id="paint3_linear" x1="130.5" y1="66" x2="130.5" y2="171" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#0066FF" stop-opacity="0.38" />
-                                                <stop offset="1" stop-color="#FF0066" stop-opacity="0.09" />
-                                            </linearGradient>
-                                            <linearGradient id="paint4_linear" x1="130.5" y1="87" x2="130.5" y2="150" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#0066FF" stop-opacity="0.38" />
-                                                <stop offset="1" stop-color="#FF0066" stop-opacity="0.09" />
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-
-
-
-                                    <div class="profileImageForBackground">
-                                        <img src="@item.ImageUrl" class="rounded-circle z-depth-0" alt="Sample avatar">
-                                    </div>
-
-                                </div>
-                                <h4 class="font-weight-bold text-uppercase mt-3 mb-3 mb-sm-3 text-primary">@item.Name</h4>
-
-                                <p class="font-weight-bold text-uppercase blue-text mb-0"><strong>@item.Position</strong></p>
-
-                                <div class="card-body mt-0 pt-0 mb-0 pb-0 text-center">
-                                    <p class="text-center">
-                                        <hr />
-                                        @Html.Raw(item.Content)
-                                    </p>
-                                </div>
-                                <div class="card-footer bg-transparent mt-0">
-                                    @foreach (var socialMedia in Model.SocialMeidaTeam.Take(1))
-                                    {
-                                        <a href="@socialMedia.FBUrl" class="btn-floating btn-md btn-fb" type="button" role="button"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="@socialMedia.TwiterUrl" class="btn-floating btn-md btn-tw" type="button" role="button"><i class="fab fa-twitter"></i></a>
-                                        <a href="@socialMedia.LinkedInUrl" class="btn-floating btn-md btn-li" type="button" role="button"><i class="fab fa-linkedin-in"></i></a>
-                                        <a href="@socialMedia.WebsiteUrl" class="btn-floating btn-md btn-dribbble" type="button" role="button" target="_blank"><i class="fab fa-dribbble"></i></a>
-                                    }
-
-                                </div>
-
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="img-fluid">
+                                <lottie-player src=https://assets6.lottiefiles.com/packages/lf20_ca8zbrdk.json background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
                             </div>
                         </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </div>
+                <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+        </div>
+        <!-- Full Page Intro -->
+
+    </header>
+    <!-- Main navigation -->
+</div>
+
+<div class="container my-5 pt-5">
 
 
+    <!--Section: Content-->
+    <section class="text-center dark-grey-text">
 
-                    }
+        <!-- Section heading -->
+       
 
-                    <!-- Grid column -->
-                    <!-- Grid column -->
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- Grid column -->
+            @foreach (var SubItem in Model.MeetoutTeamListViewmodel)
+            {
+
+                <div class="col-lg-4 col-md-12 mb-4">
+
+                    <!-- Rotating card -->
+                    <div class="card-wrapper">
+                        <div id="card-1" class="card card-rotating text-center">
+                            <!-- Front Side -->
+                            <div class="face front">
+                                <!-- Image -->
+                                <div class="card-up">
+                                    <img class="card-img-top" src="@SubItem.ProfileImageUrl" alt="Team member card image">
+                                </div>
+                                <!-- Avatar -->
+                                <div class="avatar mx-auto white">
+                                    <img src="@SubItem.ImageUrl" class="rounded-circle img-fluid"
+                                         alt="First sample avatar image">
+                                </div>
+                                <!-- Content -->
+                                <div class="card-body">
+                                    <h3 class="font-weight-bold light-blue-text mt-1 mb-3">@SubItem.Name</h3>
+                                    <p class="font-weight-normal dark-grey-text">@SubItem.Position</p>
+                                    <!-- Triggering button -->
+                                    <hr>
+                                    <a class="rotate-btn light-blue-text pb-5" data-card="card-1">
+                                        <i class="fas fa-redo-alt grey-text"></i> Read more
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Front Side -->
+                            <!-- Back Side -->
+                            <div class="face back">
+                                <!-- Content -->
+                                <div class="card-body">
+                                    <!-- Content -->
+                                    <h4 class="font-weight-bold mt-4 mb-2">
+                                        <strong>About @SubItem.Name</strong>
+                                    </h4>
+                                    <hr>
+                                    <p class="text-justify">
+                                       @SubItem.Content
+                                    </p>
+                                    <hr>
+                                    <!-- Social Icons -->
+                                    <ul class="list-inline list-unstyled">
+                                        <li class="list-inline-item">
+                                            <a class="p-2 fa-lg fb-ic">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="p-2 fa-lg pin-ic">
+                                                <i class="fab fa-pinterest"> </i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="p-2 fa-lg ins-ic">
+                                                <i class="fab fa-instagram"> </i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="p-2 fa-lg tw-ic">
+                                                <i class="fab fa-twitter"> </i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- Triggering button -->
+                                    <a class="rotate-btn grey-text" data-card="card-1">
+                                        <i class="fas fa-redo-alt grey-text"></i> Click here to rotate back
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Back Side -->
+                        </div>
+                    </div>
+                    <!-- Rotating card -->
 
                 </div>
-                <!-- Grid row -->
 
-            </section>
-            <!--Section: Content-->
-            
-
+            }
 
         </div>
-    </div>
+        <!-- Grid row -->
+
+    </section>
+    <!--Section: Content-->
 
 
+</div>
 }
+
+
+
+
+
 @section AboutCustomCSS{
 
     <link href="~/Content/slick.css" rel="stylesheet" />

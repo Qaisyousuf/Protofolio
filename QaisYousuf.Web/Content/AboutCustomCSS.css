@@ -324,7 +324,7 @@ nav .nav-item .nav-link {
     .CoutingImages img {
         position: absolute;
         top: 15%;
-        left: 26%;
+        left: 22%;
     }
 }
 
@@ -481,4 +481,18 @@ nav .nav-item .nav-link {
         font-size: 2rem !important;
         color: white !important;
     }
+}
+
+.collapse-content .fa.fa-heart:hover {
+    color: #f44336 !important;
+}
+
+.collapse-content .fa.fa-share-alt:hover {
+    color: #0d47a1 !important;
+}
+
+.card-wrapper .avatar img {
+    width: 100% !important;
+    background: none repeat scroll 0 0 #fff !important;
+    border: 6px solid #f0f9ff !important;
 }
