@@ -4,13 +4,6 @@ body {
     overflow-x: hidden;
     color: rebeccapurple;
 }
-/*@media(max-width:500px)
-{
-    body {
-        overflow-x: hidden;
-    }
-   
-}*/
 
 header {
     margin-top: 0px !important;
@@ -37,10 +30,9 @@ textarea {
 }
 
 .top-nav-collapse {
-    background-color: #fafeff !important;
-    -webkit-box-shadow: -1px 7px 15px -5px rgba(162,169,171,0.6) !important;
-    -moz-box-shadow: -1px 7px 15px -5px rgba(162,169,171,0.6) !important;
-    box-shadow: -1px 7px 15px -5px rgba(162,169,171,0.6) !important;
+    background-color: #348acb !important;
+    -webkit-box-shadow: 0px 6px 11px -10px #000000 !important;
+    box-shadow: 0px 6px 11px -10px #000000 !important;
 }
 
 
@@ -82,23 +74,48 @@ textarea {
 }
 
 .navbar.navbar-dark .navbar-nav .nav-item .nav-link {
-    color: #fff;
+    color: white;
     -webkit-transition: .35s;
     transition: .35s;
 }
 
 nav .nav-item .nav-link {
-    color: #545f7e !important;
+    color: white !important;
     font-size: 1.1rem;
-    font-weight: normal;
+    font-weight: bolder;
     font-family: 'Varela Round', sans-serif;
     -webkit-transition: .35s;
     transition: .35s;
 }
 
+@media(max-width:990px) {
+
+    .navbar.navbar-dark .navbar-nav .nav-item .nav-link {
+        color: #4380e0 !important;
+        -webkit-transition: .35s;
+        transition: .35s;
+    }
+
+    nav .nav-item .nav-link {
+        color: red !important;
+        font-size: 1.1rem;
+        font-weight: bolder;
+        font-family: 'Varela Round', sans-serif;
+        -webkit-transition: .35s;
+        transition: .35s;
+    }
+}
+
 .navbar-brand {
-    color: #29367d !important;
+    color: #fff !important;
     font-weight: bold !important;
+}
+
+@media(max-width:990px) {
+    .navbar-brand {
+        color: #4380e0 !important;
+        font-weight: bold !important;
+    }
 }
 
 @media (max-width:767px) and (min-width:200px) {
@@ -107,14 +124,14 @@ nav .nav-item .nav-link {
     }
 }
 
-
-
-
-
-
+.btn-info {
+    background-color: transparent !important;
+    border: 2px solid #17bde3 !important;
+    color: white;
+}
 
 .btn-primary {
-    background-color: #17bde3 !important;
+    background-color: #5caaf2 !important;
     color: white;
 }
 
@@ -123,6 +140,47 @@ nav .nav-item .nav-link {
     color: #17bde3 !important;
 }
 
+
+.display-5 {
+    color: white !important;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+@media (max-width: 976px) {
+    .display-5 {
+        font-size: 3rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 876px) {
+    .display-5 {
+        font-size: 3rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 776px) {
+    .display-5 {
+        font-size: 2.5rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-5 {
+        font-size: 2.5rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 376px) {
+    .display-5 {
+        font-size: 2rem !important;
+        color: white !important;
+    }
+}
 .display-4 {
     color: #169cba !important;
     font-weight: bold;
@@ -140,113 +198,6 @@ nav .nav-item .nav-link {
         font-size: 2rem;
     }
 }
-
-
-
-
-
-
-.footerwaves {
-    margin-top: -50px;
-}
-
-
-
-
-
-
-
-
-
-#One {
-    animation: test 10s infinite ease-in-out;
-    transform-origin: center;
-    transform-box: fill-box;
-}
-
-@keyframes test {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-#Tow {
-    animation: test 9s infinite ease-in-out;
-    transform-origin: center;
-    transform-box: fill-box;
-}
-
-@keyframes test {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-#Three {
-    animation: test 8s infinite ease-in-out;
-    transform-origin: center;
-    transform-box: fill-box;
-}
-
-@keyframes test {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-#Four {
-    animation: test 7s infinite ease-in-out;
-    transform-origin: center;
-    transform-box: fill-box;
-}
-
-@keyframes test1 {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-#Five {
-    padding: 10px;
-    animation: test1 6s infinite ease-in-out;
-    transform-origin: center;
-    
-    position: absolute;
-    top: 20%;
-}
-
-@keyframes test1 {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
-
-
-
-
-
 
 
 
@@ -327,12 +278,12 @@ nav .nav-item .nav-link {
 }
 .display-1 {
     font-size: 5.5rem !important;
-    color: #e1f5fe !important;
+    color: #fff !important;
 }
 @media (max-width: 376px) {
     .display-1 {
         font-size: 1.8rem !important;
-        color: #e1f5fe !important;
+        color: #fff !important;
     }
 }
 @media (max-width: 576px)
@@ -368,20 +319,72 @@ nav .nav-item .nav-link {
 
 .UIUXBackground
 {
-    margin-top:-20px;
-    background-image:url(Images/UIBackground.svg);
+   margin-top:-20px;
+    background-image:url(Images/UIUXBigBackground.svg);
     background-position:center center;
     background-size:cover;
-    height:100vh;
-    
-    background-attachment:fixed;
+    height:auto;
     margin-left:-15px;
     margin-right:-15px;
 }
+
+@media (max-width: 1920px) {
+
+    .UIUXBackground {
+        margin-top: -20px;
+        background-image: url(Images/UIUXXBigBackground.svg);
+        background-position: center center;
+        background-size: cover;
+        height: 737px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+@media (max-width: 1500px) {
+
+    .UIUXBackground {
+        margin-top: -20px;
+        background-image: url(Images/UIUXBigBackground.svg);
+        background-position: center center;
+        background-size: cover;
+        height: 615px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .UIUXBackground {
+        margin-top: -20px;
+        padding-top:30px;
+        background-image: url(Images/UIUXXMedumBackground.svg);
+        background-position: center center;
+        background-size: cover;
+        height: 860px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .UIUXBackground {
+        margin-top: -20px;
+        padding-top: 30px;
+        background-image: url(Images/UIUXXMedumBackground.svg);
+        background-position: center center;
+        background-size: cover;
+        height: 800px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
 .mainUIStepsBackground {
-    background-image: url(Images/CodeBannerBackground.svg);
-    background-attachment:fixed;
    
+    background-attachment:fixed;
+
     box-shadow: 0px 2px 21px -9px rgba(205,218,222,1);
     -webkit-box-shadow: 0px 2px 21px -9px rgba(205,218,222,1);
     -moz-box-shadow: 0px 2px 21px -9px rgba(205,218,222,1);
@@ -400,33 +403,75 @@ nav .nav-item .nav-link {
     top:100px;
 }
 
+
+
+@media (max-width: 400px) {
+    .ContentBackAnimation .Animation {
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+
+
+    .MainContent {
+        position: absolute;
+        left: 0px;
+        top: 20px;
+    }
+}
+
 .display-2 {
     color: #e1f5fe !important;
 }
 
 
 .UIMatterBackground {
-        background-image: url(Images/UIWavesBig.svg);
-        height: 860px;
+        background-image: url(Images/UXUXMatterBigBackground.svg);
+        height: 722px;
         background-repeat: no-repeat;
         margin-left: -15px;
         margin-right: -15px;
-        background-position:center top;
-        margin-bottom:-120px;
+        background-position:center;
+
+       
 
         
     }
 
-@media (max-width: 900px) {
+@media (max-width: 990px) {
     .UIMatterBackground {
-        background-image: url(Images/UIWavesSmallBack.svg);
-        height: 929px;
+        background-image: url(Images/UXUXMatterMedumBackground.svg);
         background-repeat: no-repeat;
         margin-left: -15px;
         margin-right: -15px;
-        background-position:center top;
+        background-position:center;
+        height:500px;
+        margin-bottom:40px;
         
         
+    }
+}
+@media (max-width: 767px) {
+    .UIMatterBackground {
+        padding-top:30px;
+        background-image: url(Images/UXUXMatterSmallBackground.svg);
+        background-repeat: no-repeat;
+        margin-left: -15px;
+        margin-right: -15px;
+        background-position: center;
+        height: 800px;
+        
+    }
+}
+@media (max-width: 400px) {
+    .UIMatterBackground {
+        padding-top: 30px;
+        background-image: url(Images/UXUXMatterXSBackground.svg);
+        background-repeat: no-repeat;
+        margin-left: -15px;
+        margin-right: -15px;
+        background-position: center;
+        height: 750px;
     }
 }
 .UIUXStepsBack
@@ -442,5 +487,66 @@ nav .nav-item .nav-link {
     .UIUXStepsBack {
         padding-top:0px;
         margin-bottom:0px;
+    }
+}
+
+
+FooterMainBackground {
+    background-image: url(Images/FooterMedumBackground.svg);
+    height: 795px;
+    margin-left: -15px;
+    margin-right: -15px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width: 1920px) {
+    .FooterMainBackground {
+        background-image: url(Images/FooterBigBackground.svg);
+        height: 652px;
+        width: auto;
+        background-position: center;
+        margin-top: 40px;
+        background-repeat: no-repeat;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-content: flex-end;
+        -ms-flex-line-pack: end;
+        align-content: flex-end;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1400px) {
+    .FooterMainBackground {
+        background-image: url(Images/FooterMedumBackground.svg);
+        height: 795px;
+        margin-left: -15px;
+        margin-right: -15px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .FooterMainBackground {
+        background-image: url(Images/FooterSmallBackground.svg);
+        height: 877px;
+        margin-left: -15px;
+        margin-right: -15px;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }

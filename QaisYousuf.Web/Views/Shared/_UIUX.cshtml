@@ -64,14 +64,6 @@
 </head>
 
 <body>
-    <!--Main Navigation-->
-    <!--Main Navigation-->
-
-
-
-
-
-
 
     <header>
 
@@ -91,106 +83,74 @@
 
     <div class="body-content">
         @RenderSection("UIUXCustomCSS", required: false)
-       
+
         @RenderBody()
-        
 
-    </div>
-    <footer>
+        <div class="FooterMainBackground">
+            <footer>
 
-        <div class="mt-0">
-
-            <div class="footerwaves mt-5">
-
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#169cba" fill-opacity="1" d="M0,128L48,138.7C96,149,192,171,288,165.3C384,160,480,128,576,138.7C672,149,768,203,864,186.7C960,171,1056,85,1152,58.7C1248,32,1344,64,1392,80L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-            </div>
-            <!--Section: Content-->
-
-            <div class="px-md-0 mx-md-0 pb-2 text-center text-white" style="background-color:#169cba;">
-                <div class="col-lg-7 col-md-6 col-sm-12 mx-0 font-weight-bold pb-2 text-lg-left text-md-center text-sm-center">
-                    <div class="display-3 text-uppercase font-weight-bold">ui to code</div>
-                    <h3>@Model.BaseContent</h3>
-                </div>
+                <div class="container">
 
 
-                <div class="container my-0 py-0 z-depth-0 text-white">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
 
-
-                    <!--Section: Content-->
-                    <section class="dark-grey-text text-center">
-
-
-
-                        <div class="row mx-3">
-                            <div class="col-md-5 px-4 mb-4">
-
-                                <div class="">
-                                    <div class="img-fluid">
-                                        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_KxADqK.json" background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                        <!-- Full Page Intro -->
+                        <div class="bg-transparent">
+                            <!-- Mask & flexbox options-->
+                            <div class="mask">
+                                <!-- Content -->
+                                <div class="container">
+                                    <!--Grid row-->
+                                    <div class="row align-items-center">
+                                        <!--Grid column-->
+                                        <div class="col-md-6 text-center text-lg-left">
+                                            <div class="display-5 text-uppercase font-weight-bold">ui to code</div>
+                                            <h3 class="text-white text-justify">@Model.BaseContent</h3>
+                                            <a href="@Model.ContactUrl" class="btn btn-info btn-rounded">@Model.Contact</a>
+                                        </div>
+                                        <!--Grid column-->
+                                        <!--Grid column-->
+                                        <div class="col-md-6">
+                                            <div class="view">
+                                                <lottie-player src=https://assets1.lottiefiles.com/packages/lf20_gzl797gs.json background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                                            </div>
+                                        </div>
+                                        <!--Grid column-->
                                     </div>
+                                    <!--Grid row-->
                                 </div>
-
+                                <!-- Content -->
                             </div>
-                            <div class="col-md-2 px-4 mb-0 mt-lg-5  mt-md-5 mt-sm-0 pt-lg-5 pt-md-5 pt-sm-0 text-white">
-
-                                <ul class="list-unstyled font-weight-bold mt-lg-5 mt-md-5 mt-sm-0">
-                                    <li>
-                                        <a class="text-white-50" href=@Model.HomeUrl>@Model.Home</a>
-                                    </li>
-                                    <li>
-                                        <a class="text-white-50" href=@Model.AboutUrl>@Model.About</a>
-                                    </li>
-                                    <li>
-                                        <a class="text-white-50" href=@Model.ContactUrl>@Model.Contact</a>
-                                    </li>
-                                    <li>
-                                        <a class="text-white-50" href=@Model.UIUX>@Model.UIUX</a>
-                                    </li>
-                                    <li>
-                                        <a class="text-white-50" href=@Model.CodeUrl>@Model.Code</a>
-                                    </li>
-                                    <li>
-                                        <a class="text-white-50" href=@Model.Support>@Model.Support</a>
-                                    </li>
-                                    <li>
-                                        <a class="text-white-50" href=@Model.ProfileUrl>@Model.Profile</a>
-                                    </li>
-                                </ul>
-
-
-                            </div>
-                            <div class="col-md-5 px-4 mb-4">
-
-                                <div class="view">
-                                    <img src="~/Content/Images/girl-sitiing-on-table-conducting-an-interview-by-oblik-studio.svg" class="img-fluid" alt="smaple image">
-                                </div>
-
-                            </div>
+                            <!-- Mask & flexbox options-->
                         </div>
-
-                    </section>
-                    <!--Section: Content-->
-
-
-                </div>
-
-                <section>
-                    <div class="footer-copyright text-center mt-0 mb-0">
-                        <p class="text-white-50 mb-1">© 2018 Copyright:@Model.SiteName</p>
-                        <p class="text-white-50 mb-1">Site Last Updated: @Model.SiteLastUpdate</p>
-                        <p class="text-white-50 mb-0">@Model.CopyrightFooter</p>
+                        <!-- Full Page Intro -->
 
                     </div>
-                </section>
+                    <!-- Main navigation -->
 
-            </div>
-            <!--Section: Content-->
+                    <div class="px-md-0 mx-md-0  mb-lg-2 mb-sm-5 text-white">
 
 
+                        <section>
+                            <div class="footer-copyright text-center mt-0 mb-0">
+                                <p class="text-white-50 mb-1">© 2018 Copyright:@Model.SiteName</p>
+                                <p class="text-white-50 mb-1">Site Last Updated: @Model.SiteLastUpdate</p>
+                                <p class="text-white-50 mb-0">@Model.CopyrightFooter</p>
+
+                            </div>
+                        </section>
+
+                    </div>
+                    <!--Section: Content-->
+
+
+                </div>
+
+
+            </footer>
         </div>
-
-
-    </footer>
+    </div>
+    
 
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/popper")
