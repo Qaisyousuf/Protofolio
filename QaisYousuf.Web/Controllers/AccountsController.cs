@@ -12,7 +12,7 @@ namespace QaisYousuf.Web.Controllers
     public class AccountsController : BaseController
     {
       
-        // GET: Accounts
+        
         public ActionResult Index()
         {
             return View();
@@ -26,12 +26,15 @@ namespace QaisYousuf.Web.Controllers
         }
 
         [HttpGet]
+        
+        [Route("Authentication")]
         public ActionResult Register()
         {
             return View();
         }
 
         [HttpPost]
+        [Route("Authentication")]
         public ActionResult Register(RegisterViewModel viewmodel)
         {
             if(!ModelState.IsValid)
@@ -39,7 +42,7 @@ namespace QaisYousuf.Web.Controllers
                 return View(viewmodel);
             }
 
-            bool registerSuccess = authservices.Register(viewmodel.Email, viewmodel
+            bool registerSuccess = Authservices.Register(viewmodel.Email, viewmodel
                 .UserName, viewmodel.Password, out int? userId);
 
             if(!registerSuccess)
@@ -52,12 +55,14 @@ namespace QaisYousuf.Web.Controllers
         }
 
         [HttpGet]
+        [Route("Authorization")]
         public ActionResult Login()
         {
             return View();
         }
 
         [HttpPost]
+        [Route("Authorization")]
         public ActionResult Login(LoginViewModel viewmodel)
         {
             if(!ModelState.IsValid)
@@ -65,8 +70,8 @@ namespace QaisYousuf.Web.Controllers
                 return View(viewmodel);
             }
 
-            var loginUser = authservices.Login(viewmodel.UserName, viewmodel.Password);
-            var userExists = uow.UserRepository.UserExists(loginUser.UserName);
+            var loginUser = Authservices.Login(viewmodel.UserName, viewmodel.Password);
+            var userExists = Uow.UserRepository.UserExists(loginUser.UserName);
             if(!userExists)
             {
                 ModelState.AddModelError("", "User Not Exists");

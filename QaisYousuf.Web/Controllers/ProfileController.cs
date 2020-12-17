@@ -13,7 +13,7 @@ namespace QaisYousuf.Web.Controllers
         [Route("Profile")]
         public ActionResult Index()
         {
-            var portfolio = uow.PortfolioBannerRepository.GetAll();
+            var portfolio = Uow.PortfolioBannerRepository.GetAll();
 
             List<PortfolioBannerViewModel> ViewModel = new List<PortfolioBannerViewModel>();
 
@@ -30,7 +30,7 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
-            var portfolioAbout = uow.PortfolioAboutRepository.GetAll();
+            var portfolioAbout = Uow.PortfolioAboutRepository.GetAll();
 
             List<PortfolioAboutViewModels> PortfolioViewModel = new List<PortfolioAboutViewModels>();
 
@@ -47,7 +47,7 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
-            var workExperience = uow.WorkExperienceRepository.GetAll();
+            var workExperience = Uow.WorkExperienceRepository.GetAll();
 
             List<WorkExperienceViewModel> ExperienceViewModel = new List<WorkExperienceViewModel>();
 
@@ -71,7 +71,7 @@ namespace QaisYousuf.Web.Controllers
                     JobSubDescription = item.JobSubDescription,
                 });
             }
-            var education = uow.EducationRepository.GetAll();
+            var education = Uow.EducationRepository.GetAll();
 
             List<EducationViewModel> EduViewModel = new List<EducationViewModel>();
 
@@ -86,7 +86,7 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
-            var onlineCertificate = uow.OnlineCertificationRepository.GetAll();
+            var onlineCertificate = Uow.OnlineCertificationRepository.GetAll();
 
             List<OnlineCertificateViewModel> Onlinecertificateviewmodel = new List<OnlineCertificateViewModel>();
 
@@ -106,7 +106,7 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
-            var projectProfile = uow.PortfolioProjectRepository.GetAll();
+            var projectProfile = Uow.PortfolioProjectRepository.GetAll();
 
             List<PortfolioProjectViewModel> ProjectViewModel = new List<PortfolioProjectViewModel>();
 
@@ -130,7 +130,7 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
-            var projectStatus = uow.ProjectStatusRepository.GetAll();
+            var projectStatus = Uow.ProjectStatusRepository.GetAll();
 
             List<ProjectStatusViewModel> ProjectStatus = new List<ProjectStatusViewModel>();
 
@@ -143,7 +143,7 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
-            var interest = uow.IntresetRepository.GetAll();
+            var interest = Uow.IntresetRepository.GetAll();
 
             List<InterestViewModel> InterestViewModelList = new List<InterestViewModel>();
 
@@ -198,8 +198,8 @@ namespace QaisYousuf.Web.Controllers
 
                 };
 
-                uow.ContactFormRepository.Add(contactForm);
-                uow.Commit();
+                Uow.ContactFormRepository.Add(contactForm);
+                Uow.Commit();
                 TempData["Message"] = $"{contactForm.FullName}";
                 return RedirectToAction(nameof(ThankYouForContact));
 

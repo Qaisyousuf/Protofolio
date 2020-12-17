@@ -13,7 +13,7 @@ namespace QaisYousuf.Web.Controllers
         [Route("ContactUs")]
         public ActionResult Index(string slug)
         {
-            var contactBanner = uow.ContactBannerRepository.GetAll();
+            var contactBanner = Uow.ContactBannerRepository.GetAll();
 
             List<ContactBannerViewModel> viewmodel = new List<ContactBannerViewModel>();
 
@@ -46,7 +46,7 @@ namespace QaisYousuf.Web.Controllers
         
         public ActionResult GetContactDetails(string slug)
         {
-            var contactDetails = uow.ContactDetialsRepository.GetAll();
+            var contactDetails = Uow.ContactDetialsRepository.GetAll();
 
             List<ContactDetailsViewModel> detailsViewModel = new List<ContactDetailsViewModel>();
 
@@ -87,7 +87,7 @@ namespace QaisYousuf.Web.Controllers
         [ChildActionOnly]
         public ActionResult GetContactMatter()
         {
-            var contactMatter = uow.ContactMatterRepository.GetAll();
+            var contactMatter = Uow.ContactMatterRepository.GetAll();
 
             List<ContactMattersViewModel> viewmodel = new List<ContactMattersViewModel>();
 
@@ -136,8 +136,8 @@ namespace QaisYousuf.Web.Controllers
 
                 };
 
-                uow.ContactFormRepository.Add(contactForm);
-                uow.Commit();
+                Uow.ContactFormRepository.Add(contactForm);
+                Uow.Commit();
                 TempData["Message"] = $"{contactForm.FullName}";
                 return RedirectToAction(nameof(ThankYou));
                 

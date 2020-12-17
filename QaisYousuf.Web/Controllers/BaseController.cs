@@ -13,24 +13,23 @@ namespace QaisYousuf.Web.Controllers
     public class BaseController : Controller
     {
         [Dependency]
-        public IUnitOfWork uow { get; set; }
+        public IUnitOfWork Uow { get; set; }
 
         [Dependency]
-        public IAuthenticationServices authservices { get; set; }
+        public IAuthenticationServices Authservices { get; set; }
 
         protected override void OnResultExecuting(ResultExecutingContext filterContext)
         {
-            ViewResult result = filterContext.Result as ViewResult;
 
-            if(result !=null)
+            if (filterContext.Result is ViewResult result)
             {
                 BaseViewModel baseViewModel = ViewData.Model as BaseViewModel;
 
-                if(baseViewModel !=null)
+                if (baseViewModel != null)
                 {
-                    var site = uow.Context.Settings.FirstOrDefault();
+                    var site = Uow.Context.Settings.FirstOrDefault();
 
-                    var siteSetting = uow.Context.Settings.FirstOrDefault(x => x.Id == site.Id);
+                    var siteSetting = Uow.Context.Settings.FirstOrDefault(x => x.Id == site.Id);
 
                     baseViewModel.SiteName = siteSetting.SiteName;
                     baseViewModel.SiteOwner = siteSetting.SiteOwner;
@@ -56,7 +55,7 @@ namespace QaisYousuf.Web.Controllers
                     baseViewModel.ProfileUrl = siteSetting.ProfileUrl;
                     baseViewModel.CopyrightFooter = siteSetting.CopyrightFooter;
                     baseViewModel.DesignBy = siteSetting.DesignBy;
-                   
+
                 }
             }
         }

@@ -150,6 +150,8 @@
     <Content Include="Content\Images\CodeDesignbigBackgrond.svg" />
     <Content Include="Content\Images\CodeDesignMedumBackgrond.svg" />
     <Content Include="Content\Images\CodeDesignSmallBackgrond.svg" />
+    <Content Include="Content\Images\ContactBigBackground.svg" />
+    <Content Include="Content\Images\ContactSmallBackground.svg" />
     <Content Include="Content\Images\DataCollectionBigBackground.svg" />
     <Content Include="Content\Images\DesignStepsBigBackground.svg" />
     <Content Include="Content\Images\EducationbigBackground.svg" />
@@ -168,6 +170,11 @@
     <Content Include="Content\Images\InterestMedumBackground.svg" />
     <Content Include="Content\Images\InterestSmallBackground.svg" />
     <Content Include="Content\Images\InterestXSmallBackground.svg" />
+    <Content Include="Content\Images\LoginBigBackground.svg" />
+    <Content Include="Content\Images\LoginMedumBackground.svg" />
+    <Content Include="Content\Images\LoginSmallBackground.svg" />
+    <Content Include="Content\Images\LoginXBigBackground.svg" />
+    <Content Include="Content\Images\LoginXSBackground.svg" />
     <Content Include="Content\Images\PlatformDesigBigBackgournd.svg" />
     <Content Include="Content\Images\PlatformDesigMedumBackgournd.svg" />
     <Content Include="Content\Images\PlatformDesigSmallBackgournd.svg" />
@@ -214,7 +221,8 @@
     <Content Include="Content\Images\UIStepBack.svg" />
     <Content Include="Content\Images\UIWavesBig.svg" />
     <Content Include="Content\Images\UIWavesSmallBack.svg" />
-    <Content Include="Content\UIUXCustomCSS.css" />
+    <Content Include="Content\UIUXCustomCSS - Copy.css" />
+    <Content Include="Content\AccountCustomCSS.css" />
     <Content Include="Content\CodeCustomCSS.css" />
     <Content Include="Content\ContactCustomCSS.css" />
     <Content Include="Content\AboutCustomCSS.css" />
@@ -236,7 +244,6 @@
     <Content Include="Content\Images\FinalLandingPage.svg" />
     <Content Include="Content\Images\girl-sitiing-on-table-conducting-an-interview-by-oblik-studio.svg" />
     <Content Include="Content\Images\HomeBackground.svg" />
-    <Content Include="Content\Images\Landing.svg" />
     <Content Include="Content\Images\MainGroup.svg" />
     <Content Include="Content\Images\process_rswj.svg" />
     <Content Include="Content\Images\ProfileBackground.svg" />
@@ -1015,7 +1022,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Accounts\Register.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Accounts\Login.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\PartialMenu.cshtml" />
     <Content Include="Views\Home\HomeBanner.cshtml" />
@@ -1053,6 +1059,9 @@
     <Content Include="Views\Profile\ThankYouForContact.cshtml" />
     <Content Include="Views\Profile\Portfolio.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Shared\_Authorization.cshtml" />
+    <Content Include="Views\Accounts\Login.cshtml" />
+    <Content Include="Views\Shared\Testing.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

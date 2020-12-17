@@ -14,7 +14,7 @@ namespace QaisYousuf.Web.Controllers
         [Route("Technologies")]
         public ActionResult Index()
         {
-            var codeBanner = uow.CodeBannerRepository.GetAll();
+            var codeBanner = Uow.CodeBannerRepository.GetAll();
 
             List<CodeBannerViewModel> viewmodel = new List<CodeBannerViewModel>();
 
@@ -31,7 +31,7 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
-            var programmingTools = uow.WebProgrammingToolsRepository.GetAll();
+            var programmingTools = Uow.WebProgrammingToolsRepository.GetAll();
 
             List<WebProgrammingToolsViewModel> WebProgrammingViewModel = new List<WebProgrammingToolsViewModel>();
 
@@ -47,7 +47,7 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
-            var uiUXTools = uow.UIUXToolsRepository.GetAll();
+            var uiUXTools = Uow.UIUXToolsRepository.GetAll();
 
             List<UIUXToolsViewModel> UIUXToolsViewModel = new List<UIUXToolsViewModel>();
 
@@ -64,7 +64,7 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
-            var desingCode = uow.DesignCodeSectionRepository.GetAll();
+            var desingCode = Uow.DesignCodeSectionRepository.GetAll();
 
             List<DesignCodeViewModel> DesignCodeViewModel = new List<DesignCodeViewModel>();
 

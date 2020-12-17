@@ -19,7 +19,7 @@ namespace QaisYousuf.Web.Controllers
 
             if (string.IsNullOrEmpty(slug))
                 slug = "home";
-            if (!uow.HomePageRepository.SlugExists(slug))
+            if (!Uow.HomePageRepository.SlugExists(slug))
             {
                 TempData["PageNotFound"] = "Page Not Found";
                 return RedirectToAction(nameof(Index), new { slug = "" });
@@ -28,7 +28,7 @@ namespace QaisYousuf.Web.Controllers
             PageViewModel viewmodel;
             HomePage page;
 
-            page = uow.HomePageRepository.GetHomePageBySlug(slug);
+            page = Uow.HomePageRepository.GetHomePageBySlug(slug);
 
 
             ViewBag.PageTitle = page.Title;
@@ -61,7 +61,7 @@ namespace QaisYousuf.Web.Controllers
         [ChildActionOnly]
         public ActionResult PartialMenu()
         {
-            var context = uow.Context;
+            var context = Uow.Context;
             var menus = context.Menus;
 
             foreach (var menu in menus)
@@ -82,7 +82,7 @@ namespace QaisYousuf.Web.Controllers
         {
             int id = (int)TempData["PageBanner"];
 
-            var homeBanner = uow.HomeBannerRepository.GetById(id);
+            var homeBanner = Uow.HomeBannerRepository.GetById(id);
 
             HomeBannerViewModel viewmodel = new HomeBannerViewModel
             {
@@ -103,7 +103,7 @@ namespace QaisYousuf.Web.Controllers
         {
             int id = (int)TempData["WorkQuality"];
 
-            var workQuality = uow.WorkQualitySectionRepository.GetById(id);
+            var workQuality = Uow.WorkQualitySectionRepository.GetById(id);
 
             WorkQualitySectionViewModel viewmodel = new WorkQualitySectionViewModel
             {
@@ -124,7 +124,7 @@ namespace QaisYousuf.Web.Controllers
         [ChildActionOnly]
         public ActionResult DataCollection()
         {
-            var dataCollection = uow.DataCollectionRepository.GetAll();
+            var dataCollection = Uow.DataCollectionRepository.GetAll();
 
             List<DataCollectionViewModel> viewmodel = new List<DataCollectionViewModel>();
 
@@ -154,7 +154,7 @@ namespace QaisYousuf.Web.Controllers
         {
 
 
-            var platformDesign = uow.PlatformDesignRepository.GetAll();
+            var platformDesign = Uow.PlatformDesignRepository.GetAll();
 
             List<PlatformDesignViewModel> viewmodel = new List<PlatformDesignViewModel>();
 
@@ -186,7 +186,7 @@ namespace QaisYousuf.Web.Controllers
         {
             
 
-            var project = uow.ProjectCountingRepository.GetAll();
+            var project = Uow.ProjectCountingRepository.GetAll();
 
             List<ProjectCountingViewModel> viewmodel = new List<ProjectCountingViewModel>();
 
@@ -217,7 +217,7 @@ namespace QaisYousuf.Web.Controllers
         [ChildActionOnly]
         public ActionResult DesignSteps()
         {
-            var desing = uow.DesignStepsRepository.GetAll();
+            var desing = Uow.DesignStepsRepository.GetAll();
 
 
             List<DesignStepsViewModel> viewmodel = new List<DesignStepsViewModel>();

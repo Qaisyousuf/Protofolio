@@ -12,7 +12,7 @@ namespace QaisYousuf.Web.Controllers
         [Route("UIUX")]
         public ActionResult Index()
         {
-            var uiUXPage = uow.UIBannerRepository.GetAll();
+            var uiUXPage = Uow.UIBannerRepository.GetAll();
 
             List<UIBannerViewModel> UIUXBannerViewModle = new List<UIBannerViewModel>();
 
@@ -30,7 +30,7 @@ namespace QaisYousuf.Web.Controllers
             }
 
 
-            var uiProcess = uow.UIProcessRepository.GetAll();
+            var uiProcess = Uow.UIProcessRepository.GetAll();
 
             List<UIProcessViewModel> uIprocessViewModel = new List<UIProcessViewModel>();
 
@@ -46,7 +46,7 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
-            var UIMatter = uow.UIUXMatterSectionRepository.GetAll();
+            var UIMatter = Uow.UIUXMatterSectionRepository.GetAll();
 
             List<UIUXMatterViewModel> UIMatterViewModel = new List<UIUXMatterViewModel>();
 
@@ -61,7 +61,7 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
-            var UiSteps = uow.UIUXStepsRepository.GetAll();
+            var UiSteps = Uow.UIUXStepsRepository.GetAll();
 
             List<UIStepsViewModel> UIStepsViewModel = new List<UIStepsViewModel>();
 

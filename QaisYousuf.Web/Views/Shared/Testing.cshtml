@@ -1,6 +1,5 @@
-﻿@model QaisYousuf.ViewModels.BaseViewModel
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="cache-control" content="max-age=0" />
@@ -8,17 +7,20 @@
     <meta http-equiv="expires" content="0" />
     <meta http-equiv="expires" content="Tue, 01 Jan 1990 12:00:00 GMT" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - @Model.BaseTitle</title>
+   
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+    <link href="~/Content/slick.css" rel="stylesheet" />
+    <link href="~/Content/slick-theme.css" rel="stylesheet" />
+
+
     @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/HomeCustomCSS.css")
+    @Styles.Render("~/Content/AboutCustomCSS.css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
+
     <script src="~/Scripts/node_modules/lottie-player/dist/lottie-player.js"></script>
-
-
-
 
     <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
 
@@ -62,7 +64,7 @@
     <!--Main Navigation-->
     <!--Main Navigation-->
 
-   
+
 
 
 
@@ -84,17 +86,13 @@
     </header>
 
 
-    <div class="body-content container-fluid">
-        @RenderSection("HomeCustomCSS", required: true)
-        @Html.Action("HomeBanner", "Home")
+    <div class="body-content">
+
+
         @RenderBody()
-        @Html.Action("DataCollection", "Home")
-        @Html.Action("WorkQuality", "Home")
-        @Html.Action("PlatformDesign", "Home")
-        @Html.Action("ProjectCounting", "Home")
-        @Html.Action("DesignSteps", "Home")
+        @RenderSection("AccountCustomCSS", required: false)
         <div class="FooterMainBackground">
-            <footer>
+            @*<footer>
 
                 <div class="container">
 
@@ -154,11 +152,10 @@
                 </div>
 
 
-            </footer>
+            </footer>*@
         </div>
-
     </div>
-    
+
 
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/popper")
@@ -167,5 +164,6 @@
     @RenderSection("scripts", required: false)
 
 
+
 </body>
-</html>
+

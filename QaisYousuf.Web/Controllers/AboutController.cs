@@ -14,7 +14,7 @@ namespace QaisYousuf.Web.Controllers
         public ActionResult Index(string slug)
         {
  
-            var aboutPage = uow.AboutPageRepository.GetAll();
+            var aboutPage = Uow.AboutPageRepository.GetAll();
 
             
             List<AboutPageViewModel> viewmodel = new List<AboutPageViewModel>();
@@ -54,7 +54,7 @@ namespace QaisYousuf.Web.Controllers
         public ActionResult GetAboutPageBanner()
         {
             
-            var aboutpage = uow.AboutPageBannerRepository.GetAll();
+            var aboutpage = Uow.AboutPageBannerRepository.GetAll();
 
             List<AboutBannerViewModel> viewmodel = new List<AboutBannerViewModel>();
 
@@ -82,7 +82,7 @@ namespace QaisYousuf.Web.Controllers
         [ChildActionOnly]
         public ActionResult StartProgram()
         {
-            var startUp = uow.StartUpProgramRepository.GetAll();
+            var startUp = Uow.StartUpProgramRepository.GetAll();
 
             List<StartUpProgramViewModel> viewmodel = new List<StartUpProgramViewModel>();
 
@@ -111,7 +111,7 @@ namespace QaisYousuf.Web.Controllers
         [ChildActionOnly]
         public ActionResult StartUpProcess()
         {
-            var startUpProcess = uow.StartUpProcessRepository.GetAll();
+            var startUpProcess = Uow.StartUpProcessRepository.GetAll();
 
             List<StartUpProcessViewModel> viewmodel = new List<StartUpProcessViewModel>();
 
@@ -138,7 +138,7 @@ namespace QaisYousuf.Web.Controllers
         [ChildActionOnly]
         public ActionResult GetMeetOurTeam()
         {
-            var meetourTeam = uow.MeetOurTeamRepository.GetAll();
+            var meetourTeam = Uow.MeetOurTeamRepository.GetAll();
 
             List<MeetOurTeamViewModel> viewmodel = new List<MeetOurTeamViewModel>();
 
@@ -159,7 +159,7 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
-            var socialMedia = uow.TeamSocialMediaRepository.GetAll();
+            var socialMedia = Uow.TeamSocialMediaRepository.GetAll();
 
             List<TeamSocialMediaViewModel> socialmediaViewModel = new List<TeamSocialMediaViewModel>();
 

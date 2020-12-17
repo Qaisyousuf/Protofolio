@@ -1,12 +1,9 @@
 ﻿
 body {
-   
     font-family: 'Varela Round', sans-serif;
     overflow-x: hidden;
-    color:rebeccapurple;
-   
+    color: rebeccapurple;
 }
-
 
 header {
     margin-top: 0px !important;
@@ -121,12 +118,12 @@ nav .nav-item .nav-link {
     }
 }
 
-
 @media (max-width:767px) and (min-width:200px) {
     #BannerContent {
         margin-top: 50px;
     }
 }
+
 .btn-info {
     background-color: transparent !important;
     border: 2px solid #17bde3 !important;
@@ -143,41 +140,23 @@ nav .nav-item .nav-link {
     color: #17bde3 !important;
 }
 
-.display-4 {
-    color: #169cba !important;
-    font-weight: bold;
-    font-size:2.5rem;
-}
-
-@media (max-width:800px) and (min-width:200px) {
-    .display-3 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width:800px) and (min-width:200px) {
-    .display-4 {
-        font-size: 2rem;
-    }
-}
-
 
 .display-5 {
     color: white !important;
     font-weight: bold;
-    font-size: 2.8rem;
+    font-size: 3.5rem;
 }
 
 @media (max-width: 976px) {
     .display-5 {
-        font-size: 2.8rem !important;
+        font-size: 3rem !important;
         color: white !important;
     }
 }
 
 @media (max-width: 876px) {
     .display-5 {
-        font-size: 2.4rem !important;
+        font-size: 3rem !important;
         color: white !important;
     }
 }
@@ -202,212 +181,93 @@ nav .nav-item .nav-link {
         color: white !important;
     }
 }
-
-
-.ContactBackground {
-    background-image: url('Images/ContactBigBackground.svg');
-    background-size: cover;
-    background-position:center;
-    height: 646px;
-    
-    margin-left: -15px;
-    margin-right: -15px;
-   
-   
+.display-4 {
+    color: #169cba !important;
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 
-
-@media (max-width: 767px) {
-
-    .ContactBackground {
-        background-image: url('Images/ContactBigBackground.svg');
-        background-size: cover;
-        background-position: center;
-        height: 962px;
-        padding-top: 60px;
-        margin-left: -15px;
-        margin-right: -15px;
-    }
-}
-@media (max-width: 567px) {
-
-    .ContactBackground {
-        background-image: url('Images/ContactSmallBackground.svg');
-        background-size: cover;
-        background-position: center;
-        height: 900px;
-        padding-top: 60px;
-        margin-left: -15px;
-        margin-right: -15px;
-    }
-}
-@media (max-width: 467px) {
-
-    .ContactBackground {
-        background-image: url('Images/ContactSmallBackground.svg');
-        background-size: cover;
-        background-position: center;
-        height: 750px;
-        padding-top: 60px;
-        margin-left: -15px;
-        margin-right: -15px;
+@media (max-width:800px) and (min-width:200px) {
+    .display-3 {
+        font-size: 2rem;
     }
 }
 
-#ContactBannerVedio main {
-    opacity: 0.2;
-    position: absolute;
-    top: 29%;
-    right: 20%;
-}
-
-.StartUpprocessBackground {
-    background-color: #74d5de;
-    margin-left: -15px;
-    margin-right: -15px;
-    color: white;
-    margin-top:-100px;
-}
-.svgBackground
-{
-    margin-left:-15px;
-    margin-right:-15px;
-    margin-top:-50px;
-    margin-bottom:-100px;
-
-}
-.svgBackgroundButtom {
-    margin-left: -15px;
-    margin-right: -15px;
-    margin-top: -50px;
-    margin-bottom:-50px;
-
+@media (max-width:800px) and (min-width:200px) {
+    .display-4 {
+        font-size: 2rem;
+    }
 }
 
 
-
-.ContactFormBackground {
-    position:relative;
-    top: 0%;
-    padding-bottom: 50px;
-    left: -15px;
-    margin: 0px;
-    padding: 0px;
-    height: auto;
-    width: auto;
+.blue-gradient {
+    background: -moz-linear-gradient(45deg, rgba(22,156,186,1) 0%, rgba(26,114,186,1) 100%) !important; /* ff3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(22,156,186,1)), color-stop(100%, rgba(26,114,186,1))) !important; /* safari4+,chrome */
+    background: -webkit-linear-gradient(45deg, rgba(22,156,186,1) 0%, rgba(26,114,186,1) 100%) !important; /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(45deg, rgba(22,156,186,1) 0%, rgba(26,114,186,1) 100%) !important; /* opera 11.10+ */
+    background: -ms-linear-gradient(45deg, rgba(22,156,186,1) 0%, rgba(26,114,186,1) 100%) !important; /* ie10+ */
+    background: linear-gradient(45deg, rgba(22,156,186,1) 0%, rgba(26,114,186,1) 100%) !important; /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1A72BA', endColorstr='#169cba',GradientType=1 ) !important; /* ie6-9 */
 }
-.ContactSVGBackground svg {
-    position: absolute;
-    top: auto;
-    left: auto;
-    
-}
-.MainContentText
-{
-    position:absolute;
-    top:-20%;
-    left:32%;
-    color:white !important;
+.btn-rounded {
+    border-radius: 0.3rem !important;
 }
 
-.ProfileBackImage svg
-{
-    position:relative;
-    top:0%;
-    left:0%;
-    
-}
-.profileImageForBackground img{
-    position: absolute;
-    top: 10%;
-    left: 30%;
-}
-.view-cascade
-{
-    background-image:url('Images/Waihou 1.svg');
-    background-position:center center;
-    background-attachment:fixed;
-    
-}
-
-.card card-cascade z-depth-1 {
-    -webkit-box-shadow: 0px 0px 27px -5px rgba(242,243,255,1) !important;
-    -moz-box-shadow: 0px 0px 27px -5px rgba(242,243,255,1) !important;
-    box-shadow: 0px 0px 27px -5px rgba(242,243,255,1) !important;
-}
-
-.ViewMap lottie-player {
-    position: relative;
-    top: 0%;
-    left: 0%;
-}
-.MapButton button {
-    position: absolute;
-    top: 30%;
-    left: 30%;
-}
-.btn-rounded 
-{
-    border-radius:0.3rem !important;
-}
-
-
-.FooterMainBackground {
-    background-image: url(Images/FooterMedumBackground.svg);
-    height: 795px;
-    margin-left: -15px;
-    margin-right: -15px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
 
 @media (max-width: 1920px) {
-    .FooterMainBackground {
-        background-image: url(Images/FooterBigBackground.svg);
-        height: 652px;
-        width: auto;
+    .LoginMainBackground {
+        background-image: url(Images/LoginXBigBackground.svg);
+        background-size: cover;
         background-position: center;
-        margin-top: 40px;
-        background-repeat: no-repeat;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-align-content: flex-end;
-        -ms-flex-line-pack: end;
-        align-content: flex-end;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
+        height: 1024px;
+        padding-top: 220px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+@media (max-width: 1500px) {
+    .LoginMainBackground {
+        background-image: url(Images/LoginBigBackground.svg);
+        background-size: cover;
+        background-position: center;
+        height: 573px;
+        padding-top: 120px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+@media (max-width: 990px) {
+    .LoginMainBackground {
+        background-image: url(Images/LoginMedumBackground.svg);
+        background-size: cover;
+        background-position: center;
+        height: 1177px;
+        padding-top: 120px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+@media (max-width: 700px) {
+    .LoginMainBackground {
+        background-image: url(Images/LoginSmallBackground.svg);
+        background-size: cover;
+        background-position: center;
+        height: 1045px;
+        padding-top: 120px;
+        margin-left: -15px;
+        margin-right: -15px;
     }
 }
 
-@media (max-width: 1400px) {
-    .FooterMainBackground {
-        background-image: url(Images/FooterMedumBackground.svg);
-        height: 795px;
+@media (max-width: 400px) {
+    .LoginMainBackground {
+        background-image: url(Images/LoginXSBackground.svg);
+        background-size: cover;
+        background-position: center;
+        height: 933px;
+        padding-top: 120px;
         margin-left: -15px;
         margin-right: -15px;
-        background-repeat: no-repeat;
-        background-position: center;
     }
 }
 
-@media (max-width: 767px) {
-    .FooterMainBackground {
-        background-image: url(Images/FooterSmallBackground.svg);
-        height: 877px;
-        margin-left: -15px;
-        margin-right: -15px;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-}
