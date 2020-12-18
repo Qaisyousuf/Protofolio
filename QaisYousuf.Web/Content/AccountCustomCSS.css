@@ -271,3 +271,28 @@ nav .nav-item .nav-link {
     }
 }
 
+@media (max-width: 1920px) {
+    .RegisterMainBackground {
+        background-image: url(Images/RegisterXBigBackground.svg);
+        background-size: cover;
+        background-position: center;
+        height: 1024px;
+        padding-top: 220px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .RegisterMainBackground {
+        background-image: url(Images/RegisterBigBackground.svg);
+        background-size: cover;
+        background-position: center;
+        height: 849px;
+        padding-top: 120px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+

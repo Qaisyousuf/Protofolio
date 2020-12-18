@@ -24,7 +24,7 @@ namespace QaisYousuf.ViewModels
         [Required]
         [Compare("Password",ErrorMessage ="Confirm password not match")]
         [DataType(DataType.Password)]
-        [Display(Name ="Confirm Password")]
+        [Display(Name ="Confirm")]
         public string ConfirmPassword { get; set; }
               
     }

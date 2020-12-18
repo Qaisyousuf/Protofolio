@@ -186,6 +186,8 @@
     <Content Include="Content\Images\PortfolioProjectBack.svg" />
     <Content Include="Content\Images\QualityAssurnceBigBackground.svg" />
     <Content Include="Content\Images\QualitySmallBackground.svg" />
+    <Content Include="Content\Images\RegisterBigBackground.svg" />
+    <Content Include="Content\Images\RegisterXBigBackground.svg" />
     <Content Include="Content\Images\StartUPProcessBigBackground.svg" />
     <Content Include="Content\Images\StartUPProcessMedumBackground.svg" />
     <Content Include="Content\Images\StartUPProcessSmallBackground.svg" />

@@ -71,10 +71,11 @@ namespace QaisYousuf.Web.Controllers
             }
 
             var loginUser = Authservices.Login(viewmodel.UserName, viewmodel.Password);
-            var userExists = Uow.UserRepository.UserExists(loginUser.UserName);
-            if(!userExists)
+           
+            if(loginUser==null)
             {
                 ModelState.AddModelError("", "User Not Exists");
+                return View(viewmodel);
             }
 
             CustomPricipalSerialize serialize = new CustomPricipalSerialize

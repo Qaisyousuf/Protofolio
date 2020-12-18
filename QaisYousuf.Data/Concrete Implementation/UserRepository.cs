@@ -47,7 +47,7 @@ namespace QaisYousuf.Data.Concrete_Implementation
 
         public UserModel GetUserWithRoles(string username)
         {
-            var user = _context.Users.Include(u => u.Roles).SingleOrDefault();
+            var user = _context.Users.Include(u => u.Roles).FirstOrDefault();
 
             UserModel currentUser = new UserModel
             {

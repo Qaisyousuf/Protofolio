@@ -86,6 +86,7 @@
     <Compile Include="EducationViewModel.cs" />
     <Compile Include="HomeBannerViewModel.cs" />
     <Compile Include="InsertUsersViewModel.cs" />
+    <Compile Include="InsertViewModel.cs" />
     <Compile Include="InterestViewModel.cs" />
     <Compile Include="ListOfAboutPage.cs" />
     <Compile Include="ListOfCodePages.cs" />
