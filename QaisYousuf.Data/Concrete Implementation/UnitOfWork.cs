@@ -97,6 +97,8 @@ namespace QaisYousuf.Data.Concrete_Implementation
 
         public IRoleRepository RoleRepository => new RoleRepository(Context);
 
+        public IAdminDashboardRepository AdminDashboardRepository => new AdminDashboardRepository(Context);
+
         public UnitOfWork()
         {
             Context = new UIContext();

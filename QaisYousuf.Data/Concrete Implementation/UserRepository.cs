@@ -20,7 +20,7 @@ namespace QaisYousuf.Data.Concrete_Implementation
 
         public void AddUserToRoles(int? userId, int[] roleIds,UIContext context)
         {
-            var user = context.Users.Where(x => x.Id == userId).SingleOrDefault();
+            var user = context.Users.Where(x => x.Id == userId).FirstOrDefault();
 
             var rolesFromdb = GetRolesById(roleIds);
 
@@ -32,7 +32,7 @@ namespace QaisYousuf.Data.Concrete_Implementation
 
         public string GetPassword(string username)
         {
-            return _context.Users.Where(x => x.UserName == username).Select(x => x.PasswordHash).SingleOrDefault();
+            return _context.Users.Where(x => x.UserName == username).Select(x => x.PasswordHash).FirstOrDefault();
         }
 
         public IEnumerable<RoleModel> GetRoles()
@@ -47,7 +47,7 @@ namespace QaisYousuf.Data.Concrete_Implementation
 
         public UserModel GetUserWithRoles(string username)
         {
-            var user = _context.Users.Include(u => u.Roles).FirstOrDefault();
+            UserModel user = _context.Users.Include("Roles").Where(x => x.UserName == username).SingleOrDefault();
 
             UserModel currentUser = new UserModel
             {

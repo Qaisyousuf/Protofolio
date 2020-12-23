@@ -1,0 +1,239 @@
+﻿@model List<QaisYousuf.ViewModels.AdminDashboardViewModel>
+@{
+    ViewBag.Title = "Admin Panel";
+    Layout = "~/Areas/UIToCode/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+@if (Model != null)
+{
+
+    foreach (var item in Model)
+    {
+<div class="DashboardMainBackground">
+    <secion>
+
+        <!-- Full Page Intro -->
+        <div class="">
+            <!-- Mask & flexbox options-->
+            <div class="mask">
+                <!-- Content -->
+                <div class="container h-100">
+                    <!--Grid row-->
+                    <div class="row align-items-center h-100">
+                        <!--Grid column-->
+                        <div class="col-md-7">
+                            <div class="display-5 font-weight-bold">@item.Title</div>
+                            <h4 class="mb-2 text-white font-weight-bold">@item.SubTitle</h4>
+                            <p class="mb-4 text-white">@item.Content</p>
+                            <div class="chip btn-primary">
+                                Login Date: @item.LoginDateTime
+                                <i class="close fas fa-times"></i>
+                            </div>
+                            <div class="chip btn-primary ">
+                                Authenticated user: @item.AuthenticatedUser
+                                <i class="close fas fa-times"></i>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-md-5">
+                            <div class="img-fluid">
+                                <lottie-player src=@item.LottiAnimationUrl background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></lottie-player>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </div>
+                <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+        </div>
+        <!-- Full Page Intro -->
+
+    </secion>
+</div>
+        
+    }
+
+    <!-- Main navigation -->
+}
+
+<div class="container my-5 z-depth-1">
+
+
+    <!--Section: Content-->
+    <section class="dark-grey-text">
+
+        <div class="row pr-lg-5">
+            <div class="col-md-7 mb-4">
+
+                <div class="img-fluid">
+                    <img src="https://mdbootstrap.com/img/illustrations/graphics(4).png" class="img-fluid" alt="smaple image">
+                </div>
+
+            </div>
+            <div class="col-md-5 d-flex align-items-center">
+                <div>
+
+                    <h3 class="font-weight-bold mb-4">Material Design Blocks</h3>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adip elit. Maiores deleniti explicabo voluptatem quisquam nulla asperiores aspernatur aperiam voluptate et consectetur minima delectus, fugiat eum soluta blanditiis adipisci, velit dolore magnam.</p>
+
+                    <button type="button" class="btn btn-orange btn-rounded mx-0">Download</button>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--Section: Content-->
+
+
+</div>
+
+<div class="container my-5 py">
+
+
+    <!--Section: Block Content-->
+    <section>
+
+        <div class="card indigo">
+            <div class="card-body">
+
+                <p class="h5 white-text pb-4 mb-3"><i class="fas fa-chart-pie px-2"></i>Sales Chart</p>
+
+                <canvas id="lineChart1" class="mb-4" height="100"></canvas>
+
+            </div>
+
+            <div class="card-body white">
+
+                <!--Grid row-->
+                <div class="row text-center text-muted my-2">
+
+                    <!--Grid column-->
+                    <div class="col-md-4 mb-4 mb-md-0">
+
+                        <span class="min-chart mt-0 mb-3" id="chart-pageviews" data-percent="86">
+                            <span class="percent"></span>
+                        </span>
+                        <p class="small mb-md-0">Mail-Orders</p>
+
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-4 mb-4 mb-md-0">
+
+                        <span class="min-chart mt-0 mb-3" id="chart-sales" data-percent="54">
+                            <span class="percent"></span>
+                        </span>
+                        <p class="small mb-md-0">Online</p>
+
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-4 mb-0">
+
+                        <span class="min-chart mt-0 mb-3" id="chart-downloads" data-percent="72">
+                            <span class="percent"></span>
+                        </span>
+                        <p class="small mb-0">In-Store</p>
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+            </div>
+        </div>
+
+
+    </section>
+    <!--Section: Block Content-->
+
+
+</div>
+
+@section scripts{
+
+    <script src="~/Scripts/node_modules/lottie-player/dist/lottie-player.js"></script>
+    <script>
+        //line
+        var ctxL = document.getElementById("lineChart1").getContext('2d');
+        var myLineChart = new Chart(ctxL, {
+            type: 'line',
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October"],
+                datasets: [{
+                    pointBackgroundColor: '#fff',
+                    backgroundColor: 'transparent',
+                    borderColor: 'rgba(255, 255, 255)',
+                    data: [2500, 2550, 5000, 3100, 7000, 5500, 4950, 16000, 10500, 8000],
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                            color: "transparent",
+                            zeroLineColor: "transparent"
+                        },
+                        ticks: {
+                            fontColor: "#fff",
+                        },
+                    }],
+                    yAxes: [{
+                        display: true,
+                        gridLines: {
+                            display: true,
+                            drawBorder: false,
+                            color: "rgba(255,255,255,.25)",
+                            zeroLineColor: "rgba(255,255,255,.25)"
+                        },
+                        ticks: {
+                            fontColor: "#fff",
+                            beginAtZero: true,
+                            stepSize: 5000
+                        },
+                    }],
+                }
+            }
+        });
+
+        // Minimalist charts
+        $(function () {
+            $('.min-chart#chart-pageviews').easyPieChart({
+                barColor: "#3059B0",
+                onStep: function (from, to, percent) {
+                    $(this.el).find('.percent').text(Math.round(percent));
+                }
+            });
+            $('.min-chart#chart-downloads').easyPieChart({
+                barColor: "#3059B0",
+                onStep: function (from, to, percent) {
+                    $(this.el).find('.percent').text(Math.round(percent));
+                }
+            });
+            $('.min-chart#chart-sales').easyPieChart({
+                barColor: "#3059B0",
+                onStep: function (from, to, percent) {
+                    $(this.el).find('.percent').text(Math.round(percent));
+                }
+            });
+        });
+    </script>
+
+
+}
+
+@section AdminPanelCustomCSS
+{
+    @Styles.Render("~/Content/AdminPanelCustomCSS.css")
+}
+

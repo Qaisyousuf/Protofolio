@@ -8,11 +8,13 @@ using QaisYousuf.ViewModels;
 
 namespace QaisYousuf.Web.Controllers
 {
+
     public class ContactController : BaseController
     {
         [Route("ContactUs")]
         public ActionResult Index(string slug)
         {
+            
             var contactBanner = Uow.ContactBannerRepository.GetAll();
 
             List<ContactBannerViewModel> viewmodel = new List<ContactBannerViewModel>();

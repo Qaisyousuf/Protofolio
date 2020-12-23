@@ -5,15 +5,20 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using QaisYousuf.Models;
+using QaisYousuf.Web.Infrastructure;
 
 namespace QaisYousuf.Web.Controllers
 {
+    
+    
     public class AboutController : BaseController
     {
         [Route("About")]
+        
         public ActionResult Index(string slug)
         {
- 
+           
+            
             var aboutPage = Uow.AboutPageRepository.GetAll();
 
             

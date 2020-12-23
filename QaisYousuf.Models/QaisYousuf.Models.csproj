@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="AboutPage.cs" />
     <Compile Include="AboutPageBanner.cs" />
+    <Compile Include="AdminDashboard.cs" />
     <Compile Include="CodeBanner.cs" />
     <Compile Include="CodePage.cs" />
     <Compile Include="ContactBanner.cs" />

@@ -1,4 +1,4 @@
-﻿@model QaisYousuf.ViewModels.BaseViewModel
+﻿
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,11 +9,11 @@
     <meta http-equiv="expires" content="Tue, 01 Jan 1990 12:00:00 GMT" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>@ViewBag.Title - @Model.BaseTitle</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 
-   
+    <link href="~/Content/slick.css" rel="stylesheet" />
+    <link href="~/Content/slick-theme.css" rel="stylesheet" />
 
 
     @Styles.Render("~/Content/css")
@@ -68,14 +68,6 @@
 </head>
 
 <body>
-    <!--Main Navigation-->
-    <!--Main Navigation-->
-
-
-
-
-
-
 
     <header>
 
@@ -94,75 +86,11 @@
 
 
     <div class="body-content">
-        @RenderSection("AboutCustomCSS", required: false)
-        @Html.Action("GetAboutPageBanner", "About")
+        @RenderSection("CustomError", required: false)
+
         @RenderBody()
-        @Html.Action("StartUpProcess", "About")
-        @Html.Action("StartProgram", "About")
-        @Html.Action("GetMeetOurTeam", "About")
-        <div class="FooterMainBackground">
-            <footer>
 
-                <div class="container">
-
-
-                    <div class="col-md-12 col-lg-12 col-sm-12">
-
-                        <!-- Full Page Intro -->
-                        <div class="bg-transparent">
-                            <!-- Mask & flexbox options-->
-                            <div class="mask">
-                                <!-- Content -->
-                                <div class="container">
-                                    <!--Grid row-->
-                                    <div class="row align-items-center">
-                                        <!--Grid column-->
-                                        <div class="col-md-6 text-center text-lg-left">
-                                            <div class="display-5 text-uppercase font-weight-bold">ui to code</div>
-                                            <h3 class="text-white text-justify">@Model.BaseContent</h3>
-                                            <a href="@Model.ContactUrl" class="btn btn-info btn-rounded">@Model.Contact</a>
-                                        </div>
-                                        <!--Grid column-->
-                                        <!--Grid column-->
-                                        <div class="col-md-6">
-                                            <div class="view">
-                                                <lottie-player src=https://assets1.lottiefiles.com/packages/lf20_gzl797gs.json background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
-                                            </div>
-                                        </div>
-                                        <!--Grid column-->
-                                    </div>
-                                    <!--Grid row-->
-                                </div>
-                                <!-- Content -->
-                            </div>
-                            <!-- Mask & flexbox options-->
-                        </div>
-                        <!-- Full Page Intro -->
-
-                    </div>
-                    <!-- Main navigation -->
-
-                    <div class="px-md-0 mx-md-0  mb-lg-2 mb-sm-5 text-white">
-
-
-                        <section>
-                            <div class="footer-copyright text-center mt-0 mb-0">
-                                <p class="text-white-50 mb-1">© 2018 Copyright:@Model.SiteName</p>
-                                <p class="text-white-50 mb-1">Site Last Updated: @Model.SiteLastUpdate</p>
-                                <p class="text-white-50 mb-0">@Model.CopyrightFooter</p>
-
-                            </div>
-                        </section>
-
-                    </div>
-                    <!--Section: Content-->
-
-
-                </div>
-
-
-            </footer>
-        </div>
+        
     </div>
     
 
@@ -171,7 +99,7 @@
 
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-   
+    <script src="~/Scripts/slick.min.js"></script>
 
 
 </body>

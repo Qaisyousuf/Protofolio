@@ -1,0 +1,55 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_CustomErrorLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+</head>
+<body>
+    <div class="ErroMainBackground">
+        <div class="container  z-depth-0">
+
+
+            <!--Section: Content-->
+            <section class="">
+
+                <div class="row pr-lg-5">
+                    <div class="col-md-7">
+
+                        <div class="img-fluid">
+                            <lottie-player src=https://assets1.lottiefiles.com/packages/lf20_C31OHO.json background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                        </div>
+
+                    </div>
+                    <div class="col-md-5 d-flex align-items-center text-lg-left text-md-left text-center">
+                        <div>
+
+                            <h3 class="font-weight-bold mb-2 text-danger">Something's wrong here...</h3>
+
+                            <h6 class=" text-white-50 text-justify">Sorry, that page seems to be taking a break, you can browse to our home page or send us a feedback with what you expected to see on this page</h6>
+
+                            <a href="/Home" class="btn btn-info btn-rounded btn-sm"><i class="fas fa-home mr-1"></i> Home</a>
+
+                            <a href="/ContactUs" class="btn btn-info btn-rounded btn-sm"><i class="fas fa-at mr-1"></i> Contact</a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!--Section: Content-->
+
+
+        </div>
+    </div>
+    
+</body>
+</html>
+@section CustomError{
+    @Styles.Render("~/Content/CustomErrorCSS.css")
+}

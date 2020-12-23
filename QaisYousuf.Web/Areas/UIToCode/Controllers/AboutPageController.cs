@@ -25,6 +25,7 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
 
         public void GetAboutPageRelatedData()
         {
+           
             ViewBag.AboutPageBanner = uow.AboutPageBannerRepository.GetAll();
             ViewBag.StartUpProgram = uow.StartUpProgramRepository.GetAll();
             ViewBag.StartUpProcess = uow.StartUpProcessRepository.GetAll();

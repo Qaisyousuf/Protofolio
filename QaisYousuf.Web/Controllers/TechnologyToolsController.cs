@@ -14,6 +14,7 @@ namespace QaisYousuf.Web.Controllers
         [Route("Technologies")]
         public ActionResult Index()
         {
+            
             var codeBanner = Uow.CodeBannerRepository.GetAll();
 
             List<CodeBannerViewModel> viewmodel = new List<CodeBannerViewModel>();

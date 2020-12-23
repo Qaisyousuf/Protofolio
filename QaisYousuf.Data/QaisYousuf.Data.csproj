@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Concrete Implementation\AboutPageBannerRepository.cs" />
     <Compile Include="Concrete Implementation\AboutPageRepository.cs" />
+    <Compile Include="Concrete Implementation\AdminDashboardRepository.cs" />
     <Compile Include="Concrete Implementation\CodeBannerRepository.cs" />
     <Compile Include="Concrete Implementation\CodePageRepository.cs" />
     <Compile Include="Concrete Implementation\ContactBannerRepository.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="FluentAPI\UserMapping.cs" />
     <Compile Include="Interfaces\IAboutPageBannerRepository.cs" />
     <Compile Include="Interfaces\IAboutPageRepository.cs" />
+    <Compile Include="Interfaces\IAdminDashboardRepository.cs" />
     <Compile Include="Interfaces\ICodeBannerRepository.cs" />
     <Compile Include="Interfaces\ICodePageRepository.cs" />
     <Compile Include="Interfaces\IContactBannerRepository.cs" />
@@ -288,6 +290,10 @@
     <Compile Include="Migrations\202009261200062_DateTimeOfWeekAdded.designer.cs">
       <DependentUpon>202009261200062_DateTimeOfWeekAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012190740314_AdminDashBoardModelAdded.cs" />
+    <Compile Include="Migrations\202012190740314_AdminDashBoardModelAdded.designer.cs">
+      <DependentUpon>202012190740314_AdminDashBoardModelAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -406,6 +412,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009261200062_DateTimeOfWeekAdded.resx">
       <DependentUpon>202009261200062_DateTimeOfWeekAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012190740314_AdminDashBoardModelAdded.resx">
+      <DependentUpon>202012190740314_AdminDashBoardModelAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

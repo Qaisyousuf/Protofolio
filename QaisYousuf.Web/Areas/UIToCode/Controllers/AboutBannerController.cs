@@ -6,9 +6,11 @@ using System.Web.Mvc;
 using QaisYousuf.ViewModels;
 using QaisYousuf.Models;
 using QaisYousuf.Data.Interfaces;
+using QaisYousuf.Web.Infrastructure;
 
 namespace QaisYousuf.Web.Areas.UIToCode.Controllers
 {
+    
     public class AboutBannerController : Controller
     {
         private readonly IUnitOfWork uow;
@@ -46,6 +48,7 @@ namespace QaisYousuf.Web.Areas.UIToCode.Controllers
         [HttpGet]
         public ActionResult Create()
         {
+            int value = int.Parse("hello");
             return View(new AboutBannerViewModel());
         }
 

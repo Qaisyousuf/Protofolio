@@ -496,3 +496,74 @@ nav .nav-item .nav-link {
     background: none repeat scroll 0 0 #fff !important;
     border: 6px solid #f0f9ff !important;
 }
+
+@media (max-width: 1920px) {
+
+    .ErroMainBackground {
+        margin-top: -50px;
+        background-image: url(Images/ErrorXBigBackground.svg);
+        background-position: center center;
+        background-size: cover;
+        height: 700px;
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 1500px) {
+
+    .ErroMainBackground {
+        margin-top: -60px;
+        background-image: url(Images/ErrorBigBackground.svg);
+        background-position: center center;
+        background-size: cover;
+        height: 700px;
+        margin-left: -15px;
+        margin-right: -15px;
+        ;
+    }
+}
+
+@media (max-width: 990px) {
+
+    .ErroMainBackground {
+        margin-top: -50px;
+        background-image: url(Images/ErrorBigBackground.svg);
+        background-position: center center;
+        background-size: cover;
+        height: 700px;
+        padding-top: 60px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .ErroMainBackground {
+        margin-top: -50px;
+        background-image: url(Images/ErrorMedumBackground.svg);
+        background-position: center center;
+        background-size: cover;
+        height: 920px;
+        padding-top: 60px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .ErroMainBackground {
+        margin-top: -50px;
+        background-image: url(Images/ErrorMedumBackground.svg);
+        background-position: center center;
+        background-size: cover;
+        height: 820px;
+        padding-top: 60px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+

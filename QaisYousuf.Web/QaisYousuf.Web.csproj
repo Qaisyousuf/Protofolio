@@ -140,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\UIToCode\Views\DataCollection\Create.cshtml" />
+    <Content Include="Content\AdminPanelCustomCSS.css" />
     <Content Include="Content\Images\AboutBigBackground.svg" />
     <Content Include="Content\Images\AboutmeBackground.svg" />
     <Content Include="Content\Images\AboutMeBackgroundMediam.svg" />
@@ -152,12 +153,16 @@
     <Content Include="Content\Images\CodeDesignSmallBackgrond.svg" />
     <Content Include="Content\Images\ContactBigBackground.svg" />
     <Content Include="Content\Images\ContactSmallBackground.svg" />
+    <Content Include="Content\Images\DashBoardBigBackground.svg" />
     <Content Include="Content\Images\DataCollectionBigBackground.svg" />
     <Content Include="Content\Images\DesignStepsBigBackground.svg" />
     <Content Include="Content\Images\EducationbigBackground.svg" />
     <Content Include="Content\Images\EducationbigMedumBackground.svg" />
     <Content Include="Content\Images\EducationbigSmallBackground.svg" />
     <Content Include="Content\Images\EducationsmallBack.svg" />
+    <Content Include="Content\Images\ErrorBigBackground.svg" />
+    <Content Include="Content\Images\ErrorMedumBackground.svg" />
+    <Content Include="Content\Images\ErrorXBigBackground.svg" />
     <Content Include="Content\Images\FooterBigBackground.svg" />
     <Content Include="Content\Images\FooterMedumBackground.svg" />
     <Content Include="Content\Images\FooterSmallBackground.svg" />
@@ -223,7 +228,8 @@
     <Content Include="Content\Images\UIStepBack.svg" />
     <Content Include="Content\Images\UIWavesBig.svg" />
     <Content Include="Content\Images\UIWavesSmallBack.svg" />
-    <Content Include="Content\UIUXCustomCSS - Copy.css" />
+    <Content Include="Content\CustomErrorCSs.css" />
+    <Content Include="Content\UIUXCustomCSS.css" />
     <Content Include="Content\AccountCustomCSS.css" />
     <Content Include="Content\CodeCustomCSS.css" />
     <Content Include="Content\ContactCustomCSS.css" />
@@ -941,7 +947,9 @@
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Scripts\umd\popper.min.js.map" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -950,6 +958,8 @@
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="Areas\UIToCode\Controllers\AboutBannerController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\AboutPageController.cs" />
+    <Compile Include="Areas\UIToCode\Controllers\AdminBashboardController.cs" />
+    <Compile Include="Areas\UIToCode\Controllers\AdminPanelController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\AdminUsersController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\CodeBannerController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\CodePageController.cs" />
@@ -995,6 +1005,8 @@
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\CustomErrorController.cs" />
+    <Compile Include="Controllers\CustomErrorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\TechnologyToolsController.cs" />
@@ -1003,6 +1015,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\ExceptionFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1019,6 +1032,14 @@
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Areas\UIToCode\Views\ContactFormBackEnd\Index.cshtml" />
     <Content Include="Areas\UIToCode\Views\ContactFormBackEnd\Details.cshtml" />
+    <Content Include="Areas\UIToCode\Views\AdminBashboard\Index.cshtml" />
+    <Content Include="Areas\UIToCode\Views\AdminBashboard\Create.cshtml" />
+    <Content Include="Areas\UIToCode\Views\AdminBashboard\Edit.cshtml" />
+    <Content Include="Areas\UIToCode\Views\AdminBashboard\Details.cshtml" />
+    <Content Include="Areas\UIToCode\Views\Shared\_AdminPanelLayout.cshtml" />
+    <Content Include="Areas\UIToCode\Views\AdminPanel\Index.cshtml" />
+    <Content Include="Areas\UIToCode\Views\Shared\_CustomErrorLayout.cshtml" />
+    <Content Include="Areas\UIToCode\Views\Shared\Error.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -1064,6 +1085,9 @@
     <Content Include="Views\Shared\_Authorization.cshtml" />
     <Content Include="Views\Accounts\Login.cshtml" />
     <Content Include="Views\Shared\Testing.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_CustomErrorLayout.cshtml" />
+    <Content Include="Views\CustomError\PageNotFount.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1073,6 +1097,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\CustomErrors\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QaisYousuf.Data\QaisYousuf.Data.csproj">

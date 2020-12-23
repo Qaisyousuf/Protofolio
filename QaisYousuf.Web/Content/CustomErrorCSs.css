@@ -1,10 +1,8 @@
 ﻿
 body {
-   
     font-family: 'Varela Round', sans-serif;
     overflow-x: hidden;
-    color:rebeccapurple;
-   
+    color: rebeccapurple;
 }
 
 
@@ -121,12 +119,12 @@ nav .nav-item .nav-link {
     }
 }
 
-
 @media (max-width:767px) and (min-width:200px) {
     #BannerContent {
         margin-top: 50px;
     }
 }
+
 .btn-info {
     background-color: transparent !important;
     border: 2px solid #17bde3 !important;
@@ -143,41 +141,23 @@ nav .nav-item .nav-link {
     color: #17bde3 !important;
 }
 
-.display-4 {
-    color: #169cba !important;
-    font-weight: bold;
-    font-size:2.5rem;
-}
-
-@media (max-width:800px) and (min-width:200px) {
-    .display-3 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width:800px) and (min-width:200px) {
-    .display-4 {
-        font-size: 2rem;
-    }
-}
-
 
 .display-5 {
     color: white !important;
     font-weight: bold;
-    font-size: 2.8rem;
+    font-size: 3.5rem;
 }
 
 @media (max-width: 976px) {
     .display-5 {
-        font-size: 2.8rem !important;
+        font-size: 3rem !important;
         color: white !important;
     }
 }
 
 @media (max-width: 876px) {
     .display-5 {
-        font-size: 2.4rem !important;
+        font-size: 3rem !important;
         color: white !important;
     }
 }
@@ -202,132 +182,30 @@ nav .nav-item .nav-link {
         color: white !important;
     }
 }
-
-
-.ContactBackground {
-    background-image: url('Images/ContactBigBackground.svg');
-    background-size: cover;
-    background-position:center;
-    height: 646px;
-    
-    margin-left: -15px;
-    margin-right: -15px;
-   
-   
+.display-4 {
+    color: #169cba !important;
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 
-
-@media (max-width: 767px) {
-
-    .ContactBackground {
-        background-image: url('Images/ContactBigBackground.svg');
-        background-size: cover;
-        background-position: center;
-        height: 962px;
-        padding-top: 60px;
-        margin-left: -15px;
-        margin-right: -15px;
-    }
-}
-@media (max-width: 567px) {
-
-    .ContactBackground {
-        background-image: url('Images/ContactSmallBackground.svg');
-        background-size: cover;
-        background-position: center;
-        height: 900px;
-        padding-top: 60px;
-        margin-left: -15px;
-        margin-right: -15px;
-    }
-}
-@media (max-width: 467px) {
-
-    .ContactBackground {
-        background-image: url('Images/ContactSmallBackground.svg');
-        background-size: cover;
-        background-position: center;
-        height: 750px;
-        padding-top: 60px;
-        margin-left: -15px;
-        margin-right: -15px;
+@media (max-width:800px) and (min-width:200px) {
+    .display-3 {
+        font-size: 2rem;
     }
 }
 
-#ContactBannerVedio main {
-    opacity: 0.2;
-    position: absolute;
-    top: 29%;
-    right: 20%;
-}
-
-.StartUpprocessBackground {
-    background-color: #74d5de;
-    margin-left: -15px;
-    margin-right: -15px;
-    color: white;
-    margin-top:-100px;
-}
-.svgBackground
-{
-    margin-left:-15px;
-    margin-right:-15px;
-    margin-top:-50px;
-    margin-bottom:-100px;
-
-}
-.svgBackgroundButtom {
-    margin-left: -15px;
-    margin-right: -15px;
-    margin-top: -50px;
-    margin-bottom:-50px;
-
+@media (max-width:800px) and (min-width:200px) {
+    .display-4 {
+        font-size: 2rem;
+    }
 }
 
 
 
-.ContactFormBackground {
-    position:relative;
-    top: 0%;
-    padding-bottom: 50px;
-    left: -15px;
-    margin: 0px;
-    padding: 0px;
-    height: auto;
-    width: auto;
-}
-.ContactSVGBackground svg {
-    position: absolute;
-    top: auto;
-    left: auto;
-    
-}
-.MainContentText
-{
-    position:absolute;
-    top:-20%;
-    left:32%;
-    color:white !important;
-}
-
-.ProfileBackImage svg
-{
-    position:relative;
-    top:0%;
-    left:0%;
-    
-}
-.profileImageForBackground img{
-    position: absolute;
-    top: 10%;
-    left: 30%;
-}
-.view-cascade
-{
-    background-image:url('Images/Waihou 1.svg');
-    background-position:center center;
-    background-attachment:fixed;
-    
+.view-cascade {
+    background-image: url('Images/blob.svg');
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .card card-cascade z-depth-1 {
@@ -336,81 +214,69 @@ nav .nav-item .nav-link {
     box-shadow: 0px 0px 27px -5px rgba(242,243,255,1) !important;
 }
 
-.ViewMap lottie-player {
-    position: relative;
-    top: 0%;
-    left: 0%;
+
+
+
+
+.btn-rounded {
+    border-radius: 0.3rem !important;
 }
-.MapButton button {
-    position: absolute;
-    top: 30%;
-    left: 30%;
+
+
+
+
+.pricing-card {
+    background: -moz-linear-gradient(45deg, rgba(13,194,255,0) 0%, rgba(0,128,128,0) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(13,194,255,0)), color-stop(100%, rgba(0,128,128,0))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(45deg, rgba(13,194,255,0) 0%, rgba(0,128,128,0) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(45deg, rgba(13,194,255,0) 0%, rgba(0,128,128,0) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(45deg, rgba(13,194,255,0) 0%, rgba(0,128,128,0) 100%); /* ie10+ */
+    background: linear-gradient(45deg, rgba(13,194,255,0) 0%, rgba(0,128,128,0) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', endColorstr='#0DC2FF',GradientType=1 ); /* ie6-9 */
 }
-.btn-rounded 
+
+
+.display-1 {
+    font-size: 5.5rem !important;
+    color: #fff !important;
+}
+@media (max-width: 376px) {
+    .display-1 {
+        font-size: 1.8rem !important;
+        color: #fff !important;
+    }
+}
+@media (max-width: 576px)
 {
-    border-radius:0.3rem !important;
+    .display-1 {
+        font-size: 3rem !important;
+        color: #e1f5fe !important;
+    }
+    
+
 }
-
-
-.FooterMainBackground {
-    background-image: url(Images/FooterMedumBackground.svg);
-    height: 795px;
-    margin-left: -15px;
-    margin-right: -15px;
-    background-repeat: no-repeat;
-    background-position: center;
+@media (max-width: 776px) {
+    .display-1 {
+        font-size: 4rem !important;
+        color: #e1f5fe !important;
+    }
 }
-
-@media (max-width: 1920px) {
-    .FooterMainBackground {
-        background-image: url(Images/FooterBigBackground.svg);
-        height: 652px;
-        width: auto;
-        background-position: center;
-        margin-top: 40px;
-        background-repeat: no-repeat;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-align-content: flex-end;
-        -ms-flex-line-pack: end;
-        align-content: flex-end;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
+@media (max-width: 876px) {
+    .display-1 {
+        font-size: 4.1rem !important;
+        color: #e1f5fe !important;
+    }
+}
+@media (max-width: 976px) {
+    .display-1 {
+        font-size: 4rem !important;
+        color: #e1f5fe !important;
     }
 }
 
-@media (max-width: 1400px) {
-    .FooterMainBackground {
-        background-image: url(Images/FooterMedumBackground.svg);
-        height: 795px;
-        margin-left: -15px;
-        margin-right: -15px;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-}
 
-@media (max-width: 767px) {
-    .FooterMainBackground {
-        background-image: url(Images/FooterSmallBackground.svg);
-        height: 877px;
-        margin-left: -15px;
-        margin-right: -15px;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-}
+
+
 
 @media (max-width: 1920px) {
 
@@ -422,10 +288,9 @@ nav .nav-item .nav-link {
         height: 700px;
         margin-left: -15px;
         margin-right: -15px;
-        padding-top: 50px;
+        padding-top:50px;
     }
 }
-
 @media (max-width: 1500px) {
 
     .ErroMainBackground {
@@ -436,7 +301,7 @@ nav .nav-item .nav-link {
         height: 700px;
         margin-left: -15px;
         margin-right: -15px;
-        
+        ;
     }
 }
 
@@ -448,7 +313,7 @@ nav .nav-item .nav-link {
         background-position: center center;
         background-size: cover;
         height: 700px;
-        padding-top: 60px;
+        padding-top:60px;
         margin-left: -15px;
         margin-right: -15px;
     }
@@ -481,3 +346,4 @@ nav .nav-item .nav-link {
         margin-right: -15px;
     }
 }
+

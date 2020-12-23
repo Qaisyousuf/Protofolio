@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title -UI To Code</title>
+    <title>@ViewBag.Title -UI & UX To Code</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 
@@ -13,7 +13,10 @@
     @Styles.Render("~/Content/AdminCustomCSS.css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/node_modules/lottie-player/dist/lottie-player.js"></script>
+    
 
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
 
 
     <script type="text/javascript" language="javascript" src="https://nightly.datatables.net/js/jquery.dataTables.min.js">
@@ -259,11 +262,10 @@
                                     <li>
                                         <a href="/UIToCode/Menus/Index" class="waves-effect"> Menu Settings</a>
                                     </li>
+
                                     <li>
                                         <a href="/UIToCode/AdminBashboard/Index" class="waves-effect"> Dashboard</a>
                                     </li>
-
-
                                 </ul>
                             </div>
                         </li>
@@ -304,15 +306,8 @@
 
             <ul class="nav navbar-nav nav-flex-icons ml-auto">
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-                        Accounts
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-
-                        @Html.Partial("_LoginPartial")
-                    </div>
+                <li class="nav-item">
+                    @Html.Partial("_LoginPartial")
                 </li>
 
 
@@ -324,12 +319,12 @@
     <!--/.Navbar-->
 
 
-    <div class="container body-content">
+    <div class="body-content">
         @RenderBody()
-        @RenderSection("AdminCustomCSS", required: true)
+        @RenderSection("AdminPanelCustomCSS", required: true)
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - UI To Code</p>
+            <p>&copy; @DateTime.Now.Year - UI & UX To Code</p>
         </footer>
     </div>
     <script>
