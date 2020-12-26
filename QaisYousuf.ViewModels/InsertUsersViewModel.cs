@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace QaisYousuf.ViewModels
 {
-    public class InsertUsersViewModel
+    public class InsertUsersViewModel:BaseViewModel
     {
-        public int Id { get; set; }
+       
 
         [Required]
         [Display(Name ="User Name")]

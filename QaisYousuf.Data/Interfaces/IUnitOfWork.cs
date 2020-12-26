@@ -53,6 +53,7 @@ namespace QaisYousuf.Data.Interfaces
         IProjectStatusRepository ProjectStatusRepository { get; }
         IRoleRepository RoleRepository { get; }
         IAdminDashboardRepository AdminDashboardRepository { get; }
+        IAdminActivityRepository AdminActivityRepository { get; }
         void Commit();
     }
 }

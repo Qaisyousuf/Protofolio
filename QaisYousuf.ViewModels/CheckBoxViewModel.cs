@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QaisYousuf.ViewModels
 {
-    public class CheckBoxViewModel
+    public class CheckBoxViewModel:BaseViewModel
     {
         public int Id { get; set; }
 

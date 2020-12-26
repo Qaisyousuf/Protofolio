@@ -12,6 +12,8 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -68,6 +70,7 @@
   <ItemGroup>
     <Compile Include="AboutBannerViewModel.cs" />
     <Compile Include="AboutPageViewModel.cs" />
+    <Compile Include="AdminActivityViewModel.cs" />
     <Compile Include="AdminDashboardViewModel.cs" />
     <Compile Include="BaseViewModel.cs" />
     <Compile Include="CheckBoxViewModel.cs" />
@@ -129,6 +132,7 @@
     <Compile Include="WorkQualitySectionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

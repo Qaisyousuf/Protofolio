@@ -6,23 +6,26 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
 using System.Web.Security;
+using QaisYousuf.Web.Infrastructure;
 
 namespace QaisYousuf.Web.Controllers
 {
+   
     public class AccountsController : BaseController
     {
       
-        
+        [Route("LoginTest")]
         public ActionResult Index()
         {
             return View();
         }
 
         [HttpPost]
+        [AdminActivityFilter]
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();
-            return RedirectToAction("Index","Home");
+            return RedirectToAction(nameof(Login));
         }
 
         [HttpGet]
@@ -30,7 +33,7 @@ namespace QaisYousuf.Web.Controllers
         [Route("Authentication")]
         public ActionResult Register()
         {
-            return View();
+            return View(new RegisterViewModel());
         }
 
         [HttpPost]
@@ -56,12 +59,14 @@ namespace QaisYousuf.Web.Controllers
 
         [HttpGet]
         [Route("Authorization")]
+        [AdminActivityFilter]
         public ActionResult Login()
         {
-            return View();
+            return View(new LoginViewModel());
         }
 
         [HttpPost]
+        [AdminActivityFilter]
         [Route("Authorization")]
         public ActionResult Login(LoginViewModel viewmodel)
         {
@@ -90,7 +95,7 @@ namespace QaisYousuf.Web.Controllers
 
             string userData = serializer.Serialize(serialize);
 
-            FormsAuthenticationTicket authTicket = new FormsAuthenticationTicket(2, loginUser.UserName, DateTime.Now, DateTime.Now.AddMinutes(30), false, userData);
+            FormsAuthenticationTicket authTicket = new FormsAuthenticationTicket(2, loginUser.UserName, DateTime.Now, DateTime.Now.AddMinutes(10), false, userData);
 
             string encryptTicket = FormsAuthentication.Encrypt(authTicket);
 
@@ -98,13 +103,14 @@ namespace QaisYousuf.Web.Controllers
             {
                 HttpOnly = true,
                 Secure = false,
-                Expires = DateTime.Now.AddMinutes(30)
+                Expires = DateTime.Now.AddMinutes(10),
+                SameSite=SameSiteMode.Strict,
             };
 
             Response.Cookies.Add(myCookie);
 
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Contact");
             
         }
         

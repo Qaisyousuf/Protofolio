@@ -4,54 +4,54 @@ namespace QaisYousuf.ViewModels
 {
     public class BaseViewModel
     {
-        public string SiteName { get; set; }
+        public string BaseSiteName { get; set; }
 
-        public string SiteOwner { get; set; }
+        public string BaseSiteOwner { get; set; }
 
-        public string GoogleSiteVerfication { get; set; }
+        public string BseGoogleSiteVerfication { get; set; }
 
-        public string GoogleAds { get; set; }
+        public string BaseGoogleAds { get; set; }
 
-        public DateTime SiteLastUpdate { get; set; }
+        public DateTime BaseSiteLastUpdate { get; set; }
 
-        public string UpdatedBy { get; set; }
+        public string BaseUpdatedBy { get; set; }
 
-        public string BaseTitle { get; set; }
+        public string BaseBaseTitle { get; set; }
 
-        public string BaseContent { get; set; }
+        public string BaseBaseContent { get; set; }
 
-        public string Home { get; set; }
+        public string BAseHome { get; set; }
 
-        public string HomeUrl { get; set; }
+        public string BaseHomeUrl { get; set; }
 
-        public string About { get; set; }
+        public string BaseAbout { get; set; }
 
-        public string AboutUrl { get; set; }
+        public string BaseAboutUrl { get; set; }
 
-        public string UIUX { get; set; }
+        public string BAseUIUX { get; set; }
 
-        public string UIUXURl { get; set; }
+        public string BaseUIUXURl { get; set; }
 
-        public string Code { get; set; }
+        public string BaseCode { get; set; }
 
-        public string CodeUrl { get; set; }
+        public string BaseCodeUrl { get; set; }
 
-        public string Contact { get; set; }
+        public string BaseContact { get; set; }
 
-        public string ContactUrl { get; set; }
+        public string BaseBaseContactUrl { get; set; }
 
-        public string Support { get; set; }
+        public string BaseSupport { get; set; }
 
-        public string SupportUrl { get; set; }
+        public string BaseSupportUrl { get; set; }
 
-        public string Profile { get; set; }
+        public string BaseProfile { get; set; }
 
-        public string ProfileUrl { get; set; }
+        public string BaseProfileUrl { get; set; }
 
-        public string CopyrightFooter { get; set; }
+        public string BaseCopyrightFooter { get; set; }
 
 
-        public string DesignBy { get; set; }
+        public string BaseDesignBy { get; set; }
 
     }
 }

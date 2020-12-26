@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Authorization.cshtml";
+}
+
+@{
+    if (User.Identity.IsAuthenticated)
+    {
+        <p>@((User as CustomPrincipal).Id)</p>
+        <p>@((User as CustomPrincipal).UserName)</p>
+        <p>@((User as CustomPrincipal).Email)</p>
+
+        if(User.IsInRole(""))
+        {
+            <a href="#">Admin</a>
+
+        }
+        else
+        {
+            <a href="#">Not Admin</a>
+        }
+
+        <ul>
+            @foreach (var role in (User as CustomPrincipal).Roles)
+            {
+                <li>@role</li>
+            }
+        </ul>
+    }
+}
+

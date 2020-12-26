@@ -9,6 +9,9 @@ using QaisYousuf.Models;
 
 namespace QaisYousuf.Web.Areas.UIToCode.Controllers
 {
+    
+    [Authorize(Roles ="Admin")]
+    
     public class DataCollectionController : Controller
     {
         private readonly IUnitOfWork uow;

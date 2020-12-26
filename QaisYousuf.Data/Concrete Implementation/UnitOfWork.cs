@@ -99,6 +99,8 @@ namespace QaisYousuf.Data.Concrete_Implementation
 
         public IAdminDashboardRepository AdminDashboardRepository => new AdminDashboardRepository(Context);
 
+        public IAdminActivityRepository AdminActivityRepository => new AdminActivityRepository(Context);
+
         public UnitOfWork()
         {
             Context = new UIContext();

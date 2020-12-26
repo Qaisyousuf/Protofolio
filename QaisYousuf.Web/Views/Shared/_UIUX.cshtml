@@ -8,7 +8,7 @@
     <meta http-equiv="expires" content="0" />
     <meta http-equiv="expires" content="Tue, 01 Jan 1990 12:00:00 GMT" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - @Model.BaseTitle</title>
+    <title>@ViewBag.Title - @Model.BaseBaseTitle</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 
@@ -109,8 +109,8 @@
                                         <!--Grid column-->
                                         <div class="col-md-6 text-center text-lg-left">
                                             <div class="display-5 text-uppercase font-weight-bold">ui to code</div>
-                                            <h3 class="text-white text-justify">@Model.BaseContent</h3>
-                                            <a href="@Model.ContactUrl" class="btn btn-info btn-rounded">@Model.Contact</a>
+                                            <h3 class="text-white text-justify">@Model.BaseBaseContent</h3>
+                                            <a href="@Model.BaseBaseContactUrl" class="btn btn-info btn-rounded">@Model.BaseContact</a>
                                         </div>
                                         <!--Grid column-->
                                         <!--Grid column-->
@@ -137,9 +137,9 @@
 
                         <section>
                             <div class="footer-copyright text-center mt-0 mb-0">
-                                <p class="text-white-50 mb-1">© 2018 Copyright:@Model.SiteName</p>
-                                <p class="text-white-50 mb-1">Site Last Updated: @Model.SiteLastUpdate</p>
-                                <p class="text-white-50 mb-0">@Model.CopyrightFooter</p>
+                                <p class="text-white-50 mb-1">© 2018 Copyright:@Model.BaseSiteName</p>
+                                <p class="text-white-50 mb-1">Site Last Updated: @Model.BaseSiteLastUpdate</p>
+                                <p class="text-white-50 mb-0">@Model.BaseCopyrightFooter</p>
 
                             </div>
                         </section>

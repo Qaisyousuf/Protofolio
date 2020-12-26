@@ -16,7 +16,7 @@ namespace QaisYousuf.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             GlobalFilters.Filters.Add(new CustomAuthenticationFilter());
-            GlobalFilters.Filters.Add(new ExceptionFilter());
+            //GlobalFilters.Filters.Add(new ExceptionFilter());
             
             
         }

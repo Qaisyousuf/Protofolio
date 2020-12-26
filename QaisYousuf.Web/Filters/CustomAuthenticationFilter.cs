@@ -28,7 +28,7 @@ namespace QaisYousuf.Web.Filters
                     Id = serialize.Id,
                     UserName = serialize.UserName,
                     Email = serialize.Email,
-                    PhoneNumber = serialize.PhoneNumber,
+                    
                     Roles = serialize.Roles
                 };
 

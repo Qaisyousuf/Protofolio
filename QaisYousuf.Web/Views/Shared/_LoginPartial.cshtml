@@ -1,25 +1,29 @@
 ﻿@if (Request.IsAuthenticated)
 {
-    using (Html.BeginForm("LogOut", "Accounts", new { Area = "" }, FormMethod.Post,
-        new { id = "logoutForm" }))
+    if (User.Identity.IsAuthenticated)
     {
-        <ul class="nav navbar-nav nav-flex-icons ml-auto">
-            <li class="">
-                <a class="nav-link ml-auto" href="javascript:document.getElementById('logoutForm').submit();"> Hi,  @User.Identity.Name | <span class="btn btn-danger btn-rounded btn-sm"> Logout <i class="fas fa-lock"></i> </span></a>
-            </li>
-        </ul>
+        using (Html.BeginForm("LogOut", "Accounts", new { Area = "" }, FormMethod.Post,
+       new { id = "logoutForm" }))
+        {
+            <ul class="nav navbar-nav nav-flex-icons ml-auto">
+                <li class="">
+                    <a class="nav-link ml-auto" href="javascript:document.getElementById('logoutForm').submit();"> Hi,  @User.Identity.Name | <span class="btn btn-danger btn-rounded btn-sm"> Logout <i class="fas fa-lock"></i> </span></a>
+                </li>
+            </ul>
+        }
     }
+
 }
 else
 {
-        <ul class="nav navbar-nav nav-flex-icons ml-auto">
-            @*<li>@Html.ActionLink("Register", "Register", "Accounts", new { Area = "" }, null)</li>
-        <li>@Html.ActionLink("Login", "Login", "Accounts", new { Area = "" }, null)</li>*@
+    <ul class="nav navbar-nav nav-flex-icons ml-auto">
+        @*<li>@Html.ActionLink("Register", "Register", "Accounts", new { Area = "" }, null)</li>
+            <li>@Html.ActionLink("Login", "Login", "Accounts", new { Area = "" }, null)</li>*@
 
-            <li class=""><a class="nav-link ml-auto" href="/Authorization"><span class="btn btn-primary btn-rounded btn-md"> Sign In <i class="fas fa-unlock"></i> </span></a></li>
-            <li class=""><a class="nav-link ml-auto" href="/Authentication"><span class="btn btn-primary btn-rounded btn-md"> Sign Up <i class="fas fa-key"></i> </span></a></li>
-           
-        </ul>
+        <li class=""><a class="nav-link ml-auto" href="/Authorization"><span class="btn btn-primary btn-rounded btn-md"> Sign In <i class="fas fa-unlock"></i> </span></a></li>
+        <li class=""><a class="nav-link ml-auto" href="/Authentication"><span class="btn btn-primary btn-rounded btn-md"> Sign Up <i class="fas fa-key"></i> </span></a></li>
+
+    </ul>
 }
 
 @section HomeCustomCSS

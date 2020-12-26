@@ -8,7 +8,7 @@ namespace QaisYousuf.Services.Security
         int Id { get; set; }
         string UserName { get; set; }
         string Email { get; set; }
-        string PhoneNumber { get; set; }
+       
         string[] Roles { get; set; }
     }
 }
