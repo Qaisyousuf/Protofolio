@@ -147,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\UIToCode\Views\DataCollection\Create.cshtml" />
+    <Content Include="Content\AuthrizationCustomCSS.css" />
     <Content Include="Content\AdminPanelCustomCSS.css" />
     <Content Include="Content\Images\AboutBigBackground.svg" />
     <Content Include="Content\Images\AboutmeBackground.svg" />

@@ -8,7 +8,7 @@ using QaisYousuf.ViewModels;
 
 namespace QaisYousuf.Web.Controllers
 {
-    [Authorize(Roles = "Editro")]
+   
     public class ContactController : BaseController
     {
         [Route("ContactUs")]

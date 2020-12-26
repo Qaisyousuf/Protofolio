@@ -1,32 +1,145 @@
-﻿
+﻿@model QaisYousuf.ViewModels.LoginViewModel
 @{
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Authorization.cshtml";
 }
 
-@{
-    if (User.Identity.IsAuthenticated)
-    {
-        <p>@((User as CustomPrincipal).Id)</p>
-        <p>@((User as CustomPrincipal).UserName)</p>
-        <p>@((User as CustomPrincipal).Email)</p>
-
-        if(User.IsInRole("Supper Admin"))
+<div class="AuthrizationAreaMainBackground">
+    @{
+        if (User.Identity.IsAuthenticated && User.IsInRole("Supper Admin"))
         {
-            <a href="#">Admin is Working</a>
+            <div class="container my-5 z-depth-0">
 
+
+                <!--Section: Content-->
+                <section class="dark-grey-text">
+
+                    <div class="row pr-lg-5">
+                        <div class="col-md-7 mb-4">
+
+                            <div class="img-fluid">
+                                <lottie-player src=https://assets3.lottiefiles.com/packages/lf20_B2qAl3/data.json background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                            </div>
+
+                        </div>
+                        <div class="col-md-5 d-flex align-items-center text-center">
+                            <div class="card card-cascade narrower mx-lg-4">
+
+                                <!-- Card image -->
+                                <div class="view view-cascade gradient-card-header blue-gradient">
+
+                                    <!-- Title -->
+                                    <h2 class="card-header-title">Admin Area</h2>
+                                    <!-- Subtitle -->
+                                    <!-- Facebook -->
+                                    <a href="https://www.linkedin.com/in/qais-yousuf-75261b125/" target="_blank" type="button" class="btn-floating"><i class="fab fa-linkedin-in"></i></a>
+                                    <!-- Twitter -->
+                                    <a href="https://github.com/Qaisyousuf" target="_blank" type="button" class="btn-floating"><i class="fab fa-github"></i></a>
+                                    <!-- Google + -->
+                                    <a href="https://stackoverflow.com/users/9307351/qais-yousuf" target="_blank" type="button" class="btn-floating"><i class="fab fa-stack-overflow"></i></a>
+
+                                </div>
+
+                                <!-- Card content -->
+                                <div class="card-body card-body-cascade bg-transparent  ">
+
+                                    <h3 class="font-weight-normal mb-4 light-blue-text">Hey, @User.Identity.Name Welcome Back</h3>
+
+                                    <p></p>
+
+                                    <a href="/UIToCode/AdminPanel/Index" class="btn btn-primary btn-rounded">Admin Panel</a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <!--Section: Content-->
+
+
+            </div>
         }
-        else
+        else if (User.Identity.IsAuthenticated && User.IsInRole("Editro"))
         {
-            <a href="#">Not Admin</a>
+            <div class="container my-5 z-depth-1">
+
+
+                <!--Section: Content-->
+                <section class="dark-grey-text">
+
+                    <div class="row pr-lg-5">
+                        <div class="col-md-7 mb-4">
+
+                            <div class="view">
+                                <img src="https://mdbootstrap.com/img/illustrations/graphics(4).png" class="img-fluid" alt="smaple image">
+                            </div>
+
+                        </div>
+                        <div class="col-md-5 d-flex align-items-center">
+                            <div>
+
+                                <h3 class="font-weight-bold mb-4">Hi @User.Identity.Name You have Editor Roles</h3>
+
+                                <p>Lorem ipsum dolor sit amet consectetur adip elit. Maiores deleniti explicabo voluptatem quisquam nulla asperiores aspernatur aperiam voluptate et consectetur minima delectus, fugiat eum soluta blanditiis adipisci, velit dolore magnam.</p>
+
+                                <button type="button" class="btn btn-orange btn-rounded mx-0">Download</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <!--Section: Content-->
+
+
+            </div>
+        }
+        else if (User.Identity.IsAuthenticated)
+        {
+            <div class="container my-5 z-depth-1">
+
+
+                <!--Section: Content-->
+                <section class="dark-grey-text">
+
+                    <div class="row pr-lg-5">
+                        <div class="col-md-7 mb-4">
+
+                            <div class="view">
+                                <img src="https://mdbootstrap.com/img/illustrations/graphics(4).png" class="img-fluid" alt="smaple image">
+                            </div>
+
+                        </div>
+                        <div class="col-md-5 d-flex align-items-center">
+                            <div>
+
+                                <h3 class="font-weight-bold mb-4">Hi @User.Identity.Name Welcom Back</h3>
+
+                                <p>Lorem ipsum dolor sit amet consectetur adip elit. Maiores deleniti explicabo voluptatem quisquam nulla asperiores aspernatur aperiam voluptate et consectetur minima delectus, fugiat eum soluta blanditiis adipisci, velit dolore magnam.</p>
+
+                                <button type="button" class="btn btn-orange btn-rounded mx-0">Download</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <!--Section: Content-->
+
+
+            </div>
         }
 
-        <ul>
-            @foreach (var role in (User as CustomPrincipal).Roles)
-            {
-                <li class="text-danger">@role</li>
-            }
-        </ul>
+
     }
+</div>
+
+
+
+@section AuthrizationCustomCSS
+{
+    @Styles.Render("~/Content/AuthrizationCustomCSS.css")
 }
 

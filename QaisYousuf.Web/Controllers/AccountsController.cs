@@ -13,8 +13,8 @@ namespace QaisYousuf.Web.Controllers
    
     public class AccountsController : BaseController
     {
-      
-        [Route("LoginTest")]
+
+        [Route("AuthrizationArea")]
         public ActionResult Index()
         {
             return View();
@@ -110,8 +110,8 @@ namespace QaisYousuf.Web.Controllers
             Response.Cookies.Add(myCookie);
 
 
-            return RedirectToAction("Index", "Contact");
-            
+            return RedirectToAction("Index", "Accounts", "AuthrizationArea");
+
         }
         
         
