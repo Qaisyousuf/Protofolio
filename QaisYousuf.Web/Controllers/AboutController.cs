@@ -10,7 +10,7 @@ using QaisYousuf.Web.Infrastructure;
 namespace QaisYousuf.Web.Controllers
 {
 
-    
+    [Authorize(Roles ="Supper Admin")]
     public class AboutController : BaseController
     {
         [Route("About")]

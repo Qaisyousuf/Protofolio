@@ -22,7 +22,7 @@ namespace QaisYousuf.Web.Infrastructure
 
         public void OnActionExecuting(ActionExecutingContext filterContext)
         {
-           if(filterContext.HttpContext.User.Identity.IsAuthenticated && filterContext.HttpContext.User.IsInRole("admin"))
+           if(filterContext.HttpContext.User.Identity.IsAuthenticated && filterContext.HttpContext.User.IsInRole("Supper Admin"))
             {
                 string controllerName = filterContext.ActionDescriptor.ControllerDescriptor.ControllerName;
                 string actionName = filterContext.ActionDescriptor.ActionName;

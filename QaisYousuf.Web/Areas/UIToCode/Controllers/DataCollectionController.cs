@@ -10,7 +10,7 @@ using QaisYousuf.Models;
 namespace QaisYousuf.Web.Areas.UIToCode.Controllers
 {
     
-    [Authorize(Roles ="Admin")]
+    [Authorize(Roles = "Supper Admin")]
     
     public class DataCollectionController : Controller
     {

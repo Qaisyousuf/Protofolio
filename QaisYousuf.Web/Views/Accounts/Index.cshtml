@@ -11,9 +11,9 @@
         <p>@((User as CustomPrincipal).UserName)</p>
         <p>@((User as CustomPrincipal).Email)</p>
 
-        if(User.IsInRole(""))
+        if(User.IsInRole("Supper Admin"))
         {
-            <a href="#">Admin</a>
+            <a href="#">Admin is Working</a>
 
         }
         else
@@ -24,7 +24,7 @@
         <ul>
             @foreach (var role in (User as CustomPrincipal).Roles)
             {
-                <li>@role</li>
+                <li class="text-danger">@role</li>
             }
         </ul>
     }

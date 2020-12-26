@@ -10,7 +10,7 @@ using QaisYousuf.Web.Infrastructure;
 
 namespace QaisYousuf.Web.Areas.UIToCode.Controllers
 {
-    [Authorize(Roles ="admin")]
+    [Authorize(Roles = "Supper Admin")]
     public class AboutBannerController : Controller
     {
         private readonly IUnitOfWork uow;
