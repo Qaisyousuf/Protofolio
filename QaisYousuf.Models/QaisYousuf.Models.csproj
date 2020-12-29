@@ -89,6 +89,7 @@
     <Compile Include="UIUXMatterSection.cs" />
     <Compile Include="UIUXSteps.cs" />
     <Compile Include="UI_UX_Tools.cs" />
+    <Compile Include="UserActivity.cs" />
     <Compile Include="UserModel.cs" />
     <Compile Include="WebProgrammingTools.cs" />
     <Compile Include="WorkExperience.cs" />

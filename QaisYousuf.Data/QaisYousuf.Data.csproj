@@ -96,6 +96,7 @@
     <Compile Include="Concrete Implementation\UIUXMatterSectionRepository.cs" />
     <Compile Include="Concrete Implementation\UIUXStepsRepository.cs" />
     <Compile Include="Concrete Implementation\UIUXToolsRepository.cs" />
+    <Compile Include="Concrete Implementation\UserActivityRepository.cs" />
     <Compile Include="Concrete Implementation\UserRepository.cs" />
     <Compile Include="Concrete Implementation\WebProgrammingToolsRepository.cs" />
     <Compile Include="Concrete Implementation\WorkExperienceRepository.cs" />
@@ -124,6 +125,7 @@
     <Compile Include="Interfaces\IMenuRepository.cs" />
     <Compile Include="Interfaces\IProjectStatusRepository.cs" />
     <Compile Include="Interfaces\IRoleRepository.cs" />
+    <Compile Include="Interfaces\IUserActivityRepository.cs" />
     <Compile Include="Interfaces\IUserRepository.cs" />
     <Compile Include="Interfaces\IOnlineCertificationRepository.cs" />
     <Compile Include="Interfaces\IPlatformDesignRepository.cs" />
@@ -300,6 +302,10 @@
     <Compile Include="Migrations\202012231045386_AdminActivityModelAdded.designer.cs">
       <DependentUpon>202012231045386_AdminActivityModelAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012292205012_UserActivityModelAdded.cs" />
+    <Compile Include="Migrations\202012292205012_UserActivityModelAdded.designer.cs">
+      <DependentUpon>202012292205012_UserActivityModelAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -424,6 +430,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012231045386_AdminActivityModelAdded.resx">
       <DependentUpon>202012231045386_AdminActivityModelAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012292205012_UserActivityModelAdded.resx">
+      <DependentUpon>202012292205012_UserActivityModelAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

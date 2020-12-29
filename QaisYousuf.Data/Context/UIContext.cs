@@ -58,6 +58,8 @@ namespace QaisYousuf.Data.Context
         public DbSet<ProjectStatus> ProjectStatuses { get; set; }
         public DbSet<AdminDashboard> AdminDashboards { get; set; }
         public DbSet<AdminActivity> AdminActivities { get; set; }
+        public DbSet<UserActivity> UserActivities { get; set; }
+
 
 
 

@@ -101,6 +101,8 @@ namespace QaisYousuf.Data.Concrete_Implementation
 
         public IAdminActivityRepository AdminActivityRepository => new AdminActivityRepository(Context);
 
+        public IUserActivityRepository UserActivityRepository => new UserActivityRepository(Context);
+
         public UnitOfWork()
         {
             Context = new UIContext();

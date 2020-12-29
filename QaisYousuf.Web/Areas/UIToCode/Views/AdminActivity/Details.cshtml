@@ -1,0 +1,107 @@
+﻿@model QaisYousuf.ViewModels.AdminActivityViewModel
+@{
+    Layout = null;
+}
+
+<div class="card card-cascade narrower mb-1 z-depth-0" style="margin-top: 28px">
+
+    <!--Card image-->
+    <div class="view view-cascade pt-0">
+        <div class=" card-header light-blue lighten-1 white-text text-uppercase font-weight-bold text-center py-3">
+            Details of <span class="text-warning">@Model.LoginUser</span>  Record
+        </div>
+
+    </div>
+    <!--/.Card image-->
+    <!--Card content-->
+    <div class="card-body card-body-cascade d-flex justify-content-center mt-n2">
+        @using (Html.BeginForm("Details", "AdminActivity", FormMethod.Get, new { onsubmit = "return SubmitFormDetails(this)" }))
+        {
+            @Html.HiddenFor(model => model.Id)
+            <div class="table-wrapper table-responsive table-bordered table-striped ">
+                <!--Table-->
+                <table class="table table-hover mb-0 ">
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-tag"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Id)</td>
+                            <td class="text-primary"> @Html.DisplayFor(model => model.Id)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-align-center"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.Ip)</td>
+
+                            <td class="text-primary"> @Html.DisplayFor(model => model.Ip)</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-spell-check"></i></a>
+                            </th>
+                            <td class="font-weight-bold"> @Html.DisplayNameFor(model => model.UserAgint)</td>
+                            <td class="text-primary">  @Html.DisplayFor(model => model.UserAgint)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
+                            </th>
+                            <td class="font-weight-bold">   @Html.DisplayNameFor(model => model.ActionName)</td>
+                            <td class="text-primary">  @Html.DisplayFor(model => model.ActionName)</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
+                            </th>
+                            <td class="font-weight-bold">   @Html.DisplayNameFor(model => model.ControllerName)</td>
+                            <td class="text-primary">  @Html.DisplayFor(model => model.ControllerName)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
+                            </th>
+                            <td class="font-weight-bold">   @Html.DisplayNameFor(model => model.LoginUser)</td>
+                            <td class="text-primary">  @Html.DisplayFor(model => model.LoginUser)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
+                            </th>
+                            <td class="font-weight-bold">   @Html.DisplayNameFor(model => model.UserBrowser)</td>
+                            <td class="text-primary">  @Html.DisplayFor(model => model.UserBrowser)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
+                            </th>
+                            <td class="font-weight-bold">   @Html.DisplayNameFor(model => model.Time)</td>
+                            <td class="text-primary">  @Html.DisplayFor(model => model.Time)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <a class="btn-floating btn-sm btn-primary"><i class="fas fa-external-link-alt"></i></a>
+                            </th>
+                            <td class="font-weight-bold">   @Html.DisplayNameFor(model => model.Date)</td>
+                            <td class="text-primary">  @Html.DisplayFor(model => model.Date)</td>
+                        </tr>
+
+
+                    </tbody>
+                    <!--Table body-->
+                </table>
+                <!--Table-->
+            </div>
+
+        }
+
+
+
+
+    </div>
+    <!--/.Card content-->
+
+</div>

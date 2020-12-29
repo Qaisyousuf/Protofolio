@@ -1055,6 +1055,7 @@
     <Content Include="Areas\UIToCode\Views\Shared\_CustomErrorLayout.cshtml" />
     <Content Include="Areas\UIToCode\Views\Shared\Error.cshtml" />
     <Content Include="Areas\UIToCode\Views\AdminActivity\Index.cshtml" />
+    <Content Include="Areas\UIToCode\Views\AdminActivity\Details.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />

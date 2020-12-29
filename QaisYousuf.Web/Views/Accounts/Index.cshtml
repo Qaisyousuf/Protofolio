@@ -8,21 +8,21 @@
     @{
         if (User.Identity.IsAuthenticated && User.IsInRole("Supper Admin"))
         {
-            <div class="container my-5 z-depth-0">
+            <div class="container z-depth-0">
 
 
                 <!--Section: Content-->
                 <section class="dark-grey-text">
 
                     <div class="row pr-lg-5">
-                        <div class="col-md-7 mb-4">
+                        <div class="col-lg-6 mb-4">
 
                             <div class="img-fluid">
-                                <lottie-player src=https://assets3.lottiefiles.com/packages/lf20_B2qAl3/data.json background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                                <lottie-player src=https://assets8.lottiefiles.com/packages/lf20_yFOj8b/2/data.json background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
                             </div>
 
                         </div>
-                        <div class="col-md-5 d-flex align-items-center text-center">
+                        <div class="col-lg-6 d-flex align-items-center text-center">
                             <div class="card card-cascade narrower mx-lg-4">
 
                                 <!-- Card image -->
@@ -41,13 +41,13 @@
                                 </div>
 
                                 <!-- Card content -->
-                                <div class="card-body card-body-cascade bg-transparent  ">
+                                <div class="card-body card-body-cascade bg-transparent mx-5 ">
 
-                                    <h3 class="font-weight-normal mb-4 light-blue-text">Hey, @User.Identity.Name Welcome Back</h3>
+                                    <h3 class="font-weight-bold mb-4 light-blue-text">Hey, @User.Identity.Name Welcome</h3>
 
-                                    <p></p>
+                                    <p class="text-justify">Web admins manage and maintain websites, taking into account functionality, appearance, content, and performance. Their main focus is on the technical aspects of web maintenance</p>
 
-                                    <a href="/UIToCode/AdminPanel/Index" class="btn btn-primary btn-rounded">Admin Panel</a>
+                                    <a href="/UIToCode/AdminPanel/Index" class="btn btn-primary btn-rounded btn-md"><i class="fas fa-cog"></i> Admin Panel </a>
 
                                 </div>
 
@@ -61,72 +61,55 @@
 
             </div>
         }
-        else if (User.Identity.IsAuthenticated && User.IsInRole("Editro"))
-        {
-            <div class="container my-5 z-depth-1">
-
-
-                <!--Section: Content-->
-                <section class="dark-grey-text">
-
-                    <div class="row pr-lg-5">
-                        <div class="col-md-7 mb-4">
-
-                            <div class="view">
-                                <img src="https://mdbootstrap.com/img/illustrations/graphics(4).png" class="img-fluid" alt="smaple image">
-                            </div>
-
-                        </div>
-                        <div class="col-md-5 d-flex align-items-center">
-                            <div>
-
-                                <h3 class="font-weight-bold mb-4">Hi @User.Identity.Name You have Editor Roles</h3>
-
-                                <p>Lorem ipsum dolor sit amet consectetur adip elit. Maiores deleniti explicabo voluptatem quisquam nulla asperiores aspernatur aperiam voluptate et consectetur minima delectus, fugiat eum soluta blanditiis adipisci, velit dolore magnam.</p>
-
-                                <button type="button" class="btn btn-orange btn-rounded mx-0">Download</button>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
-                <!--Section: Content-->
-
-
-            </div>
-        }
+       
         else if (User.Identity.IsAuthenticated)
         {
-            <div class="container my-5 z-depth-1">
+            <div class="container my-5 z-depth-0">
 
-
-                <!--Section: Content-->
                 <section class="dark-grey-text">
 
                     <div class="row pr-lg-5">
-                        <div class="col-md-7 mb-4">
+                        <div class="col-lg-6 mb-4">
 
-                            <div class="view">
-                                <img src="https://mdbootstrap.com/img/illustrations/graphics(4).png" class="img-fluid" alt="smaple image">
+                            <div class="img-fluid">
+                                <lottie-player src=https://assets8.lottiefiles.com/packages/lf20_yFOj8b/2/data.json background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
                             </div>
 
                         </div>
-                        <div class="col-md-5 d-flex align-items-center">
-                            <div>
+                        <div class="col-lg-6 d-flex align-items-center text-center">
+                            <div class="card card-cascade narrower mx-lg-4">
 
-                                <h3 class="font-weight-bold mb-4">Hi @User.Identity.Name Welcom Back</h3>
+                                <!-- Card image -->
+                                <div class="view view-cascade gradient-card-header blue-gradient">
 
-                                <p>Lorem ipsum dolor sit amet consectetur adip elit. Maiores deleniti explicabo voluptatem quisquam nulla asperiores aspernatur aperiam voluptate et consectetur minima delectus, fugiat eum soluta blanditiis adipisci, velit dolore magnam.</p>
+                                    <!-- Title -->
+                                    <h2 class="card-header-title">User Area</h2>
+                                    <!-- Subtitle -->
+                                    <!-- Facebook -->
+                                    <a href="https://www.linkedin.com/in/qais-yousuf-75261b125/" target="_blank" type="button" class="btn-floating"><i class="fab fa-linkedin-in"></i></a>
+                                    <!-- Twitter -->
+                                    <a href="https://github.com/Qaisyousuf" target="_blank" type="button" class="btn-floating"><i class="fab fa-github"></i></a>
+                                    <!-- Google + -->
+                                    <a href="https://stackoverflow.com/users/9307351/qais-yousuf" target="_blank" type="button" class="btn-floating"><i class="fab fa-stack-overflow"></i></a>
 
-                                <button type="button" class="btn btn-orange btn-rounded mx-0">Download</button>
+                                </div>
+
+                                <!-- Card content -->
+                                <div class="card-body card-body-cascade bg-transparent mx-lg-3 mx-md-3 mx-sm-2  ">
+
+                                    <h3 class="font-weight-bold mb-4 light-blue-text">Hey, @User.Identity.Name Welcome</h3>
+
+                                    <p class="text-justify">Web admins manage and maintain websites, taking into account functionality, appearance, content, and performance. Their main focus is on the technical aspects of web maintenance</p>
+
+                                    <a href="/UIToCode/AdminPanel/Index" class="btn btn-primary btn-rounded btn-md"><i class="fas fa-cog"></i> Dashboard </a>
+
+                                </div>
 
                             </div>
                         </div>
                     </div>
 
                 </section>
-                <!--Section: Content-->
 
 
             </div>

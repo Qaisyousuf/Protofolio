@@ -54,6 +54,7 @@ namespace QaisYousuf.Data.Interfaces
         IRoleRepository RoleRepository { get; }
         IAdminDashboardRepository AdminDashboardRepository { get; }
         IAdminActivityRepository AdminActivityRepository { get; }
+        IUserActivityRepository UserActivityRepository { get; }
         void Commit();
     }
 }
