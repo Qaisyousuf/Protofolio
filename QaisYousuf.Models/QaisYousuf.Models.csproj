@@ -90,6 +90,7 @@
     <Compile Include="UIUXSteps.cs" />
     <Compile Include="UI_UX_Tools.cs" />
     <Compile Include="UserActivity.cs" />
+    <Compile Include="UserDashboard.cs" />
     <Compile Include="UserModel.cs" />
     <Compile Include="WebProgrammingTools.cs" />
     <Compile Include="WorkExperience.cs" />

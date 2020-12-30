@@ -4,9 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using QaisYousuf.ViewModels;
+using QaisYousuf.Web.Infrastructure;
 
 namespace QaisYousuf.Web.Controllers
 {
+    
     public class UIUXController :BaseController
     {
         [Route("UIUX")]

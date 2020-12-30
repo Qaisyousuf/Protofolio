@@ -18,6 +18,7 @@ namespace QaisYousuf.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             GlobalFilters.Filters.Add(new CustomAuthenticationFilter());
             //GlobalFilters.Filters.Add(new ExceptionFilter());
+           // GlobalFilters.Filters.Add(new UserActivityFilter());
             
             
         }

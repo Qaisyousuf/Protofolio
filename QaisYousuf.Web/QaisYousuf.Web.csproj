@@ -1010,6 +1010,7 @@
     <Compile Include="Areas\UIToCode\Controllers\UIStepsController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\UIUXMatterController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\UIUXToolsController.cs" />
+    <Compile Include="Areas\UIToCode\Controllers\UserActivityController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\WebProgrammingToolsController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\WorkExperinceController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\WorkQualitySectionController.cs" />
@@ -1030,6 +1031,7 @@
     </Compile>
     <Compile Include="Infrastructure\AdminActivityFilter.cs" />
     <Compile Include="Infrastructure\ExceptionFilter.cs" />
+    <Compile Include="Infrastructure\UserActivityFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1056,6 +1058,8 @@
     <Content Include="Areas\UIToCode\Views\Shared\Error.cshtml" />
     <Content Include="Areas\UIToCode\Views\AdminActivity\Index.cshtml" />
     <Content Include="Areas\UIToCode\Views\AdminActivity\Details.cshtml" />
+    <Content Include="Areas\UIToCode\Views\UserActivity\Index.cshtml" />
+    <Content Include="Areas\UIToCode\Views\UserActivity\Details.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />

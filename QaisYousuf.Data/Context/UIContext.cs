@@ -59,6 +59,7 @@ namespace QaisYousuf.Data.Context
         public DbSet<AdminDashboard> AdminDashboards { get; set; }
         public DbSet<AdminActivity> AdminActivities { get; set; }
         public DbSet<UserActivity> UserActivities { get; set; }
+        public DbSet<UserDashboard> UserDashboards { get; set; }
 
 
 

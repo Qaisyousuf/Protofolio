@@ -55,6 +55,7 @@ namespace QaisYousuf.Data.Interfaces
         IAdminDashboardRepository AdminDashboardRepository { get; }
         IAdminActivityRepository AdminActivityRepository { get; }
         IUserActivityRepository UserActivityRepository { get; }
+        IUserDashBoardRepository UserDashboardRepository { get; }
         void Commit();
     }
 }

@@ -103,6 +103,8 @@ namespace QaisYousuf.Data.Concrete_Implementation
 
         public IUserActivityRepository UserActivityRepository => new UserActivityRepository(Context);
 
+        public IUserDashBoardRepository UserDashboardRepository => new UserDashboardRepository(Context);
+
         public UnitOfWork()
         {
             Context = new UIContext();

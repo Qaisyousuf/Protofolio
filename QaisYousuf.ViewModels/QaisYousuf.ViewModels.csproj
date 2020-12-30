@@ -128,6 +128,7 @@
     <Compile Include="UIUXPageViewModel.cs" />
     <Compile Include="UIUXToolsViewModel.cs" />
     <Compile Include="UserActivityViewModel.cs" />
+    <Compile Include="UserDashboardViewModel.cs" />
     <Compile Include="WebProgrammingToolsViewModel.cs" />
     <Compile Include="WorkExperienceViewModel.cs" />
     <Compile Include="WorkQualitySectionViewModel.cs" />
