@@ -105,6 +105,8 @@ namespace QaisYousuf.Data.Concrete_Implementation
 
         public IUserDashBoardRepository UserDashboardRepository => new UserDashboardRepository(Context);
 
+        public ISubscriberEmailRepository SubscriberEmailRepository => new SubscriberEmailRepository(Context);
+
         public UnitOfWork()
         {
             Context = new UIContext();

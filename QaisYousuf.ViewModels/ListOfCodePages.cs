@@ -12,5 +12,6 @@ namespace QaisYousuf.ViewModels
         public List<WebProgrammingToolsViewModel> ListOfWebProgramming { get; set; }
         public List<UIUXToolsViewModel> ListUIUXToolsViewModel { get; set; }
         public List<DesignCodeViewModel> ListCodeDesignViewModel { get; set; }
+        public List<SubscribeViewModel> ListOfSubscribeViewModel { get; set; }
     }
 }

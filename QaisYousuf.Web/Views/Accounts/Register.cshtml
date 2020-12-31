@@ -1,8 +1,10 @@
 ﻿@model QaisYousuf.ViewModels.RegisterViewModel
 
 @{
-    ViewBag.Title = "Register";
-    Layout = "~/Views/Shared/_Authorization.cshtml";
+                /**/
+
+                ViewBag.Title = "Register";
+                Layout = "~/Views/Shared/_Authorization.cshtml";
 
 }
 
@@ -31,6 +33,10 @@
 
                     <!-- Card content -->
                     <div class="card-body card-body-cascade bg-transparent d-inline-flex justify-content-center ">
+                        @if (TempData["Success"] != null)
+                        {
+                            <h5 class="alert alert-success">@TempData["Success"]</h5>
+                        }
 
                         <!-- Text -->
                         @using (Html.BeginForm())

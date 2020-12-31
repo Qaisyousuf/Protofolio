@@ -1,0 +1,300 @@
+﻿
+body {
+    font-family: 'Varela Round', sans-serif;
+    overflow-x: hidden;
+    color: rebeccapurple;
+}
+
+header {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar {
+    background-color: transparent !important;
+    -webkit-box-shadow: -1px 3px 5px -200px rgba(0,0,0,0.75) !important;
+    -moz-box-shadow: -1px 3px 5px -200px rgba(0,0,0,0.75) !important;
+    box-shadow: -1px 3px 5px -200px rgba(0,0,0,0.75) !important;
+}
+
+.top-nav-collapse {
+    background-color: #348acb !important;
+    -webkit-box-shadow: 0px 6px 11px -10px #000000 !important;
+    box-shadow: 0px 6px 11px -10px #000000 !important;
+}
+
+
+
+@media (max-width:575px) {
+    .top-nav-collapse {
+        background-color: #f5f9ff !important;
+        -webkit-box-shadow: -1px 7px 15px -5px rgba(162,169,171,0.6) !important;
+        -moz-box-shadow: -1px 7px 15px -5px rgba(162,169,171,0.6) !important;
+        box-shadow: -1px 7px 15px -5px rgba(162,169,171,0.6) !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .top-nav-collapse {
+        background-color: #f5f9ff !important;
+        -webkit-box-shadow: -1px 7px 15px -5px rgba(162,169,171,0.6) !important;
+        -moz-box-shadow: -1px 7px 15px -5px rgba(162,169,171,0.6) !important;
+        box-shadow: -1px 7px 15px -5px rgba(162,169,171,0.6) !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar {
+        background-color: #fff !important;
+        -webkit-box-shadow: 0px 68px 55px -120px rgba(62,154,179,1);
+        -moz-box-shadow: 0px 68px 55px -120px rgba(62,154,179,1);
+        box-shadow: 0px 68px 55px -120px rgba(62,154,179,1);
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .navbar {
+        background-color: #fff !important;
+        -webkit-box-shadow: 0px 68px 55px -120px rgba(62,154,179,1);
+        -moz-box-shadow: 0px 68px 55px -120px rgba(62,154,179,1);
+        box-shadow: 0px 68px 55px -120px rgba(62,154,179,1);
+    }
+}
+
+.navbar.navbar-dark .navbar-nav .nav-item .nav-link {
+    color: white;
+    -webkit-transition: .35s;
+    transition: .35s;
+}
+
+nav .nav-item .nav-link {
+    color: white !important;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    font-family: 'Varela Round', sans-serif;
+    -webkit-transition: .35s;
+    transition: .35s;
+}
+
+@media(max-width:990px) {
+
+    .navbar.navbar-dark .navbar-nav .nav-item .nav-link {
+        color: #4380e0 !important;
+        -webkit-transition: .35s;
+        transition: .35s;
+    }
+
+    nav .nav-item .nav-link {
+        color: red !important;
+        font-size: 1.1rem;
+        font-weight: bolder;
+        font-family: 'Varela Round', sans-serif;
+        -webkit-transition: .35s;
+        transition: .35s;
+    }
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-weight: bold !important;
+}
+
+@media(max-width:990px) {
+    .navbar-brand {
+        color: #4380e0 !important;
+        font-weight: bold !important;
+    }
+}
+
+@media (max-width:767px) and (min-width:200px) {
+    #BannerContent {
+        margin-top: 50px;
+    }
+}
+
+.btn-info {
+    background-color: transparent !important;
+    border: 2px solid #17bde3 !important;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #5caaf2 !important;
+    color: white;
+}
+
+.btn-outline-primary {
+    border: 2px solid #17bde3 !important;
+    color: #17bde3 !important;
+}
+
+
+.display-5 {
+    color: white !important;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+@media (max-width: 976px) {
+    .display-5 {
+        font-size: 3rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 876px) {
+    .display-5 {
+        font-size: 3rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 776px) {
+    .display-5 {
+        font-size: 2.5rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-5 {
+        font-size: 2.5rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 376px) {
+    .display-5 {
+        font-size: 2rem !important;
+        color: white !important;
+    }
+}
+
+.display-4 {
+    color: #169cba !important;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+@media (max-width:800px) and (min-width:200px) {
+    .display-3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:800px) and (min-width:200px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+}
+
+
+.blue-gradient {
+    background: -moz-linear-gradient(45deg, rgba(22,156,186,1) 0%, rgba(26,114,186,1) 100%) !important; /* ff3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(22,156,186,1)), color-stop(100%, rgba(26,114,186,1))) !important; /* safari4+,chrome */
+    background: -webkit-linear-gradient(45deg, rgba(22,156,186,1) 0%, rgba(26,114,186,1) 100%) !important; /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(45deg, rgba(22,156,186,1) 0%, rgba(26,114,186,1) 100%) !important; /* opera 11.10+ */
+    background: -ms-linear-gradient(45deg, rgba(22,156,186,1) 0%, rgba(26,114,186,1) 100%) !important; /* ie10+ */
+    background: linear-gradient(45deg, rgba(22,156,186,1) 0%, rgba(26,114,186,1) 100%) !important; /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1A72BA', endColorstr='#169cba',GradientType=1 ) !important; /* ie6-9 */
+}
+
+.btn-rounded {
+    border-radius: 0.3rem !important;
+}
+
+
+@media (max-width: 1920px) {
+    .UserDashboardMainBackground {
+        background-image: url(Images/LoginXBigBackground.svg);
+        background-size: cover;
+        background-position: center;
+        height: 1024px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .UserDashboardMainBackground {
+        background-image: url(Images/LoginBigBackground.svg);
+        background-size: cover;
+        background-position: center;
+        height: 573px;
+        padding-top: 100px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+@media (max-width: 990px) {
+    .AuthrizationAreaMainBackground {
+        background-image: url(Images/LoginMedumBackground.svg);
+        background-size: cover;
+        background-position: center;
+        height: 1177px;
+        padding-top: 120px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+@media (max-width: 700px) {
+    .LoginMainBackground {
+        background-image: url(Images/LoginSmallBackground.svg);
+        background-size: cover;
+        background-position: center;
+        height: 1045px;
+        padding-top: 120px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .LoginMainBackground {
+        background-image: url(Images/LoginXSBackground.svg);
+        background-size: cover;
+        background-position: center;
+        height: 933px;
+        padding-top: 120px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+@media (max-width: 1920px) {
+    .RegisterMainBackground {
+        background-image: url(Images/RegisterXBigBackground.svg);
+        background-size: cover;
+        background-position: center;
+        height: 1024px;
+        padding-top: 220px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .RegisterMainBackground {
+        background-image: url(Images/RegisterBigBackground.svg);
+        background-size: cover;
+        background-position: center;
+        height: 849px;
+        padding-top: 120px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}

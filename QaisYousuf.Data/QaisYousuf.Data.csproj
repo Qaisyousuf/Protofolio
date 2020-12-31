@@ -71,6 +71,7 @@
     <Compile Include="Concrete Implementation\InterestRepository.cs" />
     <Compile Include="Concrete Implementation\ProjectStatusRepository.cs" />
     <Compile Include="Concrete Implementation\RoleRepository.cs" />
+    <Compile Include="Concrete Implementation\SubscriberEmailRepository.cs" />
     <Compile Include="Concrete Implementation\SubscribeRepository.cs" />
     <Compile Include="Concrete Implementation\MeetOurTeamRepository.cs" />
     <Compile Include="Concrete Implementation\MenuRepository.cs" />
@@ -126,6 +127,7 @@
     <Compile Include="Interfaces\IMenuRepository.cs" />
     <Compile Include="Interfaces\IProjectStatusRepository.cs" />
     <Compile Include="Interfaces\IRoleRepository.cs" />
+    <Compile Include="Interfaces\ISubscriberEmailRepository.cs" />
     <Compile Include="Interfaces\IUserActivityRepository.cs" />
     <Compile Include="Interfaces\IUserDashBoardRepository.cs" />
     <Compile Include="Interfaces\IUserRepository.cs" />
@@ -312,6 +314,14 @@
     <Compile Include="Migrations\202012300957587_UserDashboardModelAdded.designer.cs">
       <DependentUpon>202012300957587_UserDashboardModelAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012302125577_UserModelAddedToUserDashboardModel.cs" />
+    <Compile Include="Migrations\202012302125577_UserModelAddedToUserDashboardModel.designer.cs">
+      <DependentUpon>202012302125577_UserModelAddedToUserDashboardModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012310917370_SubscriberEmaillAdded.cs" />
+    <Compile Include="Migrations\202012310917370_SubscriberEmaillAdded.designer.cs">
+      <DependentUpon>202012310917370_SubscriberEmaillAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -442,6 +452,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012300957587_UserDashboardModelAdded.resx">
       <DependentUpon>202012300957587_UserDashboardModelAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012302125577_UserModelAddedToUserDashboardModel.resx">
+      <DependentUpon>202012302125577_UserModelAddedToUserDashboardModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012310917370_SubscriberEmaillAdded.resx">
+      <DependentUpon>202012310917370_SubscriberEmaillAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

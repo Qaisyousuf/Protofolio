@@ -81,6 +81,7 @@
     <Compile Include="StartUpProcess.cs" />
     <Compile Include="StartUpProgram.cs" />
     <Compile Include="Subscribe.cs" />
+    <Compile Include="SubscriberEmail.cs" />
     <Compile Include="TeamSocialMedia.cs" />
     <Compile Include="TypeOfCompany.cs" />
     <Compile Include="UIBanner.cs" />

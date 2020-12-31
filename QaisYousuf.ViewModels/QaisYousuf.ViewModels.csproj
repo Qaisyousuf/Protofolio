@@ -119,6 +119,7 @@
     <Compile Include="SiteSettingViewMdoel.cs" />
     <Compile Include="StartUpProcessViewModel.cs" />
     <Compile Include="StartUpProgramViewModel.cs" />
+    <Compile Include="SubscriberEmailViewModel.cs" />
     <Compile Include="SubscribeViewModel.cs" />
     <Compile Include="TeamSocialMediaViewModel.cs" />
     <Compile Include="UIBannerViewModel.cs" />

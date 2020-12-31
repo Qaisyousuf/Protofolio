@@ -237,6 +237,7 @@
     <Content Include="Content\Images\UIWavesBig.svg" />
     <Content Include="Content\Images\UIWavesSmallBack.svg" />
     <Content Include="Content\CustomErrorCSs.css" />
+    <Content Include="Content\UserDashBoardCustomCSS.css" />
     <Content Include="Content\UIUXCustomCSS.css" />
     <Content Include="Content\AccountCustomCSS.css" />
     <Content Include="Content\CodeCustomCSS.css" />
@@ -1004,6 +1005,7 @@
     <Compile Include="Areas\UIToCode\Controllers\StartUpProcessController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\StartUpProgramController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\SubscribeController.cs" />
+    <Compile Include="Areas\UIToCode\Controllers\SubscribeEmailController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\UIBannerController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\UIPageController.cs" />
     <Compile Include="Areas\UIToCode\Controllers\UIProcessController.cs" />
@@ -1025,6 +1027,7 @@
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\TechnologyToolsController.cs" />
     <Compile Include="Controllers\UIUXController.cs" />
+    <Compile Include="Controllers\UserDashboardController.cs" />
     <Compile Include="Filters\CustomAuthenticationFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1060,6 +1063,8 @@
     <Content Include="Areas\UIToCode\Views\AdminActivity\Details.cshtml" />
     <Content Include="Areas\UIToCode\Views\UserActivity\Index.cshtml" />
     <Content Include="Areas\UIToCode\Views\UserActivity\Details.cshtml" />
+    <Content Include="Areas\UIToCode\Views\SubscribeEmail\Index.cshtml" />
+    <Content Include="Areas\UIToCode\Views\SubscribeEmail\Details.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -1111,6 +1116,9 @@
     <Content Include="Scripts\moment.min.js.map" />
     <Content Include="Scripts\moment-with-locales.min.js.map" />
     <Content Include="Views\Accounts\Index.cshtml" />
+    <Content Include="Views\UserDashboard\Index.cshtml" />
+    <Content Include="Views\Shared\_UserDashBoard.cshtml" />
+    <Content Include="Views\TechnologyTools\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

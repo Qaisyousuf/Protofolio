@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using QaisYousuf.Data.Interfaces;
 using QaisYousuf.ViewModels;
+using QaisYousuf.Models;
 
 namespace QaisYousuf.Web.Controllers
 {
@@ -79,15 +80,60 @@ namespace QaisYousuf.Web.Controllers
                 });
             }
 
+            var subscribe = Uow.SubscribeRepository.GetAll();
+
+            List<SubscribeViewModel> ViewModelSubscribe = new List<SubscribeViewModel>();
+
+            foreach (var item in subscribe)
+            {
+                ViewModelSubscribe.Add(new SubscribeViewModel
+                {
+                    Id=item.Id,
+                    Title=item.Title,
+                    Content=item.Content,
+                    Email=item.Email,
+                    Buttontext=item.Buttontext,
+                    ModalMessage=item.ModalMessage,
+                    ImageUrl=item.ImageUrl,
+                });
+            }
+
             ListOfCodePages CodeList = new ListOfCodePages
             {
                 ListOfCodeBannerViewModel=viewmodel,
                 ListOfWebProgramming=WebProgrammingViewModel,
                 ListUIUXToolsViewModel=UIUXToolsViewModel,
                 ListCodeDesignViewModel=DesignCodeViewModel,
+                ListOfSubscribeViewModel=ViewModelSubscribe,
             };
 
             return View(CodeList);
+        }
+
+        
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View(new SubscriberEmailViewModel());
+        }
+        [HttpPost]
+        public ActionResult Create(SubscriberEmailViewModel viewmodel)
+        {
+            if(ModelState.IsValid)
+            {
+                SubscriberEmail email = new SubscriberEmail
+                {
+                    Id=viewmodel.Id,
+                    Email=viewmodel.Email,
+                };
+
+                Uow.SubscriberEmailRepository.Add(email);
+                Uow.Commit();
+                TempData["Success"] ="Your Email : " + email.Email  + "  subscribed successfully";
+                
+                
+            }
+            return View(viewmodel);
         }
     }
 }

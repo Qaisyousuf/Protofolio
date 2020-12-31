@@ -1,6 +1,8 @@
-﻿using System;
+﻿using QaisYousuf.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,5 +36,9 @@ namespace QaisYousuf.ViewModels
         [Display(Name = "Project Type")]
         
         public string ProjectType { get; set; }
+
+        public int UserId { get; set; }
+        [ForeignKey("UserId")]
+        public UserModel Users { get; set; }
     }
 }
