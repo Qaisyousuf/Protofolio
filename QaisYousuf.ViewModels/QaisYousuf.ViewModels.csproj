@@ -122,6 +122,7 @@
     <Compile Include="SubscriberEmailViewModel.cs" />
     <Compile Include="SubscribeViewModel.cs" />
     <Compile Include="TeamSocialMediaViewModel.cs" />
+    <Compile Include="ThankYouPageViewModel.cs" />
     <Compile Include="UIBannerViewModel.cs" />
     <Compile Include="UIProcessViewModel.cs" />
     <Compile Include="UIStepsViewModel.cs" />

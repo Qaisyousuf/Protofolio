@@ -57,6 +57,9 @@ namespace QaisYousuf.Data.Interfaces
         IUserActivityRepository UserActivityRepository { get; }
         IUserDashBoardRepository UserDashboardRepository { get; }
         ISubscriberEmailRepository SubscriberEmailRepository { get; }
+        IThankYouPageRepository ThankYouPageRepository { get; }
+
+
         void Commit();
     }
 }

@@ -89,6 +89,7 @@
     <Compile Include="Concrete Implementation\StartUpProcessRepository.cs" />
     <Compile Include="Concrete Implementation\StartUpProgramRepository.cs" />
     <Compile Include="Concrete Implementation\TeamSocialMediaRepository.cs" />
+    <Compile Include="Concrete Implementation\ThankYouPageRepository.cs" />
     <Compile Include="Concrete Implementation\TypeOfCompanyRepository.cs" />
     <Compile Include="Concrete Implementation\UIBannerRepository.cs" />
     <Compile Include="Concrete Implementation\UnitOfWork.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="Interfaces\IProjectStatusRepository.cs" />
     <Compile Include="Interfaces\IRoleRepository.cs" />
     <Compile Include="Interfaces\ISubscriberEmailRepository.cs" />
+    <Compile Include="Interfaces\IThankYouPageRepository.cs" />
     <Compile Include="Interfaces\IUserActivityRepository.cs" />
     <Compile Include="Interfaces\IUserDashBoardRepository.cs" />
     <Compile Include="Interfaces\IUserRepository.cs" />
@@ -322,6 +324,10 @@
     <Compile Include="Migrations\202012310917370_SubscriberEmaillAdded.designer.cs">
       <DependentUpon>202012310917370_SubscriberEmaillAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101060608017_ThankYouModelAdded.cs" />
+    <Compile Include="Migrations\202101060608017_ThankYouModelAdded.designer.cs">
+      <DependentUpon>202101060608017_ThankYouModelAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -458,6 +464,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012310917370_SubscriberEmaillAdded.resx">
       <DependentUpon>202012310917370_SubscriberEmaillAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101060608017_ThankYouModelAdded.resx">
+      <DependentUpon>202101060608017_ThankYouModelAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

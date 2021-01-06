@@ -83,6 +83,7 @@
     <Compile Include="Subscribe.cs" />
     <Compile Include="SubscriberEmail.cs" />
     <Compile Include="TeamSocialMedia.cs" />
+    <Compile Include="ThankYouPage.cs" />
     <Compile Include="TypeOfCompany.cs" />
     <Compile Include="UIBanner.cs" />
     <Compile Include="UIPage.cs" />

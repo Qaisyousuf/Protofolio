@@ -107,6 +107,8 @@ namespace QaisYousuf.Data.Concrete_Implementation
 
         public ISubscriberEmailRepository SubscriberEmailRepository => new SubscriberEmailRepository(Context);
 
+        public IThankYouPageRepository ThankYouPageRepository => new ThankYouPageRepository(Context);
+
         public UnitOfWork()
         {
             Context = new UIContext();

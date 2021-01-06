@@ -61,6 +61,7 @@ namespace QaisYousuf.Data.Context
         public DbSet<UserActivity> UserActivities { get; set; }
         public DbSet<UserDashboard> UserDashboards { get; set; }
         public DbSet<SubscriberEmail> SubscriberEmails { get; set; }
+        public DbSet<ThankYouPage> ThankYouPages { get; set; }
 
 
 

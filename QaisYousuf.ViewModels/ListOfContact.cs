@@ -11,5 +11,6 @@ namespace QaisYousuf.ViewModels
         public List<ContactBannerViewModel> ListContactBannerViewmodel { get; set; }
         public List<ContactDetailsViewModel> ListContactDetiailsViewModel { get; set; }
         public List<ContactMattersViewModel> ListContactMatterViewModel { get; set; }
+        public List<ThankYouPageViewModel> ListOfThankYouPageViewModel { get; set; }
     }
 }
