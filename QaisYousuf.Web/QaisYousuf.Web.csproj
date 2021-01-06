@@ -1020,6 +1020,7 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ConnectionController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\CustomErrorController.cs" />
     <Compile Include="Controllers\CustomErrorsController.cs" />
@@ -1119,6 +1120,8 @@
     <Content Include="Views\UserDashboard\Index.cshtml" />
     <Content Include="Views\Shared\_UserDashBoard.cshtml" />
     <Content Include="Views\TechnologyTools\Create.cshtml" />
+    <Content Include="Views\Connection\Coneection.cshtml" />
+    <Content Include="Views\Connection\Connected.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1128,6 +1131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Base\" />
     <Folder Include="Views\CustomErrors\" />
   </ItemGroup>
   <ItemGroup>
