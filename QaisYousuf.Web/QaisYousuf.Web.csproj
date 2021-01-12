@@ -1076,6 +1076,7 @@
     <Content Include="Views\Home\HomeBanner.cshtml" />
     <Content Include="Views\Home\DataCollection.cshtml" />
     <Content Include="Views\Home\WorkQuality.cshtml" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\node_modules\lottie-player\dist\data.json" />
