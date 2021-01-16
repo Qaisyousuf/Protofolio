@@ -40,7 +40,7 @@
 
                             @foreach (var subitem in Model.DesignViewModel.Take(1))
                             {
-                                <h2 class="card-title font-weight-bold light-blue-text  mt-4"><strong>@subitem.MainTitle</strong></h2>
+                                <h2 class="card-title font-weight-bold light-blue-text  mt-4">@subitem.MainTitle</h2>
                                 <!-- Subtitle -->
                                 <div class="img-fluid">
                                     <lottie-player src=@subitem.StepIcon background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
@@ -84,7 +84,7 @@
                                     <!--Grid column-->
                                     <div class="col-md-9 mt-5 ">
 
-                                        <h3 class="font-weight-bold">@item.SubTitle</h3>
+                                        <h3 class="font-weight-bold light-blue-text">@item.SubTitle</h3>
 
                                         <p class="text-muted text-justify">
                                             @Html.Raw(item.StepContent)

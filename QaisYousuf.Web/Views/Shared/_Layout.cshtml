@@ -111,9 +111,9 @@
                                     <div class="row align-items-center">
                                         <!--Grid column-->
                                         <div class="col-md-6 text-center text-lg-left">
-                                            <div class="display-5 text-uppercase font-weight-bold">ui to code</div>
-                                            <h3 class="text-white text-justify">@Model.BaseBaseContent</h3>
-                                            <a href="@Model.BaseBaseContactUrl" class="btn btn-info btn-rounded">@Model.BaseContact</a>
+                                            <div class="display-5 text-uppercase font-weight-bold">@Model.BaseSiteName</div>
+                                            <h3 class="text-white">@Model.BaseBaseContent</h3>
+                                            <a href="@Model.BaseBaseContactUrl" class="btn btn-info btn-rounded btn-md">@Model.BaseContact <i class="fas fa-at"></i></a>
                                         </div>
                                         <!--Grid column-->
                                         <!--Grid column-->
@@ -140,9 +140,9 @@
 
                         <section>
                             <div class="footer-copyright text-center mt-0 mb-0">
-                                <p class="text-white-50 mb-1">© 2018 Copyright:@Model.BaseSiteName</p>
+                                <p class="text-white-50 mb-1">© @DateTime.Now.Date.Year.ToString() Copyright:@Model.BaseSiteName</p>
                                 <p class="text-white-50 mb-1">Site Last Updated: @Model.BaseSiteLastUpdate</p>
-                                <p class="text-white-50 mb-0">@Model.BaseCopyrightFooter</p>
+                                <p class="text-white-50 mb-3">@Model.BaseCopyrightFooter</p>
 
                             </div>
                         </section>

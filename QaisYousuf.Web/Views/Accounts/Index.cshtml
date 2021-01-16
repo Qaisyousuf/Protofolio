@@ -12,13 +12,13 @@
 
 
                 <!--Section: Content-->
-                <section class="dark-grey-text">
+                <section class="dark-grey-text pt-lg-5 pt-md-5">
 
                     <div class="row pr-lg-5">
                         <div class="col-lg-6 mb-4">
 
                             <div class="img-fluid">
-                                <lottie-player src=https://assets8.lottiefiles.com/packages/lf20_yFOj8b/2/data.json background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                                <lottie-player src=https://assets9.lottiefiles.com/packages/lf20_yYOpBn.json background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
                             </div>
 
                         </div>
@@ -45,7 +45,9 @@
 
                                     <h3 class="font-weight-bold mb-4 light-blue-text">Hey, @User.Identity.Name Welcome</h3>
 
-                                    <p class="text-justify">Web admins manage and maintain websites, taking into account functionality, appearance, content, and performance. Their main focus is on the technical aspects of web maintenance</p>
+                                    <p class="text-justify">
+                                        Web admins manage and maintain websites, taking into account functionality, appearance, content, and performance. Their main focus is on the technical aspects of web maintenance
+                                    </p>
 
                                     <a href="/UIToCode/AdminPanel/Index" class="btn btn-primary btn-rounded btn-md"><i class="fas fa-cog"></i> Admin Panel </a>
 
@@ -72,7 +74,7 @@
                         <div class="col-lg-6 mb-4">
 
                             <div class="img-fluid">
-                                <lottie-player src=https://assets8.lottiefiles.com/packages/lf20_yFOj8b/2/data.json background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                                <lottie-player src=https://assets10.lottiefiles.com/packages/lf20_fclga8fl.json background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
                             </div>
 
                         </div>
@@ -99,10 +101,35 @@
 
                                     <h3 class="font-weight-bold mb-4 light-blue-text">Hey, @User.Identity.Name Welcome</h3>
 
-                                    <p class="text-justify">Web admins manage and maintain websites, taking into account functionality, appearance, content, and performance. Their main focus is on the technical aspects of web maintenance</p>
+                                    <p class="text-justify">
 
-                                    <a href="/UIToCode/AdminPanel/Index" class="btn btn-primary btn-rounded btn-md"><i class="fas fa-cog"></i> Dashboard </a>
+                                        We are so glad you decided to try out our product, here are a few tips to get you up and running fast.
+                                        If you need to have project with UIUXtoCode please contact us, our team are excited to design a demo for your company,
+                                    </p>
 
+                                    <button type="button" class="btn btn-primary btn-rounded" data-toggle="modal" data-target="#frameModalBottom">
+                                        <i class="fas fa-paper-plane mr-2"></i> Contact Us
+                                    </button>
+
+                                </div>
+                                <div class="modal fade bottom" id="frameModalBottom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                     aria-hidden="true">
+
+                                    <!-- Add class .modal-frame and then add class .modal-bottom (or other classes from list above) to set a position to the modal -->
+                                    <div class="modal-dialog modal-frame modal-bottom" role="document">
+
+
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <div class="row d-flex justify-content-center align-items-center">
+
+
+                                                    @{ Html.RenderAction("Coneection", "Connection");}
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>

@@ -26,7 +26,7 @@
                                 <div class="row align-items-center text-center text-lg-left h-100 my-5 py-5">
                                     <!--Grid column-->
                                     <div class="col-md-12  text-center ">
-                                        <h1 class="light-blue-text">@item.MainTitle</h1>
+                                        <h1 class="light-blue-text font-weight-bold">@item.MainTitle</h1>
                                        
                                        
                                     </div>
@@ -82,10 +82,13 @@
                                             <h3 class="font-weight-bold light-blue-text">@item.SubTitle</h3>
 
                                             <p class="text-muted text-justify">
-                                               @Html.Raw(item.Content)
+                                                @Html.Raw(item.Content)
                                             </p>
 
-                                            <button class="btn btn-primary btn-rounded">View Process</button>
+                                            <button type="button" class="btn btn-primary btn-rounded btn-md" data-toggle="modal" data-target="#frameModalBottom">
+                                                <i class="far fa-eye mr-2"></i> View Process
+                                               
+                                            </button>
 
                                         </div>
                                         <!--Grid column-->
@@ -102,6 +105,27 @@
 
                             </div>
 
+                            <div class="modal fade bottom" id="frameModalBottom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+
+        <!-- Add class .modal-frame and then add class .modal-bottom (or other classes from list above) to set a position to the modal -->
+        <div class="modal-dialog modal-frame modal-bottom" role="document">
+
+
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row d-flex justify-content-center align-items-center">
+
+                        <div class="img-fluid pt-3">
+                            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_egwdrB.json" background="transparent" speed="1" style="width: auto; height: auto;" loop autoplay></lottie-player>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
                             <!-- Grid row -->
                             @*<div class="col-md-4">
                 <!-- Card -->
