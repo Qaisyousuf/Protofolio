@@ -80,40 +80,42 @@ nav .nav-item .nav-link {
     font-weight: bold;
     font-size: 3.5rem;
 }
-@media (max-width: 576px) {
+
+@media (max-width: 976px) {
     .display-5 {
         font-size: 3rem !important;
         color: white !important;
     }
 }
 
-@media (max-width: 776px) {
-    .display-5 {
-        font-size: 4rem !important;
-        color: white !important;
-    }
-}
-
 @media (max-width: 876px) {
     .display-5 {
-        font-size: 4.1rem !important;
+        font-size: 2.5rem !important;
         color: white !important;
     }
 }
 
-@media (max-width: 976px) {
+@media (max-width: 776px) {
     .display-5 {
-        font-size: 4rem !important;
+        font-size: 2.2rem !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-5 {
+        font-size: 2rem !important;
         color: white !important;
     }
 }
 
 @media (max-width: 376px) {
     .display-5 {
-        font-size: 2.5rem !important;
+        font-size: 1.8rem !important;
         color: white !important;
     }
 }
+
 
 .display-4 {
     color: #169cba !important;

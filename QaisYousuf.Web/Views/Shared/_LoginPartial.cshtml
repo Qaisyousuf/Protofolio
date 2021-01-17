@@ -5,9 +5,9 @@
         using (Html.BeginForm("LogOut", "Accounts", new { Area = "" }, FormMethod.Post,
        new { id = "logoutForm" }))
         {
-            <ul class="nav navbar-nav nav-flex-icons ml-auto">
-                <li class="">
-                    <a class="nav-link ml-auto" href="javascript:document.getElementById('logoutForm').submit();"> Hi,  @User.Identity.Name | <span class="btn btn-danger btn-rounded btn-sm"> Logout <i class="fas fa-lock"></i> </span></a>
+            <ul class="nav navbar-nav nav-flex-icons">
+                <li class="d-flex justify-content-end ml-lg-5 ml-md-5" id="LogOutButton">
+                    <a class="nav-link ml-auto"  href="javascript:document.getElementById('logoutForm').submit();"> Hi,  @User.Identity.Name | <span class="btn btn-danger btn-rounded btn-sm"> Logout <i class="fas fa-lock"></i> </span></a>
                 </li>
             </ul>
         }

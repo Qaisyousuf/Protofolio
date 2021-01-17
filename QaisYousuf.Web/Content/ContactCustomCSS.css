@@ -203,6 +203,25 @@ nav .nav-item .nav-link {
     }
 }
 
+#LogOutButton {
+    margin-left: 400px !important;
+}
+
+@media(max-width:1120px) {
+    #LogOutButton {
+        margin-left: 100px !important;
+    }
+}
+
+@media(max-width:990px) {
+    #LogOutButton {
+        margin-left: 0px !important;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        color: #348acb !important;
+    }
+}
 
 .ContactBackground {
     background-image: url('Images/ContactBigBackground.svg');
@@ -404,7 +423,7 @@ nav .nav-item .nav-link {
 @media (max-width: 767px) {
     .FooterMainBackground {
         background-image: url(Images/FooterSmallBackground.svg);
-        height: 877px;
+        height: 715px;
         margin-left: -15px;
         margin-right: -15px;
         background-repeat: no-repeat;

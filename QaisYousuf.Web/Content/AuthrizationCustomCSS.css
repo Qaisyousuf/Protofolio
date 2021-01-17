@@ -199,6 +199,25 @@ nav .nav-item .nav-link {
     }
 }
 
+#LogOutButton {
+    margin-left: 400px !important;
+}
+
+@media(max-width:1120px) {
+    #LogOutButton {
+        margin-left: 100px !important;
+    }
+}
+
+@media(max-width:990px) {
+    #LogOutButton {
+        margin-left: 0px !important;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        color: #348acb !important;
+    }
+}
 
 .blue-gradient {
     background: -moz-linear-gradient(45deg, rgba(22,156,186,1) 0%, rgba(26,114,186,1) 100%) !important; /* ff3.6+ */
