@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace QaisYousuf.Web.Areas.UIToCode.Controllers
 {
+    [Authorize(Roles = "Supper Admin")]
     public class AdminBashboardController : Controller
     {
         private readonly IUnitOfWork uow;

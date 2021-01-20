@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace QaisYousuf.Web.Areas.UIToCode.Controllers
 {
+    [Authorize(Roles = "Supper Admin")]
     public class UserActivityController : Controller
     {
         private readonly IUnitOfWork uow;

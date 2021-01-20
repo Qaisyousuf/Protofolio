@@ -9,6 +9,7 @@ using QaisYousuf.Data.Interfaces;
 
 namespace QaisYousuf.Web.Areas.UIToCode.Controllers
 {
+    [Authorize(Roles = "Supper Admin")]
     public class StartUpProcessController : Controller
     {
         private readonly IUnitOfWork uow;

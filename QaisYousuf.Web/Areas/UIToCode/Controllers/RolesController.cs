@@ -9,6 +9,7 @@ using QaisYousuf.Models;
 
 namespace QaisYousuf.Web.Areas.UIToCode.Controllers
 {
+    [Authorize(Roles = "Supper Admin")]
     public class RolesController : Controller
     {
         private readonly IUnitOfWork uow;

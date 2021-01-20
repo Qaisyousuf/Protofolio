@@ -8,7 +8,8 @@ using QaisYousuf.Web.Infrastructure;
 
 namespace QaisYousuf.Web.Controllers
 {
-    
+    [UserActivityFilter]
+    [AdminActivityFilter]
     public class UIUXController :BaseController
     {
         [Route("UIUX")]

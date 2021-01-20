@@ -5,10 +5,12 @@ using System.Web;
 using System.Web.Mvc;
 using QaisYousuf.Models;
 using QaisYousuf.ViewModels;
+using QaisYousuf.Web.Infrastructure;
 
 namespace QaisYousuf.Web.Controllers
 {
-   
+    [UserActivityFilter]
+    [AdminActivityFilter]
     public class ContactController : BaseController
     {
         [Route("ContactUs")]

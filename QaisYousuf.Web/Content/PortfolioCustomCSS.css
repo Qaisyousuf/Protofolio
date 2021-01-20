@@ -104,14 +104,14 @@ nav .nav-item .nav-link {
 
 @media (max-width: 576px) {
     .display-5 {
-        font-size: 2rem !important;
+        font-size: .25rem !important;
         color: white !important;
     }
 }
 
 @media (max-width: 376px) {
     .display-5 {
-        font-size: 1.8rem !important;
+        font-size: 2.2rem !important;
         color: white !important;
     }
 }

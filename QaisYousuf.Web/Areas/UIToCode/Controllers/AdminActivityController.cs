@@ -8,6 +8,7 @@ using QaisYousuf.ViewModels;
 
 namespace QaisYousuf.Web.Areas.UIToCode.Controllers
 {
+    [Authorize(Roles = "Supper Admin")]
     public class AdminActivityController : Controller
     {
         private readonly IUnitOfWork uow;

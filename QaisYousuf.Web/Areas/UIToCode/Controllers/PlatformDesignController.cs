@@ -6,6 +6,7 @@ using QaisYousuf.Models;
 
 namespace QaisYousuf.Web.Areas.UIToCode.Controllers
 {
+    [Authorize(Roles = "Supper Admin")]
     public class PlatformDesignController : Controller
     {
         private readonly IUnitOfWork uow;

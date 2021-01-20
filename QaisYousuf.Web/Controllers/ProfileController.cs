@@ -5,9 +5,12 @@ using System.Web;
 using System.Web.Mvc;
 using QaisYousuf.ViewModels;
 using QaisYousuf.Models;
+using QaisYousuf.Web.Infrastructure;
 
 namespace QaisYousuf.Web.Controllers
 {
+    [UserActivityFilter]
+    [AdminActivityFilter]
     public class ProfileController : BaseController
     {
         [Route("Profile")]

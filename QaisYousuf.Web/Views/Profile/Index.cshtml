@@ -12,14 +12,14 @@
                 <!-- Mask & flexbox options-->
                 <div class="mask">
                     <!-- Content -->
-                    <div class="container h-100 d-flex justify-content-center">
+                    <div class="container h-100">
 
-                            <div class="row align-items-center h-100 mx-2 d-flex justify-content-center">
+                            <div class="row align-items-center h-100 mx-2">
                                 @foreach (var item in Model.ListPortfolioViewModle.Take(1))
                                 {
                                     <!--Grid column-->
-                                    <div class="col-lg-5 mt-5">
-                                        <div class="mb-2  font-weight-bold display-5 ">@item.Title</div>
+                                    <div class="col-lg-5 offset-lg-1 mt-5">
+                                        <div class="mb-2  font-weight-bold display-5">@item.Title</div>
                                         <h6 class="mb-2 pb-2 text-white text-justify">@item.SubTitle</h6>
                                         <a href="@item.ButtonUrl" class="btn btn-outline-primary  btn-rounded btn-md"> @item.ButtonText <i class="fas fa-home ml-2"></i></a>
                                         <a href="/ContactUs" class="btn btn-outline-primary btn-rounded btn-md">Contact <i class="fas fa-at ml-2"></i></a>

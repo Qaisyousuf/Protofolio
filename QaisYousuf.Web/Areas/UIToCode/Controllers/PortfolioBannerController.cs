@@ -9,6 +9,7 @@ using QaisYousuf.Models;
 
 namespace QaisYousuf.Web.Areas.UIToCode.Controllers
 {
+    [Authorize(Roles = "Supper Admin")]
     public class PortfolioBannerController : Controller
     {
         private readonly IUnitOfWork uow;

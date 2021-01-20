@@ -6,9 +6,12 @@ using System.Web.Mvc;
 using QaisYousuf.Data.Interfaces;
 using QaisYousuf.ViewModels;
 using QaisYousuf.Models;
+using QaisYousuf.Web.Infrastructure;
 
 namespace QaisYousuf.Web.Controllers
 {
+    [UserActivityFilter]
+    [AdminActivityFilter]
     public class TechnologyToolsController : BaseController
     {
         

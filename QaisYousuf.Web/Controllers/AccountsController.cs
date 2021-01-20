@@ -13,7 +13,8 @@ namespace QaisYousuf.Web.Controllers
    
     public class AccountsController : BaseController
     {
-
+        [AdminActivityFilter]
+        [UserActivityFilter]
         [Route("AuthrizationArea")]
         public ActionResult Index()
         {
@@ -22,6 +23,7 @@ namespace QaisYousuf.Web.Controllers
 
         [HttpPost]
         [AdminActivityFilter]
+        [UserActivityFilter]
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();
@@ -31,6 +33,8 @@ namespace QaisYousuf.Web.Controllers
         [HttpGet]
         
         [Route("Authentication")]
+        [AdminActivityFilter]
+        [UserActivityFilter]
         public ActionResult Register()
         {
             return View(new RegisterViewModel());
@@ -38,6 +42,8 @@ namespace QaisYousuf.Web.Controllers
 
         [HttpPost]
         [Route("Authentication")]
+        [AdminActivityFilter]
+        [UserActivityFilter]
         public ActionResult Register(RegisterViewModel viewmodel)
         {
             if(!ModelState.IsValid)
@@ -60,6 +66,7 @@ namespace QaisYousuf.Web.Controllers
         [HttpGet]
         [Route("Authorization")]
         [AdminActivityFilter]
+        [UserActivityFilter]
         public ActionResult Login()
         {
             return View(new LoginViewModel());
@@ -67,6 +74,7 @@ namespace QaisYousuf.Web.Controllers
 
         [HttpPost]
         [AdminActivityFilter]
+        [UserActivityFilter]
         [Route("Authorization")]
         public ActionResult Login(LoginViewModel viewmodel)
         {

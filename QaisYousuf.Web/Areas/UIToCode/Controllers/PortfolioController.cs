@@ -10,6 +10,7 @@ using QaisYousuf.Services;
 
 namespace QaisYousuf.Web.Areas.UIToCode.Controllers
 {
+    [Authorize(Roles = "Supper Admin")]
     public class PortfolioController : Controller
     {
         private readonly IUnitOfWork uow;

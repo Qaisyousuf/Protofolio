@@ -6,10 +6,13 @@ using System.Web.Mvc;
 using QaisYousuf.ViewModels;
 using QaisYousuf.Models;
 using QaisYousuf.Data.Interfaces;
+
 namespace QaisYousuf.Web.Areas.UIToCode.Controllers
 {
+    [Authorize(Roles = "Supper Admin")]
     public class MeetOurTeamController : Controller
     {
+       
         private readonly IUnitOfWork uow;
 
         public MeetOurTeamController(IUnitOfWork uow)

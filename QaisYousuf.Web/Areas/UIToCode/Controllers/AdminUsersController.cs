@@ -11,6 +11,7 @@ using QaisYousuf.Data.Context;
 
 namespace QaisYousuf.Web.Areas.UIToCode.Controllers
 {
+    [Authorize(Roles = "Supper Admin")]
     public class AdminUsersController : Controller
     {
         private readonly IUnitOfWork uow;

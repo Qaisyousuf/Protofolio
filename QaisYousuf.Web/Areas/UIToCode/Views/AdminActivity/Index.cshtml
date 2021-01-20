@@ -61,7 +61,7 @@
                         "targets": 3,
 
                         "render": function (data, type, row, meta) {
-                            return moment(row.Date).locale("fr").format('DD-MMMM-YYYY');
+                            return moment(row.Date).format('MMMM Do YYYY, h:mm:ss a');
                         }
                     },
                     {
@@ -69,7 +69,7 @@
 
 
                         "render": function (data, type, row, meta) {
-                            return moment(row.Time).locale("fr").format('DD-MMMM-YYYY');
+                            return moment(row.Time).format('MMMM Do YYYY, h:mm:ss a');
                         }
 
                     },

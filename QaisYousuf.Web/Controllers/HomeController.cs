@@ -1,6 +1,7 @@
 ﻿using QaisYousuf.Data.Interfaces;
 using QaisYousuf.Models;
 using QaisYousuf.ViewModels;
+using QaisYousuf.Web.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,8 @@ using System.Web.Mvc;
 
 namespace QaisYousuf.Web.Controllers
 {
+    [UserActivityFilter]
+    [AdminActivityFilter]
     public class HomeController : BaseController
     {
 
